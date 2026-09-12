@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crear Cuenta-AgroVerde</title>
+<link rel="stylesheet" href="crear_cuenta.css">
+</head>
+<body>
+<div class="phone"> <!-- caja que simula un celular -->
+<div class="status-bar"> <!-- barra donde va la hora -->
+<span>9:41</span>
+</div>
+
+<div class="screen">
+<div class="header">
+<div>
+<h1>Crear Cuenta</h1>
+<p>Ingresa tus datos para continuar</p>
+</div>
+<div class="logo">
+<img src="Logo.jpeg" alt="Logo AgroVerde">
+</div>
+</div>
+
+<form>
+<div class="field">
+<label for="usuario">Nombre de usuario</label>
+<input type="text" id="usuario" placeholder="Tu nombre">
+</div>
+
+<div class="field">
+<label for="correo">Correo electrónico</label>
+<input type="email" id="correo" placeholder="tu@correo.com">
+</div>
+
+<div class="field">
+<label for="contrasena">Contraseña</label>
+<input type="password" id="contrasena" placeholder="••••••••">
+</div>
+<div class="rol-wrapper" id="rolWrapper">
+    <button type="button" class="rol-button" id="rolButton">
+        <span id="rolLabel">ROL</span>
+        <span class="arrow">▼</span>
+    </button>
+    <ul class="rol-options" id="rolOptions">
+        <li data-rol="Agricultor">Agricultor</li>
+        <li data-rol="Administrador">Administrador</li>
+        <li data-rol="Trabajador">Trabajador</li>
+    </ul>
+</div>
+</form>
+</div>
+</div>
+</body>
+</html>

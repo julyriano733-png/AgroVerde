@@ -1,5 +1,7 @@
 # *AgroVerde*
 
+![Logo Agro verde](./Agro%20verde.png "Agro Verde")
+
 Sistema de gestión de terrenos, cultivos, sanidad vegetal e inventario agrícola para el Centro Agropecuario del SENA.
 
 Agro Verde es una aplicación móvil orientada a digitalizar y optimizar el control de terrenos, el seguimiento fenológico de siembras, la gestión de insumos agrícolas y la trazabilidad del tiempo de trabajo en campo.

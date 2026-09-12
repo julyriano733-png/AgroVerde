@@ -1,8 +1,8 @@
 :root {
     --bg-exterior: #F5F2EB;
-    /* Tono beige / vainilla suave */
+    /* fondo pagina*/
     --bg-principal: #0F3223;
-    /* Verde oscuro Agro Verde */
+    /* Verde oscuro Agro Verd fondo */
     --bg-boton: #EFEFEF;
     /* Gris claro para botones */
     --texto-blanco: #FFFFFF;
@@ -13,6 +13,7 @@
     /* Subtítulos */
     --texto-legal: #38A156;
     /* Verde claro para legibilidad en el footer */
+    --verde-marca: #087c38;
 }
 
 * {
@@ -47,13 +48,21 @@ body {
 
 /* Logo */
 .contenedor-logo {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: var(--verde-marca);
+    font-size: 2.6rem;
+    font-weight: 900;
+    letter-spacing: 1px;
 }
 
 .contenedor-logo img {
-    width: 500px;
+    width: 300px;
     height: auto;
     display: block;
+    margin-bottom: 12px;
 }
 
 /* Secciones y textos */
@@ -103,6 +112,27 @@ body {
 
 .boton:active {
     transform: scale(0.98);
+}
+
+/* Separador con líneas horizontales y letra 'o' */
+.separador {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0 16px 0;
+}
+
+.separador::before,
+.separador::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25); /* Línea sutil en tono claro */
+}
+
+.separador span {
+    padding: 0 10px;
+    color: var(--texto-subtitulo);
+    font-size: 0.85rem;
 }
 
 /* Footer Legal */

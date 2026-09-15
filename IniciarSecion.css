@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.login-card {
+  background-color: #0d281e; 
+  width: 100%;
+  max-width: 380px;
+  min-height: 650px;
+  padding: 40px 24px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
+  margin-top: 20px;
+}
+
+.header-text h1 {
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.header-text p {
+  color: #8da499;
+  font-size: 13px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo span {
+  color: #1e824c;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  background-color: #143528; 
+  border-radius: 12px;
+  padding: 10px 16px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  color: #7d998c;
+  font-size: 11px;
+  margin-bottom: 4px;
+}
+
+.input-group input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-size: 15px;
+  width: 100%;
+}
+
+.input-group input::placeholder {
+  color: #a0b5ab;
+}
+
+/* Enlace recuperar contraseña */
+.forgot-container {
+  text-align: right;
+  margin-bottom: 24px;
+}
+
+.forgot-link {
+  color: #2ecc71;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.btn-submit {
+  background-color: #25d366; 
+  color: #0a1f16;
+  border: none;
+  border-radius: 12px;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: opacity 0.2s;
+}
+
+.btn-submit:hover {
+  opacity: 0.9;
+}
+
+/* Enlace inferior Registro */
+.signup-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.signup-container p {
+  color: #8da499;
+  font-size: 13px;
+}
+
+.signup-link {
+  color: #2ecc71;
+  font-weight: 600;
+  text-decoration: none;
+}
+.titulo-con-icono {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}

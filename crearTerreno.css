@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-card {
+    background-color: #0d281e;
+    width: 100%;
+    max-width: 380px;
+    min-height: 650px;
+    padding: 40px 24px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 32px;
+    margin-top: 20px;
+}
+
+.titulo-con-icono {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.header-text h1 {
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.header-text p {
+    color: #8da499;
+    font-size: 13px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    background-color: #143528;
+    border-radius: 12px;
+    padding: 10px 16px;
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    color: #7d998c;
+    font-size: 11px;
+    margin-bottom: 4px;
+}
+
+.input-group input,
+.input-group textarea {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 15px;
+    width: 100%;
+    resize: vertical;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+    color: #a0b5ab;
+}
+
+/* Enlace recuperar contraseña */
+.forgot-container {
+    text-align: right;
+    margin-bottom: 24px;
+}
+
+.forgot-link {
+    color: #2ecc71;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+/* Botón principal */
+.boton {
+    width: 100%;
+    background-color: #efefef;
+    color: #0a1f16;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.boton:hover {
+    opacity: 0.9;
+}
+
+.boton:active {
+    transform: scale(0.98);
+}
+
+/* Enlace inferior Registro */
+.signup-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.signup-container p {
+    color: #8da499;
+    font-size: 13px;
+}
+
+.signup-link {
+    color: #2ecc71;
+    font-weight: 600;
+    text-decoration: none;
+}

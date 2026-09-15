@@ -1,26 +1,32 @@
+/* Reset general */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* Fondo de la página y centrado del "teléfono" */
 body {
-    background: #0f231a;
+    background: #2b2b2b;
     min-height: 100vh;
     display: flex;
+    align-items: center;
     justify-content: center;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    padding: 20px;
 }
 
 .phone {
     width: 100%;
-    max-width: 480px;
-    min-height: 100vh;
+    max-width: 420px;
+    min-height: calc(100vh - 40px);
     background: #0f231a;
-    border-radius: 0;
-    box-shadow: none;
+    border-radius: 28px;
+    padding: 0;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.45);
 }
 
+/* Barra de la hora arriba */
 .status-bar {
     padding: 14px 22px 0;
     color: #eaf3ee;
@@ -28,35 +34,35 @@ body {
     font-weight: 600;
 }
 
+/* Contenido interno */
 .screen {
     padding: 28px 24px 40px;
 }
 
+/* Título + logo lado a lado */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 32px;
 }
-
 .header h1 {
     font-size: 24px;
     color: #eaf3ee;
     font-weight: 700;
     margin-bottom: 6px;
 }
-
 .header p {
     font-size: 13px;
     color: #8fae9c;
 }
-
 .logo img {
     width: 60px;
     height: 60px;
     object-fit: contain;
 }
 
+/* Cajas de usuario, correo y contraseña */
 .field {
     background: #1c3d2c;
     border: 1px solid #2a5240;
@@ -64,74 +70,27 @@ body {
     padding: 10px 16px 12px;
     margin-bottom: 14px;
 }
-
 .field label {
     display: block;
     font-size: 11px;
     color: #8fae9c;
     margin-bottom: 4px;
 }
-
-.field input {
+.field input,
+.field select {
     width: 100%;
     background: transparent;
     border: none;
     outline: none;
-    color: #eaf3ee;
+    color: #010101;
     font-size: 15px;
+    cursor: default;
 }
-
-.rol-wrapper {
-    position: relative;
-    margin-bottom: 16px;
-}
-
-.rol-button {
-    width: 100%;
-    background: #4ec97b;
-    color: #0c1f15;
-    border: none;
-    border-radius: 14px;
-    padding: 15px 18px;
-    font-size: 15px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.field select {
     cursor: pointer;
 }
 
-.rol-options {
-    list-style: none;
-    margin-top: 6px;
-    border: 1px solid #3aa863;
-    border-radius: 14px;
-    overflow: hidden;
-    max-height: 0;
-    opacity: 0;
-    transition: max-height 0.25s ease, opacity 0.2s ease;
-}
-
-.rol-wrapper.open .rol-options {
-    max-height: 200px;
-    opacity: 1;
-}
-
-.rol-options li {
-    padding: 14px 18px;
-    color: #eaf3ee;
-    font-size: 14px;
-    font-weight: 600;
-    text-align: center;
-    border-bottom: 1px solid #2a5240;
-    cursor: pointer;
-}
-
-.rol-options li:last-child {
-    border-bottom: none;
-}
-
+/* Botón final */
 .submit-btn {
     width: 100%;
     background: #4ec97b;
@@ -144,7 +103,6 @@ body {
     cursor: pointer;
     margin-top: 6px;
 }
-
 .submit-btn:hover {
     background: #3aa863;
 }

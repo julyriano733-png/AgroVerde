@@ -19,7 +19,7 @@
 <p>Ingresa tus datos para continuar</p>
 </div>
 <div class="logo">
-<img src="Logo.jpeg" alt="Logo AgroVerde">
+<img src="img/Logo.jpeg" alt="Logo AgroVerde">
 </div>
 </div>
 
@@ -38,16 +38,14 @@
 <label for="contrasena">Contraseña</label>
 <input type="password" id="contrasena" placeholder="••••••••">
 </div>
-<div class="rol-wrapper" id="rolWrapper">
-    <button type="button" class="rol-button" id="rolButton">
-        <span id="rolLabel">ROL</span>
-        <span class="arrow">▼</span>
-    </button>
-    <ul class="rol-options" id="rolOptions">
-        <li data-rol="Agricultor">Agricultor</li>
-        <li data-rol="Administrador">Administrador</li>
-        <li data-rol="Trabajador">Trabajador</li>
-    </ul>
+<div class="field">
+    <label for="rol">ROL</label>
+    <select id="rol" name="rol">
+        <option value="">Selecciona tu rol</option>
+        <option value="agricultor">Agricultor</option>
+        <option value="administrador">Administrador</option>
+        <option value="trabajador">Trabajador</option>
+    </select>
 </div>
 </form>
 </div>

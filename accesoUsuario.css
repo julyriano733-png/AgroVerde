@@ -104,6 +104,10 @@ h1 {
     font-weight: 600;
     cursor: pointer;
     transition: opacity 0.2s, transform 0.1s;
+    display: flex;
+    align-items: center;     /* Centra verticalmente el logo*/
+    justify-content: center;  /* Centra horizontalmente  el logo*/
+    gap: 10px;
 }
 
 .boton:hover {
@@ -112,6 +116,13 @@ h1 {
 
 .boton:active {
     transform: scale(0.98);
+}
+
+.icono-boton {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    
 }
 
 /* Separador con líneas horizontales y letra 'o' */

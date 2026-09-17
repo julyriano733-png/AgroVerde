@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Propiedad - Agro Verde</title>
+    <link rel="stylesheet" href="../assets/css/crear-propiedad.css">
+</head>
+
+<body>
+
+    <div class="cuadro-de-terreno">
+
+        <header class="header">
+            <div class="header-texto">
+                <div class="titulo-con-icono">
+                    <h1>Nueva Propiedad</h1>
+                    <img src="../assets/img/agro-verde-con-texto.png" alt="Logo de Agro Verde" class="icono-logo">
+                </div>
+                <p>Ingresa la información general de la propiedad</p>
+            </div>
+        </header>
+
+        <form class="formulario-terreno">
+
+            <div class="grupo-input">
+                <label for="nombre">Nombre de la propiedad</label>
+                <input type="text" id="nombre" placeholder="Ej. napoles">
+            </div><br>
+
+            <div class="grupo-input">
+                <label for="ubicacion">Ubicación</label>
+                <input type="text" id="ubicacion" placeholder="Ej. sur, norte">
+            </div><br>
+
+            <div class="grupo-input">
+                <label for="notas">Notas</label>
+                <textarea id="notas" rows="7" placeholder="Ej. Finca, hato, lote"></textarea>
+            </div>
+            
+            <button type="submit" class="boton">
+                <span>Crear Propiedad</span>
+            </button>
+        </form>
+    </div>
+
+</body>
+
+</html>

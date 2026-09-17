@@ -105,8 +105,10 @@ h1 {
     cursor: pointer;
     transition: opacity 0.2s, transform 0.1s;
     display: flex;
-    align-items: center;     /* Centra verticalmente el logo*/
-    justify-content: center;  /* Centra horizontalmente  el logo*/
+    align-items: center;
+    /* Centra verticalmente el logo*/
+    justify-content: center;
+    /* Centra horizontalmente  el logo*/
     gap: 10px;
 }
 
@@ -122,7 +124,11 @@ h1 {
     width: 20px;
     height: 20px;
     object-fit: contain;
-    
+
+}
+
+a {
+    text-decoration: none;
 }
 
 /* Separador con líneas horizontales y letra 'o' */
@@ -137,7 +143,8 @@ h1 {
 .separador::after {
     content: "";
     flex: 1;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.25); /* Línea sutil en tono claro */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    /* Línea sutil en tono claro */
 }
 
 .separador span {

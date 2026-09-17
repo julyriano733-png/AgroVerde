@@ -5,20 +5,22 @@
 }
 
 body {
-    background: #0f231a;
+    background: #ffffff;
     min-height: 100vh;
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding: 20px;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 .phone {
+    background: #0F3223;
     width: 100%;
-    max-width: 480px;
-    min-height: 100vh;
-    background: #0f231a;
-    border-radius: 0;
-    box-shadow: none;
+    max-width: 380px;
+    padding: 100px 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
 .status-bar {

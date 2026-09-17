@@ -1,6 +1,6 @@
-# *AgroVerde*
+# AgroVerde
 
-![Logo Agro verde](img/Agro%20verde.png "Agro Verde")
+![Logo Agro Verde](assets/img/agro-verde-con-texto.png "Agro Verde")
 
 Sistema de gestión de terrenos, cultivos, sanidad vegetal e inventario agrícola para el Centro Agropecuario del SENA.
 

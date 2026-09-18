@@ -6,15 +6,15 @@
 }
 
 body {
-  background-color: #ffffff;
+  background-color: #f3f1f1;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
 
-.login-card {
-  background-color: #0d281e; 
+.tarjeta_inicio {
+  background-color: #0d281e;
   width: 100%;
   max-width: 380px;
   min-height: 650px;
@@ -24,88 +24,79 @@ body {
   flex-direction: column;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+.encabezado {
+  position: relative;
   margin-bottom: 32px;
   margin-top: 20px;
 }
 
-.header-text h1 {
+.encabezado img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.encabezado h1 {
   color: #ffffff;
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 6px;
 }
 
-.header-text p {
+.encabezado p {
   color: #8da499;
   font-size: 13px;
+
 }
 
-.logo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
-.logo span {
-  color: #1e824c;
-  font-size: 9px;
-  font-weight: 800;
-  letter-spacing: 0.5px;
-  margin-top: 2px;
-}
 
-.login-form {
+
+
+.formulario_login {
   display: flex;
   flex-direction: column;
 }
 
-.input-group {
-  background-color: #143528; 
+.correo,
+.contraseña {
+  background-color: #143528;
   border-radius: 12px;
   padding: 10px 16px;
   margin-bottom: 16px;
   display: flex;
   flex-direction: column;
+  
 }
-
-.input-group label {
-  color: #7d998c;
-  font-size: 11px;
-  margin-bottom: 4px;
-}
-
-.input-group input {
+.correo input,
+.contraseña input {
   background: transparent;
   border: none;
   outline: none;
-  color: #ffffff;
-  font-size: 15px;
-  width: 100%;
-}
-
-.input-group input::placeholder {
   color: #a0b5ab;
 }
 
+/*color letra pequeña*/
+.correo input::placeholder,
+.contraseña input::placeholder {
+  color: #ecf2ef;
+}
+
 /* Enlace recuperar contraseña */
-.forgot-container {
+.olvido_contraseña {
   text-align: right;
   margin-bottom: 24px;
 }
 
-.forgot-link {
+.olvido_contraseña a {
   color: #2ecc71;
   font-size: 13px;
   text-decoration: none;
 }
 
-.btn-submit {
-  background-color: #25d366; 
-  color: #0a1f16;
+.boton_iniciar_sesion {
+  background-color: #25d366;
+  color: #171f0a;
   border: none;
   border-radius: 12px;
   padding: 14px;
@@ -116,28 +107,21 @@ body {
   transition: opacity 0.2s;
 }
 
-.btn-submit:hover {
+.boton_iniciar_sesion:hover {
   opacity: 0.9;
 }
 
 /* Enlace inferior Registro */
-.signup-container {
+.registro {
   margin-top: 20px;
   text-align: center;
 }
 
-.signup-container p {
-  color: #8da499;
-  font-size: 13px;
-}
 
-.signup-link {
+
+.iniciar_sesion {
   color: #2ecc71;
   font-weight: 600;
   text-decoration: none;
 }
-.titulo-con-icono {
-  display: flex;
-  align-items: center;
-  gap: 60px;
-}
+

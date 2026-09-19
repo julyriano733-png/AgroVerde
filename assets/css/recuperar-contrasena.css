@@ -1,0 +1,110 @@
+
+:root {
+    --fondo-pagina: #f6f7f6;
+    --texto-blanco: #ffffff;
+    --verde: #4ADE80;
+    --texto-boton: #030303;
+    --fondo-caja: #0F3223;
+    --fondo-input: #16261d;
+    --texto-gris: #cfd8d3;
+    --texto-placeholder: #8fa89a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont;
+    background-color: var(--fondo-pagina);
+    color: var(--texto-blanco);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.contenedor {
+    width: 400px;
+    min-height: 750px;
+    padding: 40px 30px;
+    background-color: var(--fondo-caja);
+    border-radius: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.contenedor img {
+    align-self: flex-end;
+    width: 90px;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.contenedor h2 {
+    margin: 0 0 12px 0;
+    font-size: 24px;
+}
+
+.contenedor p {
+    color: var(--texto-gris);
+    font-size: 14px;
+    margin: 0 0 30px 0;
+    line-height: 1.4;
+}
+.label-correo {
+    display: block;
+    font-size: 13px;
+    color: var(--texto-gris);
+    background-color: var(--fondo-input);
+    padding: 12px 14px 0 14px;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 0;
+}
+
+input[type="email"] {
+    display: block;
+    padding: 0 14px 14px 14px;
+    border: none;
+    border-radius: 0 0 10px 10px;
+    background-color: var(--fondo-input);
+    color: var(--texto-blanco);
+    width: 100%;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+input[type="email"]::placeholder {
+    color: var(--texto-placeholder);
+}
+
+
+button {
+    background-color: var(--verde);
+    color: var(--texto-boton);
+    font-weight: bold;
+    padding: 14px;
+    border-radius: 30px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+
+.footer-text {
+    font-size: 13px;
+    color: var(--texto-gris);
+    text-align: center;
+}
+
+.footer-text a {
+    color: var(--verde);
+    font-weight: bold;
+    text-decoration: none;
+}

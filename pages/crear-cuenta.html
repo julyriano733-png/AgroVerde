@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear Cuenta-AgroVerde</title>
+  <link rel="stylesheet" href="../assets/css/crear-cuenta.css">
+</head>
+
+<body>
+<main class="tarjeta_cuenta"> 
+
+  <header class="encabezado">
+        <h1>Crear Cuenta</h1>
+        <img src="../assets/img/agro-verde-con-texto.png" width="90" height="80" alt="Logo AgroVerde">
+      <p>Ingresa tus datos para continuar</p>
+  </header>
+
+  <form class="formulario_cuenta">
+
+     <label class="usuario">Nombre de usuario
+        <input type="text" id="usuario" placeholder="Tu nombre">
+      </label>
+
+     <label class="correo">Correo electrónico
+        <input type="email" id="correo" placeholder="tu@correo.com">
+      </label>
+
+     <label class="contraseña">Contraseña
+        <input type="password" id="contrasena" placeholder="••••••••">
+      </label>
+
+       <label class="rol">Rol
+        <select id="rol">
+          <option value="" disabled selected>Selecciona tu rol</option>
+          <option value="Agricultor">Agricultor</option>
+          <option value="Administrador">Administrador</option>
+          <option value="Trabajador">Trabajador</option>
+        </select>
+      </label>
+      
+</form>
+
+    <a href="crear-propiedad.html">
+    <button type="submit" class="boton_crear_cuenta">Crear cuenta</button>
+  
+</a>
+
+
+</main>
+</body>
+
+</html>

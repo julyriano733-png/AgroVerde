@@ -2,55 +2,53 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear Cuenta-AgroVerde</title>
-    <link rel="stylesheet" href="../assets/css/crear-cuenta.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear Cuenta-AgroVerde</title>
+  <link rel="stylesheet" href="../assets/css/crear-cuenta.css">
 </head>
 
 <body>
-    <!--utilice algo como un main en lugar de un div por lo menos de principal-->
-    <div class="phone"> <!-- caja que simula un celular -->
-        <div class="screen">
-            <div class="header">
-                <div>
-                    <h1>Crear Cuenta</h1>
-                    <p>Ingresa tus datos para continuar</p>
-                </div>
-                <div class="logo">
-                    <img src="../assets/img/agro-verde-sin-texto.png" alt="Logo AgroVerde">
-                </div>
-            </div>
+<main class="tarjeta_cuenta"> 
 
-            <form>
-                <div class="field">
-                    <label for="usuario">Nombre de usuario</label>
-                    <input type="text" id="usuario" placeholder="Tu nombre">
-                </div>
+  <header class="encabezado">
+        <h1>Crear Cuenta</h1>
+        <img src="../assets/img/agro-verde-con-texto.png" width="90" height="80" alt="Logo AgroVerde">
+      <p>Ingresa tus datos para continuar</p>
+  </header>
 
-                <div class="field">
-                    <label for="correo">Correo electrónico</label>
-                    <input type="email" id="correo" placeholder="tu@correo.com">
-                </div>
+  <form class="formulario_cuenta">
 
-                <div class="field">
-                    <label for="contrasena">Contraseña</label>
-                    <input type="password" id="contrasena" placeholder="••••••••">
-                </div>
-                <div class="rol-wrapper" id="rolWrapper">
-                    <button type="button" class="rol-button" id="rolButton">
-                        <span id="rolLabel">ROL</span>
-                        <span class="arrow">▼</span>
-                    </button>
-                    <ul class="rol-options" id="rolOptions">
-                        <li data-rol="Agricultor">Agricultor</li>
-                        <li data-rol="Administrador">Administrador</li>
-                        <li data-rol="Trabajador">Trabajador</li>
-                    </ul>
-                </div>
-            </form>
-        </div>
-    </div>
+     <label class="usuario">Nombre de usuario
+        <input type="text" id="usuario" placeholder="Tu nombre">
+      </label>
+
+     <label class="correo">Correo electrónico
+        <input type="email" id="correo" placeholder="tu@correo.com">
+      </label>
+
+     <label class="contraseña">Contraseña
+        <input type="password" id="contrasena" placeholder="••••••••">
+      </label>
+
+       <label class="rol">Rol
+        <select id="rol">
+          <option value="" disabled selected>Selecciona tu rol</option>
+          <option value="Agricultor">Agricultor</option>
+          <option value="Administrador">Administrador</option>
+          <option value="Trabajador">Trabajador</option>
+        </select>
+      </label>
+      
+</form>
+
+    <a href="crear-propiedad.html">
+    <button type="submit" class="boton_crear_cuenta">Crear cuenta</button>
+  
+</a>
+
+
+</main>
 </body>
 
 </html>

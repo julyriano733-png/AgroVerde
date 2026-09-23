@@ -39,7 +39,7 @@ body {
 
 
 .contenedor img {
-    align-self: flex-end;
+    align-self: flex-end; /* revelio */
     width: 90px;
     height: auto;
     margin-bottom: 30px;

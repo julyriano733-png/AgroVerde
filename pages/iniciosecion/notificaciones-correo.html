@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificaciones - Agro Verde</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/iniciosecion/notificaciones-por-correo.css">
+</head>
+
+<body>
+
+    <main class="pantalla-notificaciones">
+        <div class="contenedor-notificaciones">
+
+            <h1 class="titulo-pantalla">Notificaciones</h1>
+
+            <!-- Alertas climáticas -->
+            <div class="tarjeta-alerta d-flex justify-content-between align-items-center">
+                <div>
+                    <p class="nombre-alerta">Alertas climáticas</p>
+                    <p class="descripcion-alerta">Recibir por correo electrónico</p>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="alertaClima" checked>
+                </div>
+            </div>
+
+            <!-- Alertas de stock mínimo -->
+            <div class="tarjeta-alerta d-flex justify-content-between align-items-center">
+                <div>
+                    <p class="nombre-alerta">Alertas de stock mínimo</p>
+                    <p class="descripcion-alerta">Recibir por correo electrónico</p>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="alertaStock" checked>
+                </div>
+            </div>
+
+            <!-- Reportes semanales -->
+            <div class="tarjeta-alerta d-flex justify-content-between align-items-center">
+                <div>
+                    <p class="nombre-alerta">Reportes semanales</p>
+                    <p class="descripcion-alerta">Resumen los lunes por correo</p>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="reportesSemanales">
+                </div>
+            </div>
+
+            <!-- Alerta por correo electrónico -->
+            <div class="tarjeta-alerta d-flex justify-content-between align-items-center">
+                <div>
+                    <p class="nombre-alerta">Alerta por correo electrónico</p>
+                    <p class="descripcion-alerta">usuario@agroverde.com</p>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="alertaCorreo" checked>
+                </div>
+            </div>
+
+            <!-- Alerta por SMS / teléfono -->
+            <div class="tarjeta-alerta d-flex justify-content-between align-items-center">
+                <div>
+                    <p class="nombre-alerta">Alerta por SMS / teléfono</p>
+                    <p class="descripcion-alerta">+57 300 123 4567</p>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="alertaSms" checked>
+                </div>
+            </div>
+
+            <!-- Campos de contacto -->
+            <div class="mb-3 grupo-campo">
+                <label for="correo" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control campo-oscuro" id="correo">
+            </div>
+
+            <div class="mb-4 grupo-campo">
+                <label for="telefono" class="form-label">Número de teléfono</label>
+                <input type="tel" class="form-control campo-oscuro" id="telefono" value="+57">
+            </div>
+
+            <button type="button" class="btn boton-guardar w-100">Guardar alertas</button>
+
+        </div>
+    </main>
+
+</body>
+
+</html>

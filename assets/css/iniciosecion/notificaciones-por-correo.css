@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #0d1f17;
+    margin: 0;
+}
+
+.pantalla-notificaciones {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 24px 16px;
+}
+
+.contenedor-notificaciones {
+    width: 100%;
+    max-width: 420px;
+}
+
+.titulo-pantalla {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.tarjeta-alerta {
+    background-color: #16261d;
+    border-radius: 14px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+}
+
+.nombre-alerta {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.descripcion-alerta {
+    color: #8da499;
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+.form-check.form-switch {
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.form-check-input {
+    width: 42px;
+    height: 24px;
+    margin-left: 0;
+    background-color: #3a4a42;
+    border-color: #3a4a42;
+    cursor: pointer;
+}
+
+.form-check-input:checked {
+    background-color: #22c55e;
+    border-color: #22c55e;
+}
+
+.form-check-input:focus {
+    box-shadow: none;
+    border-color: #22c55e;
+}
+
+
+.grupo-campo .form-label {
+    color: #8da499;
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.campo-oscuro {
+    background-color: #16261d;
+    border: 1px solid #2c3e37;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 12px 14px;
+}
+
+.campo-oscuro:focus {
+    background-color: #16261d;
+    border-color: #22c55e;
+    color: #ffffff;
+    box-shadow: none;
+}
+
+.campo-oscuro::placeholder {
+    color: #6b8177;
+}
+
+.boton-guardar {
+    background-color: #22c55e;
+    color: #0d1f17;
+    border: none;
+    border-radius: 12px;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+
+.boton-guardar:hover {
+    background-color: #22c55e;
+    opacity: 0.9;
+}

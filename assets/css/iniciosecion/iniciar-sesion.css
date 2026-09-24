@@ -1,127 +1,162 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+html,
+body {
+    height: 100%;
 }
 
 body {
-  background-color: #f3f1f1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+    min-height: 100vh;
 }
 
-.tarjeta_inicio {
-  background-color: #0d281e;
-  width: 100%;
-  max-width: 380px;
-  min-height: 650px;
-  padding: 40px 24px;
-  border-radius: 16px;
-  display: flex;
-  flex-direction: column;
+/* CAMBIO: la tarjeta ahora ocupa TODO el ancho y alto de la pantalla (100vw / 100vh), sin bordes redondeados ni margen alrededor */
+.cuadro-de-login {
+    background-color: #0d281e;
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.encabezado {
-  position: relative;
-  margin-bottom: 32px;
-  margin-top: 20px;
+.contenedor-logo {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-.encabezado img {
-  position: absolute;
-  top: 0;
-  right: 0;
+/* CAMBIO: logo más grande en computador ya que ahora hay mucho más espacio disponible */
+.contenedor-logo img {
+    max-width: 260px;
+    width: 100%;
+    height: auto;
 }
 
-.encabezado h1 {
-  color: #ffffff;
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 6px;
+/* CAMBIO: se agregó un ancho máximo al bloque de texto/botones para que en pantallas anchas no se estiren de borde a borde y se vean feos */
+.seccion-cuenta,
+.seccion-login {
+    text-align: center;
+    margin-bottom: 32px;
+    width: 100%;
+    max-width: 420px;
 }
 
-.encabezado p {
-  color: #8da499;
-  font-size: 13px;
-
+.title {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 6px;
 }
 
-
-
-
-
-.formulario_login {
-  display: flex;
-  flex-direction: column;
+.subtitulo {
+    color: #8da499;
+    font-size: 14px;
+    margin-bottom: 18px;
 }
 
-.correo,
-.contraseña {
-  background-color: #143528;
-  border-radius: 12px;
-  padding: 10px 16px;
-  margin-bottom: 16px;
-  display: flex;
-  flex-direction: column;
-  
-}
-.correo input,
-.contraseña input {
-  background: transparent;
-  border: none;
-  outline: none;
-  color: #a0b5ab;
+.grupo-botones {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
-/*color letra pequeña*/
-.correo input::placeholder,
-.contraseña input::placeholder {
-  color: #ecf2ef;
+.seccion-cuenta a,
+.grupo-botones a {
+    text-decoration: none;
+    display: block;
 }
 
-/* Enlace recuperar contraseña */
-.olvido_contraseña {
-  text-align: right;
-  margin-bottom: 24px;
+.boton {
+    background-color: #ecf2ef;
+    color: #0d281e;
+    border: none;
+    border-radius: 12px;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: opacity 0.2s;
 }
 
-.olvido_contraseña a {
-  color: #2ecc71;
-  font-size: 13px;
-  text-decoration: none;
+.boton span {
+    color: #0d281e;
 }
 
-.boton_iniciar_sesion {
-  background-color: #25d366;
-  color: #171f0a;
-  border: none;
-  border-radius: 12px;
-  padding: 14px;
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  width: 100%;
-  transition: opacity 0.2s;
+.boton:hover {
+    opacity: 0.9;
 }
 
-.boton_iniciar_sesion:hover {
-  opacity: 0.9;
+.icono-boton {
+    width: 18px;
+    height: 18px;
 }
 
-/* Enlace inferior Registro */
-.registro {
-  margin-top: 20px;
-  text-align: center;
+/* CAMBIO: ancho máximo para que coincida con el bloque de arriba */
+.separador {
+    display: flex;
+    align-items: center;
+    color: #8da499;
+    font-size: 13px;
+    margin: 28px 0;
+    width: 100%;
+    max-width: 420px;
 }
 
-
-
-.iniciar_sesion {
-  color: #2ecc71;
-  font-weight: 600;
-  text-decoration: none;
+.separador::before,
+.separador::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #2c4a3d;
 }
 
+.separador span {
+    padding: 0 12px;
+}
+
+.legal {
+    text-align: center;
+    width: 100%;
+    max-width: 420px;
+}
+
+.legal p {
+    color: #8da499;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.legal a {
+    color: #2ecc71;
+    text-decoration: underline;
+}
+
+/* CAMBIO: en celular (menos de 480px de ancho) se reduce un poco el logo y los espacios para que quepa cómodo */
+@media (max-width: 480px) {
+    .cuadro-de-login {
+        padding: 24px 16px;
+    }
+
+    .contenedor-logo img {
+        max-width: 180px;
+    }
+
+    .contenedor-logo {
+        margin-bottom: 24px;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+}

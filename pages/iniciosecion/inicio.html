@@ -15,19 +15,19 @@
 </head>
 <body>
 
-  <!-- este div es la pantalla principal para k no se descuadre en cel -->
+  <!-- este div es la pantalla principal k en pc se estira bien para k no quede pegado -->
   <div class="pantalla container-fluid">
 
     <!-- la parte de arriba con el titulo y los botones de notificaciones y ajustes -->
     <div class="d-flex justify-content-between align-items-center mb-4">
       <h5 class="m-0">Finca el manantial</h5>
       <div class="d-flex gap-3">
-        <!-- boton de notificaciones que lleva a su pagina -->
+        <!-- boton de notificaciones k lleva a su pagina -->
         <a href="notificaciones.html" class="text-white text-decoration-none">
           <i class="bi bi-bell fs-5"></i>
         </a>
         <!-- boton de configuracion k lleva a ajustes -->
-        <a href="configuracion.html" class="text-white text-decoration-none">
+        <a href="../../pages/iniciosecion/configuracion.html" class="text-white text-decoration-none">
           <i class="bi bi-gear fs-5"></i>
         </a>
       </div>
@@ -42,7 +42,7 @@
       <div class="punto_verde"></div>
     </a>
 
-    <!-- dos tarjetas juntas una de cultivos y la otra de plagas -->
+    <!-- tarjetas con la info rápida distribuidas horizontalmente para k se acomoden bien en la pantalla del pc -->
     <div class="row g-2 mb-2">
       <div class="col-6 col-md-3">
         <a href="cultivos.html" class="tarjeta p-3 rounded-4 text-decoration-none d-block">
@@ -62,7 +62,6 @@
           </div>
         </a>
       </div>
-      <!-- otras dos tarjetas para la humedad y el riesgo del dia -->
       <div class="col-6 col-md-3">
         <a href="clima.html" class="tarjeta p-3 rounded-4 text-decoration-none d-block">
           <p class="mb-1 small">Humedad</p>
@@ -84,8 +83,8 @@
     </div>
 
     <div class="row g-3">
+      <!-- columna izquierda para los accesos rapidos k aprovecha el espacio ancho de la pc -->
       <div class="col-12 col-lg-7">
-        <!-- la cuadricula con botones para ir mas rapido a otras partes -->
         <p class="mb-2">Accesos rápidos</p>
         <div class="row g-2 mb-2">
           <div class="col-4 col-md-4">
@@ -111,8 +110,8 @@
         </div>
       </div>
 
+      <!-- columna derecha para el historial para k quede al lado en monitor o laptop -->
       <div class="col-12 col-lg-5">
-        <!-- lista de cosas k han pasado recientemente con scroll por si hay mas -->
         <p class="mb-2">Historial reciente</p>
 
         <div class="contenedor_historial">
@@ -137,10 +136,10 @@
 
   </div>
 
-  <!-- menu de abajo que se queda pegado en la pantalla -->
+  <!-- menu de abajo k se queda fijo abajo del monitor para navegar rapido -->
   <div class="navegacion_inferior d-flex justify-content-between">
     <a href="inicio.html" class="text-center small"><i class="bi bi-house-door d-block"></i>Inicio</a>
-    <a href="cultivos.html" class="text-center small"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
+    <a href="../cultivos/cultivos.html" class="text-center small"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
     <a href="clima.html" class="text-center small"><i class="bi bi-cloud-sun d-block"></i>Clima</a>
     <a href="insumos.html" class="text-center small"><i class="bi bi-box-seam d-block"></i>Insumos</a>
     <a href="perfil.html" class="text-center small"><i class="bi bi-person-circle d-block"></i>Perfil</a>

@@ -15,7 +15,7 @@
 </head>
 <body>
 
-  <!-- este div es la pantalla principal para k no se descuadre en cel -->
+  <!-- este div es la pantalla principal k en pc se acomoda bien centrada -->
   <div class="pantalla container-fluid">
 
     <!-- la parte de arriba con el boton de regresar y el titulo -->
@@ -27,66 +27,73 @@
       <h4 class="m-0 text-white fw-bold">Configuración</h4>
     </div>
 
-    <!-- SECCION CUENTA -->
-    <p class="mb-2 texto_subtitulo small text-uppercase">CUENTA</p>
-    <div class="tarjeta p-0 rounded-4 mb-4 overflow-hidden">
-      <!-- opcion perfil y cuenta -->
-      <a href="perfil.html" class="item_opcion d-flex justify-content-between align-items-center p-3 text-decoration-none border-bottom-subtil">
-        <span class="texto_blanco">Perfil y cuenta</span>
-        <i class="bi bi-chevron-right icono_verde"></i>
-      </a>
-      <!-- opcion notificaciones -->
-      <a href="notificaciones.html" class="item_opcion d-flex justify-content-between align-items-center p-3 text-decoration-none">
-        <span class="texto_blanco">Notificaciones</span>
-        <i class="bi bi-chevron-right icono_verde"></i>
-      </a>
-    </div>
-
-    <!-- SECCION PREFERENCIAS -->
-    <p class="mb-2 texto_subtitulo small text-uppercase">PREFERENCIAS</p>
-    <div class="d-flex flex-column gap-2 mb-4">
-      <!-- opcion idioma y regionalizacion -->
-      <a href="idioma.html" class="tarjeta_con_borde p-3 rounded-4 d-flex justify-content-between align-items-center text-decoration-none">
-        <span class="texto_blanco">Idioma y regionalización</span>
-        <div class="d-flex align-items-center gap-2">
-          <span class="small texto_gris">Español (CO)</span>
-          <i class="bi bi-chevron-right icono_verde"></i>
+    <!-- distribucion en columnas para aprovechar la pantalla ancha de la pc -->
+    <div class="row g-4">
+      <div class="col-12 col-lg-6">
+        <!-- SECCION CUENTA -->
+        <p class="mb-2 texto_subtitulo small text-uppercase">CUENTA</p>
+        <div class="tarjeta p-0 rounded-4 mb-4 overflow-hidden">
+          <!-- opcion perfil y cuenta -->
+          <a href="perfil.html" class="item_opcion d-flex justify-content-between align-items-center p-3 text-decoration-none border-bottom-subtil">
+            <span class="texto_blanco">Perfil y cuenta</span>
+            <i class="bi bi-chevron-right icono_verde"></i>
+          </a>
+          <!-- opcion notificaciones -->
+          <a href="notificaciones.html" class="item_opcion d-flex justify-content-between align-items-center p-3 text-decoration-none">
+            <span class="texto_blanco">Notificaciones</span>
+            <i class="bi bi-chevron-right icono_verde"></i>
+          </a>
         </div>
-      </a>
 
-      <!-- opcion unidades de medida -->
-      <a href="unidades.html" class="tarjeta_con_borde p-3 rounded-4 d-flex justify-content-between align-items-center text-decoration-none">
-        <span class="texto_blanco">Unidades de medida</span>
-        <div class="d-flex align-items-center gap-2">
-          <span class="small texto_gris">Métrico</span>
-          <i class="bi bi-chevron-right icono_verde"></i>
+        <!-- SECCION PREFERENCIAS -->
+        <p class="mb-2 texto_subtitulo small text-uppercase">PREFERENCIAS</p>
+        <div class="d-flex flex-column gap-2 mb-4">
+          <!-- opcion idioma y regionalizacion -->
+          <a href="idioma.html" class="tarjeta_con_borde p-3 rounded-4 d-flex justify-content-between align-items-center text-decoration-none">
+            <span class="texto_blanco">Idioma y regionalización</span>
+            <div class="d-flex align-items-center gap-2">
+              <span class="small texto_gris">Español (CO)</span>
+              <i class="bi bi-chevron-right icono_verde"></i>
+            </div>
+          </a>
+
+          <!-- opcion unidades de medida -->
+          <a href="unidades.html" class="tarjeta_con_borde p-3 rounded-4 d-flex justify-content-between align-items-center text-decoration-none">
+            <span class="texto_blanco">Unidades de medida</span>
+            <div class="d-flex align-items-center gap-2">
+              <span class="small texto_gris">Métrico</span>
+              <i class="bi bi-chevron-right icono_verde"></i>
+            </div>
+          </a>
+
+          <!-- opcion configuracion alertas -->
+          <a href="alertas_config.html" class="tarjeta_con_borde p-3 rounded-4 d-flex justify-content-between align-items-center text-decoration-none">
+            <span class="texto_blanco">Configuracion alertas</span>
+            <i class="bi bi-chevron-right icono_verde"></i>
+          </a>
         </div>
-      </a>
+      </div>
 
-      <!-- opcion configuracion alertas -->
-      <a href="alertas_config.html" class="tarjeta_con_borde p-3 rounded-4 d-flex justify-content-between align-items-center text-decoration-none">
-        <span class="texto_blanco">Configuracion alertas</span>
-        <i class="bi bi-chevron-right icono_verde"></i>
-      </a>
-    </div>
-
-    <!-- SECCION SOPORTE -->
-    <p class="mb-2 texto_subtitulo small text-uppercase">SOPORTE</p>
-    <div class="tarjeta p-0 rounded-4 mb-4 overflow-hidden">
-      <!-- opcion ayuda y soporte -->
-      <a href="soporte.html" class="item_opcion d-flex justify-content-between align-items-center p-3 text-decoration-none border-bottom-subtil">
-        <span class="texto_blanco">Ayuda y soporte</span>
-        <i class="bi bi-chevron-right icono_verde"></i>
-      </a>
-      <!-- opcion cerrar sesion -->
-      <a href="../../login.html" class="item_opcion d-flex justify-content-between align-items-center p-3 text-decoration-none">
-        <span class="texto_rojo fw-bold">Cerrar sesión</span>
-      </a>
+      <div class="col-12 col-lg-6">
+        <!-- SECCION SOPORTE -->
+        <p class="mb-2 texto_subtitulo small text-uppercase">SOPORTE</p>
+        <div class="tarjeta p-0 rounded-4 mb-4 overflow-hidden">
+          <!-- opcion ayuda y soporte -->
+          <a href="soporte.html" class="item_opcion d-flex justify-content-between align-items-center p-3 text-decoration-none border-bottom-subtil">
+            <span class="texto_blanco">Ayuda y soporte</span>
+            <i class="bi bi-chevron-right icono_verde"></i>
+          </a>
+          <!-- opcion cerrar sesion -->
+          <a href="../../login.html" class="item_opcion d-flex justify-content-between align-items-center p-3 text-decoration-none">
+            <span class="texto_rojo fw-bold">Cerrar sesión</span>
+          </a>
+        </div>
+      </div>
     </div>
 
   </div>
 
-  <!-- menu de abajo que se queda pegado en la pantalla -->
+  <!-- menu de abajo k se queda fijo abajo del monitor para moverte rapido -->
   <div class="navegacion_inferior d-flex justify-content-between">
     <a href="inicio.html" class="text-center small"><i class="bi bi-house-door d-block"></i>Inicio</a>
     <a href="cultivos.html" class="text-center small"><i class="bi bi-flower1 d-block"></i>Cultivos</a>

@@ -4,7 +4,7 @@ body {
   margin: 0;
 }
 
-/* el contenedor principal k simula la pantalla de un celular */
+/* el contenedor principal k en la pc ocupa toda la pantalla a lo ancho */
 .pantalla {
   width: 100%;
   max-width: 100%;
@@ -23,7 +23,7 @@ body {
   display: block;
 }
 
-/* para k cambie un poquito el color cuando uno pasa el mouse o toca la tarjeta */
+/* para k cambie un poquito el color cuando uno pasa el mouse o le da click a la tarjeta */
 .tarjeta:hover,
 .tarjeta:active,
 .tarjeta:focus {
@@ -74,7 +74,7 @@ body {
   display: block;
 }
 
-/* para k cambie de color cuando le undo o le paso encima a los botones */
+/* para k cambie de color cuando le undo o le paso el mouse encima a los botones */
 .boton_acceso:hover,
 .boton_acceso:active,
 .boton_acceso:focus {
@@ -83,7 +83,7 @@ body {
   text-decoration: none;
 }
 
-/* la barra del menu de abajo k se queda fija al bajar */
+/* la barra del menu de abajo k se queda fija abajo en el monitor del pc */
 .navegacion_inferior {
   position: fixed;
   bottom: 0;
@@ -108,14 +108,14 @@ body {
   font-size: 18px;
 }
 
-/* la caja del historial k le pusimos scroll si hay muchas cosas */
+/* la caja del historial k en pc le dejamos mas espacio con scroll por si hay mas cosas */
 .contenedor_historial {
-  max-height: 180px; 
+  max-height: 220px; 
   overflow-y: auto;
   padding-right: 4px;
 }
 
-/* reglas responsivas para pantallas medianas y de pc */
+/* reglas para k en pantallas de pc y laptops se acomode con mas espacio */
 @media (min-width: 768px) {
   .pantalla {
     padding: 30px 40px 100px 40px;

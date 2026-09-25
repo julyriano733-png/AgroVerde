@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cultivos</title>
+  
+  <!-- traemos bootstrap para k se vea bien sin complicarme tanto -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!-- iconos de bootstrap para los botones e interfaz -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <!-- estilos del css de cultivos -->
+  <link rel="stylesheet" href="../../assets/css/inicio/cultivos.css">
+</head>
+<body>
+
+  <!-- este div es la pantalla principal k en pc se estira a lo ancho para k no quede tan apretado -->
+  <div class="pantalla container-fluid">
+
+    <!-- encabezado de la pagina con titulo y boton para agregar nuevo cultivo -->
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h4 class="m-0 text-white fw-bold">Cultivos</h4>
+      <a href="nuevo_cultivo.html" class="btn_nuevo text-decoration-none">
+        + Nuevo
+      </a>
+    </div>
+
+    <!-- buscador de cultivos o lotes -->
+    <div class="mb-4">
+      <input type="text" class="form-control caja_busqueda" placeholder="Buscar cultivo o lote">
+    </div>
+
+    <!-- lista de cultivos activos organizados en varias columnas para k en pc se vean en filas -->
+    <div class="row g-3 mb-4">
+      
+      <!-- tarjeta cultivo maiz -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <a href="detalle_cultivo.html" class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center text-decoration-none h-100">
+          <div>
+            <h6 class="m-0 text-white fw-bold">Maíz - Lote 1</h6>
+            <p class="m-0 small texto_gris">Etapa: Floración</p>
+          </div>
+          <span class="insignia insignia_optimo">Óptimo</span>
+        </a>
+      </div>
+
+      <!-- tarjeta cultivo cafe -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <a href="detalle_cultivo.html" class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center text-decoration-none h-100">
+          <div>
+            <h6 class="m-0 text-white fw-bold">Café - Lote 2</h6>
+            <p class="m-0 small texto_gris">Etapa: Maduración</p>
+          </div>
+          <span class="insignia insignia_revisar">Revisar</span>
+        </a>
+      </div>
+
+      <!-- tarjeta cultivo frijol -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <a href="detalle_cultivo.html" class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center text-decoration-none h-100">
+          <div>
+            <h6 class="m-0 text-white fw-bold">Frijol - Lote 3</h6>
+            <p class="m-0 small texto_gris">Etapa: Siembra</p>
+          </div>
+          <span class="insignia insignia_alerta">Alerta plaga</span>
+        </a>
+      </div>
+
+      <!-- tarjeta cultivo tomate -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <a href="detalle_cultivo.html" class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center text-decoration-none h-100">
+          <div>
+            <h6 class="m-0 text-white fw-bold">Tomate - Lote 4</h6>
+            <p class="m-0 small texto_gris">Etapa: Crecimiento</p>
+          </div>
+          <span class="insignia insignia_optimo">Óptimo</span>
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- menu flotante desplegable hacia arriba (dropup) k queda accesible abajo en la esquina de la pantalla -->
+  <div class="contenedor_menu_flotante dropup">
+    <!-- boton flotante k activa el menu con las opciones avanzadas -->
+    <button class="boton_mas_flotante dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-plus-lg"></i>
+    </button>
+
+    <!-- lista desplegable con las herramientas de monitoreo -->
+    <div class="dropdown-menu panel_monitoreo dropdown-menu-end shadow">
+      <div class="encabezado_panel">
+        <i class="bi bi-bar-chart-fill me-2"></i> Monitoreo y Análisis
+      </div>
+      <div class="cuerpo_panel">
+        <a href="fase_fenologica.html" class="dropdown-item opcion_panel">
+          <i class="bi bi-bell icon"></i> Fase fenológica
+        </a>
+        <a href="comparar_cultivos.html" class="dropdown-item opcion_panel">
+          <span class="icon_vs">VS</span> Comparar cultivos
+        </a>
+        <a href="cosecha_estimada.html" class="dropdown-item opcion_panel">
+          <i class="bi bi-graph-up-arrow icon"></i> Cosecha estimada
+        </a>
+        <a href="editar_cultivo.html" class="dropdown-item opcion_panel">
+          <i class="bi bi-pencil-fill icon"></i> Editar cultivo
+        </a>
+        <a href="plagas.html" class="dropdown-item opcion_panel">
+          <i class="bi bi-bug-fill icon"></i> Plagas por cultivo
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- menu de abajo k se queda fijo abajo del monitor para navegar rapido -->
+  <div class="navegacion_inferior d-flex justify-content-between">
+    <a href="../iniciosecion/inicio.html" class="text-center small"><i class="bi bi-house-door d-block"></i>Inicio</a>
+    <a href="../cultivos/cultivos.html" class="text-center small active"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
+    <a href="clima.html" class="text-center small"><i class="bi bi-cloud-sun d-block"></i>Clima</a>
+    <a href="insumos.html" class="text-center small"><i class="bi bi-box-seam d-block"></i>Insumos</a>
+    <a href="perfil.html" class="text-center small"><i class="bi bi-person-circle d-block"></i>Perfil</a>
+  </div>
+
+  <!-- script de bootstrap para funciones de javascript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

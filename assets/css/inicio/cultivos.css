@@ -1,0 +1,217 @@
+/* el fondo de toda la pagina */
+body {
+  background-color: #0f2a1d;
+  margin: 0;
+}
+
+/* el contenedor principal k en la pc ocupa toda la pantalla a lo ancho */
+.pantalla {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #0f2a1d;
+  color: white;
+  padding: 20px 16px 90px 16px;
+  min-height: 100vh;
+}
+
+/* el estilo base de los cuadritos o tarjetas */
+.tarjeta {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+/* para k cambie un poquito el color cuando uno pasa el mouse o toca la tarjeta */
+.tarjeta:hover,
+.tarjeta:active,
+.tarjeta:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  text-decoration: none;
+}
+
+/* estilo del boton verde para agregar nuevo cultivo */
+.btn_nuevo {
+  background-color: #22c55e;
+  color: #0f2a1d;
+  font-weight: bold;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+/* la caja de texto para buscar */
+.caja_busqueda {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: none;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 16px;
+}
+
+/* color del placeholder de la caja de busqueda */
+.caja_busqueda::placeholder {
+  color: #8eb39f;
+}
+
+/* foco en la caja de busqueda */
+.caja_busqueda:focus {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: white;
+  box-shadow: none;
+}
+
+/* estilo base de las insignias de estado */
+.insignia {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* insignia de estado optimo verde */
+.insignia_optimo {
+  background-color: rgba(34, 197, 94, 0.2);
+  color: #22c55e;
+}
+
+/* insignia de estado revisar azul */
+.insignia_revisar {
+  background-color: rgba(6, 182, 212, 0.2);
+  color: #06b6d4;
+}
+
+/* insignia de estado alerta plaga rojo */
+.insignia_alerta {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+}
+
+/* para poner las letras en un gris suave */
+.texto_gris {
+  color: #9ca3af;
+}
+
+/* contenedor posicion flotante del desplegable */
+.contenedor_menu_flotante {
+  position: fixed;
+  bottom: 75px;
+  right: 25px;
+  z-index: 100;
+}
+
+/* cuadro estilo tarjeta desplegable */
+.panel_monitoreo {
+  background-color: #163e2b;
+  border: 1px solid #1d734e;
+  border-radius: 12px;
+  width: 240px;
+  padding: 0;
+  margin-bottom: 10px !important;
+  overflow: hidden;
+}
+
+/* encabezado de la tarjeta de monitoreo */
+.encabezado_panel {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #ffffff;
+  border-bottom: 1px solid #1d734e;
+}
+
+/* cuerpo con las opciones */
+.cuerpo_panel {
+  display: flex;
+  flex-direction: column;
+}
+
+/* cada renglon u opcion del cuadro */
+.opcion_panel {
+  padding: 10px 14px;
+  color: #ffffff !important;
+  text-decoration: none;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background-color 0.2s ease;
+}
+
+.opcion_panel:last-child {
+  border-bottom: none;
+}
+
+.opcion_panel:hover,
+.opcion_panel:focus {
+  background-color: rgba(34, 197, 94, 0.15) !important;
+  color: #22c55e !important;
+}
+
+.opcion_panel .icon {
+  color: #22c55e;
+  font-size: 14px;
+}
+
+.opcion_panel .icon_vs {
+  color: #22c55e;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+/* boton flotante principal verde */
+.boton_mas_flotante {
+  width: 48px;
+  height: 48px;
+  background-color: #22c55e;
+  color: #0f2a1d;
+  border: none;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* quita la flecha por defecto de bootstrap en el boton desplegable */
+.boton_mas_flotante::after {
+  display: none;
+}
+
+/* la barra del menu de abajo k se queda fija abajo en el monitor del pc */
+.navegacion_inferior {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #0f2a1d;
+  padding: 12px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* los links del menu de abajo */
+.navegacion_inferior a {
+  color: white;
+  text-decoration: none;
+}
+
+/* tamaño de los iconos del menu de abajo */
+.navegacion_inferior i {
+  font-size: 18px;
+}
+
+/* reglas para k en pantallas de pc y laptops se acomode con mas espacio */
+@media (min-width: 768px) {
+  .pantalla {
+    padding: 30px 40px 100px 40px;
+  }
+}

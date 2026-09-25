@@ -1,0 +1,132 @@
+/* el fondo de toda la pagina */
+body {
+  background-color: #ffffff;
+  margin: 0;
+}
+
+/* el contenedor principal k simula la pantalla de un celular */
+.pantalla {
+  max-width: 390px;
+  margin: 0 auto;
+  background-color: #0f2a1d;
+  color: white;
+  padding: 20px 16px 90px 16px;
+  min-height: 100vh;
+}
+
+/* el estilo base de los cuadritos o tarjetas */
+.tarjeta {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+/* para k cambie un poquito el color cuando uno pasa el mouse o toca la tarjeta */
+.tarjeta:hover,
+.tarjeta:active,
+.tarjeta:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  text-decoration: none;
+}
+
+/* boton cuadrado para devolverse con el icono de la flecha */
+.boton_atras {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #1d734e;
+  border-radius: 12px;
+  background-color: transparent;
+  transition: background-color 0.2s ease;
+}
+
+/* efecto cuando le hunden al boton de atras */
+.boton_atras:hover,
+.boton_atras:active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* las tarjetas de la seccion preferencias que llevan borde verde */
+.tarjeta_con_borde {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid #1d734e;
+  color: white;
+  text-decoration: none;
+  display: flex;
+}
+
+/* efecto hover para las tarjetas con borde verde */
+.tarjeta_con_borde:hover,
+.tarjeta_con_borde:active {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+/* cada opcion de las listas dentro de las tarjetas */
+.item_opcion {
+  color: white;
+  transition: background-color 0.2s ease;
+}
+
+/* efecto hover al pasar sobre una opcion */
+.item_opcion:hover,
+.item_opcion:active {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+}
+
+/* una linea sutil para separar las opciones en una tarjeta */
+.border-bottom-subtil {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* el color de las flechitas de la derecha */
+.icono_verde {
+  color: #1d734e;
+}
+
+/* texto para letras blancas dentro de opciones */
+.texto_blanco {
+  color: #ffffff;
+}
+
+/* para ponerselo a titulos de secciones como CUENTA o PREFERENCIAS */
+.texto_subtitulo {
+  color: #8eb39f;
+  letter-spacing: 0.5px;
+}
+
+/* para ponerselo al boton de cerrar sesion */
+.texto_rojo {
+  color: #e57373;
+}
+
+/* para poner las letras en un gris suave */
+.texto_gris {
+  color: #9ca3af;
+}
+
+/* la barra del menu de abajo k se queda fija al bajar */
+.navegacion_inferior {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 390px;
+  margin: 0 auto;
+  background-color: #0f2a1d;
+  padding: 12px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* los links del menu de abajo */
+.navegacion_inferior a {
+  color: white;
+  text-decoration: none;
+}
+
+/* tamaño de los iconos del menu de abajo */
+.navegacion_inferior i {
+  font-size: 18px;
+}

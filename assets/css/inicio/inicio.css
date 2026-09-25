@@ -1,0 +1,115 @@
+/* el fondo de toda la pagina */
+body {
+  background-color: #ffffff;
+  margin: 0;
+}
+
+/* el contenedor principal k simula la pantalla de un celular */
+.pantalla {
+  max-width: 390px;
+  margin: 0 auto;
+  background-color: #0f2a1d;
+  color: white;
+  padding: 20px 16px 90px 16px;
+  min-height: 100vh;
+}
+
+/* el estilo base de los cuadritos o tarjetas */
+.tarjeta {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+/* para k cambie un poquito el color cuando uno pasa el mouse o toca la tarjeta */
+.tarjeta:hover,
+.tarjeta:active,
+.tarjeta:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  text-decoration: none;
+}
+
+/* el circulo verde grande */
+.punto_verde {
+  width: 20px;
+  height: 20px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* el circulo verde chiquito para los cuadros mas pequeños */
+.punto_verde_pequeno {
+  width: 16px;
+  height: 16px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* el puntito rojo k sale en el historial */
+.punto_rojo {
+  width: 10px;
+  height: 10px;
+  background-color: #ef4444;
+  border-radius: 50%;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+/* para poner las letras en un gris suave */
+.texto_gris {
+  color: #9ca3af;
+}
+
+/* el estilo de los botones de accesos rapidos */
+.boton_acceso {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: white;
+  border: none;
+  text-decoration: none;
+  display: block;
+}
+
+/* para k cambie de color cuando le undo o le paso encima a los botones */
+.boton_acceso:hover,
+.boton_acceso:active,
+.boton_acceso:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  text-decoration: none;
+}
+
+/* la barra del menu de abajo k se queda fija al bajar */
+.navegacion_inferior {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 390px;
+  margin: 0 auto;
+  background-color: #0f2a1d;
+  padding: 12px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* los links del menu de abajo */
+.navegacion_inferior a {
+  color: white;
+  text-decoration: none;
+}
+
+/* tamaño de los iconos del menu de abajo */
+.navegacion_inferior i {
+  font-size: 18px;
+}
+
+/* la caja del historial k le pusimos scroll si hay muchas cosas */
+.contenedor_historial {
+  max-height: 180px; 
+  overflow-y: auto;
+  padding-right: 4px;
+}
+

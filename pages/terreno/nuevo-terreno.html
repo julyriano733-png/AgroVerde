@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Añadir terreno</title>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    
+  <link rel="stylesheet" href="/assets/css/terreno/nuevo-terreno.css">
+</head>
+<body class="bg-agro text-white py-4">
+
+  <div class="container" style="max-width: 400px;">
+    <h2 class="h4 fw-bold mb-4">Añadir terreno</h2>
+
+    <form class="d-flex flex-column gap-3">
+      
+      <div>
+        <label class="form-label fs-7">Nombre del terreno</label>
+        <input type="text" class="form-control field-agro" placeholder="Ingrese el nombre">
+      </div>
+
+      <div>
+        <label class="form-label fs-7">Ubicación del terreno</label>
+        <div class="d-flex gap-2">
+          <input type="text" class="form-control field-agro" placeholder="Ingrese ubicación">
+          <button class="btn btn-verde px-3 fw-bold" type="button">Actual</button>
+        </div>
+      </div>
+
+      <div>
+        <label class="form-label fs-7">Área del terreno</label>
+        <input type="text" class="form-control field-agro" placeholder="Ingrese el área">
+      </div>
+
+      <div>
+        <label class="form-label fs-7">Tipo de suelo</label>
+        <select class="form-select field-agro">
+          <option selected disabled>Seleccione</option>
+          <option value="arenoso">Arenoso</option>
+          <option value="arcilloso">Arcilloso</option>
+          <option value="limoso">Limoso</option>
+          <option value="mixto">Mixto</option>
+          <option value="turboso">Turboso</option>
+          <option value="calcareo">Calcáreo</option>
+        </select>
+      </div>
+
+      <div class="mt-2">
+        <h3 class="h6 fw-bold mb-3">Fuente de agua</h3>
+
+        <label class="form-label fs-7">Tipo de fuente hídrica</label>
+        <div class="fuente-box d-flex p-1 mb-3">
+          <input type="radio" class="btn-check" name="fuente" id="rio" checked>
+          <label class="btn btn-tab flex-fill" for="rio">Río</label>
+
+          <input type="radio" class="btn-check" name="fuente" id="pozo">
+          <label class="btn btn-tab flex-fill" for="pozo">Pozo</label>
+
+          <input type="radio" class="btn-check" name="fuente" id="acueducto">
+          <label class="btn btn-tab flex-fill" for="acueducto">Acueducto</label>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label fs-7">Caudal estimado (L/min)</label>
+          <input type="text" class="form-control field-agro text-center mb-2" value="120">
+          <button type="button" class="btn btn-verde w-100 py-2 fw-bold">Asociar fuente</button>
+        </div>
+
+        <div>
+          <label class="form-label fs-7">Capturar coordenadas</label>
+          <button type="button" class="btn btn-outline-verde w-100 py-2">Usar mi ubicación actual</button>
+        </div>
+      </div>
+
+      <div class="d-flex flex-column gap-2 mt-3">
+        <button type="submit" class="btn btn-verde rounded-pill py-2 fw-bold">Guardar</button>
+        <button type="button" class="btn btn-verde rounded-pill py-2 fw-bold">Cancelar</button>
+      </div>
+
+    </form>
+  </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</body>
+</html>

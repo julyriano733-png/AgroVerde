@@ -16,7 +16,7 @@
 <body>
 
   <!-- este div es la pantalla principal para k no se descuadre en cel -->
-  <div class="pantalla">
+  <div class="pantalla container-fluid">
 
     <!-- la parte de arriba con el titulo y los botones de notificaciones y ajustes -->
     <div class="d-flex justify-content-between align-items-center mb-4">
@@ -34,7 +34,7 @@
     </div>
 
     <!-- tarjeta k muestra como esta el clima y si le hunden va a clima.html -->
-    <a href="clima.html" class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center mb-3">
+    <a href="clima.html" class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center mb-3 text-decoration-none">
       <div>
         <p class="mb-1">Clima actual</p>
         <h3 class="m-0">24°C -Soleado</h3>
@@ -44,8 +44,8 @@
 
     <!-- dos tarjetas juntas una de cultivos y la otra de plagas -->
     <div class="row g-2 mb-2">
-      <div class="col-6">
-        <a href="cultivos.html" class="tarjeta p-3 rounded-4">
+      <div class="col-6 col-md-3">
+        <a href="cultivos.html" class="tarjeta p-3 rounded-4 text-decoration-none d-block">
           <p class="mb-1 small">Cultivos activos</p>
           <div class="d-flex justify-content-between align-items-center">
             <h4 class="m-0">128</h4>
@@ -53,8 +53,8 @@
           </div>
         </a>
       </div>
-      <div class="col-6">
-        <a href="plagas.html" class="tarjeta p-3 rounded-4">
+      <div class="col-6 col-md-3">
+        <a href="plagas.html" class="tarjeta p-3 rounded-4 text-decoration-none d-block">
           <p class="mb-1 small">Alertas plagas</p>
           <div class="d-flex justify-content-between align-items-center">
             <h4 class="m-0">3</h4>
@@ -62,12 +62,9 @@
           </div>
         </a>
       </div>
-    </div>
-
-    <!-- otras dos tarjetas para la humedad y el riesgo del dia -->
-    <div class="row g-2 mb-3">
-      <div class="col-6">
-        <a href="clima.html" class="tarjeta p-3 rounded-4">
+      <!-- otras dos tarjetas para la humedad y el riesgo del dia -->
+      <div class="col-6 col-md-3">
+        <a href="clima.html" class="tarjeta p-3 rounded-4 text-decoration-none d-block">
           <p class="mb-1 small">Humedad</p>
           <div class="d-flex justify-content-between align-items-center">
             <h4 class="m-0">68%</h4>
@@ -75,8 +72,8 @@
           </div>
         </a>
       </div>
-      <div class="col-6">
-        <a href="plagas.html" class="tarjeta p-3 rounded-4">
+      <div class="col-6 col-md-3">
+        <a href="plagas.html" class="tarjeta p-3 rounded-4 text-decoration-none d-block">
           <p class="mb-1 small">Riesgo hoy</p>
           <div class="d-flex justify-content-between align-items-center">
             <h4 class="m-0">62%</h4>
@@ -86,51 +83,56 @@
       </div>
     </div>
 
-    <!-- la cuadricula con botones para ir mas rapido a otras partes -->
-    <p class="mb-2">Accesos rápidos</p>
-    <div class="row g-2 mb-2">
-      <div class="col-4">
-        <a href="plagas.html" class="boton_acceso text-center py-3 rounded-4">Plagas</a>
-      </div>
-      <div class="col-4">
-        <a href="propiedades.html" class="boton_acceso text-center py-3 rounded-4">Propiedades</a>
-      </div>
-      <div class="col-4">
-        <a href="reportes.html" class="boton_acceso text-center py-3 rounded-4">Reportes</a>
-      </div>
-    </div>
-    <div class="row g-2 mb-3">
-      <div class="col-4">
-        <a href="terrenos.html" class="boton_acceso text-center py-3 rounded-4">Terrenos</a>
-      </div>
-      <div class="col-4">
-        <a href="alertas.html" class="boton_acceso text-center py-3 rounded-4">Alertas</a>
-      </div>
-      <div class="col-4">
-        <a href="proveedores.html" class="boton_acceso text-center py-3 rounded-4">Provedores</a>
-      </div>
-    </div>
-
-    <!-- lista de cosas k han pasado recientemente con scroll por si hay mas -->
-    <p class="mb-2">Historial reciente</p>
-
-    <div class="contenedor_historial">
-      <a href="reportes.html" class="tarjeta d-flex mb-2 p-2 rounded-3">
-        <div class="punto_rojo me-2"></div>
-        <div>
-          <p class="m-0 fw-bold">Cultivo registrado</p>
-          <p class="m-0 small texto_gris">Helian Moreno</p>
+    <div class="row g-3">
+      <div class="col-12 col-lg-7">
+        <!-- la cuadricula con botones para ir mas rapido a otras partes -->
+        <p class="mb-2">Accesos rápidos</p>
+        <div class="row g-2 mb-2">
+          <div class="col-4 col-md-4">
+            <a href="plagas.html" class="boton_acceso text-center py-3 rounded-4 text-decoration-none d-block">Plagas</a>
+          </div>
+          <div class="col-4 col-md-4">
+            <a href="propiedades.html" class="boton_acceso text-center py-3 rounded-4 text-decoration-none d-block">Propiedades</a>
+          </div>
+          <div class="col-4 col-md-4">
+            <a href="reportes.html" class="boton_acceso text-center py-3 rounded-4 text-decoration-none d-block">Reportes</a>
+          </div>
         </div>
-      </a>
-
-      <a href="plagas.html" class="tarjeta d-flex mb-2 p-2 rounded-3">
-        <div class="punto_rojo me-2"></div>
-        <div>
-          <p class="m-0 fw-bold">Plaga reportada</p>
-          <p class="m-0 small texto_gris">Finca Manantial</p>
+        <div class="row g-2 mb-3">
+          <div class="col-4 col-md-4">
+            <a href="terrenos.html" class="boton_acceso text-center py-3 rounded-4 text-decoration-none d-block">Terrenos</a>
+          </div>
+          <div class="col-4 col-md-4">
+            <a href="alertas.html" class="boton_acceso text-center py-3 rounded-4 text-decoration-none d-block">Alertas</a>
+          </div>
+          <div class="col-4 col-md-4">
+            <a href="proveedores.html" class="boton_acceso text-center py-3 rounded-4 text-decoration-none d-block">Provedores</a>
+          </div>
         </div>
-      </a>
+      </div>
 
+      <div class="col-12 col-lg-5">
+        <!-- lista de cosas k han pasado recientemente con scroll por si hay mas -->
+        <p class="mb-2">Historial reciente</p>
+
+        <div class="contenedor_historial">
+          <a href="reportes.html" class="tarjeta d-flex mb-2 p-2 rounded-3 text-decoration-none">
+            <div class="punto_rojo me-2"></div>
+            <div>
+              <p class="m-0 fw-bold">Cultivo registrado</p>
+              <p class="m-0 small texto_gris">Helian Moreno</p>
+            </div>
+          </a>
+
+          <a href="plagas.html" class="tarjeta d-flex mb-2 p-2 rounded-3 text-decoration-none">
+            <div class="punto_rojo me-2"></div>
+            <div>
+              <p class="m-0 fw-bold">Plaga reportada</p>
+              <p class="m-0 small texto_gris">Finca Manantial</p>
+            </div>
+          </a>
+        </div>
+      </div>
     </div>
 
   </div>
@@ -141,7 +143,7 @@
     <a href="cultivos.html" class="text-center small"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
     <a href="clima.html" class="text-center small"><i class="bi bi-cloud-sun d-block"></i>Clima</a>
     <a href="insumos.html" class="text-center small"><i class="bi bi-box-seam d-block"></i>Insumos</a>
-<a href="perfil.html" class="text-center small"><i class="bi bi-person-circle d-block"></i>Perfil</a>
+    <a href="perfil.html" class="text-center small"><i class="bi bi-person-circle d-block"></i>Perfil</a>
   </div>
 
   <!-- script de bootstrap para funciones de javascript -->

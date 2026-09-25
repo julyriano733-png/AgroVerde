@@ -1,0 +1,47 @@
+body.bg-agro { background-color: #061911; }
+
+.fs-7 { font-size: 0.85rem; }
+
+/* Campos oscuros */
+.field-agro {
+  background-color: #0f281e !important;
+  border: 1px solid transparent !important;
+  color: #fff !important;
+  border-radius: 12px !important;
+  font-size: 0.9rem;
+  padding: 10px 14px;
+}
+.field-agro::placeholder { color: #4a6d5c; }
+
+/* Botones principales verdes */
+.btn-verde {
+  background-color: #23cc62 !important;
+  color: #000 !important;
+  border: none !important;
+  border-radius: 12px;
+}
+
+/* Tabs de Río / Pozo / Acueducto */
+.fuente-box {
+  background-color: #0f281e;
+  border-radius: 12px;
+}
+.btn-tab {
+  color: #8aa495 !important;
+  border: none !important;
+  border-radius: 10px !important;
+  font-size: 0.85rem;
+}
+.btn-check:checked + .btn-tab {
+  background-color: #23cc62 !important;
+  color: #000 !important;
+  font-weight: 600;
+}
+
+/* Botón de borde */
+.btn-outline-verde {
+  border: 1px solid #184d34 !important;
+  color: #23cc62 !important;
+  border-radius: 12px;
+  font-size: 0.85rem;
+}

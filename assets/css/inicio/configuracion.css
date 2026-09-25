@@ -1,12 +1,13 @@
 /* el fondo de toda la pagina */
 body {
-  background-color: #ffffff;
+  background-color: #0f2a1d;
   margin: 0;
 }
 
 /* el contenedor principal k simula la pantalla de un celular */
 .pantalla {
-  max-width: 390px;
+  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
   background-color: #0f2a1d;
   color: white;
@@ -113,7 +114,8 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  max-width: 390px;
+  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
   background-color: #0f2a1d;
   padding: 12px 20px;
@@ -129,4 +131,11 @@ body {
 /* tamaño de los iconos del menu de abajo */
 .navegacion_inferior i {
   font-size: 18px;
+}
+
+/* reglas responsivas para pantallas medianas y de pc */
+@media (min-width: 768px) {
+  .pantalla {
+    padding: 30px 40px 100px 40px;
+  }
 }

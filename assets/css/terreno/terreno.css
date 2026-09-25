@@ -1,81 +1,85 @@
-:root{
+:root {
   --av-bg: #16261d;      /* fondo general */
-  --av-card: #1e3327;    /* fondo de cada tarjeta, un poco más claro */
-  --av-verde: #22c55e;   /* verde acento (botones, badge "sur") */
-  --av-rojo: #e24b4a;    /* badge "Norte" */
-  --av-amarillo: #f0a92c;/* acento amarillo, disponible si lo necesitas */
+  --av-card: #1e3327;    /* fondo de cada tarjeta */
+  --av-verde: #22c55e;   /* verde acento */
+  --av-rojo: #e24b4a;    /* badge norte */
+  
   --av-texto: #eafaf0;
-  --av-texto-suave: #9db3a6;
+  --av-texto-suave: #ebf1ee;
 }
 
-body{
+body {
   background-color: var(--av-bg);
   color: var(--av-texto);
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  padding-bottom: 90px; 
 }
 
-/* Simula el "marco" del teléfono para que se vea como la captura */
-.telefono{
-  max-width: 380px;
-  margin: 24px auto;
-  padding: 20px 16px 90px 16px;
-  min-height: 720px;
-  background-color: var(--av-bg);
-  border-radius: 24px;
-  position: relative;
-}
 
-.buscador{
+.buscador {
   background-color: var(--av-card);
   border: none;
   color: var(--av-texto-suave);
   border-radius: 14px;
   padding: 10px 16px;
 }
-.buscador:focus{
+
+.buscador:focus {
   background-color: var(--av-card);
   color: var(--av-texto);
   box-shadow: none;
   border: 1px solid var(--av-verde);
 }
 
-.tarjeta-terreno{
+.buscador::placeholder {
+  color: white;
+  opacity: 0.5;
+}
+
+
+.tarjeta-terreno {
   background-color: var(--av-card);
-  border: none;
   border-radius: 16px;
   padding: 16px;
+  color: #ebf1ee;
+  border: none;
 }
-.tarjeta-terreno h6{
+
+.tarjeta-terreno h6 {
   margin-bottom: 4px;
   font-weight: 600;
 }
-.tarjeta-terreno .etapa{
+
+.tarjeta-terreno .etapa {
   color: var(--av-texto-suave);
   font-size: 0.85rem;
 }
 
-.badge-estado{
+
+.badge-estado {
   border-radius: 20px;
   padding: 6px 16px;
   font-weight: 500;
   font-size: 0.85rem;
 }
+
 .badge-sur   { background-color: rgba(34,197,94,0.18); color: var(--av-verde); }
 .badge-casa  { background-color: rgba(59,130,246,0.18); color: #60a5fa; }
 .badge-norte { background-color: rgba(226,75,74,0.18); color: var(--av-rojo); }
 
-.btn-editar{
+.btn-editar {
   background-color: var(--av-bg);
   color: var(--av-texto);
   border-radius: 8px;
-  width: 34px; height: 34px;
+  width: 34px; 
+  height: 34px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border: none;
 }
 
-.btn-historial{
+.btn-historial {
   background-color: var(--av-verde);
   color: #0b1a10;
   border-radius: 30px;
@@ -84,23 +88,32 @@ body{
   border: none;
 }
 
-.nav-inferior{
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
+/* Navegación Inferior Fija */
+.nav-inferior {
+  position: fixed; /* Mantiene la barra siempre en la parte inferior de la pantalla */
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-around;
-  padding: 14px 0;
-  border-top: 1px solid rgba(255,255,255,0.05);
+  padding: 12px 0;
+  background-color: var(--av-bg); 
+  border-top: 1px solid rgba(7, 155, 34, 0.4);
+  z-index: 1000; 
 }
-.nav-inferior .item{
+
+.nav-inferior .item {
   text-align: center;
   color: var(--av-texto-suave);
   font-size: 0.7rem;
+  cursor: pointer;
 }
-.nav-inferior .item.activo{
-  color: var(--av-texto);
+
+.nav-inferior .item.activo {
+  color: var(--av-verde);
 }
-.nav-inferior i{
+
+.nav-inferior i {
   display: block;
   font-size: 1.1rem;
   margin-bottom: 2px;

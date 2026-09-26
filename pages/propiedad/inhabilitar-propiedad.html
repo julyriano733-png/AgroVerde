@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inhabilitar Propiedad - Agro Verde</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Estilos Personalizados Agro Verde -->
+    <link rel="stylesheet" href="/assets/css/propiedad/inhabilitar-propiedad.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100 py-4 py-md-5">
+
+    <!-- Contenedor Web de Escritorio -->
+    <main class="container-lg my-auto">
+
+        <!-- Encabezado -->
+        <header class="d-flex align-items-center justify-content-between mb-4 pb-2">
+            <div class="d-flex align-items-center gap-3">
+                <button class="boton-volver d-flex align-items-center justify-content-center" aria-label="Volver">
+                    <i class="bi bi-arrow-left fs-5"></i>
+                </button>
+                <h1 class="titulo-pagina m-0 fs-2">Propiedades</h1>
+            </div>
+
+            <!-- Logo Agro Verde -->
+            <div class="logo-agroverde d-flex flex-column align-items-center">
+                <img src="/assets/img/agro-verde-con-texto.png" alt="Logo Agro Verde" class="img-fluid">
+            </div>
+        </header>
+
+        <!-- Buscador -->
+        <div class="contenedor-buscador d-flex align-items-center mb-4 px-3 py-3">
+            <i class="bi bi-search me-2 fs-5"></i>
+            <input type="text" id="inputBuscar" class="campo-buscar form-control border-0 p-0 shadow-none" placeholder="Buscar">
+        </div>
+
+        <!-- Lista de propiedades con Selección (Radio) -->
+        <section class="lista-propiedades d-flex flex-column gap-3 mb-4" id="listaPropiedades">
+
+            <!-- Item 1 -->
+            <label class="tarjeta-propiedad d-flex align-items-center justify-content-between p-3 px-md-4 py-md-3">
+                <div class="d-flex align-items-center gap-3">
+                    <input type="radio" name="propiedadSeleccionada" value="1" class="radio-seleccion">
+                    <div>
+                        <h2 class="nombre-propiedad m-0 fs-5">Santandercito</h2>
+                        <span class="tipo-propiedad">Finca</span>
+                    </div>
+                </div>
+                <span class="badge-ubicacion badge-sur px-4 py-1">sur</span>
+            </label>
+
+            <!-- Item 2 -->
+            <label class="tarjeta-propiedad d-flex align-items-center justify-content-between p-3 px-md-4 py-md-3">
+                <div class="d-flex align-items-center gap-3">
+                    <input type="radio" name="propiedadSeleccionada" value="2" class="radio-seleccion">
+                    <div>
+                        <h2 class="nombre-propiedad m-0 fs-5">Reserva</h2>
+                        <span class="tipo-propiedad">Lote</span>
+                    </div>
+                </div>
+                <span class="badge-ubicacion badge-casa px-4 py-1">Casa</span>
+            </label>
+
+            <!-- Item 3 -->
+            <label class="tarjeta-propiedad d-flex align-items-center justify-content-between p-3 px-md-4 py-md-3">
+                <div class="d-flex align-items-center gap-3">
+                    <input type="radio" name="propiedadSeleccionada" value="3" class="radio-seleccion">
+                    <div>
+                        <h2 class="nombre-propiedad m-0 fs-5">Finca el manantial</h2>
+                        <span class="tipo-propiedad">Finca</span>
+                    </div>
+                </div>
+                <span class="badge-ubicacion badge-norte px-4 py-1">Norte</span>
+            </label>
+
+        </section>
+
+        <!-- Separador -->
+        <div class="separador my-4"></div>
+
+        <!-- Botón Inhabilitar -->
+        <div class="d-flex justify-content-center">
+            <button class="boton-inhabilitar w-100 py-3 fw-bold">Inhabilitar propiedad</button>
+        </div>
+
+    </main>
+
+    <!-- JavaScript Personalizado -->
+    <script src="script.js"></script>
+</body>
+
+</html>

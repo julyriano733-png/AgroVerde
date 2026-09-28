@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historial - Agro Verde</title>
+  
+  <!-- traemos bootstrap para k se vea bien sin complicarme tanto -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!-- iconos de bootstrap para los botones de la interfaz -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <!-- estilos del css de historial -->
+  <link rel="stylesheet" href="../../assets/css/inicio/historial.css">
+</head>
+<body>
+
+  <!-- este div es la pantalla principal k en pc se estira a lo ancho para k no quede apretado -->
+  <div class="pantalla container-fluid">
+
+    <!-- encabezado con el boton para devolverse, el titulo de historial y el logo oficial de agro verde -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <div class="d-flex align-items-center gap-3">
+        <!-- boton para devolvernos a la pagina anterior -->
+        <a href="../iniciosecion/inicio.html" class="boton_atras text-white text-decoration-none d-flex align-items-center justify-content-center">
+          <i class="bi bi-chevron-left fs-5"></i>
+        </a>
+        <h4 class="m-0 text-white fw-bold">Historial</h4>
+      </div>
+      <!-- logo oficial de agro verde -->
+      <div class="logo-agroverde">
+        <img src="../../assets/img/agro-verde-con-texto.png" alt="Logo Agro Verde" class="img-fluid" style="max-width: 100px;">
+      </div>
+    </div>
+
+    <!-- botones de filtro para seleccionar que historial queremos ver -->
+    <div class="d-flex gap-2 mb-4 overflow-auto pb-1">
+      <button type="button" class="btn_nuevo border-0 py-1 px-3">Todos</button>
+      <button type="button" class="boton_acceso border-0 py-1 px-3 rounded-4">Cultivos</button>
+      <button type="button" class="boton_acceso border-0 py-1 px-3 rounded-4">Insumos</button>
+      <button type="button" class="boton_acceso border-0 py-1 px-3 rounded-4">Inventario</button>
+    </div>
+
+    <!-- lista del historial agrupada por dias y dividida en columnas para pc -->
+    <div class="row g-4 mb-4">
+      
+      <!-- columna izquierda: eventos ocurridos hoy -->
+      <div class="col-12 col-lg-6">
+        <p class="mb-3 text-white fw-bold small">Hoy</p>
+
+        <div class="d-flex flex-column gap-3">
+          
+          <!-- evento 1 cultivo registrado -->
+          <div class="tarjeta p-3 rounded-4 d-flex align-items-center gap-3">
+            <div class="d-flex align-items-center justify-content-center rounded-circle p-2" style="background-color: rgba(34, 197, 94, 0.15); width: 42px; height: 42px;">
+              <i class="bi bi-plus-circle fs-5 text-success"></i>
+            </div>
+            <div>
+              <p class="m-0 fw-bold text-white">Cultivo registrado</p>
+              <p class="m-0 small texto_gris">Daniela Riaño agregó</p>
+            </div>
+          </div>
+
+          <!-- evento 2 plaga reportada -->
+          <div class="tarjeta p-3 rounded-4 d-flex align-items-center gap-3">
+            <div class="d-flex align-items-center justify-content-center rounded-circle p-2" style="background-color: rgba(239, 68, 68, 0.15); width: 42px; height: 42px;">
+              <i class="bi bi-exclamation-triangle fs-5 text-danger"></i>
+            </div>
+            <div>
+              <p class="m-0 fw-bold text-white">Plaga reportada</p>
+              <p class="m-0 small texto_gris">Helian marcó "Roya" en la finca Manantial</p>
+            </div>
+          </div>
+
+          <!-- evento 3 inicio de sesion -->
+          <div class="tarjeta p-3 rounded-4 d-flex align-items-center gap-3">
+            <div class="d-flex align-items-center justify-content-center rounded-circle p-2" style="background-color: rgba(6, 182, 212, 0.15); width: 42px; height: 42px;">
+              <i class="bi bi-box-arrow-in-right fs-5 text-info"></i>
+            </div>
+            <div>
+              <p class="m-0 fw-bold text-white">Inicio de sesión</p>
+              <p class="m-0 small texto_gris">Dayan Combita accedió al sistema</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- columna derecha: eventos ocurridos ayer -->
+      <div class="col-12 col-lg-6">
+        <p class="mb-3 text-white fw-bold small">Ayer</p>
+
+        <div class="d-flex flex-column gap-3">
+          
+          <!-- evento 4 insumo actualizado -->
+          <div class="tarjeta p-3 rounded-4 d-flex align-items-center gap-3">
+            <div class="d-flex align-items-center justify-content-center rounded-circle p-2" style="background-color: rgba(34, 197, 94, 0.15); width: 42px; height: 42px;">
+              <i class="bi bi-file-earmark-text fs-5 text-success"></i>
+            </div>
+            <div>
+              <p class="m-0 fw-bold text-white">Insumo actualizado</p>
+              <p class="m-0 small texto_gris">Derlin cambió stock de "Fertilizante"</p>
+            </div>
+          </div>
+
+          <!-- evento 5 terreno inhabilitado -->
+          <div class="tarjeta p-3 rounded-4 d-flex align-items-center gap-3">
+            <div class="d-flex align-items-center justify-content-center rounded-circle p-2" style="background-color: rgba(239, 68, 68, 0.15); width: 42px; height: 42px;">
+              <i class="bi bi-upload fs-5 text-danger"></i>
+            </div>
+            <div>
+              <p class="m-0 fw-bold text-white">Terreno inhabilitado</p>
+              <p class="m-0 small texto_gris">Daniela inhabilitó el lote 1</p>
+            </div>
+          </div>
+
+          <!-- evento 6 usuario creado -->
+          <div class="tarjeta p-3 rounded-4 d-flex align-items-center gap-3">
+            <div class="d-flex align-items-center justify-content-center rounded-circle p-2" style="background-color: rgba(34, 197, 94, 0.15); width: 42px; height: 42px;">
+              <i class="bi bi-plus-circle fs-5 text-success"></i>
+            </div>
+            <div>
+              <p class="m-0 fw-bold text-white">Usuario creado</p>
+              <p class="m-0 small texto_gris">Fue creado un nuevo usuario</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- menu de abajo k se queda fijo abajo del monitor para moverte rapido -->
+  <div class="navegacion_inferior d-flex justify-content-between">
+    <!-- enlace k sube un nivel de carpeta para ir al inicio principal -->
+    <a href="../iniciosecion/inicio.html" class="text-center small"><i class="bi bi-house-door d-block"></i>Inicio</a>
+    <!-- enlace k navega a la seccion de cultivos -->
+    <a href="../cultivos/cultivos.html" class="text-center small"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
+    <!-- enlace para la vista del clima -->
+    <a href="clima.html" class="text-center small"><i class="bi bi-cloud-sun d-block"></i>Clima</a>
+    <!-- enlace k sube un nivel de carpeta para ir a la seccion de insumos -->
+    <a href="../insumos/insumos.html" class="text-center small"><i class="bi bi-box-seam d-block"></i>Insumos</a>
+    <!-- enlace k sube un nivel de carpeta para ir a la vista de perfil -->
+    <a href="../perfil/perfil.html" class="text-center small"><i class="bi bi-person-circle d-block"></i>Perfil</a>
+  </div>
+
+  <!-- script de bootstrap para funciones de javascript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

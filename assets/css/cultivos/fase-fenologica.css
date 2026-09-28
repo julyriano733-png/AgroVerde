@@ -1,0 +1,114 @@
+body {
+    background-color: #0f2e20;
+    color: white;
+    max-width: 480px;
+    padding-bottom: 30px;
+}
+
+/* Parte de arriba */
+.btn-volver {
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 56px;
+    height: 56px;
+}
+
+/* Desplegable */
+.campo {
+    background-color: #1a4632;
+    border-radius: 10px;
+    padding: 12px 16px;
+    cursor: pointer;
+}
+
+.lista {
+    background-color: #1a4632;
+    border-radius: 12px;
+    padding: 10px;
+    margin-top: 8px;
+}
+
+.opcion {
+    padding: 3px 8px;
+    font-size: 14px;
+    border-radius: 20px;
+}
+
+.opcion-activa {
+    background-color: #22c55e;
+    color: #06210f;
+    font-weight: 600;
+}
+
+/* Tarjeta de recomendaciones */
+.tarjeta-fase {
+    background-color: #14261c;
+    border: none;
+    border-radius: 14px;
+    padding: 16px;
+    color: white;
+}
+
+.etapa {
+    background-color: #22c55e;
+    color: #06210f;
+    border-radius: 20px;
+    font-size: 12px;
+    text-align: center;
+    padding: 6px 0;
+    margin-bottom: 20px;
+}
+
+.recomendacion {
+    border: 2px solid #22c55e;
+    border-radius: 20px;
+    color: #22c55e;
+    font-size: 12px;
+    padding: 8px 14px;
+    margin-bottom: 16px;
+}
+
+.punto {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.punto-verde {
+    background-color: #22c55e;
+}
+
+.punto-rojo {
+    background-color: #ef4444;
+}
+
+.punto-amarillo {
+    background-color: #facc15;
+}
+
+.punto-azul {
+    background-color: #3b82f6;
+}
+
+/* Proxima etapa */
+.proxima {
+    border-bottom: 1px solid #b6cbbf;
+    padding: 10px 12px;
+}
+
+.texto-gris {
+    color: #b6cbbf;
+}

@@ -1,140 +1,192 @@
+/* el fondo de toda la pagina */
 body {
-    background-color: #0d2818;
-    color: #fff;
-    padding-bottom: 90px;
+  background-color: #0f2a1d;
+  margin: 0;
 }
 
-.btn-verde {
-    background-color: #3fae5a;
-    color: #fff;
-    border: none;
+/* el contenedor principal k en la pc ocupa toda la pantalla a lo ancho */
+.pantalla {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #0f2a1d;
+  color: white;
+  padding: 20px 16px 90px 16px;
+  min-height: 100vh;
 }
 
-.btn-verde:hover {
-    background-color: #359350;
-    color: #fff;
+/* el estilo base de los cuadritos o tarjetas */
+.tarjeta {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: white;
+  text-decoration: none;
+  display: block;
 }
 
-/* Buscador */
-.buscador {
-    background-color: #16391f;
-    border: none;
-    border-radius: 10px;
-    color: #fff;
+/* para k cambie un poquito el color cuando uno pasa el mouse o toca la tarjeta */
+.tarjeta:hover,
+.tarjeta:active,
+.tarjeta:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  text-decoration: none;
 }
 
-.buscador::placeholder {
-    color: #8fae9a;
+/* boton cuadrado para devolverse con el icono de la flecha */
+.boton_atras {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #1d734e;
+  border-radius: 12px;
+  background-color: transparent;
+  transition: background-color 0.2s ease;
 }
 
-.buscador:focus {
-    background-color: #16391f;
-    color: #fff;
-    box-shadow: 0 0 0 0.2rem rgba(63, 174, 90, 0.35);
+/* efecto cuando le hunden al boton de atras */
+.boton_atras:hover,
+.boton_atras:active {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Filtros (Todas, Insecto, Hongo, Bacteria) */
-.filtros {
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    scrollbar-width: none;
+/* estilo del boton verde para agregar nueva plaga */
+.btn_nuevo {
+  background-color: #22c55e;
+  color: #0f2a1d;
+  font-weight: bold;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
 }
 
-.filtros::-webkit-scrollbar {
-    display: none;
+/* efecto al pasar el mouse sobre el boton verde */
+.btn_nuevo:hover,
+.btn_nuevo:active {
+  background-color: #16a34a;
+  color: #ffffff;
 }
 
-.chip {
-    background-color: #123421;
-    color: #fff;
-    border: 1px solid #1f4a2e;
-    border-radius: 50px;
-    padding: 6px 18px;
-    white-space: nowrap;
-    font-size: 0.9rem;
+/* estilo del boton rojo para inhabilitar plagas */
+.btn_inhabilitar {
+  background-color: #ef4444;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  border: none;
+  transition: background-color 0.2s ease;
 }
 
-.chip.activo {
-    background-color: #6b4a44;
-    border-color: #6b4a44;
-    font-weight: bold;
+/* efecto al pasar el mouse sobre el boton rojo */
+.btn_inhabilitar:hover,
+.btn_inhabilitar:active {
+  background-color: #dc2626;
+  color: #ffffff;
 }
 
-/* Items del catálogo */
-.item-plaga {
-    background-color: #16391f;
-    border-radius: 12px;
-    padding: 12px 16px;
+/* estilo de los botones del filtro (todas, insecto, hongo, etc.) */
+.boton_acceso {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: white;
+  border: none;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.2s ease;
 }
 
-.item-plaga small {
-    color: #a9bfb0;
+/* para k cambie de color cuando le undo o le paso el mouse encima a los botones de filtro */
+.boton_acceso:hover,
+.boton_acceso:active,
+.boton_acceso:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  text-decoration: none;
 }
 
-/* Niveles de riesgo */
-.nivel {
-    border-radius: 50px;
-    padding: 4px 22px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    min-width: 80px;
-    text-align: center;
+/* la caja de texto para buscar plagas en el catalogo */
+.caja_busqueda {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid #1d734e;
+  color: white;
+  border-radius: 12px;
+  padding: 10px 16px;
+  color-scheme: dark;
 }
 
-.nivel-alto {
-    background-color: #6b3b3b;
-    color: #ff8f8f;
+/* color del placeholder en las cajas de texto */
+.caja_busqueda::placeholder {
+  color: #8eb39f;
 }
 
-.nivel-medio {
-    background-color: #1f7a86;
-    color: #7fe9f5;
+/* foco cuando uno entra a escribir en la caja de busqueda */
+.caja_busqueda:focus {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: white;
+  border-color: #22c55e;
+  box-shadow: none;
 }
 
-.nivel-bajo {
-    background-color: #1c4a2a;
-    color: #5fe08a;
+/* estilo base de las insignias de estado y nivel de riesgo */
+.insignia {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
 }
 
-/* Botón inferior */
-.btn-inhabilitar {
-    background-color: #b96060;
-    color: #fff;
+/* insignia de nivel de riesgo bajo en verde */
+.insignia_optimo {
+  background-color: rgba(34, 197, 94, 0.2);
+  color: #22c55e;
 }
 
-/* Navegación Inferior Fija */
-.nav-inferior {
-  position: fixed; /* Mantiene la barra siempre en la parte inferior de la pantalla */
+/* insignia de nivel de riesgo medio en azul */
+.insignia_revisar {
+  background-color: rgba(6, 182, 212, 0.2);
+  color: #06b6d4;
+}
+
+/* insignia de nivel de riesgo alto en rojo */
+.insignia_alerta {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+}
+
+/* para poner las letras en un gris suave */
+.texto_gris {
+  color: #9ca3af;
+}
+
+/* la barra del menu de abajo k se queda fija abajo en el monitor del pc */
+.navegacion_inferior {
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  display: flex;
-  justify-content: space-around;
-  padding: 12px 0;
-  background-color: var(--av-bg); 
-  border-top: 1px solid rgba(7, 155, 34, 0.4);
-  z-index: 1000; 
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #0f2a1d;
+  padding: 12px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1000;
 }
 
-.nav-inferior .item {
-  text-align: center;
-  color: var(--av-texto-suave);
-  font-size: 0.7rem;
-  cursor: pointer;
+/* los links del menu de abajo */
+.navegacion_inferior a {
+  color: white;
+  text-decoration: none;
 }
 
-.nav-inferior .item.activo {
-  color: var(--av-verde);
+/* tamaño de los iconos del menu de abajo */
+.navegacion_inferior i {
+  font-size: 18px;
 }
 
-.nav-inferior i {
-  display: block;
-  font-size: 1.1rem;
-  margin-bottom: 2px;
-}
-/* Logo Imagen Agro Verde */
-.logo-agroverde img {
-    max-width: 120px;
-    height: auto;
-    object-fit: contain;
+/* reglas para k en pantallas de pc y laptops se acomode con mas espacio */
+@media (min-width: 768px) {
+  .pantalla {
+    padding: 30px 40px 100px 40px;
+  }
 }

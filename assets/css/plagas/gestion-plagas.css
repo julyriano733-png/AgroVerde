@@ -1,209 +1,188 @@
+/* el fondo de toda la pagina */
 body {
-    background-color: #0d2818;
-    color: #fff;
-    padding-bottom: 90px;
+  background-color: #0f2a1d;
+  margin: 0;
 }
 
-/* Encabezado */
-.btn-volver {
-    width: 36px;
-    height: 36px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #cfe5d6;
-    border-radius: 8px;
-    color: #fff;
-    text-decoration: none;
+/* el contenedor principal k en la pc ocupa toda la pantalla a lo ancho */
+.pantalla {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #0f2a1d;
+  color: white;
+  padding: 20px 16px 90px 16px;
+  min-height: 100vh;
 }
 
-.btn-volver:hover {
-    background-color: #16391f;
-    color: #fff;
+/* el estilo base de los cuadritos o tarjetas */
+.tarjeta {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: white;
+  text-decoration: none;
+  display: block;
 }
 
-.logo {
-    text-align: center;
-    line-height: 1.1;
-}
-/* Logo Imagen Agro Verde */
-.logo-agroverde img {
-    max-width: 120px;
-    height: auto;
-    object-fit: contain;
+/* para k cambie un poquito el color cuando uno pasa el mouse o toca la tarjeta */
+.tarjeta:hover,
+.tarjeta:active,
+.tarjeta:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  text-decoration: none;
 }
 
-/* Buscador */
-.buscador {
-    background-color: #16391f;
-    border: none;
-    border-radius: 10px;
-    color: #fff;
+/* boton cuadrado para devolverse con el icono de la flecha */
+.boton_atras {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #1d734e;
+  border-radius: 12px;
+  background-color: transparent;
+  transition: background-color 0.2s ease;
 }
 
-.buscador::placeholder {
-    color: #8fae9a;
+/* efecto cuando le hunden al boton de atras */
+.boton_atras:hover,
+.boton_atras:active {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-.buscador:focus {
-    background-color: #16391f;
-    color: #fff;
-    box-shadow: 0 0 0 0.2rem rgba(63, 174, 90, 0.35);
+/* estilo del boton verde para agregar o guardar registros */
+.btn_nuevo {
+  background-color: #22c55e;
+  color: #0f2a1d;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
 }
 
-/* Lista de inhabilitar */
-.item-plaga {
-    background-color: #16391f;
-    border-radius: 12px;
-    padding: 12px 16px;
-    cursor: pointer;
+/* efecto al pasar el mouse sobre el boton verde */
+.btn_nuevo:hover,
+.btn_nuevo:active {
+  background-color: #16a34a;
+  color: #ffffff;
 }
 
-.item-plaga small {
-    color: #a9bfb0;
+/* estilo del boton rojo para inhabilitar o borrar plagas */
+.btn_inhabilitar {
+  background-color: #ef4444;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  border: none;
+  transition: background-color 0.2s ease;
 }
 
-.radio-plaga {
-    width: 20px;
-    height: 20px;
-    margin: 0;
-    flex-shrink: 0;
-    background-color: transparent;
-    border: 2px solid #8fae9a;
-    cursor: pointer;
+/* efecto al pasar el mouse sobre el boton rojo */
+.btn_inhabilitar:hover,
+.btn_inhabilitar:active {
+  background-color: #dc2626;
+  color: #ffffff;
 }
 
-.radio-plaga:checked {
-    background-color: #3fae5a;
-    border-color: #3fae5a;
+/* las cajas de texto e inputs de los formularios */
+.caja_busqueda {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid #1d734e;
+  color: white;
+  border-radius: 12px;
+  padding: 10px 16px;
+  color-scheme: dark;
 }
 
-.radio-plaga:focus {
-    box-shadow: 0 0 0 0.2rem rgba(63, 174, 90, 0.35);
+/* color del placeholder en las cajas de texto */
+.caja_busqueda::placeholder {
+  color: #8eb39f;
 }
 
-/* Estados */
-.estado {
-    border-radius: 50px;
-    padding: 4px 14px;
-    font-size: 0.8rem;
-    font-weight: 500;
-    white-space: nowrap;
+/* foco cuando uno entra a escribir en la caja */
+.caja_busqueda:focus {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: white;
+  border-color: #22c55e;
+  box-shadow: none;
 }
 
-.estado-optimo {
-    background-color: #1c4a2a;
-    color: #5fe08a;
-}
-
-.estado-revisar {
-    background-color: #1f7a86;
-    color: #7fe9f5;
-}
-
-.estado-alerta {
-    background-color: #6b3b3b;
-    color: #ff8f8f;
-}
-
-/* Formularios */
-.etiqueta {
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin-bottom: 4px;
-}
-
-.campo {
-    background-color: #0f2a1a;
-    border: 1px solid #1f4a2e;
-    border-radius: 8px;
-    color: #fff;
-    color-scheme: dark;
-}
-
-.campo::placeholder {
-    color: #6f8f7b;
-}
-
-.campo:focus {
-    background-color: #0f2a1a;
-    color: #fff;
-    border-color: #3fae5a;
-    box-shadow: 0 0 0 0.2rem rgba(63, 174, 90, 0.25);
-}
-
-/* Resumen (pantalla modificar) */
-.resumen {
-    background-color: #16391f;
-    border-radius: 15px;
-    padding: 16px;
-}
-
-.badge-estado {
-    background-color: #2c5638;
-    color: #fff;
-}
-
-/* Botones */
-.btn-inhabilitar {
-    background-color: #b96060;
-    color: #fff;
-}
-
-.btn-inhabilitar:hover {
-    background-color: #a55252;
-    color: #fff;
-}
-
-.btn-guardar {
-    background-color: #3ddc84;
-    color: #04240f;
-    font-weight: bold;
-}
-
-.btn-guardar:hover {
-    background-color: #33c374;
-    color: #04240f;
-}
-
-.btn-actualizar {
-    background-color: #2f8f4a;
-    color: #04240f;
-    font-weight: bold;
-}
-
-.btn-actualizar:hover {
-    background-color: #29793f;
-    color: #04240f;
-}
-
-/* Navegación Inferior Fija */
-.nav-inferior {
-  position: fixed; /* Mantiene la barra siempre en la parte inferior de la pantalla */
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: space-around;
-  padding: 12px 0;
-  background-color: var(--av-bg); 
-  border-top: 1px solid rgba(7, 155, 34, 0.4);
-  z-index: 1000; 
-}
-
-.nav-inferior .item {
-  text-align: center;
-  color: var(--av-texto-suave);
-  font-size: 0.7rem;
+/* los botoncitos redondos tipo radio para seleccionar elementos */
+.radio_custom {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 2px solid #8eb39f;
   cursor: pointer;
 }
 
-.nav-inferior .item.activo {
-  color: var(--av-verde);
+/* estilo cuando esta marcado el radio button */
+.radio_custom:checked {
+  background-color: #22c55e;
+  border-color: #22c55e;
 }
 
-.nav-inferior i {
-  display: block;
-  font-size: 1.1rem;
-  margin-bottom: 2px;
+/* estilo base de las insignias de estado */
+.insignia {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* insignia de estado optimo verde */
+.insignia_optimo {
+  background-color: rgba(34, 197, 94, 0.2);
+  color: #22c55e;
+}
+
+/* insignia de estado revisar o iniciada en azul */
+.insignia_revisar {
+  background-color: rgba(6, 182, 212, 0.2);
+  color: #06b6d4;
+}
+
+/* insignia de estado alerta o avanzada en rojo */
+.insignia_alerta {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+}
+
+/* para poner las letras en un gris suave */
+.texto_gris {
+  color: #9ca3af;
+}
+
+/* la barra del menu de abajo k se queda fija abajo en el monitor del pc */
+.navegacion_inferior {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #0f2a1d;
+  padding: 12px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+}
+
+/* los links del menu de abajo */
+.navegacion_inferior a {
+  color: white;
+  text-decoration: none;
+}
+
+/* tamaño de los iconos del menu de abajo */
+.navegacion_inferior i {
+  font-size: 18px;
+}
+
+/* reglas para k en pantallas de pc y laptops se acomode con mas espacio */
+@media (min-width: 768px) {
+  .pantalla {
+    padding: 30px 40px 100px 40px;
+  }
 }

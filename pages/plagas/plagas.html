@@ -1,95 +1,125 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plagas - Agro Verde</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="/assets/css/plagas/plagas.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plagas - Agro Verde</title>
+  
+  <!-- traemos bootstrap para k se vea bien sin complicarme tanto -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!-- iconos de bootstrap para la interfaz y el menu de abajo -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <!-- estilos del css de plagas -->
+  <link rel="stylesheet" href="../../assets/css/plagas/plagas.css">
 </head>
 <body>
 
-    <div class="container py-3">
+  <!-- este div es la pantalla principal k en pc se estira a lo ancho para k no quede apretado -->
+  <div class="pantalla container-fluid">
 
-        <!-- Encabezado -->
-        <div class="d-flex justify-content-between align-items-center mb-3">
-            <h4 class="mb-0">Plagas</h4>
-           <!-- Logo Agro Verde -->
-            <div class="logo-agroverde d-flex flex-column align-items-center">
-                <img src="/assets/img/agro-verde-con-texto.png" alt="Logo Agro Verde" class="img-fluid">
+    <!-- parte de arriba con el titulo y el boton para agregar nueva plaga -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h4 class="m-0 text-white fw-bold">Plagas</h4>
+      <!-- boton k conecta directamente con el formulario para crear una nueva plaga -->
+      <a href="nueva-plaga.html" class="btn_nuevo text-decoration-none">
+        + Nuevo
+      </a>
+    </div>
+
+    <!-- tarjeta k muestra el resumen de las alertas de plagas detectadas -->
+    <div class="tarjeta p-3 rounded-4 mb-4">
+      <div class="d-flex align-items-center mb-2">
+        <div class="punto_rojo me-2"></div>
+        <span class="small">Plaga detectada en lote 3</span>
+      </div>
+      <div class="d-flex align-items-center mb-2">
+        <div class="punto_verde_pequeno me-2"></div>
+        <span class="small">Control de plaga en proceso - Lote 2</span>
+      </div>
+      <div class="d-flex align-items-center">
+        <div class="punto_verde_pequeno me-2"></div>
+        <span class="small">Lote 1 libre de amenaza</span>
+      </div>
+    </div>
+
+    <!-- lista de tarjetas de plagas acomodadas en columnas para pantalla de pc -->
+    <div class="row g-3 mb-4">
+      
+      <!-- tarjeta de reporte de plaga en cultivo de maiz -->
+      <div class="col-12 col-md-6">
+        <div class="tarjeta p-3 rounded-4 d-flex flex-column justify-content-between h-100">
+          <div class="d-flex justify-content-between align-items-start mb-2">
+            <div>
+              <h5 class="m-0 text-white fw-bold">Maíz - Lote 1</h5>
+              <span class="insignia insignia_alerta mt-2 d-inline-block">Avanzada</span>
             </div>
-        </header>
-            <button class="btn btn-verde rounded-pill px-3">+ Nuevo</button>
+            <div class="text-end">
+              <p class="m-0 fw-bold">Gusano</p>
+              <p class="m-0 small texto_gris">14/06/2026</p>
+            </div>
+          </div>
+          <div class="d-flex gap-2 mt-3">
+            <!-- boton para ver la informacion detallada o notas del registro -->
+            <a href="modificar-plaga.html" class="btn_nuevo text-center text-decoration-none flex-fill">Notas</a>
+            <!-- boton k lleva a la pantalla para editar este registro de plaga -->
+            <a href="modificar-plaga.html" class="btn_nuevo text-center text-decoration-none flex-fill">Modificar</a>
+          </div>
         </div>
+      </div>
 
-        <!-- Tarjeta de alertas -->
-        <div class="card card-custom p-3 mb-4">
-            <div class="d-flex align-items-center mb-2">
-                <span class="punto bg-danger"></span>
-                <span class="ms-2">Plaga detectada en lote 3</span>
+      <!-- tarjeta de reporte de plaga en cultivo de cafe -->
+      <div class="col-12 col-md-6">
+        <div class="tarjeta p-3 rounded-4 d-flex flex-column justify-content-between h-100">
+          <div class="d-flex justify-content-between align-items-start mb-2">
+            <div>
+              <h5 class="m-0 text-white fw-bold">Café - Lote 2</h5>
+              <span class="insignia insignia_revisar mt-2 d-inline-block">Iniciada</span>
             </div>
-            <div class="d-flex align-items-center mb-2">
-                <span class="punto bg-info"></span>
-                <span class="ms-2">Plaga detectada en lote 3</span>
+            <div class="text-end">
+              <p class="m-0 fw-bold">Broca del café</p>
+              <p class="m-0 small texto_gris">14/06/2026</p>
             </div>
-            <div class="d-flex align-items-center">
-                <span class="punto bg-success"></span>
-                <span class="ms-2">Plaga detectada en lote 3</span>
-            </div>
+          </div>
+          <div class="d-flex gap-2 mt-3">
+            <!-- boton para ver la informacion detallada o notas del registro -->
+            <a href="modificar-plaga.html" class="btn_nuevo text-center text-decoration-none flex-fill">Notas</a>
+            <!-- boton k lleva a la pantalla para editar este registro de plaga -->
+            <a href="modificar-plaga.html" class="btn_nuevo text-center text-decoration-none flex-fill">Modificar</a>
+          </div>
         </div>
-
-        <!-- Tarjeta Maíz -->
-        <div class="card card-custom p-3 mb-3">
-            <div class="d-flex justify-content-between align-items-start">
-                <div>
-                    <h5>Maíz - Lote 1</h5>
-                    <span class="badge badge-estado rounded-pill px-3 py-2">Avanzada</span>
-                </div>
-                <div class="text-end">
-                    <div>Gusano</div>
-                    <div>14/06/2026</div>
-                </div>
-            </div>
-            <div class="d-flex gap-2 mt-3">
-                <button class="btn btn-verde rounded-pill flex-fill">Notas</button>
-                <button class="btn btn-verde rounded-pill flex-fill">Modificar</button>
-            </div>
-        </div>
-
-        <!-- Tarjeta Café -->
-        <div class="card card-custom p-3 mb-4">
-            <div class="d-flex justify-content-between align-items-start">
-                <div>
-                    <h5>Café - Lote 2</h5>
-                    <span class="badge badge-estado rounded-pill px-3 py-2">Iniciada</span>
-                </div>
-                <div class="text-end">
-                    <div>broca del café</div>
-                    <div>14/06/2026</div>
-                </div>
-            </div>
-            <div class="d-flex gap-2 mt-3">
-                <button class="btn btn-verde rounded-pill flex-fill">Notas</button>
-                <button class="btn btn-verde rounded-pill flex-fill">Modificar</button>
-            </div>
-        </div>
-
-        <!-- Botones grandes -->
-        <button class="btn btn-catalogo w-100 rounded-pill mb-3 py-2">Catalogo de plagas</button>
-        <button class="btn btn-inhabilitar w-100 rounded-pill py-2">Inhabilitar Plaga</button>
+      </div>
 
     </div>
 
-    <!-- Barra de navegación inferior -->
-   <div class="nav-inferior">
-        <div class="item activo"><i class="bi bi-house-door-fill"></i>Inicio</div>
-        <div class="item"><i class="bi bi-flower2"></i>Cultivos</div>
-        <div class="item"><i class="bi bi-cloud-sun"></i>Clima</div>
-        <div class="item"><i class="bi bi-box-seam"></i>Insumos</div>
-        <div class="item"><i class="bi bi-person"></i>Perfil</div>
+    <!-- botones principales para ir al catalogo e inhabilitar plaga -->
+    <div class="row g-2 mb-4">
+      <div class="col-12 col-md-6">
+        <!-- boton k lleva a la lista del catalogo general de plagas -->
+        <a href="catalogo-plagas.html" class="boton_acceso text-center py-3 rounded-4 text-decoration-none d-block">Catálogo de plagas</a>
+      </div>
+      <div class="col-12 col-md-6">
+        <!-- boton k abre la vista para desactivar o inhabilitar una plaga -->
+        <a href="inhabilitar-plaga.html" class="boton_acceso text-center py-3 rounded-4 text-decoration-none d-block">Inhabilitar Plaga</a>
+      </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </div>
+
+  <!-- menu de abajo k se queda fijo abajo del monitor para navegar rapido -->
+  <div class="navegacion_inferior d-flex justify-content-between">
+    <!-- enlace k sube un nivel de carpeta para ir al inicio de sesion principal -->
+    <a href="../iniciosecion/inicio.html" class="text-center small"><i class="bi bi-house-door d-block"></i>Inicio</a>
+    <!-- enlace k navega a la seccion de cultivos -->
+    <a href="../cultivos/ver-cultivo.html" class="text-center small"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
+    <!-- enlace para la vista del clima -->
+    <a href="clima.html" class="text-center small"><i class="bi bi-cloud-sun d-block"></i>Clima</a>
+    <!-- enlace k sube un nivel de carpeta para ir a la seccion de insumos -->
+    <a href="../insumos/insumos.html" class="text-center small"><i class="bi bi-box-seam d-block"></i>Insumos</a>
+    <!-- enlace k sube un nivel de carpeta para ir a la vista de perfil -->
+    <a href="../perfil/perfil.html" class="text-center small"><i class="bi bi-person-circle d-block"></i>Perfil</a>
+  </div>
+
+  <!-- script de bootstrap para funciones de javascript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>

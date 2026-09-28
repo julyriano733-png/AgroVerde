@@ -1,87 +1,110 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inhabilitar plaga - Agro Verde</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="/assets/css/plagas/gestion-plagas.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inhabilitar plaga - Agro Verde</title>
+  
+  <!-- traemos bootstrap para k se vea bien sin complicarme tanto -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!-- iconos de bootstrap para los botones y la flecha de devolverse -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <!-- estilos del css de plagas -->
+  <link rel="stylesheet" href="../../assets/css/plagas/gestion-plagas.css">
 </head>
 <body>
 
-    <div class="container py-3">
+  <!-- este div es la pantalla principal k en pc se acomoda centrada para k no quede estirada -->
+  <div class="pantalla container-fluid">
 
-        <!-- Encabezado -->
-        <div class="d-flex justify-content-between align-items-center mb-3">
-            <a href="plagas.html" class="btn-volver" aria-label="Volver"><i class="bi bi-arrow-left"></i></a>
-            <h4 class="mb-0">Inhabilitar plaga</h4>
-            <!-- Logo Agro Verde -->
-            <div class="logo-agroverde d-flex flex-column align-items-center">
-                <img src="/assets/img/agro-verde-con-texto.png" alt="Logo Agro Verde" class="img-fluid">
-            </div>
-        </header>
-        </div>
+    <!-- la parte de arriba con el boton de regresar y el titulo de la pagina -->
+    <div class="d-flex align-items-center mb-4 gap-3">
+      <!-- boton para devolverse a la pantalla principal de plagas -->
+      <a href="plagas.html" class="boton_atras text-white text-decoration-none d-flex align-items-center justify-content-center">
+        <i class="bi bi-chevron-left fs-5"></i>
+      </a>
+      <h4 class="m-0 text-white fw-bold">Inhabilitar plaga</h4>
+    </div>
 
-        <!-- Buscador -->
-        <input type="text" class="form-control buscador mb-3" placeholder="Buscar plaga">
+    <!-- buscador y lista de plagas metidos en una tarjeta centrada para k se vea bien en pc y cel -->
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 col-lg-6">
+        
+        <!-- caja de texto para buscar entre las plagas de la lista -->
+        <input type="text" class="form-control caja_busqueda mb-3" placeholder="Buscar plaga">
 
-        <form>
-            <!-- Lista -->
-            <div class="d-flex flex-column gap-2 mb-4">
+        <form action="plagas.html" method="GET">
+          
+          <!-- lista de opciones para seleccionar la plaga a inhabilitar -->
+          <div class="d-flex flex-column gap-2 mb-4">
 
-                <label class="item-plaga d-flex align-items-center gap-3">
-                    <input type="radio" class="form-check-input radio-plaga" name="plaga" value="cogollero">
-                    <div class="flex-grow-1">
-                        <div class="fw-bold">Cogollero - Lote 1</div>
-                        <small>Etapa: leve</small>
-                    </div>
-                    <span class="estado estado-optimo">Óptimo</span>
-                </label>
+            <!-- opcion 1 cogollero -->
+            <label class="tarjeta p-3 rounded-4 d-flex align-items-center gap-3 cursor-pointer">
+              <input type="radio" class="form-check-input radio_custom m-0" name="plaga" value="cogollero">
+              <div class="flex-grow-1">
+                <div class="fw-bold text-white">Cogollero - Lote 1</div>
+                <small class="texto_gris">Etapa: leve</small>
+              </div>
+              <span class="insignia insignia_optimo">Óptimo</span>
+            </label>
 
-                <label class="item-plaga d-flex align-items-center gap-3">
-                    <input type="radio" class="form-check-input radio-plaga" name="plaga" value="broca">
-                    <div class="flex-grow-1">
-                        <div class="fw-bold">Broca del café - Lote 2</div>
-                        <small>Etapa: inicial</small>
-                    </div>
-                    <span class="estado estado-revisar">Revisar</span>
-                </label>
+            <!-- opcion 2 broca del cafe -->
+            <label class="tarjeta p-3 rounded-4 d-flex align-items-center gap-3 cursor-pointer">
+              <input type="radio" class="form-check-input radio_custom m-0" name="plaga" value="broca">
+              <div class="flex-grow-1">
+                <div class="fw-bold text-white">Broca del café - Lote 2</div>
+                <small class="texto_gris">Etapa: inicial</small>
+              </div>
+              <span class="insignia insignia_revisar">Revisar</span>
+            </label>
 
-                <label class="item-plaga d-flex align-items-center gap-3">
-                    <input type="radio" class="form-check-input radio-plaga" name="plaga" value="mosca-blanca">
-                    <div class="flex-grow-1">
-                        <div class="fw-bold">Mosca blanca - Lote 3</div>
-                        <small>Etapa: riesgo bajo</small>
-                    </div>
-                    <span class="estado estado-alerta">Alerta plaga</span>
-                </label>
+            <!-- opcion 3 mosca blanca -->
+            <label class="tarjeta p-3 rounded-4 d-flex align-items-center gap-3 cursor-pointer">
+              <input type="radio" class="form-check-input radio_custom m-0" name="plaga" value="mosca-blanca">
+              <div class="flex-grow-1">
+                <div class="fw-bold text-white">Mosca blanca - Lote 3</div>
+                <small class="texto_gris">Etapa: riesgo bajo</small>
+              </div>
+              <span class="insignia insignia_alerta">Alerta plaga</span>
+            </label>
 
-                <label class="item-plaga d-flex align-items-center gap-3">
-                    <input type="radio" class="form-check-input radio-plaga" name="plaga" value="polilla">
-                    <div class="flex-grow-1">
-                        <div class="fw-bold">Polilla - Lote 4</div>
-                        <small>Etapa: avanzada</small>
-                    </div>
-                    <span class="estado estado-optimo">Óptimo</span>
-                </label>
+            <!-- opcion 4 polilla -->
+            <label class="tarjeta p-3 rounded-4 d-flex align-items-center gap-3 cursor-pointer">
+              <input type="radio" class="form-check-input radio_custom m-0" name="plaga" value="polilla">
+              <div class="flex-grow-1">
+                <div class="fw-bold text-white">Polilla - Lote 4</div>
+                <small class="texto_gris">Etapa: avanzada</small>
+              </div>
+              <span class="insignia insignia_optimo">Óptimo</span>
+            </label>
 
-            </div>
+          </div>
 
-            <button type="submit" class="btn btn-inhabilitar w-100 rounded-3 py-2">Inhabilitar Plaga</button>
+          <!-- boton rojo para confirmar e inhabilitar la plaga seleccionada -->
+          <button type="submit" class="btn_inhabilitar w-100 py-2 text-center">Inhabilitar Plaga</button>
+
         </form>
 
+      </div>
     </div>
 
-    <!-- Barra de navegación inferior -->
-   <div class="nav-inferior">
-        <div class="item activo"><i class="bi bi-house-door-fill"></i>Inicio</div>
-        <div class="item"><i class="bi bi-flower2"></i>Cultivos</div>
-        <div class="item"><i class="bi bi-cloud-sun"></i>Clima</div>
-        <div class="item"><i class="bi bi-box-seam"></i>Insumos</div>
-        <div class="item"><i class="bi bi-person"></i>Perfil</div>
-    </div>
+  </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- menu de abajo k se queda fijo abajo del monitor para moverte rapido -->
+  <div class="navegacion_inferior d-flex justify-content-between">
+    <!-- enlace k sube un nivel de carpeta para ir al inicio principal -->
+    <a href="../iniciosecion/inicio.html" class="text-center small"><i class="bi bi-house-door d-block"></i>Inicio</a>
+    <!-- enlace k navega a la seccion de cultivos -->
+    <a href="../cultivos/ver-cultivo.html" class="text-center small"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
+    <!-- enlace para la vista del clima -->
+    <a href="clima.html" class="text-center small"><i class="bi bi-cloud-sun d-block"></i>Clima</a>
+    <!-- enlace k sube un nivel de carpeta para ir a la seccion de insumos -->
+    <a href="../insumos/insumos.html" class="text-center small"><i class="bi bi-box-seam d-block"></i>Insumos</a>
+    <!-- enlace k sube un nivel de carpeta para ir a la vista de perfil -->
+    <a href="../perfil/perfil.html" class="text-center small"><i class="bi bi-person-circle d-block"></i>Perfil</a>
+  </div>
+
+  <!-- script de bootstrap para funciones de javascript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>

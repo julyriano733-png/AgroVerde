@@ -1,0 +1,209 @@
+body {
+    background-color: #0d2818;
+    color: #fff;
+    padding-bottom: 90px;
+}
+
+/* Encabezado */
+.btn-volver {
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #cfe5d6;
+    border-radius: 8px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-volver:hover {
+    background-color: #16391f;
+    color: #fff;
+}
+
+.logo {
+    text-align: center;
+    line-height: 1.1;
+}
+/* Logo Imagen Agro Verde */
+.logo-agroverde img {
+    max-width: 120px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Buscador */
+.buscador {
+    background-color: #16391f;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.buscador::placeholder {
+    color: #8fae9a;
+}
+
+.buscador:focus {
+    background-color: #16391f;
+    color: #fff;
+    box-shadow: 0 0 0 0.2rem rgba(63, 174, 90, 0.35);
+}
+
+/* Lista de inhabilitar */
+.item-plaga {
+    background-color: #16391f;
+    border-radius: 12px;
+    padding: 12px 16px;
+    cursor: pointer;
+}
+
+.item-plaga small {
+    color: #a9bfb0;
+}
+
+.radio-plaga {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    flex-shrink: 0;
+    background-color: transparent;
+    border: 2px solid #8fae9a;
+    cursor: pointer;
+}
+
+.radio-plaga:checked {
+    background-color: #3fae5a;
+    border-color: #3fae5a;
+}
+
+.radio-plaga:focus {
+    box-shadow: 0 0 0 0.2rem rgba(63, 174, 90, 0.35);
+}
+
+/* Estados */
+.estado {
+    border-radius: 50px;
+    padding: 4px 14px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.estado-optimo {
+    background-color: #1c4a2a;
+    color: #5fe08a;
+}
+
+.estado-revisar {
+    background-color: #1f7a86;
+    color: #7fe9f5;
+}
+
+.estado-alerta {
+    background-color: #6b3b3b;
+    color: #ff8f8f;
+}
+
+/* Formularios */
+.etiqueta {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.campo {
+    background-color: #0f2a1a;
+    border: 1px solid #1f4a2e;
+    border-radius: 8px;
+    color: #fff;
+    color-scheme: dark;
+}
+
+.campo::placeholder {
+    color: #6f8f7b;
+}
+
+.campo:focus {
+    background-color: #0f2a1a;
+    color: #fff;
+    border-color: #3fae5a;
+    box-shadow: 0 0 0 0.2rem rgba(63, 174, 90, 0.25);
+}
+
+/* Resumen (pantalla modificar) */
+.resumen {
+    background-color: #16391f;
+    border-radius: 15px;
+    padding: 16px;
+}
+
+.badge-estado {
+    background-color: #2c5638;
+    color: #fff;
+}
+
+/* Botones */
+.btn-inhabilitar {
+    background-color: #b96060;
+    color: #fff;
+}
+
+.btn-inhabilitar:hover {
+    background-color: #a55252;
+    color: #fff;
+}
+
+.btn-guardar {
+    background-color: #3ddc84;
+    color: #04240f;
+    font-weight: bold;
+}
+
+.btn-guardar:hover {
+    background-color: #33c374;
+    color: #04240f;
+}
+
+.btn-actualizar {
+    background-color: #2f8f4a;
+    color: #04240f;
+    font-weight: bold;
+}
+
+.btn-actualizar:hover {
+    background-color: #29793f;
+    color: #04240f;
+}
+
+/* Navegación Inferior Fija */
+.nav-inferior {
+  position: fixed; /* Mantiene la barra siempre en la parte inferior de la pantalla */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 0;
+  background-color: var(--av-bg); 
+  border-top: 1px solid rgba(7, 155, 34, 0.4);
+  z-index: 1000; 
+}
+
+.nav-inferior .item {
+  text-align: center;
+  color: var(--av-texto-suave);
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+
+.nav-inferior .item.activo {
+  color: var(--av-verde);
+}
+
+.nav-inferior i {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 2px;
+}

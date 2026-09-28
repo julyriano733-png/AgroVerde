@@ -1,0 +1,234 @@
+/* ===== Variables de color ===== */
+:root {
+    --fondo: #123524;
+    --tarjeta: #1a4632;
+    --borde: #235a41;
+    --verde: #22c55e;
+    --texto: #ffffff;
+    --texto-suave: #b6cbbf;
+}
+
+/* ===== General ===== */
+body {
+    background-color: var(--fondo);
+    color: var(--texto);
+    font-family: "Segoe UI", Roboto, sans-serif;
+    max-width: 480px;
+    padding-bottom: 90px; /* espacio para la barra fija */
+}
+
+/* ===== Encabezado ===== */
+.titulo {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.logo {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+/* ===== Selectores desplegables ===== */
+.etiqueta-cultivo {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.desplegable {
+    position: relative;
+}
+
+.selector {
+    display: block;
+    position: relative;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    color: #111;
+    font-size: 0.8rem;
+    text-align: left;
+    padding: 0.5rem 2rem 0.5rem 0.7rem;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+}
+
+/* Quita el triángulo por defecto de details */
+.selector::-webkit-details-marker {
+    display: none;
+}
+
+/* Flecha propia */
+.selector::after {
+    content: "";
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    width: 7px;
+    height: 7px;
+    border-right: 2px solid #111;
+    border-bottom: 2px solid #111;
+    transform: translateY(-70%) rotate(45deg);
+    transition: transform 0.2s;
+}
+
+.desplegable[open] .selector::after {
+    transform: translateY(-30%) rotate(-135deg);
+}
+
+/* En el campo solo se ve el texto del cultivo elegido */
+.txt {
+    display: none;
+}
+
+.desplegable:has(.op-maiz:checked) .txt-maiz,
+.desplegable:has(.op-cafe:checked) .txt-cafe,
+.desplegable:has(.op-frijol:checked) .txt-frijol,
+.desplegable:has(.op-tomate:checked) .txt-tomate {
+    display: inline;
+}
+
+/* Lista que se despliega */
+.lista-opciones {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    margin-top: 0.4rem;
+    background-color: var(--tarjeta);
+    border-radius: 12px;
+    padding: 0.4rem;
+    z-index: 10;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+}
+
+.opcion-oculta {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.lista-opciones label {
+    display: block;
+    font-size: 0.75rem;
+    padding: 3px 0;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.lista-opciones label:hover {
+    color: var(--verde);
+}
+
+/* Opción elegida con borde verde */
+.opcion-oculta:checked + label {
+    border-color: var(--verde);
+}
+
+/* ===== Tarjetas de comparación ===== */
+.tarjeta-cultivo {
+    background-color: var(--tarjeta);
+    border: none;
+    border-radius: 22px;
+    padding: 2rem 0.8rem;
+    text-align: center;
+    height: 100%;
+    color: var(--texto);
+}
+
+.nombre-cultivo {
+    color: var(--verde);
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 1.6rem;
+}
+
+.dato {
+    color: var(--texto-suave);
+    font-size: 0.7rem;
+    margin-bottom: 1.6rem;
+}
+
+.dato:last-child {
+    margin-bottom: 0;
+}
+
+/* VS en el centro entre las dos tarjetas */
+.vs {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.75rem;
+    font-weight: 700;
+    z-index: 2;
+}
+
+/* ===== Recomendación ===== */
+.recomendacion {
+    background-color: var(--tarjeta);
+    border: none;
+    border-radius: 22px;
+    padding: 1.5rem 1.2rem;
+    color: var(--texto);
+}
+
+.recomendacion-titulo {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.recomendacion-texto {
+    color: var(--texto-suave);
+    font-size: 0.75rem;
+}
+
+.punto {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    background-color: var(--verde);
+    border-radius: 50%;
+}
+
+/* ===== Navegación inferior fija ===== */
+.nav-inferior {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #0d2a1c;
+    border-top: 1px solid var(--borde);
+    padding: 0.6rem 0 0.7rem;
+    z-index: 20;
+}
+
+.nav-inferior .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    color: var(--texto-suave);
+    font-size: 0.65rem;
+    text-decoration: none;
+}
+
+.nav-inferior .item i {
+    font-size: 1.25rem;
+}
+
+.nav-inferior .item:hover {
+    color: var(--verde);
+}
+
+.nav-inferior .item.activo {
+    color: var(--verde);
+}

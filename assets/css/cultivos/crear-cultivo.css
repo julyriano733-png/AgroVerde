@@ -1,0 +1,230 @@
+/* ===== Variables de color ===== */
+:root {
+  --fondo: #08150e;
+  --campo-fondo: #122019;
+  --borde: #1e3427;
+  --verde: #22c55e;
+  --texto: #ffffff;
+  --texto-suave: #6f8479;
+}
+
+/* ===== General ===== */
+body {
+  background-color: #000;
+  color: var(--texto);
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+.pantalla {
+  background-color: var(--fondo);
+  max-width: 390px;
+  min-height: 100vh;
+}
+
+/* ===== Encabezado ===== */
+.titulo {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.btn-volver {
+  width: 34px;
+  height: 34px;
+  border: 1.5px solid var(--texto);
+  border-radius: 50%;
+  color: var(--texto);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+/* ===== Labels ===== */
+.form-label {
+  font-size: 0.72rem;
+  color: var(--texto);
+  margin-bottom: 0.3rem;
+}
+
+/* ===== Campos ===== */
+.campo {
+  background-color: var(--campo-fondo);
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  color: var(--texto);
+  font-size: 0.8rem;
+  padding: 0.7rem 0.9rem;
+}
+
+.campo::placeholder {
+  color: var(--texto-suave);
+}
+
+.campo:focus {
+  background-color: var(--campo-fondo);
+  color: var(--texto);
+  border-color: var(--verde);
+  box-shadow: 0 0 0 0.15rem rgba(34, 197, 94, 0.2);
+}
+
+/* Flecha del select en color claro */
+.form-select.campo {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%236f8479' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+}
+
+.form-select.campo option {
+  background-color: var(--campo-fondo);
+  color: var(--texto);
+}
+
+textarea.campo {
+  resize: none;
+}
+
+/* ===== Terreno ===== */
+
+.campo-terreno {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  list-style: none;
+  color: var(--texto-suave);
+  user-select: none;
+}
+
+
+.campo-terreno::-webkit-details-marker {
+  display: none;
+}
+
+/* Flecha propia */
+.campo-terreno::after {
+  content: "";
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--texto-suave);
+  border-bottom: 2px solid var(--texto-suave);
+  transform: translateY(-70%) rotate(45deg);
+  transition: transform 0.2s;
+}
+
+.terreno-desplegable[open] .campo-terreno {
+  border-color: var(--verde);
+}
+
+.terreno-desplegable[open] .campo-terreno::after {
+  transform: translateY(-30%) rotate(-135deg);
+}
+
+/* Texto que se muestra en el campo */
+.txt-valor {
+  display: none;
+}
+
+.terreno-desplegable:has(input:checked) .txt-vacio {
+  display: none;
+}
+
+.terreno-desplegable:has(input:checked) .campo-terreno {
+  color: var(--texto);
+}
+
+.terreno-desplegable:has(#t1:checked) .txt-t1,
+.terreno-desplegable:has(#t2:checked) .txt-t2,
+.terreno-desplegable:has(#t3:checked) .txt-t3 {
+  display: inline;
+}
+
+/* Lista de opciones */
+.lista-terrenos {
+  background-color: var(--campo-fondo);
+  border: 1.5px solid var(--verde);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.lista-terrenos li {
+  border-bottom: 1px solid var(--verde);
+}
+
+.lista-terrenos li:last-child {
+  border-bottom: none;
+}
+
+.opcion-oculta {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.terreno-item {
+  display: block;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.7rem 0;
+  cursor: pointer;
+}
+
+.terreno-item:hover,
+.opcion-oculta:checked + .terreno-item {
+  background-color: rgba(34, 197, 94, 0.15);
+}
+
+/* ===== Cultivos recomendados ===== */
+.card-reco {
+  background-color: var(--campo-fondo);
+  border: 1px solid var(--borde);
+  border-radius: 14px;
+  padding: 0.7rem;
+  height: 100%;
+  position: relative;
+}
+
+.punto {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: var(--verde);
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+.nombre-reco {
+  font-size: 0.85rem;
+}
+
+.compat {
+  display: block;
+  font-size: 0.6rem;
+  color: var(--texto-suave);
+  margin-top: 0.4rem;
+}
+
+/* ===== Botón guardar ===== */
+.btn-guardar {
+  background-color: var(--verde);
+  border: none;
+  border-radius: 10px;
+  color: #06210f;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.8rem;
+}
+
+.btn-guardar:hover,
+.btn-guardar:focus {
+  background-color: #1ea850;
+  color: #06210f;
+}

@@ -1,0 +1,167 @@
+/* ===== Variables de color ===== */
+:root {
+    --fondo: #0f2e20;
+    --tarjeta: #1a4632;
+    --borde: #235a41;
+    --verde: #22c55e;
+    --azul: #38bdf8;
+    --rojo: #ef4444;
+    --texto: #ffffff;
+    --texto-suave: #b6cbbf;
+}
+
+/* ===== General ===== */
+body {
+    background-color: var(--fondo);
+    color: var(--texto);
+    font-family: "Segoe UI", Roboto, sans-serif;
+    max-width: 480px;
+    padding-bottom: 90px; /* espacio para la barra fija */
+}
+
+/* ===== Encabezado ===== */
+.titulo {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.logo {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+/* ===== Tarjeta de cosecha ===== */
+.tarjeta-cosecha {
+    background-color: var(--tarjeta);
+    border: none;
+    border-radius: 18px;
+    padding: 1.2rem;
+    color: var(--texto);
+}
+
+.nombre-lote {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+}
+
+.fecha-siembra {
+    color: var(--texto-suave);
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.fecha-cosecha {
+    color: var(--verde);
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+}
+
+.texto-cosecha {
+    color: var(--texto-suave);
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+/* Barra de avance (82 de 120 días = 68%) */
+.barra-avance {
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+}
+
+.barra-relleno {
+    width: 68%;
+    background-color: var(--verde);
+    border-radius: 10px;
+}
+
+.dia-actual {
+    color: var(--texto-suave);
+    font-size: 0.7rem;
+}
+
+/* ===== Factores considerados ===== */
+.tarjeta-factores {
+    background-color: var(--tarjeta);
+    border: none;
+    border-radius: 18px;
+    padding: 1.2rem;
+    color: var(--texto);
+}
+
+.factores-titulo {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.factor {
+    color: var(--texto-suave);
+    font-size: 0.75rem;
+    margin-bottom: 0.9rem;
+}
+
+.factor:last-child {
+    margin-bottom: 0;
+}
+
+.punto {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.punto-verde {
+    background-color: var(--verde);
+}
+
+.punto-azul {
+    background-color: var(--azul);
+}
+
+.punto-rojo {
+    background-color: var(--rojo);
+}
+
+/* ===== Navegación inferior fija ===== */
+.nav-inferior {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #0a2016;
+    border-top: 1px solid var(--borde);
+    padding: 0.6rem 0 0.7rem;
+    z-index: 20;
+}
+
+.nav-inferior .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    color: var(--texto-suave);
+    font-size: 0.65rem;
+    text-decoration: none;
+}
+
+.nav-inferior .item i {
+    font-size: 1.25rem;
+}
+
+.nav-inferior .item:hover {
+    color: var(--verde);
+}
+
+.nav-inferior .item.activo {
+    color: var(--verde);
+}

@@ -1,0 +1,183 @@
+/* Variables de la paleta Agro Verde */
+:root {
+    --bg-principal: #0F3223;
+    /* Verde oscuro Agro Verde fondo de pantalla completa */
+    --bg-tarjeta: #13382b;
+    /* Verde para las tarjetas de propiedad */
+    --bg-input: #103125;
+    /* Fondo para la barra de búsqueda */
+    --texto-blanco: #FFFFFF;
+    /* Títulos principales */
+    --texto-subtitulo: #CCCCCC;
+    /* Subtítulos */
+    --texto-legal: #38A156;
+    /* Verde claro para legibilidad */
+
+    /* Colores de badges (Pills) */
+    --bg-badge-sur: #143e2d;
+    --texto-badge-sur: #4ade80;
+    --bg-badge-casa: #0a434c;
+    --texto-badge-casa: #38bdf8;
+    --bg-badge-norte: #4a2828;
+    --texto-badge-norte: #f87171;
+
+    /* Botón Inhabilitar */
+    --bg-btn-inhabilitar: #8c4a4a;
+    --bg-btn-inhabilitar-hover: #a15555;
+}
+
+body {
+    background-color: var(--bg-principal);
+    color: var(--texto-blanco);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    min-height: 100vh;
+}
+
+/* Encabezado */
+.boton-volver {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--texto-blanco);
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.boton-volver:hover {
+    background-color: var(--bg-tarjeta);
+}
+
+.titulo-pagina {
+    color: var(--texto-blanco);
+    font-weight: 700;
+}
+
+/* Logo Imagen Agro Verde */
+.logo-agroverde img {
+    max-width: 120px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Buscador */
+.contenedor-buscador {
+    background-color: var(--bg-input);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--texto-subtitulo);
+}
+
+.campo-buscar {
+    background: transparent !important;
+    color: var(--texto-blanco) !important;
+    font-size: 1rem;
+}
+
+.campo-buscar::placeholder {
+    color: var(--texto-subtitulo);
+}
+
+/* Tarjetas de Propiedad con Radio */
+.tarjeta-propiedad {
+    background-color: var(--bg-tarjeta);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.tarjeta-propiedad:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Radio Button Personalizado estilo Circulo */
+.radio-seleccion {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--texto-subtitulo);
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.2s, background-color 0.2s;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.radio-seleccion:checked {
+    border-color: #22c55e;
+    background-color: #22c55e;
+}
+
+.radio-seleccion:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background-color: #000000;
+    border-radius: 50%;
+}
+
+.nombre-propiedad {
+    color: var(--texto-blanco);
+    font-weight: 600;
+}
+
+.tipo-propiedad {
+    color: var(--texto-subtitulo);
+    font-size: 0.9rem;
+}
+
+/* Badges estilo Pill */
+.badge-ubicacion {
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.badge-sur {
+    background-color: var(--bg-badge-sur);
+    color: var(--texto-badge-sur);
+}
+
+.badge-casa {
+    background-color: var(--bg-badge-casa);
+    color: var(--texto-badge-casa);
+}
+
+.badge-norte {
+    background-color: var(--bg-badge-norte);
+    color: var(--texto-badge-norte);
+}
+
+/* Separador */
+.separador {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Botón Inhabilitar */
+.boton-inhabilitar {
+    background-color: var(--bg-btn-inhabilitar);
+    color: var(--texto-blanco);
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    max-width: 400px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.boton-inhabilitar:hover {
+    background-color: var(--bg-btn-inhabilitar-hover);
+}
+
+.boton-inhabilitar:active {
+    transform: scale(0.98);
+}

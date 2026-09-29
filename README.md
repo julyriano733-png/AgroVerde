@@ -80,7 +80,7 @@ Estos módulos ya están hechos en HTML y CSS. Cada uno tiene su carpeta en `pag
 
 ## Equipo de desarrollo: ByteRaíz
 
+- July Daniela Riaño Soto
 - Helian Camilo Moreno Latorre
 - Dayan Leonel Montañez Combita
 - Derlin Yissel Caro Bautista
-- July Daniela Riaño Soto

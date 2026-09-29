@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de plagas - Agro Verde</title>
+  
+  <!-- traemos bootstrap para k se vea bien sin complicarme tanto -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!-- iconos de bootstrap para los botones y la flecha de devolverse -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <!-- estilos del css de plagas -->
+  <link rel="stylesheet" href="../../assets/css/plagas/catalogo-plagas.css">
+</head>
+<body>
+
+  <!-- este div es la pantalla principal k en pc se estira a lo ancho para k no quede apretado -->
+  <div class="pantalla container-fluid">
+
+    <!-- parte de arriba con el boton de regresar el titulo y el boton de nuevo -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <div class="d-flex align-items-center gap-3">
+        <!-- boton para devolverse a la pantalla principal de plagas -->
+        <a href="plagas.html" class="boton_atras text-white text-decoration-none d-flex align-items-center justify-content-center">
+          <i class="bi bi-chevron-left fs-5"></i>
+        </a>
+        <h4 class="m-0 text-white fw-bold">Catálogo de plagas</h4>
+      </div>
+      <!-- boton verde k conecta con el formulario de nueva plaga -->
+      <a href="nueva-plaga.html" class="btn_nuevo text-decoration-none">
+        + Nuevo
+      </a>
+    </div>
+
+    <!-- caja de texto para buscar plagas en el catalogo -->
+    <div class="mb-3">
+      <input type="text" class="form-control caja_busqueda" placeholder="Buscar plaga">
+    </div>
+
+    <!-- botones de filtro por tipo de plaga -->
+    <div class="d-flex gap-2 mb-4 overflow-auto pb-1">
+      <button type="button" class="btn_nuevo border-0 py-1 px-3">Todas</button>
+      <button type="button" class="boton_acceso border-0 py-1 px-3 rounded-4">Insecto</button>
+      <button type="button" class="boton_acceso border-0 py-1 px-3 rounded-4">Hongo</button>
+      <button type="button" class="boton_acceso border-0 py-1 px-3 rounded-4">Bacteria</button>
+    </div>
+
+    <!-- lista de plagas del catalogo organizadas en columnas para pantalla de pc -->
+    <div class="row g-3 mb-4">
+
+      <!-- item 1 gusano cogollero -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center h-100">
+          <div>
+            <div class="fw-bold text-white">Gusano cogollero</div>
+            <small class="texto_gris">Insecto - Maíz</small>
+          </div>
+          <span class="insignia insignia_alerta">Alto</span>
+        </div>
+      </div>
+
+      <!-- item 2 roya del cafe -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center h-100">
+          <div>
+            <div class="fw-bold text-white">Roya del café</div>
+            <small class="texto_gris">Hongo - Café</small>
+          </div>
+          <span class="insignia insignia_alerta">Alto</span>
+        </div>
+      </div>
+
+      <!-- item 3 afido verde -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center h-100">
+          <div>
+            <div class="fw-bold text-white">Áfido verde</div>
+            <small class="texto_gris">Insecto - Frijol</small>
+          </div>
+          <span class="insignia insignia_revisar">Medio</span>
+        </div>
+      </div>
+
+      <!-- item 4 acaro rojo -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center h-100">
+          <div>
+            <div class="fw-bold text-white">Ácaro rojo</div>
+            <small class="texto_gris">Ácaro - Tomate</small>
+          </div>
+          <span class="insignia insignia_revisar">Medio</span>
+        </div>
+      </div>
+
+      <!-- item 5 antracnosis -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center h-100">
+          <div>
+            <div class="fw-bold text-white">Antracnosis</div>
+            <small class="texto_gris">Hongo - Frijol/Maíz</small>
+          </div>
+          <span class="insignia insignia_optimo">Bajo</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- boton inferior k conecta con la pantalla de inhabilitar plaga -->
+    <div class="row justify-content-center mb-4">
+      <div class="col-12 col-md-6">
+        <a href="inhabilitar-plaga.html" class="btn_inhabilitar d-block text-center text-decoration-none py-2">Inhabilitar Plaga</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- menu de abajo k se queda fijo abajo del monitor para moverte rapido -->
+  <div class="navegacion_inferior d-flex justify-content-between">
+    <!-- enlace k sube un nivel de carpeta para ir al inicio principal -->
+    <a href="../iniciosecion/inicio.html" class="text-center small"><i class="bi bi-house-door d-block"></i>Inicio</a>
+    <!-- enlace k navega a la seccion de cultivos -->
+    <a href="../cultivos/ver-cultivo.html" class="text-center small"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
+    <!-- enlace para la vista del clima -->
+    <a href="clima.html" class="text-center small"><i class="bi bi-cloud-sun d-block"></i>Clima</a>
+    <!-- enlace k sube un nivel de carpeta para ir a la seccion de insumos -->
+    <a href="../insumos/insumos.html" class="text-center small"><i class="bi bi-box-seam d-block"></i>Insumos</a>
+    <!-- enlace k sube un nivel de carpeta para ir a la vista de perfil -->
+    <a href="../perfil/perfil.html" class="text-center small"><i class="bi bi-person-circle d-block"></i>Perfil</a>
+  </div>
+
+  <!-- script de bootstrap para funciones de javascript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

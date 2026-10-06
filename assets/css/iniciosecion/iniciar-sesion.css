@@ -1,4 +1,3 @@
-/* Reinicio general: quita márgenes y rellenos por defecto y define la fuente */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,106 +10,69 @@ body {
     height: 100%;
 }
 
-/* El fondo verde oscuro ocupa toda la pantalla y la tarjeta queda centrada */
 body {
     min-height: 100vh;
-    background-color: #0d281e;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 20px;
 }
 
-/* Tarjeta principal (<main class="tarjeta_inicio">): ancho máximo para que no se estire en pantallas grandes */
-.tarjeta_inicio {
+/* CAMBIO: la tarjeta ahora ocupa TODO el ancho y alto de la pantalla (100vw / 100vh), sin bordes redondeados ni margen alrededor */
+.cuadro-de-login {
+    background-color: #0d281e;
     width: 100%;
-    max-width: 420px;
+    min-height: 100vh;
+    padding: 40px 20px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
-/* Encabezado (<header class="encabezado">): título, logo y texto de apoyo centrados */
-.encabezado {
+.contenedor-logo {
     text-align: center;
-    margin-bottom: 32px;
+    margin-bottom: 40px;
 }
 
-.encabezado h1 {
+/* CAMBIO: logo más grande en computador ya que ahora hay mucho más espacio disponible */
+.contenedor-logo img {
+    max-width: 260px;
+    width: 100%;
+    height: auto;
+}
+
+/* CAMBIO: se agregó un ancho máximo al bloque de texto/botones para que en pantallas anchas no se estiren de borde a borde y se vean feos */
+.seccion-cuenta,
+.seccion-login {
+    text-align: center;
+    margin-bottom: 32px;
+    width: 100%;
+    max-width: 420px;
+}
+
+.title {
     color: #ffffff;
     font-size: 22px;
     font-weight: 700;
-    margin-bottom: 16px;
+    margin-bottom: 6px;
 }
 
-/* El logo mantiene su proporción */
-.encabezado img {
-    max-width: 180px;
-    width: 90px;
-    height: auto;
-    margin-bottom: 16px;
-}
-
-.encabezado p {
+.subtitulo {
     color: #8da499;
     font-size: 14px;
+    margin-bottom: 18px;
 }
 
-/* Formulario (<form class="formulario_login">): campos apilados con espacio entre ellos */
-.formulario_login {
-    width: 100%;
+.grupo-botones {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 12px;
 }
 
-/* Etiquetas de correo y contraseña: texto arriba y campo debajo */
-.correo,
-.contraseña {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 600;
+.seccion-cuenta a,
+.grupo-botones a {
+    text-decoration: none;
+    display: block;
 }
 
-/* Campos de texto (correo y contraseña) */
-.formulario_login input {
-    width: 100%;
-    background-color: #ecf2ef;
-    color: #0d281e;
-    border: 2px solid transparent;
-    border-radius: 12px;
-    padding: 14px;
-    font-size: 15px;
-    font-weight: 400;
-    outline: none;
-    transition: border-color 0.2s;
-}
-
-.formulario_login input::placeholder {
-    color: #6b8378;
-}
-
-/* Resalta el campo que está seleccionado */
-.formulario_login input:focus {
-    border-color: #2ecc71;
-}
-
-/* Texto "¿Olvidaste tu contraseña?" alineado a la derecha */
-.olvido_contraseña {
-    text-align: right;
-    font-size: 13px;
-}
-
-.olvido_contraseña a {
-    color: #2ecc71;
-    text-decoration: underline;
-}
-
-/* Botón de iniciar sesión: ocupa todo el ancho de la tarjeta */
-.boton_iniciar_sesion {
+.boton {
     background-color: #ecf2ef;
     color: #0d281e;
     border: none;
@@ -120,37 +82,81 @@ body {
     font-weight: 600;
     cursor: pointer;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     transition: opacity 0.2s;
 }
 
-.boton_iniciar_sesion:hover {
+.boton span {
+    color: #0d281e;
+}
+
+.boton:hover {
     opacity: 0.9;
 }
 
-/* Texto "¿No tienes cuenta? Regístrate" centrado debajo del formulario */
-.registro {
-    margin-top: 28px;
-    text-align: center;
-    color: #8da499;
-    font-size: 14px;
+.icono-boton {
+    width: 18px;
+    height: 18px;
 }
 
-.registro a {
+/* CAMBIO: ancho máximo para que coincida con el bloque de arriba */
+.separador {
+    display: flex;
+    align-items: center;
+    color: #8da499;
+    font-size: 13px;
+    margin: 28px 0;
+    width: 100%;
+    max-width: 420px;
+}
+
+.separador::before,
+.separador::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #2c4a3d;
+}
+
+.separador span {
+    padding: 0 12px;
+}
+
+.legal {
+    text-align: center;
+    width: 100%;
+    max-width: 420px;
+}
+
+.legal p {
+    color: #8da499;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.legal a {
     color: #2ecc71;
     text-decoration: underline;
 }
 
-/* Celular (menos de 480px de ancho): se reducen espacios y tamaños para que quepa cómodo */
+/* CAMBIO: en celular (menos de 480px de ancho) se reduce un poco el logo y los espacios para que quepa cómodo */
 @media (max-width: 480px) {
-    body {
+    .cuadro-de-login {
         padding: 24px 16px;
     }
 
-    .encabezado h1 {
-        font-size: 18px;
+    .contenedor-logo img {
+        max-width: 180px;
     }
 
-    .encabezado {
+    .contenedor-logo {
         margin-bottom: 24px;
+    }
+
+    .title {
+        font-size: 18px;
     }
 }

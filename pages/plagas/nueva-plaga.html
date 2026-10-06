@@ -5,59 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nueva plaga - Agro Verde</title>
   
-  <!-- traemos bootstrap para k se vea bien sin complicarme tanto -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <!-- iconos de bootstrap para los botones y la flecha de devolverse -->
+  <!-- Bootstrap 5 CSS (Versión estable) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Íconos de Bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-  <!-- estilos del css de plagas -->
+  <!-- Estilos del CSS de Plagas -->
   <link rel="stylesheet" href="../../assets/css/plagas/gestion-plagas.css">
 </head>
 <body>
 
-  <!-- este div es la pantalla principal k en pc se acomoda centrada para k no quede tan estirada -->
+  <!-- Pantalla principal -->
   <div class="pantalla container-fluid">
 
-    <!-- la parte de arriba con el boton de regresar y el titulo de la pagina -->
+    <!-- Encabezado con botón de regresó y título -->
     <div class="d-flex align-items-center mb-4 gap-3">
-      <!-- boton para devolverse a la pagina principal de plagas -->
       <a href="plagas.html" class="boton_atras text-white text-decoration-none d-flex align-items-center justify-content-center">
         <i class="bi bi-chevron-left fs-5"></i>
       </a>
       <h4 class="m-0 text-white fw-bold">Nueva plaga</h4>
     </div>
 
-    <!-- formulario metido en una tarjeta centrada para k se vea ordenado en pc y cel -->
+    <!-- Formulario de registro -->
     <div class="row justify-content-center">
       <div class="col-12 col-md-8 col-lg-6">
         <div class="tarjeta p-4 rounded-4">
           
           <form action="plagas.html" method="GET">
             
-            <!-- campo para escribir el nombre de la plaga -->
+            <!-- Nombre de la plaga -->
             <div class="mb-3">
               <label for="nombre" class="form-label text-white small fw-bold">Nombre de la plaga</label>
-              <input type="text" class="form-control caja_busqueda" id="nombre" name="nombre" placeholder="Ej. polilla">
+              <input type="text" class="form-control caja_busqueda" id="nombre" name="nombre" placeholder="Ej. polilla" required>
             </div>
 
-            <!-- campo para seleccionar la fecha de inicio -->
+            <!-- Fecha de inicio -->
             <div class="mb-3">
               <label for="fecha" class="form-label text-white small fw-bold">Fecha de inicio</label>
-              <input type="date" class="form-control caja_busqueda" id="fecha" name="fecha">
+              <input type="date" class="form-control caja_busqueda" id="fecha" name="fecha" required>
             </div>
 
-            <!-- campo para poner en k cultivo o lote esta la plaga -->
+            <!-- Ubicación / Cultivo / Lote -->
             <div class="mb-3">
               <label for="ubicacion" class="form-label text-white small fw-bold">Ubicación</label>
-              <input type="text" class="form-control caja_busqueda" id="ubicacion" name="ubicacion" placeholder="Ej. cultivo1 o lote 2">
+              <input type="text" class="form-control caja_busqueda" id="ubicacion" name="ubicacion" placeholder="Ej. cultivo1 o lote 2" required>
             </div>
 
-            <!-- cuadro de texto grande para poner notas u observaciones -->
+            <!-- Notas u observaciones -->
             <div class="mb-4">
               <label for="notas" class="form-label text-white small fw-bold">Notas</label>
               <textarea class="form-control caja_busqueda" id="notas" name="notas" rows="4" placeholder="Observaciones adicionales..."></textarea>
             </div>
 
-            <!-- boton verde para guardar la plaga y enviar los datos -->
+            <!-- Botón de guardar -->
             <button type="submit" class="btn_nuevo w-100 py-2 border-0 text-center">Guardar plaga</button>
 
           </form>
@@ -68,21 +67,16 @@
 
   </div>
 
-  <!-- menu de abajo k se queda fijo abajo del monitor para moverte rapido -->
-  <div class="navegacion_inferior d-flex justify-content-between">
-    <!-- enlace k sube un nivel de carpeta para ir al inicio principal -->
+  <!-- Menú de navegación inferior fijo -->
+  <nav class="navegacion_inferior d-flex justify-content-between">
     <a href="../iniciosecion/inicio.html" class="text-center small"><i class="bi bi-house-door d-block"></i>Inicio</a>
-    <!-- enlace k navega a la seccion de cultivos -->
     <a href="../cultivos/ver-cultivo.html" class="text-center small"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
-    <!-- enlace para la vista del clima -->
-    <a href="clima.html" class="text-center small"><i class="bi bi-cloud-sun d-block"></i>Clima</a>
-    <!-- enlace k sube un nivel de carpeta para ir a la seccion de insumos -->
+    <a href="../clima/ver-clima.html" class="text-center small"><i class="bi bi-cloud-sun d-block"></i>Clima</a>
     <a href="../insumos/insumos.html" class="text-center small"><i class="bi bi-box-seam d-block"></i>Insumos</a>
-    <!-- enlace k sube un nivel de carpeta para ir a la vista de perfil -->
     <a href="../perfil/perfil.html" class="text-center small"><i class="bi bi-person-circle d-block"></i>Perfil</a>
-  </div>
+  </nav>
 
-  <!-- script de bootstrap para funciones de javascript -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <!-- Script de Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar insumo - Agro Verde</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Íconos de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- Estilos globales y específicos de Insumos -->
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/insumos/insumos.css">
+</head>
+
+<body>
+
+    <main class="pantalla container-fluid">
+
+        <!-- Encabezado -->
+        <header class="d-flex justify-content-between align-items-center mb-4">
+            <div class="d-flex align-items-center gap-3">
+                <a href="insumos.html"
+                    class="boton_atras text-white text-decoration-none d-flex align-items-center justify-content-center"
+                    aria-label="Volver">
+                    <i class="bi bi-chevron-left fs-5"></i>
+                </a>
+                <h4 class="m-0 text-white fw-bold">Editar insumo</h4>
+            </div>
+            <img src="../../assets/img/agro-verde-sin-texto.png" alt="Agro Verde" class="app-logo-mini">
+        </header>
+
+        <!-- Formulario centrado -->
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6">
+                <section class="tarjeta p-4 rounded-4">
+                    <form action="insumos.html" method="GET">
+
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label text-white small fw-bold">Nombre del insumo</label>
+                            <input type="text" class="form-control caja_busqueda" id="nombre" name="nombre"
+                                value="Urea 46%" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="cantidad" class="form-label text-white small fw-bold">Cantidad insumo</label>
+                            <input type="number" class="form-control caja_busqueda" id="cantidad" name="cantidad"
+                                value="25" min="0" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="fecha_llegada" class="form-label text-white small fw-bold">Fecha de
+                                llegada</label>
+                            <input type="date" class="form-control caja_busqueda" id="fecha_llegada"
+                                name="fecha_llegada" value="2026-08-10" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="fecha_caducidad" class="form-label text-white small fw-bold">Fecha de
+                                caducidad</label>
+                            <input type="date" class="form-control caja_busqueda" id="fecha_caducidad"
+                                name="fecha_caducidad" value="2028-08-10" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="medida" class="form-label text-white small fw-bold">Medida del insumo</label>
+                            <input type="text" class="form-control caja_busqueda" id="medida" name="medida" value="KG"
+                                required>
+                        </div>
+
+                        <button type="submit" class="btn_nuevo w-100 py-2 border-0 rounded-3">Guardar cambios</button>
+
+                    </form>
+                </section>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Barra de navegación inferior fija -->
+    <nav class="navegacion_inferior d-flex justify-content-between">
+        <a href="../inicio/inicio.html" class="text-center small"><i class="bi bi-house-door d-block"></i>Inicio</a>
+        <a href="../cultivos/cultivos.html" class="text-center small"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
+        <a href="../clima/clima.html" class="text-center small"><i class="bi bi-cloud-sun d-block"></i>Clima</a>
+        <a href="insumos.html" class="text-center small active"><i class="bi bi-box-seam d-block"></i>Insumos</a>
+        <a href="../perfil/perfil.html" class="text-center small"><i class="bi bi-person-circle d-block"></i>Perfil</a>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

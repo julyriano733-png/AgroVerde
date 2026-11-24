@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escanear código - Agro Verde</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Íconos de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- Estilos globales y específicos de Insumos -->
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/insumos/insumos.css">
+</head>
+
+<body>
+
+    <main class="pantalla container-fluid">
+
+        <!-- Encabezado -->
+        <header class="d-flex justify-content-between align-items-center mb-4">
+            <div class="d-flex align-items-center gap-3">
+                <a href="insumos.html"
+                    class="boton_atras text-white text-decoration-none d-flex align-items-center justify-content-center"
+                    aria-label="Volver">
+                    <i class="bi bi-chevron-left fs-5"></i>
+                </a>
+                <h4 class="m-0 text-white fw-bold">Escanear código</h4>
+            </div>
+            <img src="../../assets/img/agro-verde-sin-texto.png" alt="Agro Verde" class="app-logo-mini">
+        </header>
+
+        <!-- Contenedor centrado -->
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6">
+
+                <!-- Visor simulado de cámara -->
+                <p class="small texto_gris mb-2">Apunta la cámara al código de barras</p>
+                <div
+                    class="visor_scanner rounded-4 mb-3 d-flex align-items-center justify-content-center position-relative">
+                    <span class="esquina_scanner esquina_tl"></span>
+                    <span class="esquina_scanner esquina_tr"></span>
+                    <span class="esquina_scanner esquina_bl"></span>
+                    <span class="esquina_scanner esquina_br"></span>
+                    <div class="linea_laser"></div>
+                </div>
+
+                <!-- Entrada manual de código -->
+                <p class="text-center small texto_gris mb-2">o ingresa el código manualmente</p>
+                <div class="mb-4">
+                    <input type="text" class="form-control caja_busqueda" placeholder="Ej. 7501234567890"
+                        value="7501234567890" aria-label="Código de barras">
+                </div>
+
+                <!-- Tarjeta de resultado y movimiento -->
+                <section class="tarjeta p-4 rounded-4 mb-4">
+                    <form action="insumos.html" method="GET">
+
+                        <!-- Datos del insumo encontrado -->
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <span class="punto_estado punto_verde"></span>
+                            <div>
+                                <h6 class="m-0 text-white fw-bold">Fertilizante NPK</h6>
+                                <small class="texto_gris">Código: 7501234567890</small>
+                            </div>
+                        </div>
+
+                        <p class="texto_encontrado mb-3">INSUMO ENCONTRADO - 18 SACOS EN STOCK</p>
+
+                        <!-- Tipo de movimiento: Entrada / Salida -->
+                        <div class="mb-3">
+                            <label class="form-label text-white small fw-bold d-block">Tipo de movimiento</label>
+                            <div class="row g-2">
+                                <div class="col-6">
+                                    <input type="radio" class="btn-check" name="tipo_movimiento" id="mov-entrada"
+                                        value="entrada" autocomplete="off">
+                                    <label class="btn_movimiento w-100 text-center py-2 rounded-3"
+                                        for="mov-entrada">Entrada</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="radio" class="btn-check" name="tipo_movimiento" id="mov-salida"
+                                        value="salida" autocomplete="off" checked>
+                                    <label class="btn_movimiento w-100 text-center py-2 rounded-3"
+                                        for="mov-salida">Salida</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Selector de cantidad -->
+                        <div class="mb-4">
+                            <label for="cantidad_mov" class="form-label text-white small fw-bold">Cantidad</label>
+                            <div class="d-flex align-items-center gap-2">
+                                <button type="button" class="btn_contador" aria-label="Disminuir cantidad">−</button>
+                                <input type="text" class="form-control caja_busqueda text-center fw-semibold"
+                                    id="cantidad_mov" name="cantidad" value="2 sacos" readonly>
+                                <button type="button" class="btn_contador" aria-label="Aumentar cantidad">+</button>
+                            </div>
+                        </div>
+
+                        <!-- Botón registrar movimiento -->
+                        <button type="submit" class="btn_nuevo w-100 py-2 border-0 rounded-3">
+                            Registrar movimiento
+                        </button>
+
+                    </form>
+                </section>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Barra de navegación inferior fija -->
+    <nav class="navegacion_inferior d-flex justify-content-between">
+        <a href="../inicio/inicio.html" class="text-center small"><i class="bi bi-house-door d-block"></i>Inicio</a>
+        <a href="../cultivos/cultivos.html" class="text-center small"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
+        <a href="../clima/clima.html" class="text-center small"><i class="bi bi-cloud-sun d-block"></i>Clima</a>
+        <a href="insumos.html" class="text-center small active"><i class="bi bi-box-seam d-block"></i>Insumos</a>
+        <a href="../perfil/perfil.html" class="text-center small"><i class="bi bi-person-circle d-block"></i>Perfil</a>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

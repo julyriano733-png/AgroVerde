@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de insumos - Agro Verde</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Íconos de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- Estilos globales y específicos de Insumos -->
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/insumos/insumos.css">
+</head>
+
+<body>
+
+    <main class="pantalla container-fluid">
+
+        <!-- Encabezado -->
+        <header class="d-flex justify-content-between align-items-center mb-4">
+            <div class="d-flex align-items-center gap-3">
+                <a href="insumos.html"
+                    class="boton_atras text-white text-decoration-none d-flex align-items-center justify-content-center"
+                    aria-label="Volver">
+                    <i class="bi bi-chevron-left fs-5"></i>
+                </a>
+                <h4 class="m-0 text-white fw-bold">Catálogo de insumos</h4>
+            </div>
+            <img src="../../assets/img/agro-verde-sin-texto.png" alt="Agro Verde" class="app-logo-mini">
+        </header>
+
+        <!-- Buscador -->
+        <div class="mb-4">
+            <input type="search" class="form-control caja_busqueda" placeholder="Buscar en el catálogo"
+                aria-label="Buscar en el catálogo">
+        </div>
+
+        <!-- Lista del catálogo -->
+        <div class="row g-3 mb-4">
+
+            <!-- Item 1 -->
+            <div class="col-12 col-md-6">
+                <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center h-100">
+                    <div class="d-flex align-items-center gap-3">
+                        <span class="punto_estado punto_verde"></span>
+                        <div>
+                            <h6 class="m-0 text-white fw-bold">Fertilizante NPK</h6>
+                            <small class="texto_gris">Fertilizante - Inventario</small>
+                        </div>
+                    </div>
+                    <div class="text-end">
+                        <p class="m-0 text-white fw-semibold small">18 sacos</p>
+                        <p class="m-0 small texto_gris">$1.134.000</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="col-12 col-md-6">
+                <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center h-100">
+                    <div class="d-flex align-items-center gap-3">
+                        <span class="punto_estado punto_cyan"></span>
+                        <div>
+                            <h6 class="m-0 text-white fw-bold">Herbicida selectivo</h6>
+                            <small class="texto_gris">Herbicida - Inventario</small>
+                        </div>
+                    </div>
+                    <div class="text-end">
+                        <p class="m-0 text-white fw-semibold small">9 L</p>
+                        <p class="m-0 small texto_gris">$405.000</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="col-12 col-md-6">
+                <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center h-100">
+                    <div class="d-flex align-items-center gap-3">
+                        <span class="punto_estado punto_rojo"></span>
+                        <div>
+                            <h6 class="m-0 text-white fw-bold">Fungicida orgánico</h6>
+                            <small class="texto_gris">Fungicida - Bajo stock</small>
+                        </div>
+                    </div>
+                    <div class="text-end">
+                        <p class="m-0 text-white fw-semibold small">3 uds</p>
+                        <p class="m-0 small texto_gris">$105.000</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="col-12 col-md-6">
+                <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center h-100">
+                    <div class="d-flex align-items-center gap-3">
+                        <span class="punto_estado punto_verde"></span>
+                        <div>
+                            <h6 class="m-0 text-white fw-bold">Semilla de maíz</h6>
+                            <small class="texto_gris">Semilla - Inventario</small>
+                        </div>
+                    </div>
+                    <div class="text-end">
+                        <p class="m-0 text-white fw-semibold small">50 kg</p>
+                        <p class="m-0 small texto_gris">$800.000</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="col-12 col-md-6">
+                <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center h-100">
+                    <div class="d-flex align-items-center gap-3">
+                        <span class="punto_estado punto_cyan"></span>
+                        <div>
+                            <h6 class="m-0 text-white fw-bold">Herbicida Roundup</h6>
+                            <small class="texto_gris">Herbicida</small>
+                        </div>
+                    </div>
+                    <div class="text-end">
+                        <p class="m-0 text-white fw-semibold small">50 kg</p>
+                        <p class="m-0 small texto_gris">$485.000</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="col-12 col-md-6">
+                <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center h-100">
+                    <div class="d-flex align-items-center gap-3">
+                        <span class="punto_estado" style="background-color: #eab308;"></span>
+                        <div>
+                            <h6 class="m-0 text-white fw-bold">Insecticida NPK</h6>
+                            <small class="texto_gris">Insecticida</small>
+                        </div>
+                    </div>
+                    <div class="text-end">
+                        <p class="m-0 text-white fw-semibold small">30 kg</p>
+                        <p class="m-0 small texto_gris">$1.790.000</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Barra de navegación inferior fija -->
+    <nav class="navegacion_inferior d-flex justify-content-between">
+        <a href="../inicio/inicio.html" class="text-center small"><i class="bi bi-house-door d-block"></i>Inicio</a>
+        <a href="../cultivos/cultivos.html" class="text-center small"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
+        <a href="../clima/clima.html" class="text-center small"><i class="bi bi-cloud-sun d-block"></i>Clima</a>
+        <a href="insumos.html" class="text-center small active"><i class="bi bi-box-seam d-block"></i>Insumos</a>
+        <a href="../perfil/perfil.html" class="text-center small"><i class="bi bi-person-circle d-block"></i>Perfil</a>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

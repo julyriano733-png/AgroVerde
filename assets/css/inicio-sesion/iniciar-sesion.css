@@ -4,12 +4,15 @@ body {
   margin: 0;
 }
 
-/* la tarjeta principal del login, centrada en la pantalla */
-.tarjeta_inicio {
-  max-width: 400px;
-  margin: 40px auto;
-  padding: 24px;
-  color: white;
+.cuadro-de-login {
+    background-color: #0d281e;
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* el encabezado con el titulo, el logo y el texto */

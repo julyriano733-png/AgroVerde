@@ -106,4 +106,7 @@ Estos módulos ya están desarrollados y estandarizados en HTML y CSS. Cada uno 
 - July Daniela Riaño Soto
 - Helian Camilo Moreno Latorre
 - Dayan Leonel Montañez Combita
-- Derlin Yissel Caro Bautista
+- Derlin Yissel Caro Bautista# AGROVERDEHCML
+# AGROVERDEHCML
+# AGROVERDEHCML
+# AGROVERDEHCMLV1

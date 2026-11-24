@@ -1,1 +1,24 @@
- 
+ /* notificaciones-general.css */
+
+/* notificación que ya se leyó: se ve apagada */
+.leida {
+  opacity: 0.55;
+}
+
+/* notificación sin leer: lleva una rayita verde a la izquierda */
+.no_leida {
+  border-left: 4px solid #22c55e;
+  cursor: pointer;
+}
+
+/* botón "Marcar todas como leídas" */
+.boton_marcar {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: white;
+}
+
+.boton_marcar:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #22c55e;
+}

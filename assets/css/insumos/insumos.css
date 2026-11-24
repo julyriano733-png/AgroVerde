@@ -1,0 +1,330 @@
+/*ESTILOS ESPECÍFICOS - MÓDULO DE INSUMOS */
+
+.logo-header {
+    max-height: 44px;
+    width: auto;
+}
+
+/* Botón cuadrado para devolverse */
+.boton_atras {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #1d734e;
+    border-radius: 12px;
+    background-color: transparent;
+    transition: background-color 0.2s ease;
+}
+
+.boton_atras:hover,
+.boton_atras:active {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Botón verde (+ Nuevo, Editar, Guardar) */
+.btn_nuevo {
+    background-color: #22c55e;
+    color: #0f2a1d;
+    font-weight: bold;
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn_nuevo:hover,
+.btn_nuevo:active {
+    background-color: #16a34a;
+    color: #ffffff;
+}
+
+.btn-editar-sm {
+    padding: 5px 18px;
+    font-size: 13px;
+}
+
+/* Botón grande Opciones Insumos */
+.btn_opciones {
+    background-color: #22c55e;
+    color: #0f2a1d;
+    font-weight: 700;
+    font-size: 15px;
+    border: none;
+    transition: background-color 0.2s ease;
+}
+
+.btn_opciones:hover,
+.btn_opciones:focus {
+    background-color: #16a34a;
+    color: #ffffff;
+}
+
+.menu_opciones {
+    background-color: #143625;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    border-radius: 14px;
+    padding: 6px;
+}
+
+.item_opcion {
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 14px;
+}
+
+.item_opcion:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+/* Puntos de estado en inventario */
+.punto_estado {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.punto_verde {
+    background-color: #22c55e;
+}
+
+.punto_cyan {
+    background-color: #06b6d4;
+}
+
+.punto_rojo {
+    background-color: #ef4444;
+}
+
+/* Botón de flecha para expandir/colapsar descripción */
+.btn_acordeon {
+    background: transparent;
+    border: none;
+    color: #9ca3af;
+    font-size: 16px;
+    padding: 4px 6px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.btn_acordeon:hover {
+    color: #ffffff;
+}
+
+.linea_divisoria {
+    border-color: rgba(255, 255, 255, 0.15);
+    opacity: 1;
+}
+
+.titulo_descripcion {
+    color: #22c55e;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Botón inferior grande Usar INSUMO */
+.btn_usar {
+    background-color: #22c55e;
+    color: #0f2a1d;
+    font-size: 16px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn_usar:hover {
+    background-color: #16a34a;
+    color: #ffffff;
+}
+
+/* Botón inferior Inhabilitar insumo (tono rojizo/terracota de Figma) */
+.btn_inhabilitar_suave {
+    background-color: rgba(239, 68, 68, 0.35);
+    color: #ffffff;
+    border: 1px solid rgba(239, 68, 68, 0.45);
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+}
+
+.btn_inhabilitar_suave:hover {
+    background-color: #ef4444;
+    color: #ffffff;
+}
+
+/* Botón rojo sólido para confirmar en formularios */
+.btn_inhabilitar {
+    background-color: #ef4444;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px 16px;
+    border-radius: 12px;
+    font-size: 14px;
+    border: none;
+    transition: background-color 0.2s ease;
+}
+
+.btn_inhabilitar:hover {
+    background-color: #dc2626;
+    color: #ffffff;
+}
+
+/* Inputs y selects */
+.caja_busqueda {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid #1d734e;
+    color: white;
+    border-radius: 12px;
+    padding: 10px 16px;
+    color-scheme: dark;
+}
+
+.caja_busqueda::placeholder {
+    color: #8eb39f;
+}
+
+.caja_busqueda:focus {
+    background-color: rgba(255, 255, 255, 0.12);
+    color: white;
+    border-color: #22c55e;
+    box-shadow: none;
+}
+
+.form-select.caja_busqueda option {
+    background-color: #163b29;
+    color: #ffffff;
+}
+
+/* Insignias y radios */
+.insignia {
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.insignia_optimo {
+    background-color: rgba(34, 197, 94, 0.2);
+    color: #22c55e;
+}
+
+.insignia_revisar {
+    background-color: rgba(6, 182, 212, 0.2);
+    color: #06b6d4;
+}
+
+.insignia_alerta {
+    background-color: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.radio_custom {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 2px solid #8eb39f;
+    cursor: pointer;
+}
+
+.radio_custom:checked {
+    background-color: #22c55e;
+    border-color: #22c55e;
+}
+
+/*ESTILOS DEL ESCÁNER DE CÓDIGO DE BARRAS*/
+
+.visor_scanner {
+    height: 170px;
+    background-color: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 20px;
+}
+
+.linea_laser {
+    width: 82%;
+    height: 2px;
+    background-color: #22c55e;
+    box-shadow: 0 0 10px #22c55e;
+}
+
+.esquina_scanner {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border-color: #22c55e;
+    border-style: solid;
+}
+
+.esquina_tl {
+    top: 16px;
+    left: 16px;
+    border-width: 2px 0 0 2px;
+    border-top-left-radius: 6px;
+}
+
+.esquina_tr {
+    top: 16px;
+    right: 16px;
+    border-width: 2px 2px 0 0;
+    border-top-right-radius: 6px;
+}
+
+.esquina_bl {
+    bottom: 16px;
+    left: 16px;
+    border-width: 0 0 2px 2px;
+    border-bottom-left-radius: 6px;
+}
+
+.esquina_br {
+    bottom: 16px;
+    right: 16px;
+    border-width: 0 2px 2px 0;
+    border-bottom-right-radius: 6px;
+}
+
+.texto_encontrado {
+    color: #22c55e;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+}
+
+/* Botones Entrada / Salida */
+.btn_movimiento {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.2s ease;
+}
+
+.btn-check:checked+.btn_movimiento {
+    background-color: #22c55e;
+    color: #0f2a1d;
+    font-weight: 700;
+    border-color: #22c55e;
+}
+
+/* Botones + y - de cantidad */
+.btn_contador {
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 12px;
+    flex-shrink: 0;
+    transition: background-color 0.2s ease;
+}
+
+.btn_contador:hover {
+    background-color: rgba(34, 197, 94, 0.2);
+    color: #22c55e;
+}

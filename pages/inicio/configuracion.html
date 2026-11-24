@@ -49,7 +49,7 @@
         <p class="mb-2 texto_subtitulo small text-uppercase">PREFERENCIAS</p>
         <div class="d-flex flex-column gap-2 mb-4">
           <!-- opcion idioma y regionalizacion -->
-          <a href="idioma.html" class="tarjeta_con_borde p-3 rounded-4 d-flex justify-content-between align-items-center text-decoration-none">
+          <a href="idioma.html" class="pendiente tarjeta_con_borde p-3 rounded-4 d-flex justify-content-between align-items-center text-decoration-none">
             <span class="texto_blanco">Idioma y regionalización</span>
             <div class="d-flex align-items-center gap-2">
               <span class="small texto_gris">Español (CO)</span>
@@ -58,16 +58,16 @@
           </a>
 
           <!-- opcion unidades de medida -->
-          <a href="unidades.html" class="tarjeta_con_borde p-3 rounded-4 d-flex justify-content-between align-items-center text-decoration-none">
+          <a href="unidades.html" id="opcion-unidades" class="tarjeta_con_borde p-3 rounded-4 d-flex justify-content-between align-items-center text-decoration-none">
             <span class="texto_blanco">Unidades de medida</span>
             <div class="d-flex align-items-center gap-2">
-              <span class="small texto_gris">Métrico</span>
+              <span id="texto-unidades" class="small texto_gris">Métrico</span>
               <i class="bi bi-chevron-right icono_verde"></i>
             </div>
           </a>
 
           <!-- opcion configuracion alertas -->
-          <a href="alertas_config.html" class="tarjeta_con_borde p-3 rounded-4 d-flex justify-content-between align-items-center text-decoration-none">
+          <a href="notificaciones-correo.html" class="tarjeta_con_borde p-3 rounded-4 d-flex justify-content-between align-items-center text-decoration-none">
             <span class="texto_blanco">Configuracion alertas</span>
             <i class="bi bi-chevron-right icono_verde"></i>
           </a>
@@ -79,12 +79,12 @@
         <p class="mb-2 texto_subtitulo small text-uppercase">SOPORTE</p>
         <div class="tarjeta p-0 rounded-4 mb-4 overflow-hidden">
           <!-- opcion ayuda y soporte -->
-          <a href="soporte.html" class="item_opcion d-flex justify-content-between align-items-center p-3 text-decoration-none border-bottom-subtil">
+          <a href="soporte.html" class="pendiente item_opcion d-flex justify-content-between align-items-center p-3 text-decoration-none border-bottom-subtil">
             <span class="texto_blanco">Ayuda y soporte</span>
             <i class="bi bi-chevron-right icono_verde"></i>
           </a>
           <!-- opcion cerrar sesion -->
-          <a href="../inicio-sesion/iniciar-sesion.html" class="item_opcion d-flex justify-content-between align-items-center p-3 text-decoration-none">
+          <a href="../inicio-sesion/iniciar-sesion.html" id="boton-cerrar-sesion" class="item_opcion d-flex justify-content-between align-items-center p-3 text-decoration-none">
             <span class="texto_rojo fw-bold">Cerrar sesión</span>
           </a>
         </div>
@@ -104,5 +104,9 @@
 
   <!-- script de bootstrap para funciones de javascript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+  <!-- Nuestro JavaScript: comun.js SIEMPRE primero -->
+  <script src="../../assets/js/comun.js"></script>
+  <script src="../../assets/js/inicio/configuracion.js"></script>
 </body>
 </html>

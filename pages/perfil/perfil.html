@@ -14,7 +14,6 @@
   <!-- Estilos globales y específicos de Perfil -->
   <link rel="stylesheet" href="../../assets/css/global.css">
   <link rel="stylesheet" href="../../assets/css/perfil/perfil.css">
-  <link rel="stylesheet" href="../../assets/js/perfil/perfil.js">
 </head>
 
 <body>
@@ -40,9 +39,9 @@
       <div class="col-12 col-lg-6">
 
         <section class="tarjeta p-4 rounded-4 text-center mb-3">
-          <div class="avatar-perfil mx-auto mb-3">HM</div>
-          <h5 class="m-0 text-white fw-bold mb-1">Helian Moreno</h5>
-          <p class="m-0 small texto_gris">Agrónomo - Finca El Manantial</p>
+          <div class="avatar-perfil mx-auto mb-3" id="avatar-usuario">HM</div>
+          <h5 class="m-0 text-white fw-bold mb-1" id="nombre-usuario">Helian Moreno</h5>
+          <p class="m-0 small texto_gris" id="rol-usuario">Agrónomo - Finca El Manantial</p>
         </section>
 
         <a href="../inicio/configuracion.html"
@@ -50,7 +49,7 @@
           <i class="bi bi-gear me-2"></i>Configuración
         </a>
 
-        <a href="../inicio-sesion/iniciar-sesion.html"
+        <a href="../inicio-sesion/iniciar-sesion.html" id="cerrar-sesion"
           class="btn_inhabilitar d-block text-center text-decoration-none py-3 rounded-4">
           <i class="bi bi-box-arrow-right me-2"></i>Cerrar sesión
         </a>
@@ -58,11 +57,11 @@
       </div>
 
       <!-- Columna derecha: Usuarios registrados en el sistema -->
-      <div class="col-12 col-lg-6">
+      <div class="col-12 col-lg-6" id="columna-usuarios">
 
         <p class="mb-2 text-white fw-bold small">Usuarios del sistema</p>
 
-        <div class="d-flex flex-column gap-2">
+        <div class="d-flex flex-column gap-2" id="lista-usuarios">
 
           <!-- Usuario 1: Helian Moreno -->
           <div class="tarjeta p-3 rounded-4 d-flex align-items-center gap-3">
@@ -121,6 +120,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
+
+  <!-- Nuestro JavaScript: comun.js SIEMPRE primero -->
+  <script src="../../assets/js/comun.js"></script>
+  <script src="../../assets/js/perfil/perfil.js"></script>
 </body>
 
 </html>

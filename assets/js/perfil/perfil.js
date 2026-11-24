@@ -36,6 +36,18 @@ function crearTarjetaUsuario(usuario) {
   return tarjeta;
 }
 
+// Saca las iniciales de un nombre: "Helian Moreno" -> "HM"
+function sacarIniciales(nombre) {
+  let palabras = nombre.split(" ");
+  let iniciales = palabras[0].charAt(0);
+
+  if (palabras.length > 1) {
+    iniciales = iniciales + palabras[1].charAt(0);
+  }
+
+  return iniciales.toUpperCase();
+}
+
 function mostrarPerfil() {
   // si no hay sesión, protegerPagina nos manda al login y paramos aquí
   if (protegerPagina() === false) {
@@ -46,6 +58,7 @@ function mostrarPerfil() {
 
   // ----- tarjeta grande con el nombre y el rol -----
   document.getElementById("nombre-usuario").textContent = usuario.nombre;
+  document.getElementById("avatar-usuario").textContent = sacarIniciales(usuario.nombre);
   document.getElementById("rol-usuario").textContent = usuario.rol + " - Finca El Manantial";
 
   // ----- lista de usuarios: solo para el Administrador -----

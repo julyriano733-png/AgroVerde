@@ -14,7 +14,6 @@
   <!-- Estilos globales y específicos de Historial -->
   <link rel="stylesheet" href="../../assets/css/global.css">
   <link rel="stylesheet" href="../../assets/css/historial/historial.css">
-  <link rel="stylesheet" href="../../assets/js/historial/historial.js">
 </head>
 
 <body>
@@ -37,10 +36,10 @@
 
     <!-- Filtros por categoría -->
     <div class="d-flex gap-2 mb-4 overflow-auto pb-1">
-      <button type="button" class="btn_nuevo border-0 py-1 px-3">Todos</button>
-      <button type="button" class="boton_acceso border-0 py-1 px-3 rounded-4">Cultivos</button>
-      <button type="button" class="boton_acceso border-0 py-1 px-3 rounded-4">Insumos</button>
-      <button type="button" class="boton_acceso border-0 py-1 px-3 rounded-4">Inventario</button>
+      <button type="button" data-filtro="todos" class="btn_nuevo border-0 py-1 px-3">Todos</button>
+      <button type="button" data-filtro="cultivos" class="boton_acceso border-0 py-1 px-3 rounded-4">Cultivos</button>
+      <button type="button" data-filtro="insumos" class="boton_acceso border-0 py-1 px-3 rounded-4">Insumos</button>
+      <button type="button" data-filtro="inventario" class="boton_acceso border-0 py-1 px-3 rounded-4">Inventario</button>
     </div>
 
     <!-- Lista del historial agrupada por días -->
@@ -50,7 +49,7 @@
       <section class="col-12 col-lg-6">
         <p class="mb-3 text-white fw-bold small">Hoy</p>
 
-        <div class="d-flex flex-column gap-3">
+        <div class="d-flex flex-column gap-3" id="eventos-hoy">
 
           <!-- Evento 1: Cultivo registrado -->
           <div class="tarjeta p-3 rounded-4 d-flex align-items-center gap-3">
@@ -92,7 +91,7 @@
       <section class="col-12 col-lg-6">
         <p class="mb-3 text-white fw-bold small">Ayer</p>
 
-        <div class="d-flex flex-column gap-3">
+        <div class="d-flex flex-column gap-3" id="eventos-ayer">
 
           <!-- Evento 4: Insumo actualizado -->
           <div class="tarjeta p-3 rounded-4 d-flex align-items-center gap-3">
@@ -147,6 +146,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
+
+  <!-- Nuestro JavaScript: comun.js SIEMPRE primero -->
+  <script src="../../assets/js/comun.js"></script>
+  <script src="../../assets/js/historial/historial.js"></script>
 </body>
 
 </html>

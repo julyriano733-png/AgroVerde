@@ -5,15 +5,15 @@ const catalogo = [
         tipo: "Insecto",
         cultivo: "Maíz",
         riesgo: "Alto",
-        descripcion: "Larvas k se comen las hojas jóvenes y el cogollo de la planta, dejando hojas agujereadas y excrementos.",
-        control: "Revisar el lote cada semana, usar control biológico y eliminar las malezas k le sirven de refugio."
+        descripcion: "Larvas que se comen las hojas jóvenes y el cogollo de la planta, dejando hojas agujereadas y excrementos.",
+        control: "Revisar el lote cada semana, usar control biológico y eliminar las malezas que le sirven de refugio."
     },
     {
         nombre: "Roya del café",
         tipo: "Hongo",
         cultivo: "Café",
         riesgo: "Alto",
-        descripcion: "Manchas amarillas o anaranjadas en el envés de las hojas, k terminan en caída de hojas.",
+        descripcion: "Manchas amarillas o anaranjadas en el envés de las hojas, que terminan en caída de hojas.",
         control: "Sembrar variedades resistentes, podar, mantener buena sombra y nutrición y aplicar fungicida solo si hace falta."
     },
     {
@@ -21,7 +21,7 @@ const catalogo = [
         tipo: "Insecto",
         cultivo: "Frijol",
         riesgo: "Medio",
-        descripcion: "Insectos pequeños verdes k se juntan en los brotes tiernos y chupan la savia de la planta.",
+        descripcion: "Insectos pequeños verdes que se juntan en los brotes tiernos y chupan la savia de la planta.",
         control: "Revisar los brotes con frecuencia, usar jabón potásico y favorecer a sus enemigos naturales, como las mariquitas."
     },
     {
@@ -56,10 +56,10 @@ const buscador = document.getElementById("buscador");
 const botones_filtro = document.querySelectorAll(".filtro_tipo");
 const modal_detalle = document.getElementById("modal_detalle");
 
-// filtro k esta activo ahora
+// filtro que esta activo ahora
 let tipo_activo = "Todas";
 
-// quita las tildes y pasa a minusculas para k "cafe" encuentre "café"
+// quita las tildes y pasa a minusculas para que "cafe" encuentre "café"
 function limpiar_texto(texto) {
     return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 }
@@ -122,7 +122,7 @@ botones_filtro.forEach(function (boton) {
 // mientras se escribe en el buscador se filtra la lista
 buscador.addEventListener("input", mostrar_catalogo);
 
-// cuando se abre la ficha se llena con los datos de la plaga k se toco
+// cuando se abre la ficha se llena con los datos de la plaga que se toco
 modal_detalle.addEventListener("show.bs.modal", function (evento) {
     const plaga = catalogo[Number(evento.relatedTarget.dataset.indice)];
 

@@ -7,11 +7,11 @@ const texto_confirmar = document.getElementById("texto_confirmar");
 const boton_confirmar = document.getElementById("boton_confirmar");
 const modal_confirmar = new bootstrap.Modal(document.getElementById("modal_confirmar"));
 
-// lista completa guardada y la plaga k el usuario va eligiendo
+// lista completa guardada y la plaga que el usuario va eligiendo
 const lista = obtener_plagas();
 let id_seleccionado = null;
 
-// dibuja las opciones, filtradas por lo k se escribio en el buscador
+// dibuja las opciones, filtradas por lo que se escribio en el buscador
 function mostrar_opciones() {
     const habilitadas = lista.filter(function (plaga) { return plaga.habilitada; });
 
@@ -57,7 +57,7 @@ buscador.addEventListener("input", mostrar_opciones);
 
 // cuando se toca "Inhabilitar Plaga" se pide confirmacion
 formulario.addEventListener("submit", function (evento) {
-    // se evita k la pagina se recargue sola
+    // se evita que la pagina se recargue sola
     evento.preventDefault();
 
     if (id_seleccionado === null) {

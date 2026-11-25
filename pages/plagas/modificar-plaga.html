@@ -6,19 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Modificar plaga - Agro Verde</title>
 
-  <!-- traemos bootstrap para k se vea bien sin complicarme tanto -->
+  <!-- traemos bootstrap para que se vea bien sin complicarme tanto -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- iconos de bootstrap para los botones y la flecha de devolverse -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <!-- estilos globales -->
+  <link rel="stylesheet" href="../../assets/css/global.css">
   <!-- estilos generales de plagas -->
   <link rel="stylesheet" href="../../assets/css/plagas/plagas.css">
   <!-- estilos del formulario de plagas -->
   <link rel="stylesheet" href="../../assets/css/plagas/gestion-plagas.css">
-</head>3
+</head>
 
 <body>
 
-  <!-- este div es la pantalla principal k en pc se acomoda centrada para k no quede estirada -->
+  <!-- este div es la pantalla principal que en pc se acomoda centrada para que no quede estirada -->
   <div class="pantalla container-fluid">
 
     <!-- la parte de arriba con el boton de regresar y el titulo de la pagina -->
@@ -32,7 +34,7 @@
       <h4 class="m-0 text-white fw-bold">Modificar plaga</h4>
     </div>
 
-    <!-- formulario y resumen metidos en una tarjeta centrada para k se vea bien en pc y cel -->
+    <!-- formulario y resumen metidos en una tarjeta centrada para que se vea bien en pc y cel -->
     <div class="row justify-content-center">
       <div class="col-12 col-md-8 col-lg-6">
         <div class="tarjeta p-4 rounded-4" id="contenido_modificar">
@@ -77,6 +79,7 @@
               <label for="estado" class="form-label text-white small fw-bold">Estado</label>
               <select class="form-select caja_busqueda" id="estado" name="estado" required>
                 <option value="Iniciada">Iniciada</option>
+                <option value="Moderada">Moderada</option>
                 <option value="Avanzada">Avanzada</option>
                 <option value="Controlada">Controlada</option>
               </select>
@@ -100,25 +103,13 @@
 
   </div>
 
-  <!-- menu de abajo k se queda fijo abajo del monitor para moverte rapido -->
+  <!-- menu de abajo que se queda fijo abajo del monitor para moverte rapido -->
   <div class="navegacion_inferior d-flex justify-content-between">
-    <!-- enlace k sube un nivel de carpeta para ir al inicio principal -->
     <a href="../inicio/inicio.html" class="text-center small"><i class="bi bi-house-door d-block"></i>Inicio</a>
-    <!-- enlace k navega a la seccion de cultivos -->
-    <a href="../cultivos/ver-cultivo.html" class="text-center small"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
-    <!-- enlace para la vista del clima -->
+    <a href="../cultivos/cultivos.html" class="text-center small"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
     <a href="../clima/clima.html" class="text-center small"><i class="bi bi-cloud-sun d-block"></i>Clima</a>
-    <!-- enlace k sube un nivel de carpeta para ir a la seccion de insumos -->
-    <a href="../insumos/insumo.html" class="text-center small"><i class="bi bi-box-seam d-block"></i>Insumos</a>
-    <!-- enlace k sube un nivel de carpeta para ir a la vista de perfil -->
+    <a href="../insumos/insumos.html" class="text-center small"><i class="bi bi-box-seam d-block"></i>Insumos</a>
     <a href="../perfil/perfil.html" class="text-center small"><i class="bi bi-person-circle d-block"></i>Perfil</a>
   </div>
 
   <!-- script de bootstrap para funciones de javascript -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- scripts de plagas (el orden importa: primero los datos) -->
-  <script src="../../assets/js/plagas/datos-plagas.js"></script>
-  <script src="../../assets/js/plagas/modificar-plaga.js"></script>
-</body>
-
-</html>

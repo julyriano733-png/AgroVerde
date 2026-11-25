@@ -11,7 +11,7 @@ campo_fecha.max = anio + "-" + mes + "-" + dia;
 
 // cuando se toca "Guardar plaga"
 formulario.addEventListener("submit", function (evento) {
-    // se evita k la pagina se recargue sola
+    // se evita que la pagina se recargue sola
     evento.preventDefault();
 
     const nombre = document.getElementById("nombre").value.trim();

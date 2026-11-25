@@ -34,7 +34,7 @@ function iniciar_pantalla() {
 
     // cuando se toca "Actualizar Información"
     formulario.addEventListener("submit", function (evento) {
-        // se evita k la pagina se recargue sola
+        // se evita que la pagina se recargue sola
         evento.preventDefault();
 
         const nombre = document.getElementById("nombre").value.trim();

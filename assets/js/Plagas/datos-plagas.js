@@ -56,7 +56,7 @@ function formatear_fecha(fecha) {
     return partes[2] + "/" + partes[1] + "/" + partes[0];
 }
 
-// evita k lo k escriba el usuario dañe el html de la pagina
+// evita que lo que escriba el usuario dañe el html de la pagina
 function escapar_html(texto) {
     const caja = document.createElement("div");
     caja.textContent = texto;

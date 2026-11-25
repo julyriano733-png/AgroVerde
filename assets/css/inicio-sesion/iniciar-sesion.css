@@ -4,17 +4,6 @@ body {
   margin: 0;
 }
 
-.cuadro-de-login {
-    background-color: #0d281e;
-    width: 100%;
-    min-height: 100vh;
-    padding: 40px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 /* el encabezado con el titulo, el logo y el texto */
 .encabezado {
   text-align: center;

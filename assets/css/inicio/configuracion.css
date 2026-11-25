@@ -1,36 +1,7 @@
-/* el fondo de toda la pagina */
-body {
-  background-color: #0f2a1d;
-  margin: 0;
-}
-
-/* el contenedor principal k en la pc ocupa toda la pantalla a lo ancho */
-.pantalla {
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-  background-color: #0f2a1d;
-  color: white;
-  padding: 20px 16px 90px 16px;
-  min-height: 100vh;
-}
-
-/* el estilo base de los cuadritos o tarjetas */
-.tarjeta {
-  background-color: rgba(255, 255, 255, 0.08);
-  color: white;
-  text-decoration: none;
-  display: block;
-}
-
-/* para k cambie un poquito el color cuando uno pasa el mouse o toca la tarjeta */
-.tarjeta:hover,
-.tarjeta:active,
-.tarjeta:focus {
-  background-color: rgba(255, 255, 255, 0.15);
-  color: white;
-  text-decoration: none;
-}
+/* configuracion.css
+   Solo lo que es propio de la pantalla de configuración.
+   El fondo, .pantalla, .tarjeta, .texto_gris y la barra de abajo
+   (.navegacion_inferior) ya vienen de global.css */
 
 /* boton cuadrado para devolverse con el icono de la flecha */
 .boton_atras {
@@ -101,41 +72,4 @@ body {
 /* para ponerselo al boton de cerrar sesion */
 .texto_rojo {
   color: #e57373;
-}
-
-/* para poner las letras en un gris suave */
-.texto_gris {
-  color: #9ca3af;
-}
-
-/* la barra del menu de abajo k se queda fija abajo en el monitor del pc */
-.navegacion_inferior {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-  background-color: #0f2a1d;
-  padding: 12px 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* los links del menu de abajo */
-.navegacion_inferior a {
-  color: white;
-  text-decoration: none;
-}
-
-/* tamaño de los iconos del menu de abajo */
-.navegacion_inferior i {
-  font-size: 18px;
-}
-
-/* reglas para k en pantallas de pc y laptops se acomode con mas espacio */
-@media (min-width: 768px) {
-  .pantalla {
-    padding: 30px 40px 100px 40px;
-  }
 }

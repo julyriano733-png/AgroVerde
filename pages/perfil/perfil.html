@@ -38,10 +38,11 @@
       <!-- Columna izquierda: Tarjeta principal del usuario y acciones -->
       <div class="col-12 col-lg-6">
 
+        <!-- el JS escribe aquí las iniciales, el nombre y el rol de quien inició sesión -->
         <section class="tarjeta p-4 rounded-4 text-center mb-3">
-          <div class="avatar-perfil mx-auto mb-3" id="avatar-usuario">HM</div>
-          <h5 class="m-0 text-white fw-bold mb-1" id="nombre-usuario">Helian Moreno</h5>
-          <p class="m-0 small texto_gris" id="rol-usuario">Agrónomo - Finca El Manantial</p>
+          <div class="avatar-perfil mx-auto mb-3" id="avatar-usuario"></div>
+          <h5 class="m-0 text-white fw-bold mb-1" id="nombre-usuario"></h5>
+          <p class="m-0 small texto_gris" id="rol-usuario"></p>
         </section>
 
         <a href="../inicio/configuracion.html"
@@ -56,50 +57,13 @@
 
       </div>
 
-      <!-- Columna derecha: Usuarios registrados en el sistema -->
+      <!-- Columna derecha: Usuarios registrados en el sistema (solo la ve el Administrador) -->
       <div class="col-12 col-lg-6" id="columna-usuarios">
 
         <p class="mb-2 text-white fw-bold small">Usuarios del sistema</p>
 
-        <div class="d-flex flex-column gap-2" id="lista-usuarios">
-
-          <!-- Usuario 1: Helian Moreno -->
-          <div class="tarjeta p-3 rounded-4 d-flex align-items-center gap-3">
-            <div class="avatar-mini avatar-verde">HM</div>
-            <div>
-              <p class="m-0 fw-bold text-white small">Helian Moreno</p>
-              <p class="m-0 texto_gris rol-texto">Agrónomo</p>
-            </div>
-          </div>
-
-          <!-- Usuario 2: July Riaño -->
-          <div class="tarjeta p-3 rounded-4 d-flex align-items-center gap-3">
-            <div class="avatar-mini avatar-cyan">JR</div>
-            <div>
-              <p class="m-0 fw-bold text-white small">July Riaño</p>
-              <p class="m-0 texto_gris rol-texto">Administrador</p>
-            </div>
-          </div>
-
-          <!-- Usuario 3: Dayan Combita -->
-          <div class="tarjeta p-3 rounded-4 d-flex align-items-center gap-3">
-            <div class="avatar-mini avatar-cyan">DC</div>
-            <div>
-              <p class="m-0 fw-bold text-white small">Dayan Combita</p>
-              <p class="m-0 texto_gris rol-texto">Administrador</p>
-            </div>
-          </div>
-
-          <!-- Usuario 4: Derlin Caro -->
-          <div class="tarjeta p-3 rounded-4 d-flex align-items-center gap-3">
-            <div class="avatar-mini avatar-cyan">DC</div>
-            <div>
-              <p class="m-0 fw-bold text-white small">Derlin Caro</p>
-              <p class="m-0 texto_gris rol-texto">Administrador</p>
-            </div>
-          </div>
-
-        </div>
+        <!-- el JS dibuja aquí una tarjeta por cada usuario registrado -->
+        <div class="d-flex flex-column gap-2" id="lista-usuarios"></div>
 
       </div>
 

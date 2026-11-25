@@ -4,13 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Finca El Manantial - Agro Verde</title>
-  
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   <!-- Estilos globales y específicos de inicio -->
   <link rel="stylesheet" href="../../assets/css/global.css">
-  <link rel="stylesheet" href="../../assets/css/inicio/inicio-pantalla.css">  
+  <link rel="stylesheet" href="../../assets/css/inicio/inicio-pantalla.css">
 </head>
 <body>
 
@@ -21,11 +20,17 @@
     <header class="d-flex justify-content-between align-items-center mb-4">
       <div class="d-flex align-items-center gap-3">
         <img src="../../assets/img/agro-verde-sin-texto.png" alt="Agro Verde" class="app-logo-mini">
-        <h5 class="m-0 fw-bold">Finca El Manantial</h5>
+        <div>
+          <h5 class="m-0 fw-bold">Finca El Manantial</h5>
+          <!-- el JS escribe aquí "Hola, July Riaño (Administrador)" -->
+          <p id="saludo" class="m-0 small texto_gris"></p>
+        </div>
       </div>
       <div class="d-flex gap-3">
-        <a href="notificaciones-general.html" class="text-white text-decoration-none" aria-label="Notificaciones">
+        <a href="notificaciones-general.html" class="position-relative text-white text-decoration-none" aria-label="Notificaciones">
           <i class="bi bi-bell fs-5"></i>
+          <!-- el JS escribe aquí cuántas notificaciones faltan por leer (si no hay ninguna, queda escondido) -->
+          <span id="contador-notificaciones" class="badge rounded-pill bg-danger position-absolute top-0 start-100 translate-middle d-none"></span>
         </a>
         <a href="configuracion.html" class="text-white text-decoration-none" aria-label="Configuración">
           <i class="bi bi-gear fs-5"></i>
@@ -45,7 +50,6 @@
     <!-- Tarjetas de resumen rápido -->
     <div class="row g-2 mb-3">
       <div class="col-6 col-md-3">
-        <!-- CORREGIDO: ahora apunta al listado general cultivos.html -->
         <a href="../cultivos/cultivos.html" class="tarjeta p-3 rounded-4 text-decoration-none d-block">
           <p class="mb-1 small">Cultivos activos</p>
           <div class="d-flex justify-content-between align-items-center">
@@ -73,7 +77,6 @@
         </a>
       </div>
       <div class="col-6 col-md-3">
-        <!-- CORREGIDO: apunta al análisis de riesgo climático -->
         <a href="../clima/riesgo-plagas-clima.html" class="tarjeta p-3 rounded-4 text-decoration-none d-block">
           <p class="mb-1 small">Riesgo hoy</p>
           <div class="d-flex justify-content-between align-items-center">
@@ -104,11 +107,9 @@
             <a href="../terreno/terreno.html" class="boton_acceso text-center py-3 rounded-4 text-decoration-none d-block">Terrenos</a>
           </div>
           <div class="col-4">
-            <!-- CORREGIDO: apunta a alertas.html -->
             <a href="../clima/alertas.html" class="boton_acceso text-center py-3 rounded-4 text-decoration-none d-block">Alertas</a>
           </div>
           <div class="col-4">
-            <!-- CORREGIDO: apunta a proveedores-insumos.html -->
             <a href="../insumos/proveedores-insumos.html" class="boton_acceso text-center py-3 rounded-4 text-decoration-none d-block">Proveedores</a>
           </div>
         </div>
@@ -118,24 +119,8 @@
       <div class="col-12 col-lg-5">
         <p class="mb-2 fw-semibold">Historial reciente</p>
 
-        <div class="contenedor_historial">
-          <!-- CORREGIDO: cultivo registrado lleva a cultivos.html -->
-          <a href="../cultivos/cultivos.html" class="tarjeta d-flex align-items-center mb-2 p-3 rounded-3 text-decoration-none">
-            <div class="punto_rojo me-3"></div>
-            <div>
-              <p class="m-0 fw-bold">Cultivo registrado</p>
-              <p class="m-0 small texto_gris">Helian Moreno</p>
-            </div>
-          </a>
-
-          <a href="../plagas/plagas.html" class="tarjeta d-flex align-items-center mb-2 p-3 rounded-3 text-decoration-none">
-            <div class="punto_rojo me-3"></div>
-            <div>
-              <p class="m-0 fw-bold">Plaga reportada</p>
-              <p class="m-0 small texto_gris">Finca Manantial</p>
-            </div>
-          </a>
-        </div>
+        <!-- el JS dibuja aquí los 2 eventos más nuevos del historial -->
+        <div class="contenedor_historial" id="historial-reciente"></div>
       </div>
     </div>
 
@@ -144,17 +129,16 @@
   <!-- Barra de navegación inferior -->
   <nav class="navegacion_inferior d-flex justify-content-between">
     <a href="inicio.html" class="text-center small active"><i class="bi bi-house-door d-block"></i>Inicio</a>
-    <!-- CORREGIDO: apunta a cultivos.html en lugar de ver-cultivo.html -->
     <a href="../cultivos/cultivos.html" class="text-center small"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
     <a href="../clima/clima.html" class="text-center small"><i class="bi bi-cloud-sun d-block"></i>Clima</a>
-    <!-- CORREGIDO: insumos.html en plural -->
     <a href="../insumos/insumos.html" class="text-center small"><i class="bi bi-box-seam d-block"></i>Insumos</a>
     <a href="../perfil/perfil.html" class="text-center small"><i class="bi bi-person-circle d-block"></i>Perfil</a>
   </nav>
 
-  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Nuestro JavaScript: comun.js SIEMPRE primero -->
   <script src="../../assets/js/comun.js"></script>
-<script src="../../assets/js/CARPETA/ARCHIVO.js"></script>
+  <script src="../../assets/js/inicio/inicio.js"></script>
 </body>
 </html>

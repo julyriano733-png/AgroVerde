@@ -34,7 +34,7 @@
       <img src="../../assets/img/agro-verde-sin-texto.png" alt="Agro Verde" class="app-logo-mini">
     </header>
 
-    <!-- Filtros por categoría -->
+    <!-- Filtros por categoría (el JS lee el data-filtro de cada botón) -->
     <div class="d-flex gap-2 mb-4 overflow-auto pb-1">
       <button type="button" data-filtro="todos" class="btn_nuevo border-0 py-1 px-3">Todos</button>
       <button type="button" data-filtro="cultivos" class="boton_acceso border-0 py-1 px-3 rounded-4">Cultivos</button>
@@ -45,88 +45,16 @@
     <!-- Lista del historial agrupada por días -->
     <div class="row g-4 mb-4">
 
-      <!-- Columna izquierda: Hoy -->
+      <!-- Columna izquierda: Hoy (el JS dibuja aquí los eventos de hoy) -->
       <section class="col-12 col-lg-6">
         <p class="mb-3 text-white fw-bold small">Hoy</p>
-
-        <div class="d-flex flex-column gap-3" id="eventos-hoy">
-
-          <!-- Evento 1: Cultivo registrado -->
-          <div class="tarjeta p-3 rounded-4 d-flex align-items-center gap-3">
-            <div class="icono-evento icono-verde">
-              <i class="bi bi-plus-circle fs-5"></i>
-            </div>
-            <div>
-              <p class="m-0 fw-bold text-white">Cultivo registrado</p>
-              <p class="m-0 small texto_gris">Daniela Riaño agregó un nuevo lote</p>
-            </div>
-          </div>
-
-          <!-- Evento 2: Plaga reportada -->
-          <div class="tarjeta p-3 rounded-4 d-flex align-items-center gap-3">
-            <div class="icono-evento icono-rojo">
-              <i class="bi bi-exclamation-triangle fs-5"></i>
-            </div>
-            <div>
-              <p class="m-0 fw-bold text-white">Plaga reportada</p>
-              <p class="m-0 small texto_gris">Helian marcó "Roya" en Finca El Manantial</p>
-            </div>
-          </div>
-
-          <!-- Evento 3: Inicio de sesión -->
-          <div class="tarjeta p-3 rounded-4 d-flex align-items-center gap-3">
-            <div class="icono-evento icono-cyan">
-              <i class="bi bi-box-arrow-in-right fs-5"></i>
-            </div>
-            <div>
-              <p class="m-0 fw-bold text-white">Inicio de sesión</p>
-              <p class="m-0 small texto_gris">Dayan Combita accedió al sistema</p>
-            </div>
-          </div>
-
-        </div>
+        <div class="d-flex flex-column gap-3" id="eventos-hoy"></div>
       </section>
 
-      <!-- Columna derecha: Ayer -->
+      <!-- Columna derecha: Ayer (el JS dibuja aquí los eventos de días anteriores) -->
       <section class="col-12 col-lg-6">
         <p class="mb-3 text-white fw-bold small">Ayer</p>
-
-        <div class="d-flex flex-column gap-3" id="eventos-ayer">
-
-          <!-- Evento 4: Insumo actualizado -->
-          <div class="tarjeta p-3 rounded-4 d-flex align-items-center gap-3">
-            <div class="icono-evento icono-verde">
-              <i class="bi bi-file-earmark-text fs-5"></i>
-            </div>
-            <div>
-              <p class="m-0 fw-bold text-white">Insumo actualizado</p>
-              <p class="m-0 small texto_gris">Derlin cambió stock de "Fertilizante"</p>
-            </div>
-          </div>
-
-          <!-- Evento 5: Terreno inhabilitado -->
-          <div class="tarjeta p-3 rounded-4 d-flex align-items-center gap-3">
-            <div class="icono-evento icono-rojo">
-              <i class="bi bi-slash-circle fs-5"></i>
-            </div>
-            <div>
-              <p class="m-0 fw-bold text-white">Terreno inhabilitado</p>
-              <p class="m-0 small texto_gris">Daniela inhabilitó el Lote 1</p>
-            </div>
-          </div>
-
-          <!-- Evento 6: Usuario creado -->
-          <div class="tarjeta p-3 rounded-4 d-flex align-items-center gap-3">
-            <div class="icono-evento icono-verde">
-              <i class="bi bi-person-plus fs-5"></i>
-            </div>
-            <div>
-              <p class="m-0 fw-bold text-white">Usuario creado</p>
-              <p class="m-0 small texto_gris">Fue creado un nuevo usuario</p>
-            </div>
-          </div>
-
-        </div>
+        <div class="d-flex flex-column gap-3" id="eventos-ayer"></div>
       </section>
 
     </div>

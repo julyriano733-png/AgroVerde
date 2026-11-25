@@ -18,6 +18,5 @@ botonEnviar.addEventListener("click", function () {
   // averiguar qué correos están registrados.
   alert("Si el correo está registrado, te enviaremos un enlace para restablecer tu contraseña");
 
-  campoCorreo.value = "";
   window.location.href = "iniciar-sesion.html";
 });

@@ -1,11 +1,11 @@
 // historial.js
 // Muestra los eventos del historial (Hoy / Ayer) y filtra por tipo
 
-// Color de fondo del circulito de cada evento
-let fondos = {
-  success: "rgba(34, 197, 94, 0.15)",
-  danger: "rgba(239, 68, 68, 0.15)",
-  info: "rgba(6, 182, 212, 0.15)"
+// Clase de historial.css que le toca al circulito según el color del evento
+let clasesColor = {
+  success: "icono-verde",
+  danger: "icono-rojo",
+  info: "icono-cyan"
 };
 
 // Filtro que está elegido ahora: todos, cultivos, insumos o inventario
@@ -16,15 +16,12 @@ function crearTarjetaEvento(evento) {
   let tarjeta = document.createElement("div");
   tarjeta.className = "tarjeta p-3 rounded-4 d-flex align-items-center gap-3";
 
-  // circulito con el icono
+  // circulito con el icono (su tamaño y colores salen de historial.css)
   let circulo = document.createElement("div");
-  circulo.className = "d-flex align-items-center justify-content-center rounded-circle p-2";
-  circulo.style.backgroundColor = fondos[evento.color];
-  circulo.style.width = "42px";
-  circulo.style.height = "42px";
+  circulo.className = "icono-evento " + clasesColor[evento.color];
 
   let icono = document.createElement("i");
-  icono.className = "bi " + evento.icono + " fs-5 text-" + evento.color;
+  icono.className = "bi " + evento.icono + " fs-5";
   circulo.appendChild(icono);
 
   // textos del evento (textContent para que no se ejecute código raro)

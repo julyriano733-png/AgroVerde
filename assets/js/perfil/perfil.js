@@ -2,40 +2,6 @@
 // Muestra los datos del usuario que inició sesión.
 // El rol decide qué ve: solo el Administrador ve la lista de usuarios del sistema.
 
-// Crea la tarjeta de un usuario de la lista
-function crearTarjetaUsuario(usuario) {
-  let tarjeta = document.createElement("div");
-  tarjeta.className = "tarjeta p-3 rounded-4 d-flex align-items-center gap-3";
-
-  let punto = document.createElement("div");
-  punto.className = "punto_verde_pequeno me-1";
-  punto.style.width = "24px";
-  punto.style.height = "24px";
-
-  // los administradores llevan el circulito azul, los demás verde
-  if (usuario.rol === "Administrador") {
-    punto.style.backgroundColor = "#06b6d4";
-  }
-
-  let cajaTextos = document.createElement("div");
-
-  let nombre = document.createElement("p");
-  nombre.className = "m-0 fw-bold text-white small";
-  nombre.textContent = usuario.nombre;
-
-  let rol = document.createElement("p");
-  rol.className = "m-0 small texto_gris";
-  rol.style.fontSize = "11px";
-  rol.textContent = usuario.rol;
-
-  cajaTextos.appendChild(nombre);
-  cajaTextos.appendChild(rol);
-  tarjeta.appendChild(punto);
-  tarjeta.appendChild(cajaTextos);
-
-  return tarjeta;
-}
-
 // Saca las iniciales de un nombre: "Helian Moreno" -> "HM"
 function sacarIniciales(nombre) {
   let palabras = nombre.split(" ");
@@ -46,6 +12,43 @@ function sacarIniciales(nombre) {
   }
 
   return iniciales.toUpperCase();
+}
+
+// Crea la tarjeta de un usuario de la lista (avatar con iniciales, nombre y rol).
+// Los colores del avatar salen de las clases de perfil.css
+function crearTarjetaUsuario(usuario) {
+  let tarjeta = document.createElement("div");
+  tarjeta.className = "tarjeta p-3 rounded-4 d-flex align-items-center gap-3";
+
+  // los administradores llevan el avatar azul (cyan), los demás verde
+  let avatar = document.createElement("div");
+
+  if (usuario.rol === "Administrador") {
+    avatar.className = "avatar-mini avatar-cyan";
+  } else {
+    avatar.className = "avatar-mini avatar-verde";
+  }
+
+  avatar.textContent = sacarIniciales(usuario.nombre);
+
+  // textContent (y no innerHTML) para que si alguien escribe código raro
+  // en su nombre, no se ejecute
+  let cajaTextos = document.createElement("div");
+
+  let nombre = document.createElement("p");
+  nombre.className = "m-0 fw-bold text-white small";
+  nombre.textContent = usuario.nombre;
+
+  let rol = document.createElement("p");
+  rol.className = "m-0 texto_gris rol-texto";
+  rol.textContent = usuario.rol;
+
+  cajaTextos.appendChild(nombre);
+  cajaTextos.appendChild(rol);
+  tarjeta.appendChild(avatar);
+  tarjeta.appendChild(cajaTextos);
+
+  return tarjeta;
 }
 
 function mostrarPerfil() {
@@ -70,7 +73,6 @@ function mostrarPerfil() {
 
   let usuarios = obtenerUsuarios();
   let lista = document.getElementById("lista-usuarios");
-  lista.innerHTML = "";
 
   for (let i = 0; i < usuarios.length; i++) {
     lista.appendChild(crearTarjetaUsuario(usuarios[i]));

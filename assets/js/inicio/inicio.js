@@ -7,10 +7,10 @@
 function crearTarjetaReciente(evento) {
   let enlace = document.createElement("a");
   enlace.href = "../historial/historial.html";
-  enlace.className = "tarjeta d-flex mb-2 p-2 rounded-3 text-decoration-none";
+  enlace.className = "tarjeta d-flex align-items-center mb-2 p-3 rounded-3 text-decoration-none";
 
   let punto = document.createElement("div");
-  punto.className = "punto_rojo me-2";
+  punto.className = "punto_rojo me-3";
 
   let cajaTextos = document.createElement("div");
 
@@ -54,9 +54,6 @@ function mostrarInicio() {
   // ----- historial reciente: solo los 2 eventos más nuevos -----
   let historial = obtenerHistorial();
   let contenedor = document.getElementById("historial-reciente");
-
-  // vaciamos lo que había en el HTML y ponemos los eventos guardados
-  contenedor.innerHTML = "";
 
   for (let i = 0; i < historial.length && i < 2; i++) {
     contenedor.appendChild(crearTarjetaReciente(historial[i]));

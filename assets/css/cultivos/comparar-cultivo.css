@@ -1,0 +1,199 @@
+/* =========================================
+    ESTILOS ESPECÍFICOS - COMPARAR CULTIVOS
+    (Hereda body, .pantalla, .btn-back, .app-logo-mini
+    y .navegacion_inferior desde global.css)
+   ========================================= */
+:root {
+    --tarjeta-comp: rgba(255, 255, 255, 0.08);
+    --borde-comp: rgba(255, 255, 255, 0.12);
+    --verde: #22c55e;
+    --texto: #ffffff;
+    --texto-suave: #9ca3af;
+}
+
+/* Encabezado */
+.titulo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--texto);
+}
+
+/* Selectores desplegables */
+.etiqueta-cultivo {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--texto);
+}
+
+.desplegable {
+    position: relative;
+}
+
+.selector {
+    display: block;
+    position: relative;
+    background-color: var(--tarjeta-comp);
+    border: 1px solid var(--borde-comp);
+    border-radius: 12px;
+    color: var(--texto);
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-align: left;
+    padding: 0.65rem 2.2rem 0.65rem 0.9rem;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    transition: border-color 0.2s;
+}
+
+.selector:hover,
+.desplegable[open] .selector {
+    border-color: var(--verde);
+}
+
+.selector::-webkit-details-marker {
+    display: none;
+}
+
+.selector::after {
+    content: "";
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    width: 7px;
+    height: 7px;
+    border-right: 2px solid var(--texto-suave);
+    border-bottom: 2px solid var(--texto-suave);
+    transform: translateY(-70%) rotate(45deg);
+    transition: transform 0.2s;
+}
+
+.desplegable[open] .selector::after {
+    transform: translateY(-30%) rotate(-135deg);
+}
+
+.txt {
+    display: none;
+}
+
+.desplegable:has(.op-maiz:checked) .txt-maiz,
+.desplegable:has(.op-cafe:checked) .txt-cafe,
+.desplegable:has(.op-frijol:checked) .txt-frijol,
+.desplegable:has(.op-tomate:checked) .txt-tomate {
+    display: inline;
+}
+
+.lista-opciones {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    margin-top: 0.4rem;
+    background-color: #163b29;
+    border: 1px solid var(--verde);
+    border-radius: 12px;
+    padding: 0.4rem;
+    z-index: 20;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+}
+
+.opcion-oculta {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.lista-opciones label {
+    display: block;
+    font-size: 0.85rem;
+    padding: 6px 8px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--texto);
+}
+
+.lista-opciones label:hover {
+    background-color: rgba(34, 197, 94, 0.15);
+    color: var(--verde);
+}
+
+.opcion-oculta:checked+label {
+    border-color: var(--verde);
+    background-color: rgba(34, 197, 94, 0.12);
+    font-weight: 600;
+}
+
+/* Tarjetas de comparación */
+.tarjeta-cultivo {
+    background-color: var(--tarjeta-comp);
+    border: 1px solid var(--borde-comp);
+    border-radius: 18px;
+    padding: 1.75rem 0.9rem;
+    text-align: center;
+    height: 100%;
+    color: var(--texto);
+}
+
+.nombre-cultivo {
+    color: var(--verde);
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 1.4rem;
+}
+
+.dato {
+    color: var(--texto-suave);
+    font-size: 0.82rem;
+    margin-bottom: 1.2rem;
+}
+
+.dato:last-child {
+    margin-bottom: 0;
+}
+
+/* VS centrado con píldora oscura */
+.vs {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0f2a1d;
+    border: 1px solid var(--verde);
+    color: var(--verde);
+    border-radius: 50px;
+    padding: 4px 10px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    z-index: 5;
+}
+
+/* Recomendación */
+.recomendacion {
+    background-color: var(--tarjeta-comp);
+    border: 1px solid var(--borde-comp);
+    border-radius: 18px;
+    padding: 1.25rem;
+    color: var(--texto);
+}
+
+.recomendacion-titulo {
+    font-size: 0.92rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+
+.recomendacion-texto {
+    color: #e5e7eb;
+    font-size: 0.85rem;
+}
+
+.punto {
+    flex-shrink: 0;
+    width: 14px;
+    height: 14px;
+    background-color: var(--verde);
+    border-radius: 50%;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de insumo - Agro Verde</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Íconos de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- Estilos globales y específicos de Insumos -->
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/insumos/insumos.css">
+</head>
+
+<body>
+
+    <main class="pantalla container-fluid">
+
+        <!-- Encabezado -->
+        <header class="d-flex justify-content-between align-items-center mb-3">
+            <div class="d-flex align-items-center gap-3">
+                <a href="insumos.html"
+                    class="boton_atras text-white text-decoration-none d-flex align-items-center justify-content-center"
+                    aria-label="Volver">
+                    <i class="bi bi-chevron-left fs-5"></i>
+                </a>
+                <h4 class="m-0 text-white fw-bold">Uso de insumo</h4>
+            </div>
+            <img src="../../assets/img/agro-verde-con-texto.png" alt="Agro Verde" class="logo-header">
+        </header>
+
+        <!-- Formulario centrado -->
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6">
+
+                <!-- Botón buscar por código de barras -->
+                <button type="button" class="btn_nuevo w-100 py-2 mb-3 border-0">
+                    <i class="bi bi-upc-scan me-2"></i>Buscar por código de barras
+                </button>
+
+                <section class="tarjeta p-4 rounded-4">
+                    <form action="insumos.html" method="GET">
+
+                        <div class="mb-3">
+                            <label for="insumo" class="form-label text-white small fw-bold">Insumo a usar</label>
+                            <select class="form-select caja_busqueda" id="insumo" name="insumo" required>
+                                <option value="fertilizante-npk" selected>Fertilizante NPK</option>
+                                <option value="herbicida-selectivo">Herbicida selectivo</option>
+                                <option value="semilla-maiz">Semilla de maíz</option>
+                                <option value="fungicida-organico">Fungicida orgánico</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="cantidad" class="form-label text-white small fw-bold">Cantidad usada</label>
+                            <input type="number" class="form-control caja_busqueda" id="cantidad" name="cantidad"
+                                placeholder="Ej. 10" min="1" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="fecha_uso" class="form-label text-white small fw-bold">Fecha de uso</label>
+                            <input type="date" class="form-control caja_busqueda" id="fecha_uso" name="fecha_uso"
+                                required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="observaciones" class="form-label text-white small fw-bold">Observaciones</label>
+                            <input type="text" class="form-control caja_busqueda" id="observaciones"
+                                name="observaciones" placeholder="Ej. Aplicación foliar">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="medida" class="form-label text-white small fw-bold">Unidad de medida</label>
+                            <input type="text" class="form-control caja_busqueda" id="medida" name="medida"
+                                placeholder="Ej. KG, ML, Sacos" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="cultivo" class="form-label text-white small fw-bold">Selecciona cultivo</label>
+                            <select class="form-select caja_busqueda" id="cultivo" name="cultivo" required>
+                                <option value="maiz-1" selected>Maíz - Lote 1</option>
+                                <option value="cafe-2">Café - Lote 2</option>
+                                <option value="frijol-4">Fríjol - Lote 4</option>
+                                <option value="tomate-5">Tomate - Lote 5</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn_nuevo w-100 py-2 border-0 rounded-3">Registrar uso</button>
+
+                    </form>
+                </section>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Barra de navegación inferior fija -->
+    <nav class="navegacion_inferior d-flex justify-content-between">
+        <a href="../inicio/inicio.html" class="text-center small"><i class="bi bi-house-door d-block"></i>Inicio</a>
+        <a href="../cultivos/cultivos.html" class="text-center small"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
+        <a href="../clima/clima.html" class="text-center small"><i class="bi bi-cloud-sun d-block"></i>Clima</a>
+        <a href="insumos.html" class="text-center small active"><i class="bi bi-box-seam d-block"></i>Insumos</a>
+        <a href="../perfil/perfil.html" class="text-center small"><i class="bi bi-person-circle d-block"></i>Perfil</a>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

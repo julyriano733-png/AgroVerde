@@ -1,0 +1,65 @@
+/* el fondo de toda la pagina */
+body {
+  background-color: #0f2a1d;
+  margin: 0;
+}
+
+/* el encabezado con el titulo, el logo y el texto */
+.encabezado {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* el texto gris suave debajo del logo */
+.encabezado p {
+  color: #9ca3af;
+}
+
+/* para k cada label quede en su propia linea */
+.correo,
+.contraseña {
+  display: block;
+  margin-bottom: 16px;
+}
+
+/* las cajitas donde se escribe el correo y la contraseña */
+.formulario_login input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 6px;
+  padding: 10px;
+}
+
+/* el link de olvidaste tu contraseña */
+.olvido_contraseña a {
+  color: #22c55e;
+  text-decoration: none;
+}
+
+/* el boton verde de iniciar sesion */
+.boton_iniciar_sesion {
+  width: 100%;
+  background-color: #22c55e;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+/* para k cambie un poquito el color cuando uno pasa el mouse por el boton */
+.boton_iniciar_sesion:hover {
+  background-color: #16a34a;
+}
+
+/* el texto de no tienes cuenta */
+.registro {
+  text-align: center;
+  color: #9ca3af;
+}
+
+/* el link de registrate */
+.iniciar_sesion {
+  color: #22c55e;
+  text-decoration: none;
+}

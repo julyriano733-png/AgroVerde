@@ -1,0 +1,131 @@
+# AgroVerde
+
+![Logo Agro Verde](assets/img/agro-verde-con-texto.png "Agro Verde")
+
+Sistema para la gestión de terrenos, cultivos, sanidad vegetal e inventario agrícola del Centro Agropecuario del SENA.
+
+Agro Verde es una aplicación web *mobile-first* y responsiva que sirve para llevar el control de los terrenos, seguir las etapas de crecimiento de las siembras, monitorear el clima, manejar los insumos agrícolas y generar reportes de campo.
+
+## Características principales
+
+- **Gestión de terrenos y parcelas:** registro, edición e historial de los espacios de siembra.
+- **Seguimiento fenológico:** control de las etapas de desarrollo, comparación y estimación de cosecha de los cultivos.
+- **Sanidad vegetal:** monitoreo de alertas, registro de incidencias y catálogo de plagas.
+- **Monitoreo climático:** pronóstico actual, riesgo de plagas por clima, alertas, calendario e historial meteorológico.
+- **Reportes y consumo:** generación de reportes operativos, seguimiento de consumo y exportación a PDF.
+- **Inventario de insumos:** control de agroquímicos, herramientas y proveedores.
+- **Despliegue:** puede funcionar en la nube (SaaS) o en servidores locales (On-Premise).
+
+## Arquitectura y estandarización
+
+Todos los módulos comparten una hoja de estilos base (`assets/css/global.css`) junto con Bootstrap 5 y Bootstrap Icons para mantener una interfaz unificada en tema oscuro (`#0f2a1d` y `#22c55e`), diseño adaptable desde móvil hasta escritorio (`container-fluid`) y barra de navegación inferior fija.
+
+## Módulos desarrollados
+
+Estos módulos ya están desarrollados y estandarizados en HTML y CSS. Cada uno cuenta con su carpeta en `pages/` y su hoja de estilos en `assets/css/`.
+
+### Inicio de sesión
+
+- Iniciar sesión (`iniciar-sesion.html`)
+- Crear cuenta (`crear-cuenta.html`)
+- Recuperar contraseña (`recuperar-contrasena.html`)
+- Términos de servicio y política de privacidad (`terminos.html`, `privacidad.html`)
+- Acceso de usuario (`acceso-usuario.html`)
+- Crear propiedad (`crear-propiedad.html`)
+- Notificaciones por correo (`notificaciones-correo.html`)
+
+### Inicio
+
+- Pantalla principal (`inicio.html`)
+- Notificaciones generales (`notificaciones-general.html`)
+- Configuración (`configuracion.html`)
+- Idioma y regionalización, unidades de medida, configuración de alertas y ayuda y soporte (`idioma.html`, `unidades.html`, `alertas-configuracion.html`, `soporte.html`)
+
+### Cultivos
+
+- Lista de cultivos (`cultivos.html`)
+- Crear cultivo (`crear-cultivo.html`)
+- Ver detalle de cultivo (`ver-cultivo.html`)
+- Editar cultivo (`editar-cultivo.html`)
+- Inhabilitar cultivo (`inhabilitar-cultivo.html`)
+- Fase fenológica (`fase-fenologica.html`)
+- Día de cosecha estimado (`dia-cosecha.html`)
+
+### Plagas
+
+- Pantalla principal de plagas (`plagas.html`)
+- Registrar nueva plaga (`nueva-plaga.html`)
+- Modificar plaga (`modificar-plaga.html`)
+- Inhabilitar plaga (`inhabilitar-plaga.html`)
+- Catálogo de plagas (`catalogo-plagas.html`)
+
+### Clima
+
+- Panel principal de clima (`clima.html`)
+- Riesgo de plagas por clima (`riesgo-plagas-clima.html`)
+- Alertas climáticas (`alertas.html`)
+- Historial climático (`historial-climatico.html`)
+- Calendario agrícola y climático (`calendario-agricola.html`)
+
+### Terreno
+
+- Lista de terrenos (`terreno.html`)
+- Nuevo terreno (`nuevo-terreno.html`)
+- Editar terreno (`editar-terreno.html`)
+- Historial de terrenos (`historial-terrenos.html`)
+
+### Reportes
+
+- Lista de reportes (`reportes.html`)
+- Crear reporte (`crear-reportes.html`)
+- Reporte de consumo (`consumo.html`)
+- Exportar a PDF (`pdf.html`)
+- Inhabilitar reporte (`inhabilitar-reporte.html`)
+
+### Propiedad
+
+- Crear propiedad (`crear-propiedad.html`)
+- Ver propiedad (`ver-propiedad.html`)
+- Ver etapa (`ver-etapa.html`)
+- Inhabilitar propiedad (`inhabilitar-propiedad.html`)
+
+### Insumos
+
+- Inventario de insumos (`insumos.html`)
+- Crear, editar, usar e inhabilitar insumo (`crear-insumo.html`, `editar-insumo.html`, `uso-insumo.html`, `inhabilitar-insumo.html`)
+- Opciones de insumos (`opciones-insumo.html`)
+- Costos por insumo y por siembra (`costos-por-insumo.html`, `costos-por-siembra.html`)
+- Insumos por siembra e insumos usados (`insumo-por-siembra.html`, `insumos-usados.html`)
+- Gráfica de insumos (`grafica-insumos.html`)
+- Proveedores (`proveedores-insumos.html`, `registrar-proveedor.html`, `nuevo-proveedor.html`)
+- Historial de uso (`historial-insumo.html`, `historial-uso.html`)
+- Actualizar stock y código de barras (`actualizar-stock.html`, `codigo-barras.html`)
+- Catálogo de insumos (`consultar-catalogo.html`)
+
+## Módulos pendientes
+
+- **Perfil** (`pages/perfil/` — vista y edición de perfil de usuario)
+- **Historial general** (`pages/historial/` — unificación si aplica)
+
+## Tecnologías usadas
+
+- HTML5
+- CSS3 (`global.css` + estilos modulares)
+- Bootstrap 5 y Bootstrap Icons
+- JavaScript (sin frameworks). Los datos se guardan en `localStorage` del navegador mientras no exista la API:
+  las funciones compartidas están en `assets/js/comun.js` (`obtenerLista`, `guardarLista`...), así que al conectar
+  la API solo hay que cambiar esas funciones.
+- [Open-Meteo](https://open-meteo.com/) para el clima real de la finca (gratis y sin clave).
+- Git y GitHub
+
+## Equipo de desarrollo: ByteRaíz
+
+- July Daniela Riaño Soto
+- Helian Camilo Moreno Latorre
+- Dayan Leonel Montañez Combita
+- Derlin Yissel Caro Bautista# AGROVERDEHCML
+# AGROVERDEHCML
+# AGROVERDEHCML
+# AGROVERDEHCMLV1
+# AGROVERDEV2
+# AGROVERD

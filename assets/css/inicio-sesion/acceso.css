@@ -1,0 +1,145 @@
+/*PANTALLAS DE ACCESO (iniciar sesión, crear cuenta y recuperar contraseña)
+  Mismos colores que el resto de la app (global.css) y adaptables a cualquier pantalla*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #0f2a1d;
+  color: #ffffff;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+}
+
+/* Tarjeta central: ocupa todo el ancho en celular y máximo 420px en computador */
+.tarjeta-acceso {
+  width: 100%;
+  max-width: 420px;
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 32px 24px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo, título y subtítulo centrados */
+.encabezado {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.encabezado img {
+  width: 110px;
+  height: auto;
+  margin-bottom: 12px;
+}
+
+.encabezado h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+  color: #ffffff;
+}
+
+.encabezado p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+/* Campos */
+.campo-acceso {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+.campo-acceso input {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 12px 14px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.campo-acceso input::placeholder {
+  color: #6c8778;
+}
+
+.campo-acceso input:focus {
+  border-color: #22c55e;
+}
+
+/* El navegador pinta de azul claro los campos autocompletados: se dejan oscuros */
+.campo-acceso input:-webkit-autofill {
+  -webkit-text-fill-color: #ffffff;
+  -webkit-box-shadow: 0 0 0 1000px #1d3a2c inset;
+  caret-color: #ffffff;
+}
+
+/* Botón principal */
+.boton-acceso {
+  width: 100%;
+  background-color: #22c55e;
+  color: #091c12;
+  border: none;
+  border-radius: 50px;
+  padding: 13px 20px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 4px;
+}
+
+.boton-acceso:hover {
+  background-color: #1ea850;
+}
+
+/* Enlaces (olvidaste tu contraseña, regístrate, inicia sesión) */
+.enlace-derecha {
+  text-align: right;
+  margin: -6px 0 16px 0;
+  font-size: 0.85rem;
+}
+
+.texto-pie {
+  text-align: center;
+  margin: 20px 0 0 0;
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+.tarjeta-acceso a {
+  color: #22c55e;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.tarjeta-acceso a:hover {
+  text-decoration: underline;
+}
+
+/* En computador la tarjeta respira un poco más */
+@media (min-width: 768px) {
+  .tarjeta-acceso {
+    padding: 40px 36px;
+  }
+
+  .encabezado img {
+    width: 130px;
+  }
+}

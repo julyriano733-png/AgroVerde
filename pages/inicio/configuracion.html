@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configuración</title>
+  
+  <!-- traemos bootstrap para k se vea bien sin complicarme tanto -->
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <!-- iconos de bootstrap para las flechas y botones de la configuracion -->
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <!-- estilos del css de configuracion -->
+  <link rel="stylesheet" href="../../assets/css/inicio/configuracion.css">
+  
+  <link rel="stylesheet" href="../../assets/css/logo.css">
+</head>
+<body>
+  <img src="../../assets/img/agro-verde-logo.png" alt="Agro Verde" class="logo-app">
+
+  <!-- este div es la pantalla principal k en pc se acomoda bien centrada -->
+  <div class="pantalla container-fluid">
+
+    <!-- la parte de arriba con el boton de regresar y el titulo -->
+    <div class="d-flex align-items-center mb-4 gap-3 encabezado-logo">
+      <!-- boton para volver a la pagina de inicio -->
+      <a href="../inicio/inicio.html" class="boton_atras text-white text-decoration-none d-flex align-items-center justify-content-center">
+        <i class="bi bi-chevron-left fs-5"></i>
+      </a>
+      <h4 class="m-0 text-white fw-bold">Configuración</h4>
+    </div>
+
+    <!-- distribucion en columnas para aprovechar la pantalla ancha de la pc -->
+    <div class="row g-4">
+      <div class="col-12 col-lg-6">
+        <!-- SECCION CUENTA -->
+        <p class="mb-2 texto_subtitulo small text-uppercase">CUENTA</p>
+        <div class="tarjeta p-0 rounded-4 mb-4 overflow-hidden">
+          <!-- opcion perfil y cuenta -->
+          <a href="../perfil/editar-perfil.html" class="item_opcion d-flex justify-content-between align-items-center p-3 text-decoration-none border-bottom-subtil">
+            <span class="texto_blanco">Perfil y cuenta</span>
+            <i class="bi bi-chevron-right icono_verde"></i>
+          </a>
+          <!-- opcion notificaciones -->
+          <a href="notificaciones-general.html" class="item_opcion d-flex justify-content-between align-items-center p-3 text-decoration-none">
+            <span class="texto_blanco">Notificaciones</span>
+            <i class="bi bi-chevron-right icono_verde"></i>
+          </a>
+        </div>
+
+        <!-- SECCION PREFERENCIAS -->
+        <p class="mb-2 texto_subtitulo small text-uppercase">PREFERENCIAS</p>
+        <div class="d-flex flex-column gap-2 mb-4">
+          <!-- opcion idioma y regionalizacion -->
+          <a href="idioma.html" class="tarjeta_con_borde p-3 rounded-4 d-flex justify-content-between align-items-center text-decoration-none">
+            <span class="texto_blanco">Idioma y regionalización</span>
+            <div class="d-flex align-items-center gap-2">
+              <span class="small texto_gris" id="texto-idioma">Español (CO)</span>
+              <i class="bi bi-chevron-right icono_verde"></i>
+            </div>
+          </a>
+
+          <!-- opcion unidades de medida -->
+          <a href="unidades.html" id="opcion-unidades" class="tarjeta_con_borde p-3 rounded-4 d-flex justify-content-between align-items-center text-decoration-none">
+            <span class="texto_blanco">Unidades de medida</span>
+            <div class="d-flex align-items-center gap-2">
+              <span class="small texto_gris" id="texto-unidades">Métrico</span>
+              <i class="bi bi-chevron-right icono_verde"></i>
+            </div>
+          </a>
+
+          <!-- opcion configuracion alertas -->
+          <a href="alertas-configuracion.html" class="tarjeta_con_borde p-3 rounded-4 d-flex justify-content-between align-items-center text-decoration-none">
+            <span class="texto_blanco">Configuracion alertas</span>
+            <i class="bi bi-chevron-right icono_verde"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-6">
+        <!-- SECCION SOPORTE -->
+        <p class="mb-2 texto_subtitulo small text-uppercase">SOPORTE</p>
+        <div class="tarjeta p-0 rounded-4 mb-4 overflow-hidden">
+          <!-- opcion ayuda y soporte -->
+          <a href="https://wa.me/573204154049?text=Hola%2C%20necesito%20ayuda%20con%20Agro%20Verde" target="_blank" rel="noopener" class="item_opcion d-flex justify-content-between align-items-center p-3 text-decoration-none border-bottom-subtil">
+            <span class="texto_blanco"><i class="bi bi-whatsapp me-2 icono_verde"></i>Ayuda y soporte</span>
+            <span class="small texto_gris">WhatsApp <i class="bi bi-box-arrow-up-right ms-1"></i></span>
+          </a>
+          <!-- opcion preguntas frecuentes -->
+          <a href="soporte.html" class="item_opcion d-flex justify-content-between align-items-center p-3 text-decoration-none border-bottom-subtil">
+            <span class="texto_blanco">Preguntas frecuentes</span>
+            <i class="bi bi-chevron-right icono_verde"></i>
+          </a>
+          <!-- opcion cerrar sesion -->
+          <a href="../inicio-sesion/iniciar-sesion.html" id="boton-cerrar-sesion" class="item_opcion d-flex justify-content-between align-items-center p-3 text-decoration-none">
+            <span class="texto_rojo fw-bold">Cerrar sesión</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- menu de abajo k se queda fijo abajo del monitor para moverte rapido -->
+  <div class="navegacion_inferior d-flex justify-content-between">
+    <a href="../inicio/inicio.html" class="text-center small"><i class="bi bi-house-door d-block"></i>Inicio</a>
+    <a href="../cultivos/cultivos.html" class="text-center small"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
+    <a href="../clima/clima.html" class="text-center small"><i class="bi bi-cloud-sun d-block"></i>Clima</a>
+    <a href="../insumos/insumos.html" class="text-center small"><i class="bi bi-box-seam d-block"></i>Insumos</a>
+    <a href="../perfil/perfil.html" class="text-center small"><i class="bi bi-person-circle d-block"></i>Perfil</a>
+  </div>
+
+  <!-- script de bootstrap para funciones de javascript -->
+  <script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/js/comun.js"></script>
+  <script src="../../assets/js/permisos.js"></script>
+  <script src="../../assets/js/confirmacion.js"></script>
+  <script src="../../assets/js/inicio/configuracion.js"></script>
+  <script src="../../assets/js/conexion.js"></script>
+  <script src="../../assets/js/logo.js"></script>
+</body>
+</html>

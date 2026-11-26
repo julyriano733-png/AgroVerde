@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar insumo - Agro Verde</title>
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/insumos/insumos.css">
+  <link rel="stylesheet" href="../../assets/css/logo.css">
+</head>
+
+<body>
+  <img src="../../assets/img/agro-verde-logo.png" alt="Agro Verde" class="logo-app">
+    <main class="pantalla container-fluid">
+        <!-- Encabezado -->
+        <header class="app-header">
+            <div class="app-header__left">
+                <a href="insumos.html" class="btn-back" aria-label="Volver"><i class="bi bi-arrow-left"></i></a>
+                <h3 class="m-0 fw-bold">Editar insumo</h3>
+            </div>
+        </header>
+
+        <div class="contenido-insumos">
+            <form id="formEditarInsumo" action="insumos.html">
+                <input type="hidden" name="mensaje" value="guardado">
+                <label for="nombre" class="agro-label">Nombre del insumo</label>
+                <input type="text" id="nombre" name="nombre" class="agro-input" value="Urea 46%">
+                <label for="categoria" class="agro-label">Categoría</label>
+                <select id="categoria" name="categoria" class="agro-select">
+                    <option value="" selected disabled>Seleccionar categoría</option>
+                    <option value="Fertilizante">Fertilizante</option>
+                    <option value="Abono orgánico">Abono orgánico</option>
+                    <option value="Herbicida">Herbicida</option>
+                    <option value="Fungicida">Fungicida</option>
+                    <option value="Insecticida">Insecticida</option>
+                    <option value="Semilla">Semilla</option>
+                    <option value="Herramienta">Herramienta</option>
+                    <option value="Otro">Otro</option>
+                </select>
+
+                <label for="codigoBarras" class="agro-label">Código de barras (opcional)</label>
+                <div class="d-flex gap-2">
+                    <input type="text" id="codigoBarras" name="codigoBarras" class="agro-input" inputmode="numeric" placeholder="Si lo dejas vacío se crea uno">
+                    <button type="button" id="botonEscanearCodigo" class="btn-agro-outline mb-3" style="width: auto;" title="Leer con la cámara"><i class="bi bi-upc-scan"></i></button>
+                </div>
+                <label for="cantidad" class="agro-label">Cantidad insumo</label>
+                <input type="number" id="cantidad" name="cantidad" class="agro-input" value="25">
+                <label for="medida" class="agro-label">Medida del insumo</label>
+                <select id="medida" name="medida" class="agro-select">
+                    <option value="" selected disabled>Seleccionar medida</option>
+                    <optgroup label="Por peso">
+                        <option value="kg">Kilogramo (kg)</option>
+                        <option value="g">Gramo (g) - 1.000 g = 1 kg</option>
+                        <option value="bultos">Bulto - entre 25 y 50 kg según el producto</option>
+                        <option value="sacos">Saco - normalmente 50 kg</option>
+                    </optgroup>
+                    <optgroup label="Por volumen (líquidos)">
+                        <option value="L">Litro (L)</option>
+                        <option value="mL">Mililitro (mL) - 1.000 mL = 1 L</option>
+                        <option value="galones">Galón - aprox. 3,8 L</option>
+                        <option value="canecas">Caneca - aprox. 20 L</option>
+                    </optgroup>
+                    <optgroup label="Por unidad">
+                        <option value="und">Unidad (frasco, sobre, caja...) - dices cuánto trae cada una</option>
+                    </optgroup>
+                </select>
+                <div id="grupoContenido" class="d-none">
+                    <label for="contenidoCantidad" class="agro-label">¿Cuánto trae cada unidad?</label>
+                    <div class="d-flex gap-2">
+                        <input type="number" id="contenidoCantidad" class="agro-input" min="0" step="any" placeholder="Ej. 500">
+                        <select id="contenidoMedida" class="agro-select" style="max-width: 170px;">
+                            <option value="g">gramos (g)</option>
+                            <option value="kg">kilos (kg)</option>
+                            <option value="mL">mililitros (mL)</option>
+                            <option value="L">litros (L)</option>
+                        </select>
+                    </div>
+                    <p class="small texto_gris mt-n2 mb-3">Ej. una caja de 500 g o un frasco de 250 mL.</p>
+                </div>
+                <div id="grupoPeso" class="d-none">
+                    <label for="pesoUnidad" class="agro-label">Peso aproximado de cada unidad (kg)</label>
+                    <input type="number" id="pesoUnidad" name="pesoUnidad" class="agro-input mb-1" min="0" step="0.5" placeholder="Ej. 25">
+                    <p class="small texto_gris mb-3" id="ayudaPeso">Lo calculamos según el insumo; puedes cambiarlo.</p>
+                </div>
+                <label for="proveedorInsumo" class="agro-label">Proveedor</label>
+                <select id="proveedorInsumo" name="proveedorInsumo" class="agro-select mb-1"></select>
+                <a href="registrar-proveedor.html" class="link-editar d-inline-block mb-3"><i class="bi bi-plus-circle me-1"></i>Agregar proveedor</a>
+
+                <label for="precio" class="agro-label">Precio por unidad ($)</label>
+                <input type="number" id="precio" name="precio" class="agro-input" placeholder="Ej. 63000" min="0" step="100">
+                <label for="minimo" class="agro-label">Stock mínimo (avisar cuando quede esto o menos)</label>
+                <input type="number" id="minimo" name="minimo" class="agro-input" placeholder="Ej. 5" min="0">
+                <label for="llegada" class="agro-label">Fecha de llegada</label>
+                <input type="date" id="llegada" name="llegada" class="agro-input" value="2026-03-10">
+                <label for="caducidad" class="agro-label">Fecha de caducidad</label>
+                <input type="date" id="caducidad" name="caducidad" class="agro-input" value="2026-09-10">
+
+                <button type="submit" class="btn-agro-primary">Guardar cambios</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Barra de navegación inferior -->
+    <nav class="navegacion_inferior d-flex justify-content-between">
+        <a href="../inicio/inicio.html" class="text-center small"><i class="bi bi-house-door d-block"></i>Inicio</a>
+        <a href="../cultivos/cultivos.html" class="text-center small"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
+        <a href="../clima/clima.html" class="text-center small"><i class="bi bi-cloud-sun d-block"></i>Clima</a>
+        <a href="insumos.html" class="text-center small active"><i class="bi bi-box-seam d-block"></i>Insumos</a>
+        <a href="../perfil/perfil.html" class="text-center small"><i class="bi bi-person-circle d-block"></i>Perfil</a>
+    </nav>
+
+    <script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/comun.js"></script>
+    <script src="../../assets/js/permisos.js"></script>
+    <script src="../../assets/js/insumos/datos-insumos.js"></script>
+    <script src="../../assets/js/insumos/insumos.js"></script>
+    <script src="../../assets/js/confirmacion.js"></script>
+  <script src="../../assets/js/conexion.js"></script>
+  <script src="../../assets/js/logo.js"></script>
+</body>
+
+</html>

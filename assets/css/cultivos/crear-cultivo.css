@@ -1,0 +1,220 @@
+/*ESTILOS ESPECÍFICOS - CREAR CULTIVO
+   (Hereda body, .pantalla y .app-logo-mini de global.css)*/
+:root {
+  --campo-fondo: rgba(255, 255, 255, 0.08);
+  --borde: rgba(255, 255, 255, 0.12);
+  --verde: #22c55e;
+  --texto: #ffffff;
+  --texto-suave: #9ca3af;
+}
+
+/* Encabezado */
+.titulo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--texto);
+}
+
+.btn-volver {
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--borde);
+  background-color: var(--campo-fondo);
+  border-radius: 10px;
+  color: var(--texto);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-volver:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: var(--verde);
+}
+
+/* Labels y Campos */
+.form-label {
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+  margin-bottom: 0.4rem;
+}
+
+.campo {
+  background-color: var(--campo-fondo);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  color: var(--texto);
+  font-size: 0.9rem;
+  padding: 0.7rem 0.9rem;
+}
+
+.campo::placeholder {
+  color: #6c8778;
+}
+
+.campo:focus {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: var(--texto);
+  border-color: var(--verde);
+  box-shadow: none;
+}
+
+.form-select.campo {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%239ca3af' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+}
+
+.form-select.campo option {
+  background-color: #163b29;
+  color: var(--texto);
+}
+
+textarea.campo {
+  resize: none;
+}
+
+/* Desplegable de Terreno */
+.campo-terreno {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  list-style: none;
+  color: #6c8778;
+  user-select: none;
+}
+
+.campo-terreno::-webkit-details-marker {
+  display: none;
+}
+
+.campo-terreno::after {
+  content: "";
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--texto-suave);
+  border-bottom: 2px solid var(--texto-suave);
+  transform: translateY(-70%) rotate(45deg);
+  transition: transform 0.2s;
+}
+
+.terreno-desplegable[open] .campo-terreno {
+  border-color: var(--verde);
+}
+
+.terreno-desplegable[open] .campo-terreno::after {
+  transform: translateY(-30%) rotate(-135deg);
+}
+
+.txt-valor {
+  display: none;
+}
+
+.terreno-desplegable:has(input:checked) .txt-vacio {
+  display: none;
+}
+
+.terreno-desplegable:has(input:checked) .campo-terreno {
+  color: var(--texto);
+}
+
+.terreno-desplegable:has(#t1:checked) .txt-t1,
+.terreno-desplegable:has(#t2:checked) .txt-t2,
+.terreno-desplegable:has(#t3:checked) .txt-t3 {
+  display: inline;
+}
+
+.lista-terrenos {
+  background-color: #163b29;
+  border: 1px solid var(--verde);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.lista-terrenos li {
+  border-bottom: 1px solid rgba(34, 197, 94, 0.25);
+}
+
+.lista-terrenos li:last-child {
+  border-bottom: none;
+}
+
+.opcion-oculta {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.terreno-item {
+  display: block;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.75rem 0;
+  cursor: pointer;
+  color: var(--texto);
+}
+
+.terreno-item:hover,
+.opcion-oculta:checked+.terreno-item {
+  background-color: rgba(34, 197, 94, 0.2);
+  color: var(--verde);
+}
+
+/* Cultivos recomendados */
+.card-reco {
+  background-color: var(--campo-fondo);
+  border: 1px solid var(--borde);
+  border-radius: 14px;
+  padding: 0.75rem;
+  height: 100%;
+}
+
+.punto {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: var(--verde);
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+.nombre-reco {
+  font-size: 0.85rem;
+}
+
+.compat {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--texto-suave);
+  margin-top: 0.35rem;
+}
+
+/* Botón guardar */
+.btn-guardar {
+  background-color: var(--verde);
+  border: none;
+  border-radius: 50px;
+  color: #091c12;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 0.8rem;
+  transition: background-color 0.2s;
+}
+
+.btn-guardar:hover,
+.btn-guardar:focus {
+  background-color: #1ea850;
+  color: #091c12;
+}
+/* Terreno con un cultivo sembrado: se ve pero no se puede elegir */
+.terreno-ocupado {
+  opacity: 0.45;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}

@@ -1,0 +1,77 @@
+/*ESTILOS ESPECÍFICOS - MÓDULO REPORTES*/
+
+/* Gráfico de barras Productividad Semanal */
+.chart-barras {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 110px;
+    padding: 12px 8px 4px;
+    gap: 8px;
+}
+
+.barra-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    height: 100%;
+    justify-content: flex-end;
+}
+
+.barra-fill {
+    width: 100%;
+    max-width: 18px;
+    background-color: #22c55e;
+    border-radius: 6px 6px 2px 2px;
+    transition: height 0.3s ease;
+}
+
+.barra-fill--destacada {
+    background-color: #38bdf8;
+}
+
+.barra-dia {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+}
+
+/* Vista previa de documento PDF */
+.pdf-preview-box {
+    background-color: #ffffff;
+    color: #1f2937;
+    border-radius: 10px;
+    padding: 20px 18px;
+    min-height: 280px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.pdf-preview-box h6 {
+    color: #1d4ed8;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.pdf-preview-box p {
+    font-size: 0.78rem;
+    line-height: 1.5;
+    color: #374151;
+}
+
+
+
+/* Selección en Inhabilitar reporte */
+.check-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--green-primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--green-primary);
+    font-size: 0.75rem;
+}

@@ -1,0 +1,65 @@
+/*ESTILOS ESPECÍFICOS - CULTIVOS PRINCIPAL
+   (Hereda body, .pantalla, .tarjeta, .texto_gris
+    y .navegacion_inferior desde global.css)*/
+
+/* Botón verde "+ Nuevo" */
+.btn_nuevo {
+  background-color: #22c55e;
+  color: #0f2a1d;
+  font-weight: bold;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.btn_nuevo:hover {
+  background-color: #1ea850;
+  color: #0f2a1d;
+}
+
+/* Buscador */
+.caja_busqueda {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: white;
+  border-radius: 20px;
+  padding: 10px 16px;
+}
+
+.caja_busqueda::placeholder {
+  color: #8eb39f;
+}
+
+.caja_busqueda:focus {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: #22c55e;
+  color: white;
+  box-shadow: none;
+}
+
+/* Insignias de estado */
+.insignia {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.insignia_optimo {
+  background-color: rgba(34, 197, 94, 0.2);
+  color: #22c55e;
+}
+
+.insignia_revisar {
+  background-color: rgba(6, 182, 212, 0.2);
+  color: #06b6d4;
+}
+
+.insignia_alerta {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+}
+
+/* El menú flotante (dropup) ahora está en global.css */

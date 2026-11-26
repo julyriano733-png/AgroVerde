@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de plagas - Agro Verde</title>
+  
+  <!-- Bootstrap 5 -->
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <!-- Íconos de Bootstrap -->
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <!-- Estilos globales y específicos de Plagas -->
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/plagas/catalogo-plagas.css">
+  <link rel="stylesheet" href="../../assets/css/logo.css">
+</head>
+
+<body>
+  <img src="../../assets/img/agro-verde-logo.png" alt="Agro Verde" class="logo-app">
+
+  <!-- Pantalla principal -->
+  <main class="pantalla container-fluid">
+
+    <!-- Encabezado con botón de regreso, título, logo y botón nuevo -->
+    <header class="d-flex justify-content-between align-items-center mb-4">
+      <div class="d-flex align-items-center gap-3">
+        <a href="plagas.html" class="boton_atras text-white text-decoration-none d-flex align-items-center justify-content-center" aria-label="Volver">
+          <i class="bi bi-chevron-left fs-5"></i>
+        </a>
+        <h4 class="m-0 text-white fw-bold">Catálogo de plagas</h4>
+      </div>
+      <a href="nueva-plaga.html" class="btn_nuevo text-decoration-none">
+        + Nuevo
+      </a>
+    </header>
+
+    <!-- Buscador -->
+    <div class="mb-3">
+      <input type="search" id="buscador" class="form-control caja_busqueda" placeholder="Buscar plaga o cultivo afectado" aria-label="Buscar plaga">
+      <select id="filtro_cultivo" class="form-select caja_busqueda mt-2" aria-label="Plagas por cultivo">
+        <option value="">Plagas de todos los cultivos</option>
+      </select>
+    </div>
+
+    <!-- Filtros por tipo de plaga -->
+    <div class="d-flex gap-2 mb-4 overflow-auto pb-1">
+      <button type="button" class="filtro_tipo btn_nuevo border-0 py-1 px-3" data-tipo="Todas">Todas</button>
+      <button type="button" class="filtro_tipo boton_acceso border-0 py-1 px-3 rounded-4"
+        data-tipo="Insecto">Insecto</button>
+      <button type="button" class="filtro_tipo boton_acceso border-0 py-1 px-3 rounded-4"
+        data-tipo="Ácaro">Ácaro</button>
+      <button type="button" class="filtro_tipo boton_acceso border-0 py-1 px-3 rounded-4"
+        data-tipo="Hongo">Hongo</button>
+      <button type="button" class="filtro_tipo boton_acceso border-0 py-1 px-3 rounded-4"
+        data-tipo="Bacteria">Bacteria</button>
+    </div>
+
+    <!-- Lista de plagas del catálogo -->
+    <div class="row g-3 mb-4" id="lista_catalogo">
+
+      <!-- Item 1: Gusano cogollero -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center h-100">
+          <div>
+            <div class="fw-bold text-white">Gusano cogollero</div>
+            <small class="texto_gris">Insecto - Maíz</small>
+          </div>
+          <span class="insignia insignia_alerta">Alto</span>
+        </div>
+      </div>
+
+      <!-- Item 2: Roya del café -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center h-100">
+          <div>
+            <div class="fw-bold text-white">Roya del café</div>
+            <small class="texto_gris">Hongo - Café</small>
+          </div>
+          <span class="insignia insignia_alerta">Alto</span>
+        </div>
+      </div>
+
+      <!-- Item 3: Áfido verde -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center h-100">
+          <div>
+            <div class="fw-bold text-white">Áfido verde</div>
+            <small class="texto_gris">Insecto - Fríjol</small>
+          </div>
+          <span class="insignia insignia_revisar">Medio</span>
+        </div>
+      </div>
+
+      <!-- Item 4: Ácaro rojo -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center h-100">
+          <div>
+            <div class="fw-bold text-white">Ácaro rojo</div>
+            <small class="texto_gris">Ácaro - Tomate</small>
+          </div>
+          <span class="insignia insignia_revisar">Medio</span>
+        </div>
+      </div>
+
+      <!-- Item 5: Antracnosis -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center h-100">
+          <div>
+            <div class="fw-bold text-white">Antracnosis</div>
+            <small class="texto_gris">Hongo - Fríjol / Maíz</small>
+          </div>
+          <span class="insignia insignia_optimo">Bajo</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Acceso inferior a inhabilitar plaga -->
+    <div class="row justify-content-center mb-4">
+      <div class="col-12 col-md-6">
+        <a href="inhabilitar-plaga.html"
+          class="btn_inhabilitar d-block text-center text-decoration-none py-2">Inhabilitar Plaga</a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Barra de navegación inferior fija -->
+  <!-- Ficha de la plaga del catálogo -->
+  <div class="modal fade" id="modal_detalle" tabindex="-1" aria-labelledby="titulo_detalle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content ventana_notas">
+        <div class="modal-header border-0">
+          <div>
+            <h5 class="modal-title" id="titulo_detalle"></h5>
+            <small class="texto_gris" id="subtitulo_detalle"></small>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <span class="insignia" id="riesgo_detalle"></span>
+          <p class="fw-bold mt-3 mb-1">Cómo reconocerla</p>
+          <p class="small" id="descripcion_detalle"></p>
+          <p class="fw-bold mb-1">Cómo controlarla</p>
+          <p class="small mb-0" id="control_detalle"></p>
+        </div>
+        <div class="modal-footer border-0">
+          <a href="nueva-plaga.html" id="enlace_registrar" class="btn_nuevo text-decoration-none w-100 text-center py-2">Registrar esta plaga</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navegacion_inferior d-flex justify-content-between">
+    <a href="../inicio/inicio.html" class="text-center small"><i class="bi bi-house-door d-block"></i>Inicio</a>
+    <a href="../cultivos/cultivos.html" class="text-center small"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
+    <a href="../clima/clima.html" class="text-center small"><i class="bi bi-cloud-sun d-block"></i>Clima</a>
+    <a href="../insumos/insumos.html" class="text-center small"><i class="bi bi-box-seam d-block"></i>Insumos</a>
+    <a href="../perfil/perfil.html" class="text-center small"><i class="bi bi-person-circle d-block"></i>Perfil</a>
+  </nav>
+
+  <!-- Script de Bootstrap -->
+  <script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/js/comun.js"></script>
+  <script src="../../assets/js/permisos.js"></script>
+  <script src="../../assets/js/plagas/datos-plagas.js"></script>
+  <script src="../../assets/js/plagas/catalogo-plagas.js"></script>
+  <script src="../../assets/js/conexion.js"></script>
+  <script src="../../assets/js/logo.js"></script>
+</body>
+</html>

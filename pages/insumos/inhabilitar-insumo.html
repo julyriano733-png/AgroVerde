@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inhabilitar insumo - Agro Verde</title>
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/insumos/insumos.css">
+  <link rel="stylesheet" href="../../assets/css/logo.css">
+</head>
+
+<body>
+  <img src="../../assets/img/agro-verde-logo.png" alt="Agro Verde" class="logo-app">
+    <main class="pantalla container-fluid">
+        <!-- Encabezado -->
+        <header class="app-header">
+            <div class="app-header__left">
+                <a href="insumos.html" class="btn-back" aria-label="Volver"><i class="bi bi-arrow-left"></i></a>
+                <h3 class="m-0 fw-bold">Inhabilitar insumo</h3>
+            </div>
+        </header>
+
+        <div class="contenido-insumos">
+            <form id="formInhabilitarInsumo" action="insumos.html">
+                <input type="hidden" name="mensaje" value="inhabilitado">
+                <p class="titulo-seccion">Selecciona el insumo a inhabilitar</p>
+                <div id="listaPrincipal" class="lista-insumos d-flex flex-column gap-2 mb-4">
+                <div class="opcion-insumo opcion-insumo--peligro">
+                    <input type="radio" name="insumo" id="i-npk">
+                    <label for="i-npk" class="tarjeta p-3 rounded-4">
+                        <div>
+                            <strong class="d-block">Fertilizante NPK</strong>
+                            <span class="texto_gris small">18 sacos disponibles</span>
+                        </div>
+                        <i class="bi bi-circle"></i>
+                    </label>
+                </div>
+                <div class="opcion-insumo opcion-insumo--peligro">
+                    <input type="radio" name="insumo" id="i-fungicida">
+                    <label for="i-fungicida" class="tarjeta p-3 rounded-4">
+                        <div>
+                            <strong class="d-block">Fungicida orgánico</strong>
+                            <span class="texto-bajo-stock small">3 unidades - bajo stock</span>
+                        </div>
+                        <i class="bi bi-circle"></i>
+                    </label>
+                </div>
+                <div class="opcion-insumo opcion-insumo--peligro">
+                    <input type="radio" name="insumo" id="i-herbicida">
+                    <label for="i-herbicida" class="tarjeta p-3 rounded-4">
+                        <div>
+                            <strong class="d-block">Herbicida selectivo</strong>
+                            <span class="texto_gris small">9 litros disponibles</span>
+                        </div>
+                        <i class="bi bi-circle"></i>
+                    </label>
+                </div>
+                </div>
+
+                <button type="submit" class="btn-agro-danger">Inhabilitar insumo</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Barra de navegación inferior -->
+    <nav class="navegacion_inferior d-flex justify-content-between">
+        <a href="../inicio/inicio.html" class="text-center small"><i class="bi bi-house-door d-block"></i>Inicio</a>
+        <a href="../cultivos/cultivos.html" class="text-center small"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
+        <a href="../clima/clima.html" class="text-center small"><i class="bi bi-cloud-sun d-block"></i>Clima</a>
+        <a href="insumos.html" class="text-center small active"><i class="bi bi-box-seam d-block"></i>Insumos</a>
+        <a href="../perfil/perfil.html" class="text-center small"><i class="bi bi-person-circle d-block"></i>Perfil</a>
+    </nav>
+
+    <script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/comun.js"></script>
+    <script src="../../assets/js/permisos.js"></script>
+    <script src="../../assets/js/insumos/datos-insumos.js"></script>
+    <script src="../../assets/js/insumos/insumos.js"></script>
+    <script src="../../assets/js/confirmacion.js"></script>
+  <script src="../../assets/js/conexion.js"></script>
+  <script src="../../assets/js/logo.js"></script>
+</body>
+
+</html>

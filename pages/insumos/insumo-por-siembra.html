@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insumos por siembra - Agro Verde</title>
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/insumos/insumos.css">
+  <link rel="stylesheet" href="../../assets/css/logo.css">
+</head>
+
+<body>
+  <img src="../../assets/img/agro-verde-logo.png" alt="Agro Verde" class="logo-app">
+    <main class="pantalla container-fluid">
+        <!-- Encabezado -->
+        <header class="app-header">
+            <div class="app-header__left">
+                <a href="opciones-insumo.html" class="btn-back" aria-label="Volver"><i class="bi bi-arrow-left"></i></a>
+                <h3 class="m-0 fw-bold">Insumos por siembra</h3>
+            </div>
+        </header>
+
+        <div class="contenido-insumos">
+            <p class="titulo-seccion">Seleccionar siembra</p>
+            <div id="pillsSiembra" class="pastillas pastillas--tres">
+                <input type="radio" name="siembra" id="ps-0" checked>
+                <label for="ps-0">Maíz - Lote 1</label>
+                <input type="radio" name="siembra" id="ps-1">
+                <label for="ps-1">Café - Lote 2</label>
+                <input type="radio" name="siembra" id="ps-2">
+                <label for="ps-2">Frijol - Lote 3</label>
+            </div>
+
+            <div class="row g-2 mb-3">
+                <div class="col">
+                    <div class="tarjeta-resumen">
+                        <div id="dato1" class="numero numero--verde">3</div>
+                        <span class="texto_gris small">Insumos usados</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="tarjeta-resumen">
+                        <div id="dato2" class="numero numero--verde">9</div>
+                        <span class="texto_gris small">Cantidad total</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="tarjeta-resumen">
+                        <div id="dato3" class="numero numero--rojo">1</div>
+                        <span class="texto_gris small">Por agotarse</span>
+                    </div>
+                </div>
+            </div>
+
+            <h6 class="fw-bold mb-2" id="tituloSiembra">Insumos - Maíz - Lote 1</h6>
+            <div id="listaPrincipal" class="lista-insumos d-flex flex-column gap-2">
+                <details class="insumo-desplegable item-buscable">
+                    <summary>
+                        <div class="d-flex align-items-center gap-3">
+                            <span class="punto-insumo punto-insumo--verde"></span>
+                            <div>
+                                <strong class="d-block">Fertilizante NPK</strong>
+                                <span class="texto_gris small">Aplicado en floración</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <i class="bi bi-chevron-down"></i>
+                        </div>
+                    </summary>
+                </details>
+                <details class="insumo-desplegable item-buscable">
+                    <summary>
+                        <div class="d-flex align-items-center gap-3">
+                            <span class="punto-insumo punto-insumo--azul"></span>
+                            <div>
+                                <strong class="d-block">Herbicida selectivo</strong>
+                                <span class="texto_gris small">Control de maleza</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <i class="bi bi-chevron-down"></i>
+                        </div>
+                    </summary>
+                </details>
+                <details class="insumo-desplegable item-buscable">
+                    <summary>
+                        <div class="d-flex align-items-center gap-3">
+                            <span class="punto-insumo punto-insumo--rojo"></span>
+                            <div>
+                                <strong class="d-block">Fungicida orgánico</strong>
+                                <span class="texto_gris small">Prevención de hongos</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <i class="bi bi-chevron-down"></i>
+                        </div>
+                    </summary>
+                </details>
+                <details class="insumo-desplegable item-buscable">
+                    <summary>
+                        <div class="d-flex align-items-center gap-3">
+                            <span class="punto-insumo punto-insumo--verde"></span>
+                            <div>
+                                <strong class="d-block">Semilla de maíz</strong>
+                                <span class="texto_gris small">50 kg disponibles</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <i class="bi bi-chevron-down"></i>
+                        </div>
+                    </summary>
+                </details>
+            </div>
+        </div>
+    </main>
+
+    <!-- Barra de navegación inferior -->
+    <nav class="navegacion_inferior d-flex justify-content-between">
+        <a href="../inicio/inicio.html" class="text-center small"><i class="bi bi-house-door d-block"></i>Inicio</a>
+        <a href="../cultivos/cultivos.html" class="text-center small"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
+        <a href="../clima/clima.html" class="text-center small"><i class="bi bi-cloud-sun d-block"></i>Clima</a>
+        <a href="insumos.html" class="text-center small active"><i class="bi bi-box-seam d-block"></i>Insumos</a>
+        <a href="../perfil/perfil.html" class="text-center small"><i class="bi bi-person-circle d-block"></i>Perfil</a>
+    </nav>
+
+    <script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/comun.js"></script>
+    <script src="../../assets/js/permisos.js"></script>
+    <script src="../../assets/js/insumos/datos-insumos.js"></script>
+    <script src="../../assets/js/insumos/insumos.js"></script>
+    <script src="../../assets/js/confirmacion.js"></script>
+  <script src="../../assets/js/conexion.js"></script>
+  <script src="../../assets/js/logo.js"></script>
+</body>
+
+</html>

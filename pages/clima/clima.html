@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima - Agro Verde</title>
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/clima/clima.css">
+  <link rel="stylesheet" href="../../assets/css/logo.css">
+</head>
+
+<body>
+  <img src="../../assets/img/agro-verde-logo.png" alt="Agro Verde" class="logo-app">
+    <main class="pantalla container-fluid">
+        <!-- Encabezado -->
+        <header class="app-header">
+            <div class="app-header__left">
+                <a href="../inicio/inicio.html" class="btn-back" aria-label="Volver"><i class="bi bi-arrow-left"></i></a>
+                <h3 class="m-0 fw-bold">Clima</h3>
+                <span class="badge-finca nombre-propiedad-actual">Finca el Manantial</span>
+            </div>
+        </header>
+
+        <!-- Tarjeta Temperatura Actual -->
+        <section class="tarjeta p-3 rounded-4 mb-3">
+            <div class="clima-actual__temp" id="climaTemp">24°C</div>
+            <div class="clima-actual__desc" id="climaDesc">Soleado</div>
+        </section>
+
+        <div class="row g-3">
+            <!-- Columna izquierda: Pronósticos -->
+            <div class="col-12 col-lg-7">
+                <p class="texto_gris small fw-semibold mb-2">Próximas horas</p>
+                <div class="tarjeta p-3 rounded-4 mb-3 horas-grid" id="climaHoras">
+                    <div class="hora-item">
+                        <span class="texto_gris small">12pm</span>
+                        <span class="fs-5"><i class="bi bi-sun-fill" style="color: #facc15;"></i></span>
+                        <span class="fw-semibold small">25°</span>
+                    </div>
+                    <div class="hora-item">
+                        <span class="texto_gris small">1pm</span>
+                        <span class="fs-5"><i class="bi bi-sun-fill" style="color: #facc15;"></i></span>
+                        <span class="fw-semibold small">26°</span>
+                    </div>
+                    <div class="hora-item">
+                        <span class="texto_gris small">2pm</span>
+                        <span class="fs-5"><i class="bi bi-sun-fill" style="color: #facc15;"></i></span>
+                        <span class="fw-semibold small">26°</span>
+                    </div>
+                    <div class="hora-item">
+                        <span class="texto_gris small">3pm</span>
+                        <span class="fs-5"><i class="bi bi-cloud-drizzle-fill" style="color: #38bdf8;"></i></span>
+                        <span class="fw-semibold small">23°</span>
+                    </div>
+                    <div class="hora-item">
+                        <span class="texto_gris small">4pm</span>
+                        <span class="fs-5"><i class="bi bi-cloud-rain-fill" style="color: #38bdf8;"></i></span>
+                        <span class="fw-semibold small">22°</span>
+                    </div>
+                </div>
+
+                <p class="texto_gris small fw-semibold mb-2">Pronóstico 5 días</p>
+                <div class="tarjeta p-3 rounded-4 mb-3" id="climaDias">
+                    <div class="dia-row">
+                        <span class="dia-nombre">Hoy</span>
+                        <span><i class="bi bi-sun-fill" style="color: #facc15;"></i></span>
+                        <span><small class="texto_gris me-2">18°</small><strong>26°</strong></span>
+                    </div>
+                    <div class="dia-row">
+                        <span class="dia-nombre">Mañana</span>
+                        <span><i class="bi bi-cloud-rain-fill" style="color: #38bdf8;"></i></span>
+                        <span><small class="texto_gris me-2">17°</small><strong>23°</strong></span>
+                    </div>
+                    <div class="dia-row">
+                        <span class="dia-nombre">Jueves</span>
+                        <span><i class="bi bi-cloud-sun-fill" style="color: #facc15;"></i></span>
+                        <span><small class="texto_gris me-2">18°</small><strong>24°</strong></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna derecha: Alertas y Submódulos -->
+            <div class="col-12 col-lg-5">
+                <p class="texto_gris small fw-semibold mb-2">Alertas climáticas</p>
+                <div class="tarjeta p-3 rounded-4 mb-3 alertas-resumen" id="climaAlertas">
+                    <p class="mb-1">• Lluvia fuerte prevista en Lote 3</p>
+                    <p class="m-0">• Humedad alta en Lote 2</p>
+                </div>
+
+                <nav class="d-flex flex-column gap-2">
+                    <a href="riesgo-plagas-clima.html"
+                        class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong class="d-block">Riesgo de plagas por clima</strong>
+                            <span class="texto_gris small" id="contadorAmenazas">2 amenazas activas</span>
+                        </div>
+                        <i class="bi bi-chevron-right texto_gris"></i>
+                    </a>
+
+                    <a href="alertas.html"
+                        class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong class="d-block">Alertas por temporada climática</strong>
+                            <span class="texto_gris small">Lluvias, sequías y heladas</span>
+                        </div>
+                        <i class="bi bi-chevron-right texto_gris"></i>
+                    </a>
+
+                    <a href="historial-climatico.html"
+                        class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong class="d-block">Historial climático</strong>
+                            <span class="texto_gris small">Registros por terreno</span>
+                        </div>
+                        <i class="bi bi-chevron-right texto_gris"></i>
+                    </a>
+
+                    <a href="calendario-agricola.html"
+                        class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong class="d-block">Calendario agrícola</strong>
+                            <span class="texto_gris small" id="contadorEventos">2 eventos próximos</span>
+                        </div>
+                        <i class="bi bi-chevron-right texto_gris"></i>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </main>
+
+    <!-- Barra de navegación inferior unificada -->
+    <nav class="navegacion_inferior d-flex justify-content-between">
+        <a href="../inicio/inicio.html" class="text-center small"><i class="bi bi-house-door d-block"></i>Inicio</a>
+        <a href="../cultivos/cultivos.html" class="text-center small"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
+        <a href="clima.html" class="text-center small active"><i class="bi bi-cloud-sun d-block"></i>Clima</a>
+        <a href="../insumos/insumos.html" class="text-center small"><i class="bi bi-box-seam d-block"></i>Insumos</a>
+        <a href="../perfil/perfil.html" class="text-center small"><i class="bi bi-person-circle d-block"></i>Perfil</a>
+    </nav>
+
+    <script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/comun.js"></script>
+    <script src="../../assets/js/permisos.js"></script>
+    <script src="../../assets/js/clima/clima.js"></script>
+  <script src="../../assets/js/conexion.js"></script>
+  <script src="../../assets/js/logo.js"></script>
+</body>
+
+</html>

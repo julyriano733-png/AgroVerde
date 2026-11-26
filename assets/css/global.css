@@ -1,0 +1,629 @@
+/*ESTILOS GLOBALES UNIFICADOS - AGRO VERDE*/
+:root {
+    --bg-main: #0f2a1d;
+    --bg-card: rgba(255, 255, 255, 0.08);
+    --bg-card-hover: rgba(255, 255, 255, 0.15);
+    --border-subtle: rgba(255, 255, 255, 0.12);
+
+    --green-primary: #22c55e;
+    --green-primary-hover: #1ea850;
+    --red-danger: #9c4a46;
+    --red-danger-hover: #853c38;
+
+    --text-main: #ffffff;
+    --text-muted: #9ca3af;
+    --text-dark: #091c12;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    margin: 0;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Contenedor principal fluido (móvil + PC) */
+.pantalla {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    padding: 20px 16px 95px 16px;
+    min-height: 100vh;
+}
+
+@media (min-width: 768px) {
+    .pantalla {
+        padding: 30px 40px 105px 40px;
+    }
+}
+
+/*ENCABEZADOS Y LOGO*/
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 12px;
+}
+
+.app-header__left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn-back {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    border: 1px solid var(--border-subtle);
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.15rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-back:hover {
+    background-color: var(--bg-card-hover);
+    color: var(--green-primary);
+}
+
+.app-logo-mini {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/*TARJETAS E INDICADORES DE ESTADO*/
+.tarjeta {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    color: var(--text-main);
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.2s;
+}
+
+.tarjeta:hover,
+.tarjeta:active,
+.tarjeta:focus {
+    background-color: var(--bg-card-hover);
+    color: var(--text-main);
+    text-decoration: none;
+}
+
+.texto_gris {
+    color: var(--text-muted);
+}
+
+.punto_verde {
+    width: 20px;
+    height: 20px;
+    background-color: #22c55e;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.punto_verde_pequeno {
+    width: 14px;
+    height: 14px;
+    background-color: #22c55e;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.punto_amarillo_pequeno {
+    width: 14px;
+    height: 14px;
+    background-color: #eab308;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.punto_azul_pequeno {
+    width: 14px;
+    height: 14px;
+    background-color: #38bdf8;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.punto_rojo,
+.punto_rojo_pequeno {
+    width: 14px;
+    height: 14px;
+    background-color: #ef4444;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/*FORMULARIOS Y BOTONES*/
+.agro-label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+}
+
+.agro-input,
+.agro-select,
+.agro-textarea {
+    width: 100%;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 11px 14px;
+    color: var(--text-main);
+    font-size: 0.95rem;
+    margin-bottom: 14px;
+    outline: none;
+}
+
+.agro-input::placeholder,
+.agro-textarea::placeholder {
+    color: #6c8778;
+}
+
+.agro-input:focus,
+.agro-select:focus,
+.agro-textarea:focus {
+    border-color: var(--green-primary);
+}
+
+.btn-agro-primary {
+    width: 100%;
+    background-color: var(--green-primary);
+    color: var(--text-dark);
+    font-weight: 700;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-agro-primary:hover {
+    background-color: var(--green-primary-hover);
+    color: var(--text-dark);
+}
+
+.btn-agro-sm {
+    background-color: var(--green-primary);
+    color: var(--text-dark);
+    font-weight: 700;
+    border: none;
+    border-radius: 50px;
+    padding: 6px 14px;
+    font-size: 0.82rem;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-agro-danger {
+    width: 100%;
+    background-color: var(--red-danger);
+    color: var(--text-main);
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-agro-danger:hover {
+    background-color: var(--red-danger-hover);
+    color: var(--text-main);
+}
+
+/*BARRA DE NAVEGACIÓN INFERIOR UNIFICADA*/
+.navegacion_inferior {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: var(--bg-main);
+    padding: 10px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+}
+
+.navegacion_inferior a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.navegacion_inferior a:hover,
+.navegacion_inferior a.active {
+    color: var(--green-primary);
+    font-weight: 600;
+}
+
+.navegacion_inferior i {
+    font-size: 18px;
+}
+/*VENTANA DE CONFIRMACIÓN (Guardado / Inhabilitado correctamente)
+  La crea assets/js/confirmacion.js*/
+.confirmacion-fondo {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    z-index: 2000;
+}
+
+.confirmacion-caja {
+    width: 100%;
+    max-width: 340px;
+    background-color: #2f9e5b;
+    border-radius: 18px;
+    padding: 28px 20px 20px 20px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.confirmacion-icono {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 10px auto;
+    border-radius: 50%;
+    border: 6px solid var(--green-primary);
+    color: var(--green-primary);
+    background-color: rgba(255, 255, 255, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.confirmacion-titulo {
+    color: var(--text-dark);
+    font-weight: 800;
+    font-size: 1.5rem;
+    margin: 0 0 18px 0;
+}
+
+.confirmacion-ok {
+    width: 100%;
+    background-color: #b5835a;
+    color: var(--text-dark);
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.confirmacion-ok:hover {
+    background-color: #a27350;
+}
+
+
+/*MENÚ FLOTANTE DESPLEGABLE (botón verde abajo a la derecha)
+  Lo usan Cultivos, Terreno y Reportes de consumo*/
+.contenedor_menu_flotante {
+  position: fixed;
+  bottom: 80px;
+  right: 25px;
+  z-index: 1050;
+}
+
+.panel_monitoreo {
+  background-color: #163e2b;
+  border: 1px solid #1d734e;
+  border-radius: 12px;
+  width: 240px;
+  padding: 0;
+  margin-bottom: 10px !important;
+  overflow: hidden;
+}
+
+.encabezado_panel {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #ffffff;
+  border-bottom: 1px solid #1d734e;
+}
+
+.cuerpo_panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.opcion_panel {
+  padding: 10px 14px;
+  color: #ffffff !important;
+  text-decoration: none;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background-color 0.2s ease;
+}
+
+.opcion_panel:last-child {
+  border-bottom: none;
+}
+
+.opcion_panel:hover,
+.opcion_panel:focus {
+  background-color: rgba(34, 197, 94, 0.15) !important;
+  color: #22c55e !important;
+}
+
+.opcion_panel .icon {
+  color: #22c55e;
+  font-size: 14px;
+}
+
+.opcion_panel .icon_vs {
+  color: #22c55e;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+/* Botón flotante principal verde */
+.boton_mas_flotante {
+  width: 48px;
+  height: 48px;
+  background-color: #22c55e;
+  color: #0f2a1d;
+  border: none;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.boton_mas_flotante:hover {
+  background-color: #1ea850;
+  transform: scale(1.04);
+}
+
+.boton_mas_flotante::after,
+.dropup .boton_mas_flotante.dropdown-toggle::after {
+  display: none;
+}
+
+/*OPCIONES DE LOS DESPLEGABLES (select)
+  Windows pinta la lista de opciones en blanco y el texto blanco no se ve:
+  se les pone el fondo oscuro de la app*/
+select option,
+select optgroup {
+    background-color: #163b29;
+    color: #ffffff;
+}
+
+select option:disabled {
+    color: #9ca3af;
+}
+
+select optgroup {
+    color: #22c55e;
+    font-weight: 700;
+}
+
+
+/*BOTÓN SECUNDARIO (borde verde)*/
+.btn-agro-outline {
+  width: 100%;
+  background-color: transparent;
+  color: var(--green-primary);
+  font-weight: 700;
+  border: 1px solid var(--green-primary);
+  border-radius: 50px;
+  padding: 11px 20px;
+  font-size: 0.95rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.2s;
+}
+
+.btn-agro-outline:hover {
+  background-color: rgba(34, 197, 94, 0.12);
+  color: var(--green-primary);
+}
+
+/*VENTANAS DE BOOTSTRAP (notas de plagas, ficha del catálogo, confirmar)
+  Bootstrap las pinta blancas y el texto de la app es blanco: se ponen oscuras*/
+.ventana_notas {
+    background-color: #163b29;
+    color: var(--text-main);
+    border: 1px solid #1d734e;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+.ventana_notas .modal-header,
+.ventana_notas .modal-footer {
+    border-color: var(--border-subtle);
+}
+
+.ventana_notas .modal-title {
+    color: var(--text-main);
+    font-weight: 700;
+}
+
+.ventana_notas p,
+.ventana_notas .modal-body {
+    color: #d1d5db;
+}
+
+.ventana_notas .fw-bold {
+    color: var(--text-main);
+}
+
+/* Tarjetas del catálogo de plagas: ocupan toda la columna y el texto no se monta en la insignia */
+.tarjeta_catalogo {
+    width: 100%;
+    gap: 12px;
+    text-align: left;
+    color: var(--text-main);
+}
+
+/*BUSCADOR OSCURO (.caja_busqueda) para las pantallas que no tienen su propio estilo
+  (historial e inhabilitados)*/
+.caja_busqueda {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    color: var(--text-main);
+    padding: 10px 14px;
+}
+
+.caja_busqueda::placeholder {
+    color: #6c8778;
+}
+
+.caja_busqueda:focus {
+    background-color: var(--bg-card);
+    border-color: var(--green-primary);
+    color: var(--text-main);
+    box-shadow: none;
+}
+
+/*AJUSTES PARA CELULAR (que todo sea cómodo de tocar)*/
+/* Las flechas de volver no se encogen cuando el título es largo */
+.btn-back,
+.btn-volver,
+.boton_atras,
+.boton-volver {
+    flex-shrink: 0;
+}
+
+/* Botones de filtro (historial, catálogo) con altura mínima para el dedo */
+[data-filtro],
+.filtro_tipo {
+    min-height: 36px;
+    white-space: nowrap;
+}
+
+/* Los títulos largos bajan de línea en vez de empujar los botones */
+.app-header h3,
+.app-header h4,
+header h4,
+header h1 {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+/* Menús desplegables: nunca más anchos que la pantalla y los nombres largos bajan de línea */
+.dropdown-menu {
+    max-width: calc(100vw - 32px);
+}
+
+.dropdown-menu .dropdown-item {
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+
+/*IMPRESIÓN / EXPORTAR A PDF
+  Al imprimir (o "Guardar como PDF") la página sale en blanco y negro, sin menús ni botones*/
+@media print {
+    body,
+    .pantalla,
+    main {
+        background: #ffffff !important;
+        color: #000000 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .pantalla *,
+    main * {
+        color: #000000 !important;
+        background-color: transparent !important;
+        box-shadow: none !important;
+        border-color: #bbbbbb !important;
+    }
+
+    .navegacion_inferior,
+    .contenedor_menu_flotante,
+    .aviso-conexion,
+    .confirmacion-fondo,
+    .no-imprimir,
+    .btn-back,
+    .btn-volver,
+    .boton_atras,
+    .btn-agro-sm,
+    .btn-agro-primary,
+    .btn-agro-outline,
+    .btn-agro-danger {
+        display: none !important;
+    }
+
+    .tarjeta,
+    .tarjeta-cultivo,
+    .card {
+        border: 1px solid #bbbbbb !important;
+        break-inside: avoid;
+    }
+
+    .tabla-pdf td,
+    .tabla-pdf th {
+        border-bottom: 1px solid #dddddd !important;
+        padding: 4px 6px;
+    }
+
+    a {
+        text-decoration: none !important;
+    }
+}
+
+/*BOTONES DE FILTRO (chips): rango del clima, categorías de insumos*/
+.chip,
+.chip-activo {
+    border-radius: 50px;
+    padding: 6px 14px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+    min-height: 36px;
+    cursor: pointer;
+}
+
+.chip {
+    background-color: transparent;
+    border: 1px solid var(--border-subtle);
+    color: var(--text-muted);
+}
+
+.chip:hover {
+    border-color: var(--green-primary);
+    color: var(--green-primary);
+}
+
+.chip-activo {
+    background-color: var(--green-primary);
+    border: 1px solid var(--green-primary);
+    color: var(--text-dark);
+}

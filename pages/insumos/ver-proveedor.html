@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proveedor - Agro Verde</title>
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/insumos/insumos.css">
+  <link rel="stylesheet" href="../../assets/css/logo.css">
+</head>
+
+<body>
+  <img src="../../assets/img/agro-verde-logo.png" alt="Agro Verde" class="logo-app">
+    <main class="pantalla container-fluid">
+        <!-- Encabezado -->
+        <header class="app-header">
+            <div class="app-header__left">
+                <a href="proveedores-insumos.html" class="btn-back" aria-label="Volver"><i class="bi bi-arrow-left"></i></a>
+                <h4 class="m-0 fw-bold">Proveedor</h4>
+            </div>
+        </header>
+
+        <div class="mx-auto" style="max-width: 760px;">
+            <section class="tarjeta p-4 rounded-4 text-center mb-3">
+                <div class="avatar-proveedor mx-auto mb-3"><i class="bi bi-truck"></i></div>
+                <h5 class="fw-bold mb-1" id="proveedorNombre">Proveedor</h5>
+                <span class="texto_gris small" id="proveedorInsumos"></span>
+            </section>
+
+            <div class="d-flex flex-column gap-2 mb-4">
+                <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center">
+                    <span class="texto_gris small">Teléfono</span>
+                    <strong class="small" id="proveedorTelefono">----</strong>
+                </div>
+                <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center">
+                    <span class="texto_gris small">Correo</span>
+                    <strong class="small" id="proveedorCorreo">----</strong>
+                </div>
+                <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center">
+                    <span class="texto_gris small">Última entrega</span>
+                    <strong class="small" id="proveedorLlegada">----</strong>
+                </div>
+            </div>
+
+            <div class="row g-2 mb-2">
+                <div class="col-6"><a href="#" id="proveedorLlamar" class="btn-agro-primary"><i class="bi bi-telephone me-1"></i> Llamar</a></div>
+                <div class="col-6"><a href="#" id="proveedorEscribir" class="btn-agro-outline"><i class="bi bi-envelope me-1"></i> Escribir</a></div>
+            </div>
+            <button type="button" id="proveedorEliminar" class="btn-agro-danger">Eliminar proveedor</button>
+        </div>
+    </main>
+
+    <nav class="navegacion_inferior d-flex justify-content-between">
+        <a href="../inicio/inicio.html" class="text-center small"><i class="bi bi-house-door d-block"></i>Inicio</a>
+        <a href="../cultivos/cultivos.html" class="text-center small"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
+        <a href="../clima/clima.html" class="text-center small"><i class="bi bi-cloud-sun d-block"></i>Clima</a>
+        <a href="../insumos/insumos.html" class="text-center small"><i class="bi bi-box-seam d-block"></i>Insumos</a>
+        <a href="../perfil/perfil.html" class="text-center small"><i class="bi bi-person-circle d-block"></i>Perfil</a>
+    </nav>
+
+    <script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/comun.js"></script>
+    <script src="../../assets/js/permisos.js"></script>
+    <script src="../../assets/js/insumos/datos-insumos.js"></script>
+    <script src="../../assets/js/insumos/insumos.js"></script>
+    <script src="../../assets/js/confirmacion.js"></script>
+  <script src="../../assets/js/conexion.js"></script>
+  <script src="../../assets/js/logo.js"></script>
+</body>
+
+</html>

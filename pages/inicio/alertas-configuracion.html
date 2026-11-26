@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración de alertas - Agro Verde</title>
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/inicio/configuracion.css">
+    <link rel="stylesheet" href="../../assets/css/inicio/preferencias.css">
+  <link rel="stylesheet" href="../../assets/css/logo.css">
+</head>
+
+<body>
+  <img src="../../assets/img/agro-verde-logo.png" alt="Agro Verde" class="logo-app">
+    <main class="pantalla container-fluid">
+        <!-- Encabezado -->
+        <header class="app-header">
+            <div class="app-header__left">
+                <a href="configuracion.html" class="btn-back" aria-label="Volver"><i class="bi bi-arrow-left"></i></a>
+                <h4 class="m-0 fw-bold">Configuración de alertas</h4>
+            </div>
+        </header>
+
+        <div class="mx-auto" style="max-width: 760px;">
+            <form id="formAlertas">
+                <p class="mb-2 texto_subtitulo small text-uppercase">Qué alertas quieres recibir</p>
+                <div class="d-flex flex-column gap-2 mb-4">
+                <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center">
+                    <div>
+                        <span class="texto_blanco d-block">Plagas detectadas</span>
+                        <span class="small texto_gris">Cuando se registra o empeora una plaga</span>
+                    </div>
+                    <div class="form-check form-switch m-0">
+                        <input class="form-check-input" type="checkbox" role="switch" id="alertaPlagas" checked>
+                    </div>
+                </div>
+                <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center">
+                    <div>
+                        <span class="texto_blanco d-block">Clima</span>
+                        <span class="small texto_gris">Lluvias fuertes, heladas y humedad alta</span>
+                    </div>
+                    <div class="form-check form-switch m-0">
+                        <input class="form-check-input" type="checkbox" role="switch" id="alertaClima" checked>
+                    </div>
+                </div>
+                <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center">
+                    <div>
+                        <span class="texto_blanco d-block">Stock bajo de insumos</span>
+                        <span class="small texto_gris">Cuando un insumo llega a su cantidad mínima</span>
+                    </div>
+                    <div class="form-check form-switch m-0">
+                        <input class="form-check-input" type="checkbox" role="switch" id="alertaStock" checked>
+                    </div>
+                </div>
+                <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center">
+                    <div>
+                        <span class="texto_blanco d-block">Cosechas próximas</span>
+                        <span class="small texto_gris">Días antes de la fecha estimada de cosecha</span>
+                    </div>
+                    <div class="form-check form-switch m-0">
+                        <input class="form-check-input" type="checkbox" role="switch" id="alertaCosecha" checked>
+                    </div>
+                </div>
+                <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center">
+                    <div>
+                        <span class="texto_blanco d-block">Reportes semanales</span>
+                        <span class="small texto_gris">Resumen de la finca cada lunes</span>
+                    </div>
+                    <div class="form-check form-switch m-0">
+                        <input class="form-check-input" type="checkbox" role="switch" id="alertaReportes" checked>
+                    </div>
+                </div>
+                </div>
+
+                <p class="mb-2 texto_subtitulo small text-uppercase">Cuándo avisar</p>
+                <label for="diasCosecha" class="agro-label">Avisar de la cosecha con anticipación (días)</label>
+                <input type="number" id="diasCosecha" class="agro-input" min="1" max="60" value="7">
+
+                <label for="humedadMaxima" class="agro-label">Avisar si la humedad pasa de (%)</label>
+                <input type="number" id="humedadMaxima" class="agro-input" min="50" max="100" value="80">
+
+                <label for="horaResumen" class="agro-label">Hora del resumen diario</label>
+                <input type="time" id="horaResumen" class="agro-input" value="07:00">
+
+                <a href="notificaciones-correo.html" class="tarjeta_con_borde p-3 rounded-4 d-flex justify-content-between align-items-center text-decoration-none mb-3">
+                    <span class="texto_blanco">Alertas por correo y SMS</span>
+                    <i class="bi bi-chevron-right icono_verde"></i>
+                </a>
+
+                <button type="submit" class="btn-agro-primary">Guardar alertas</button>
+            </form>
+        </div>
+    </main>
+
+    <nav class="navegacion_inferior d-flex justify-content-between">
+        <a href="../inicio/inicio.html" class="text-center small"><i class="bi bi-house-door d-block"></i>Inicio</a>
+        <a href="../cultivos/cultivos.html" class="text-center small"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
+        <a href="../clima/clima.html" class="text-center small"><i class="bi bi-cloud-sun d-block"></i>Clima</a>
+        <a href="../insumos/insumos.html" class="text-center small"><i class="bi bi-box-seam d-block"></i>Insumos</a>
+        <a href="../perfil/perfil.html" class="text-center small"><i class="bi bi-person-circle d-block"></i>Perfil</a>
+    </nav>
+
+    <script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/comun.js"></script>
+    <script src="../../assets/js/permisos.js"></script>
+    <script src="../../assets/js/inicio/preferencias.js"></script>
+    <script src="../../assets/js/confirmacion.js"></script>
+  <script src="../../assets/js/conexion.js"></script>
+  <script src="../../assets/js/logo.js"></script>
+</body>
+
+</html>

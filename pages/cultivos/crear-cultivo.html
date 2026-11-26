@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuevo Cultivo - Agro Verde</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <!-- Estilos globales y propios -->
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/cultivos/crear-cultivo.css">
+  <link rel="stylesheet" href="../../assets/css/logo.css">
+</head>
+<body>
+  <img src="../../assets/img/agro-verde-logo.png" alt="Agro Verde" class="logo-app">
+
+  <main class="pantalla container px-3 py-3">
+
+    <!-- Encabezado -->
+    <header class="d-flex align-items-center justify-content-between mb-3">
+      <div class="d-flex align-items-center gap-3">
+        <a href="cultivos.html" class="btn-volver" aria-label="Volver">&#8592;</a>
+        <h1 class="titulo m-0">Nuevo Cultivo</h1>
+      </div>
+    </header>
+
+    <form id="formCultivo" action="cultivos.html">
+      <input type="hidden" name="mensaje" value="guardado">
+
+      <!-- Nombre -->
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre del cultivo</label>
+        <input type="text" id="nombre" name="nombre" class="form-control campo" placeholder="Ej. Café Castillo" required>
+      </div>
+
+      <!-- Tipo -->
+      <div class="mb-3">
+        <label for="tipo" class="form-label">Tipo de cultivo</label>
+        <select id="tipo" name="tipo" class="form-select campo" required>
+          <option value="" selected disabled>Seleccionar tipo</option>
+          <option value="fruta">Fruta</option>
+          <option value="verdura">Verdura</option>
+          <option value="hortaliza">Hortaliza</option>
+          <option value="cereal">Cereal</option>
+          <option value="leguminosa">Leguminosa</option>
+          <option value="tuberculo">Tubérculo</option>
+          <option value="permanente">Cultivo permanente (café, cacao)</option>
+        </select>
+      </div>
+
+      <!-- Fecha -->
+      <div class="mb-3">
+        <label for="fecha" class="form-label">Fecha de siembra</label>
+        <input type="date" id="fecha" name="fecha" class="form-control campo" required>
+      </div>
+
+      <!-- Fecha estimada de cosecha -->
+      <div class="mb-3">
+        <label for="fechaCosecha" class="form-label">Fecha estimada de cosecha</label>
+        <input type="date" id="fechaCosecha" name="fechaCosecha" class="form-control campo">
+        <small class="texto_gris" id="ayudaCosecha">Se calcula sola con el tipo de cultivo y la fecha de siembra; puedes cambiarla.</small>
+      </div>
+
+      <!-- Temporada -->
+      <div class="mb-3">
+        <label for="temporada" class="form-label">Temporada de siembra</label>
+        <select id="temporada" name="temporada" class="form-select campo">
+          <option value="lluviosa">Temporada lluviosa</option>
+          <option value="seca">Temporada seca</option>
+          <option value="todo">Todo el año</option>
+        </select>
+      </div>
+
+
+      <!-- Área -->
+      <div class="mb-3">
+        <label for="area" class="form-label">Área sembrada (ha)</label>
+        <input type="number" id="area" name="area" class="form-control campo" placeholder="Ej. 2.5" step="0.1" min="0.1" required>
+      </div>
+
+      <!-- Semilla -->
+      <div class="mb-3">
+        <label for="semilla" class="form-label">Selección de semilla</label>
+        <select id="semilla" name="semilla" class="form-select campo">
+          <option value="" selected disabled>Seleccionar semilla</option>
+          <option value="certificada">Semilla certificada</option>
+          <option value="criolla">Semilla criolla</option>
+        </select>
+      </div>
+
+      <!-- Terreno -->
+      <div class="mb-3">
+        <span class="form-label d-block">Seleccionar terreno</span>
+
+        <details class="terreno-desplegable" id="detalleTerreno">
+          <summary class="campo campo-terreno" id="terrenoSeleccionado">
+            Seleccione
+          </summary>
+
+          <ul class="lista-terrenos list-unstyled mt-2 mb-0" id="listaTerrenosCultivo">
+          </ul>
+        </details>
+      </div>
+
+      <!-- Cultivos recomendados para la temporada actual (los pone cultivos.js) -->
+      <p class="form-label mb-1">Recomendados para sembrar ahora</p>
+      <p class="small texto_gris mb-2" id="textoTemporada"></p>
+      <div class="row g-2 mb-3" id="recomendados"></div>
+
+      <!-- Notas -->
+      <div class="mb-4">
+        <label for="notas" class="form-label">Notas (opcional)</label>
+        <textarea id="notas" name="notas" class="form-control campo" rows="4" placeholder="Observaciones adicionales..."></textarea>
+      </div>
+
+      <!-- Botón -->
+      <button type="submit" class="btn btn-guardar w-100">Guardar cultivo</button>
+
+    </form>
+  </main>
+
+  <script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+
+    <script src="../../assets/js/comun.js"></script>
+    <script src="../../assets/js/permisos.js"></script>
+    <script src="../../assets/js/terreno/terreno.js"></script>
+    <script src="../../assets/js/cultivos/guia-cultivos.js"></script>
+    <script src="../../assets/js/plagas/datos-plagas.js"></script>
+    <script src="../../assets/js/cultivos/cultivos.js"></script>
+  <script src="../../assets/js/conexion.js"></script>
+  <script src="../../assets/js/logo.js"></script>
+</body>
+</html>

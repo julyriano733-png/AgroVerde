@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Terrenos - Agro Verde</title>
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/terreno/terreno.css">
+  <link rel="stylesheet" href="../../assets/css/logo.css">
+</head>
+
+<body>
+  <img src="../../assets/img/agro-verde-logo.png" alt="Agro Verde" class="logo-app">
+    <main class="pantalla container-fluid">
+        <!-- Encabezado -->
+        <header class="app-header">
+            <div class="app-header__left">
+                <a href="../inicio/inicio.html" class="btn-back" aria-label="Volver"><i class="bi bi-arrow-left"></i></a>
+                <h3 class="m-0 fw-bold">Lista de terrenos</h3>
+            </div>
+            <a href="nuevo-terreno.html" class="btn-agro-sm">+ Nuevo</a>
+        </header>
+
+        <div class="mx-auto" style="max-width: 700px;">
+            <!-- Buscador -->
+            <input type="search" id="buscadorTerrenos" class="agro-input mb-3" placeholder="Buscar terreno">
+
+            <!-- Listado de terrenos -->
+            <div class="d-flex flex-column gap-2 mb-3" id="listaTerrenos">
+                <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center">
+                    <div>
+                        <strong class="d-block">Terreno 1</strong>
+                        <span class="texto_gris small">Etapa: Floración</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                        <span class="badge-zona badge-zona--sur">Sur</span>
+                        <a href="editar-terreno.html" class="text-success fs-5" aria-label="Editar Terreno 1">
+                            <i class="bi bi-pencil-square"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center">
+                    <div>
+                        <strong class="d-block">Terreno de Café</strong>
+                        <span class="texto_gris small">Etapa: Maduración</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                        <span class="badge-zona badge-zona--casa">Casa</span>
+                        <a href="editar-terreno.html" class="text-success fs-5" aria-label="Editar Terreno de Café">
+                            <i class="bi bi-pencil-square"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center">
+                    <div>
+                        <strong class="d-block">Terreno loma</strong>
+                        <span class="texto_gris small">Etapa: Siembra</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                        <span class="badge-zona badge-zona--norte">Norte</span>
+                        <a href="editar-terreno.html" class="text-success fs-5" aria-label="Editar Terreno loma">
+                            <i class="bi bi-pencil-square"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center">
+                    <div>
+                        <strong class="d-block">Vacío</strong>
+                        <span class="texto_gris small">Etapa: ----</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                        <span class="badge-zona badge-zona--norte">Norte</span>
+                        <a href="editar-terreno.html" class="text-success fs-5" aria-label="Editar Terreno Vacío">
+                            <i class="bi bi-pencil-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <a href="historial-terrenos.html" class="btn-agro-primary">Ver historial de terrenos</a>
+        </div>
+    </main>
+
+    <!-- Menú flotante desplegable hacia arriba (dropup) -->
+    <div class="contenedor_menu_flotante dropup">
+      <button class="boton_mas_flotante dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Más opciones">
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="dropdown-menu panel_monitoreo dropdown-menu-end shadow">
+        <div class="encabezado_panel">
+          <i class="bi bi-geo-alt-fill me-2"></i> Opciones de terreno
+        </div>
+        <div class="cuerpo_panel">
+        <a href="nuevo-terreno.html" class="dropdown-item opcion_panel">
+          <i class="bi bi-plus-circle icon"></i> Nuevo terreno
+        </a>
+        <a href="editar-terreno.html" class="dropdown-item opcion_panel">
+          <i class="bi bi-pencil icon"></i> Editar terreno
+        </a>
+        <a href="historial-terrenos.html" class="dropdown-item opcion_panel">
+          <i class="bi bi-clock-history icon"></i> Historial de terrenos
+        </a>
+        <a href="../propiedad/ver-propiedad.html" class="dropdown-item opcion_panel">
+          <i class="bi bi-gear icon"></i> Propiedades
+        </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Barra de navegación inferior -->
+    <nav class="navegacion_inferior d-flex justify-content-between">
+        <a href="../inicio/inicio.html" class="text-center small"><i class="bi bi-house-door d-block"></i>Inicio</a>
+        <a href="../cultivos/cultivos.html" class="text-center small"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
+        <a href="../clima/clima.html" class="text-center small"><i class="bi bi-cloud-sun d-block"></i>Clima</a>
+        <a href="../insumos/insumos.html" class="text-center small"><i class="bi bi-box-seam d-block"></i>Insumos</a>
+        <a href="../perfil/perfil.html" class="text-center small"><i class="bi bi-person-circle d-block"></i>Perfil</a>
+    </nav>
+    <script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/comun.js"></script>
+    <script src="../../assets/js/permisos.js"></script>
+    <script src="../../assets/js/terreno/terreno.js"></script>
+    <script src="../../assets/js/confirmacion.js"></script>
+  <script src="../../assets/js/conexion.js"></script>
+  <script src="../../assets/js/logo.js"></script>
+</body>
+
+</html>

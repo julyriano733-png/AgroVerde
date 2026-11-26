@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Terreno - Agro Verde</title>
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/terreno/terreno.css">
+  <link rel="stylesheet" href="../../assets/css/logo.css">
+</head>
+
+<body>
+  <img src="../../assets/img/agro-verde-logo.png" alt="Agro Verde" class="logo-app">
+    <main class="pantalla container-fluid">
+        <header class="app-header">
+            <div class="app-header__left">
+                <a href="terreno.html" class="btn-back" aria-label="Volver"><i class="bi bi-arrow-left"></i></a>
+                <h4 class="m-0 fw-bold">Editar terreno</h4>
+            </div>
+        </header>
+
+        <form action="terreno.html" id="formEditarTerreno" class="mx-auto" style="max-width: 600px;">
+            <label for="nombreTerrenoEdit" class="agro-label">Nombre del terreno</label>
+            <input type="text" id="nombreTerrenoEdit" name="nombreTerreno" class="agro-input" value="Terreno 1"
+                required>
+
+            <label for="ubicacionTerrenoEdit" class="agro-label">Ubicación del terreno</label>
+            <div class="input-group-agro">
+                <input type="text" id="ubicacionTerrenoEdit" name="ubicacionTerreno"
+                    value="Sector Sur - Finca El Manantial">
+                <button type="button" class="btn-agro-sm boton-ubicacion">Actual</button>
+            </div>
+
+            <label for="areaTerrenoEdit" class="agro-label">Área del terreno</label>
+            <input type="text" id="areaTerrenoEdit" name="areaTerreno" class="agro-input" value="2.4 ha">
+
+            <label for="zonaTerrenoEdit" class="agro-label">Zona dentro de la finca</label>
+            <select id="zonaTerrenoEdit" name="zonaTerreno" class="agro-select" style="background-color: #163b29;">
+                <option value="Norte">Norte</option>
+                <option value="Sur">Sur</option>
+                <option value="Este">Este</option>
+                <option value="Oeste">Oeste</option>
+                <option value="Centro">Centro</option>
+                <option value="Casa">Junto a la casa</option>
+            </select>
+
+            <label for="usoAnteriorEdit" class="agro-label">Uso anterior del terreno</label>
+            <textarea id="usoAnteriorEdit" name="usoAnterior" rows="3" class="agro-textarea" placeholder="Ej. Tuvo papa hasta junio de 2026; 3 meses en descanso; se encaló en agosto"></textarea>
+            <!-- Cultivos que tuvo este terreno (se anotan solos al inhabilitar un cultivo) -->
+            <div id="cultivosAnteriores" class="mb-3"></div>
+
+            <label for="tipoSueloEdit" class="agro-label">Tipo de suelo</label>
+            <select id="tipoSueloEdit" name="tipoSuelo" class="agro-select" style="background-color: #163b29;">
+                <option value="arenoso">Arenoso</option>
+                <option value="arcilloso">Arcilloso</option>
+                <option value="limoso" selected>Limoso</option>
+                <option value="mixto">Mixto</option>
+                <option value="turboso">Turboso</option>
+                <option value="calcareo">Calcáreo</option>
+            </select>
+
+            <hr class="border-secondary my-3">
+            <p class="fw-semibold small mb-2">Fuente de agua</p>
+
+            <label class="agro-label">Tipo de fuente hídrica</label>
+            <div class="radio-pills-group">
+                <div>
+                    <input type="radio" id="editFuenteRio" name="fuenteHidrica" value="rio" checked>
+                    <label for="editFuenteRio" class="w-100">Río</label>
+                </div>
+                <div>
+                    <input type="radio" id="editFuentePozo" name="fuenteHidrica" value="pozo">
+                    <label for="editFuentePozo" class="w-100">Pozo</label>
+                </div>
+                <div>
+                    <input type="radio" id="editFuenteAcueducto" name="fuenteHidrica" value="acueducto">
+                    <label for="editFuenteAcueducto" class="w-100">Acueducto</label>
+                </div>
+            </div>
+
+            <label for="caudalEstimadoEdit" class="agro-label">Caudal estimado (L/min)</label>
+            <input type="number" id="caudalEstimadoEdit" name="caudalEstimado" class="agro-input mb-2" value="120">
+            <button type="button" class="btn-agro-primary py-2 mb-3 boton-asociar">Asociar fuente</button>
+
+            <label class="agro-label">Capturar coordenadas</label>
+            <button type="button" class="btn-agro-outline mb-4 boton-ubicacion">
+                <i class="bi bi-geo-alt me-1"></i> Usar mi ubicación actual
+            </button>
+
+            <div class="d-flex flex-column gap-2">
+                <button type="submit" class="btn-agro-primary">Guardar</button>
+                <a href="terreno.html" class="btn-agro-primary" style="background-color: #1ea850;">Cancelar</a>
+                <a href="terreno.html" class="btn-agro-danger" id="botonInhabilitarTerreno">Inhabilitar</a>
+            </div>
+        </form>
+    </main>
+    <script src="../../assets/js/comun.js"></script>
+    <script src="../../assets/js/permisos.js"></script>
+    <script src="../../assets/js/terreno/terreno.js"></script>
+    <script src="../../assets/js/confirmacion.js"></script>
+  <script src="../../assets/js/conexion.js"></script>
+  <script src="../../assets/js/logo.js"></script>
+</body>
+
+</html>

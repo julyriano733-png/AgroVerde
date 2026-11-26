@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar propiedad - Agro Verde</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+
+    <!-- Estilos Personalizados Agro Verde -->
+    <link rel="stylesheet" href="../../assets/css/propiedad/crear-propiedad.css">
+  <link rel="stylesheet" href="../../assets/css/logo.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100 py-4 py-md-5">
+  <img src="../../assets/img/agro-verde-logo.png" alt="Agro Verde" class="logo-app">
+
+    <!-- Contenedor Web de Escritorio -->
+    <main class="container-lg my-auto">
+
+        <!-- Encabezado -->
+        <header class="d-flex align-items-center justify-content-between mb-4 pb-2">
+            <div class="d-flex align-items-center gap-3">
+                <button class="boton-volver d-flex align-items-center justify-content-center" aria-label="Volver">
+                    <i class="bi bi-arrow-left fs-5"></i>
+                </button>
+                <h1 class="titulo-pagina m-0 fs-2">Editar propiedad</h1>
+            </div>
+
+        </header>
+
+        <!-- Formulario de Registro -->
+        <form id="formEditarPropiedad" action="ver-propiedad.html" class="d-flex flex-column gap-4">
+            <input type="hidden" name="mensaje" value="guardado">
+
+            <!-- Campo: Nombre de la propiedad -->
+            <div class="grupo-campo">
+                <label for="nombrePropiedad" class="form-label label-personalizado">Nombre de la propiedad</label>
+                <input type="text" id="nombrePropiedad" class="form-control campo-personalizado"
+                    placeholder="Ej. napoles" required>
+            </div>
+
+            <!-- Campo: Tipo de propiedad -->
+            <div class="grupo-campo">
+                <label for="tipoPropiedad" class="form-label label-personalizado">Tipo de propiedad</label>
+                <select id="tipoPropiedad" class="form-select campo-personalizado">
+                    <option value="Finca">Finca</option>
+                    <option value="Lote">Lote</option>
+                    <option value="Parcela">Parcela</option>
+                    <option value="Invernadero">Invernadero</option>
+                </select>
+            </div>
+
+            <!-- Campo: Zona -->
+            <div class="grupo-campo">
+                <label for="zonaPropiedad" class="form-label label-personalizado">Zona</label>
+                <select id="zonaPropiedad" class="form-select campo-personalizado">
+                    <option value="Norte">Norte</option>
+                    <option value="sur">Sur</option>
+                    <option value="Casa">Junto a la casa</option>
+                </select>
+            </div>
+
+            <!-- Campo: Área -->
+            <div class="grupo-campo">
+                <label for="areaPropiedad" class="form-label label-personalizado">Área (ha)</label>
+                <input type="number" id="areaPropiedad" class="form-control campo-personalizado" placeholder="Ej. 3.5" step="0.1" min="0.1" required>
+            </div>
+
+            <!-- Campo: Ubicación -->
+            <div class="grupo-campo">
+                <label for="ubicacionPropiedad" class="form-label label-personalizado">Ubicacion</label>
+                <input type="text" id="ubicacionPropiedad" class="form-control campo-personalizado"
+                    placeholder="Ej. Fusagasugá, Cundinamarca" required>
+            </div>
+
+            <!-- Campo: Coordenadas (el clima de la propiedad sale de aquí) -->
+            <div class="grupo-campo">
+                <label class="form-label label-personalizado">Coordenadas (para el clima de la propiedad)</label>
+                <div class="row g-2">
+                    <div class="col-6">
+                        <input type="number" step="any" id="latitudPropiedad" class="form-control campo-personalizado" placeholder="Latitud, ej. 5.7145" aria-label="Latitud" required>
+                    </div>
+                    <div class="col-6">
+                        <input type="number" step="any" id="longitudPropiedad" class="form-control campo-personalizado" placeholder="Longitud, ej. -72.9339" aria-label="Longitud" required>
+                    </div>
+                </div>
+                <div class="d-flex flex-wrap gap-2 mt-2">
+                    <button type="button" id="botonBuscarCoordenadas" class="btn btn-sm btn-outline-success"><i class="bi bi-search me-1"></i>Buscar por la ubicación</button>
+                    <button type="button" id="botonMiUbicacion" class="btn btn-sm btn-outline-success"><i class="bi bi-geo-alt me-1"></i>Usar mi ubicación actual</button>
+                </div>
+                <small id="ayudaCoordenadas" class="d-block mt-1" style="color: #9ca3af;">Escribe la ubicación y toca "Buscar por la ubicación", o usa la ubicación de tu celular si estás en la finca.</small>
+            </div>
+
+            <!-- Campo: Notas -->
+            <div class="grupo-campo">
+                <label for="notasPropiedad" class="form-label label-personalizado">Notas</label>
+                <textarea id="notasPropiedad" class="form-control campo-personalizado textarea-personalizado" rows="4"
+                    placeholder="Ej. Finca, hato, lote"></textarea>
+            </div>
+
+            <!-- Separador -->
+            <div class="separador my-2"></div>
+
+            <!-- Botón Guardar Propiedad -->
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="boton-guardar w-100 py-3 fw-bold">Guardar cambios</button>
+            </div>
+
+        </form>
+
+    </main>
+    <script src="../../assets/js/comun.js"></script>
+    <script src="../../assets/js/permisos.js"></script>
+    <script src="../../assets/js/propiedad/propiedad.js"></script>
+  <script src="../../assets/js/conexion.js"></script>
+  <script src="../../assets/js/logo.js"></script>
+</body>
+
+</html>

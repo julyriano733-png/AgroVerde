@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exportar PDF - Agro Verde</title>
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/reportes/reportes.css">
+  <link rel="stylesheet" href="../../assets/css/logo.css">
+</head>
+
+<body>
+  <img src="../../assets/img/agro-verde-logo.png" alt="Agro Verde" class="logo-app">
+    <main class="pantalla container-fluid">
+        <header class="app-header">
+            <div class="app-header__left">
+                <a href="reportes.html" class="btn-back" aria-label="Volver"><i class="bi bi-arrow-left"></i></a>
+                <h4 class="m-0 fw-bold">Exportar PDF</h4>
+            </div>
+        </header>
+
+        <div class="mx-auto" style="max-width: 600px;">
+            <!-- Documento simulado -->
+            <article class="pdf-preview-box mb-4">
+                <div class="border-bottom pb-2 mb-3 d-flex justify-content-between align-items-center">
+                    <span class="text-muted" style="font-size: 0.7rem;">AGRO VERDE • REPORTE TÉCNICO</span>
+                    <span class="text-muted" style="font-size: 0.7rem;" id="pdfFecha">15 Ago 2026</span>
+                </div>
+                <h6 id="pdfTitulo">Comportamiento del cultivo en condiciones naturales</h6>
+                <p id="pdfTexto"></p>
+
+                <!-- Resumen de la propiedad al día del reporte (lo llena reportes.js) -->
+                <div id="pdfResumen"></div>
+            </article>
+
+            <button type="button" class="btn-agro-primary no-imprimir" onclick="window.print()"><i class="bi bi-file-earmark-pdf me-1"></i> Exportar PDF</button>
+            <p class="small texto_gris mt-2 no-imprimir">Se abre la ventana de impresión: en "Destino" elige <strong>Guardar como PDF</strong>.</p>
+        </div>
+    </main>
+    <script src="../../assets/js/comun.js"></script>
+    <script src="../../assets/js/permisos.js"></script>
+    <script src="../../assets/js/insumos/datos-insumos.js"></script>
+    <script src="../../assets/js/plagas/datos-plagas.js"></script>
+    <script src="../../assets/js/reportes/reportes.js"></script>
+  <script src="../../assets/js/conexion.js"></script>
+  <script src="../../assets/js/logo.js"></script>
+</body>
+
+</html>

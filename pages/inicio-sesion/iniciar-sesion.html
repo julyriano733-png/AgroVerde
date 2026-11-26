@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesión - Agro Verde</title>
+  <link rel="stylesheet" href="../../assets/css/inicio-sesion/acceso.css">
+</head>
+
+<body>
+  <main class="tarjeta-acceso">
+    <header class="encabezado">
+      <img src="../../assets/img/agro-verde-con-texto.png" alt="Agro Verde">
+      <h1>Iniciar sesión</h1>
+      <p>Ingresa tus datos para continuar</p>
+    </header>
+
+    <form class="formulario_login" action="../inicio/inicio.html">
+      <label class="campo-acceso">Correo electrónico
+        <input type="email" id="email" placeholder="tu@correo.com" autocomplete="email" required>
+      </label>
+      <label class="campo-acceso">Contraseña
+        <input type="password" id="password" placeholder="Tu contraseña" autocomplete="current-password" required>
+      </label>
+
+      <p class="enlace-derecha"><a href="recuperar-contrasena.html">¿Olvidaste tu contraseña?</a></p>
+
+      <button type="submit" class="boton-acceso">Iniciar sesión</button>
+    </form>
+
+    <p class="texto-pie">¿No tienes cuenta? <a href="crear-cuenta.html">Regístrate</a></p>
+  </main>
+
+  <script src="../../assets/js/comun.js"></script>
+  <script src="../../assets/js/inicio-sesion/iniciar-sesion.js"></script>
+  <script src="../../assets/js/conexion.js"></script>
+</body>
+
+</html>

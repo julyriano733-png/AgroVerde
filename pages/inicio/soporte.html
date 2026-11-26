@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayuda y soporte - Agro Verde</title>
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/inicio/configuracion.css">
+    <link rel="stylesheet" href="../../assets/css/inicio/preferencias.css">
+  <link rel="stylesheet" href="../../assets/css/logo.css">
+</head>
+
+<body>
+  <img src="../../assets/img/agro-verde-logo.png" alt="Agro Verde" class="logo-app">
+    <main class="pantalla container-fluid">
+        <!-- Encabezado -->
+        <header class="app-header">
+            <div class="app-header__left">
+                <a href="configuracion.html" class="btn-back" aria-label="Volver"><i class="bi bi-arrow-left"></i></a>
+                <h4 class="m-0 fw-bold">Ayuda y soporte</h4>
+            </div>
+        </header>
+
+        <div class="mx-auto" style="max-width: 760px;">
+            <div class="row g-4">
+                <div class="col-12 col-lg-6">
+                    <p class="mb-2 texto_subtitulo small text-uppercase">Preguntas frecuentes</p>
+                    <input type="search" id="buscarPregunta" class="agro-input" placeholder="Buscar una pregunta">
+                    <div class="d-flex flex-column gap-2 mb-4" id="listaPreguntas">
+                <details class="tarjeta p-3 rounded-4 pregunta">
+                    <summary class="texto_blanco d-flex justify-content-between align-items-center">
+                        <span>¿Cómo registro un cultivo nuevo?</span>
+                        <i class="bi bi-chevron-down icono_verde"></i>
+                    </summary>
+                    <p class="small texto_gris mt-2 mb-0">Ve a Cultivos, toca &quot;+ Nuevo&quot;, llena el nombre, el tipo, la fecha de siembra y elige el terreno. Al guardar aparece en la lista.</p>
+                </details>
+                <details class="tarjeta p-3 rounded-4 pregunta">
+                    <summary class="texto_blanco d-flex justify-content-between align-items-center">
+                        <span>¿Cómo descuento un insumo que usé?</span>
+                        <i class="bi bi-chevron-down icono_verde"></i>
+                    </summary>
+                    <p class="small texto_gris mt-2 mb-0">En Insumos toca &quot;Usar insumo&quot;, elige el insumo y el cultivo y escribe la cantidad. Se descuenta solo del inventario.</p>
+                </details>
+                <details class="tarjeta p-3 rounded-4 pregunta">
+                    <summary class="texto_blanco d-flex justify-content-between align-items-center">
+                        <span>¿De dónde sale el clima?</span>
+                        <i class="bi bi-chevron-down icono_verde"></i>
+                    </summary>
+                    <p class="small texto_gris mt-2 mb-0">Del servicio gratuito Open-Meteo, con la ubicación de la finca. Se actualiza cada 30 minutos y, si no hay internet, se muestra el último clima guardado.</p>
+                </details>
+                <details class="tarjeta p-3 rounded-4 pregunta">
+                    <summary class="texto_blanco d-flex justify-content-between align-items-center">
+                        <span>¿Qué pasa si inhabilito algo?</span>
+                        <i class="bi bi-chevron-down icono_verde"></i>
+                    </summary>
+                    <p class="small texto_gris mt-2 mb-0">No se borra: solo deja de aparecer en las listas. Queda anotado en el historial.</p>
+                </details>
+                <details class="tarjeta p-3 rounded-4 pregunta">
+                    <summary class="texto_blanco d-flex justify-content-between align-items-center">
+                        <span>¿Cómo exporto un reporte en PDF?</span>
+                        <i class="bi bi-chevron-down icono_verde"></i>
+                    </summary>
+                    <p class="small texto_gris mt-2 mb-0">En Reportes toca &quot;Exportar en PDF&quot; y luego &quot;Exportar PDF&quot;: se abre la impresión del navegador, donde eliges &quot;Guardar como PDF&quot;.</p>
+                </details>
+                <details class="tarjeta p-3 rounded-4 pregunta">
+                    <summary class="texto_blanco d-flex justify-content-between align-items-center">
+                        <span>¿Por qué no veo mis datos en otro computador?</span>
+                        <i class="bi bi-chevron-down icono_verde"></i>
+                    </summary>
+                    <p class="small texto_gris mt-2 mb-0">Mientras no esté lista la API, los datos se guardan solo en el navegador donde los registras.</p>
+                </details>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6">
+                    <p class="mb-2 texto_subtitulo small text-uppercase">Escríbenos</p>
+                    <form id="formSoporte" class="tarjeta p-3 rounded-4 mb-4">
+                        <label for="asuntoSoporte" class="agro-label">Asunto</label>
+                        <select id="asuntoSoporte" class="agro-select">
+                            <option value="" selected disabled>Seleccionar</option>
+                            <option>Tengo un problema con la aplicación</option>
+                            <option>Tengo una sugerencia</option>
+                            <option>Necesito ayuda con mi cuenta</option>
+                            <option>Otro</option>
+                        </select>
+
+                        <label for="mensajeSoporte" class="agro-label">Mensaje</label>
+                        <textarea id="mensajeSoporte" rows="4" class="agro-textarea" placeholder="Cuéntanos qué pasó..."></textarea>
+
+                        <button type="submit" class="btn-agro-primary"><i class="bi bi-whatsapp me-1"></i> Enviar por WhatsApp</button>
+                    </form>
+
+                    <p class="mb-2 texto_subtitulo small text-uppercase">Contacto</p>
+                    <div class="tarjeta p-0 rounded-4 overflow-hidden">
+                        <a href="mailto:soporte@agroverde.com" class="item_opcion d-flex justify-content-between align-items-center p-3 text-decoration-none border-bottom-subtil">
+                            <span class="texto_blanco"><i class="bi bi-envelope me-2 icono_verde"></i>soporte@agroverde.com</span>
+                            <i class="bi bi-chevron-right icono_verde"></i>
+                        </a>
+                        <a href="https://wa.me/573204154049?text=Hola%2C%20necesito%20ayuda%20con%20Agro%20Verde" target="_blank" rel="noopener" class="item_opcion d-flex justify-content-between align-items-center p-3 text-decoration-none border-bottom-subtil">
+                            <span class="texto_blanco"><i class="bi bi-whatsapp me-2 icono_verde"></i>WhatsApp +57 320 415 4049</span>
+                            <i class="bi bi-chevron-right icono_verde"></i>
+                        </a>
+                        <div class="p-3">
+                            <span class="small texto_gris">Lunes a viernes de 8:00 a.m. a 5:00 p.m. • Versión 1.0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <nav class="navegacion_inferior d-flex justify-content-between">
+        <a href="../inicio/inicio.html" class="text-center small"><i class="bi bi-house-door d-block"></i>Inicio</a>
+        <a href="../cultivos/cultivos.html" class="text-center small"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
+        <a href="../clima/clima.html" class="text-center small"><i class="bi bi-cloud-sun d-block"></i>Clima</a>
+        <a href="../insumos/insumos.html" class="text-center small"><i class="bi bi-box-seam d-block"></i>Insumos</a>
+        <a href="../perfil/perfil.html" class="text-center small"><i class="bi bi-person-circle d-block"></i>Perfil</a>
+    </nav>
+
+    <script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/comun.js"></script>
+    <script src="../../assets/js/permisos.js"></script>
+    <script src="../../assets/js/inicio/preferencias.js"></script>
+    <script src="../../assets/js/confirmacion.js"></script>
+  <script src="../../assets/js/conexion.js"></script>
+  <script src="../../assets/js/logo.js"></script>
+</body>
+
+</html>

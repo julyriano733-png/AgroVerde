@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades de medida - Agro Verde</title>
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/inicio/configuracion.css">
+    <link rel="stylesheet" href="../../assets/css/inicio/preferencias.css">
+  <link rel="stylesheet" href="../../assets/css/logo.css">
+</head>
+
+<body>
+  <img src="../../assets/img/agro-verde-logo.png" alt="Agro Verde" class="logo-app">
+    <main class="pantalla container-fluid">
+        <!-- Encabezado -->
+        <header class="app-header">
+            <div class="app-header__left">
+                <a href="configuracion.html" class="btn-back" aria-label="Volver"><i class="bi bi-arrow-left"></i></a>
+                <h4 class="m-0 fw-bold">Unidades de medida</h4>
+            </div>
+        </header>
+
+        <div class="mx-auto" style="max-width: 760px;">
+            <form id="formUnidades">
+                <p class="mb-2 texto_subtitulo small text-uppercase">Sistema</p>
+                <div class="d-flex flex-column gap-2 mb-4">
+                <label class="tarjeta_con_borde p-3 rounded-4 d-flex justify-content-between align-items-center" style="cursor: pointer;">
+                    <div>
+                        <span class="texto_blanco d-block">Métrico</span>
+                        <span class="small texto_gris">Hectáreas, kilogramos, litros y °C</span>
+                    </div>
+                    <input type="radio" name="sistema" value="Métrico" class="form-check-input m-0" checked>
+                </label>
+                <label class="tarjeta_con_borde p-3 rounded-4 d-flex justify-content-between align-items-center" style="cursor: pointer;">
+                    <div>
+                        <span class="texto_blanco d-block">Imperial</span>
+                        <span class="small texto_gris">Acres, libras, galones y °F</span>
+                    </div>
+                    <input type="radio" name="sistema" value="Imperial" class="form-check-input m-0">
+                </label>
+                <label class="tarjeta_con_borde p-3 rounded-4 d-flex justify-content-between align-items-center" style="cursor: pointer;">
+                    <div>
+                        <span class="texto_blanco d-block">Personalizado</span>
+                        <span class="small texto_gris">Elige cada unidad por separado</span>
+                    </div>
+                    <input type="radio" name="sistema" value="Personalizado" class="form-check-input m-0">
+                </label>
+                </div>
+
+                <p class="mb-2 texto_subtitulo small text-uppercase">Unidades</p>
+                <label for="unidadArea" class="agro-label">Área de terrenos y cultivos</label>
+                <select id="unidadArea" class="agro-select">
+                    <option value="ha">Hectáreas (ha)</option>
+                    <option value="acre">Acres (ac)</option>
+                    <option value="m2">Metros cuadrados (m²)</option>
+                </select>
+                <label for="unidadPeso" class="agro-label">Peso de insumos y cosechas</label>
+                <select id="unidadPeso" class="agro-select">
+                    <option value="kg">Kilogramos (kg)</option>
+                    <option value="lb">Libras (lb)</option>
+                    <option value="ton">Toneladas (t)</option>
+                </select>
+                <label for="unidadVolumen" class="agro-label">Volumen de líquidos</label>
+                <select id="unidadVolumen" class="agro-select">
+                    <option value="L">Litros (L)</option>
+                    <option value="gal">Galones (gal)</option>
+                </select>
+                <label for="unidadTemperatura" class="agro-label">Temperatura</label>
+                <select id="unidadTemperatura" class="agro-select">
+                    <option value="C">Celsius (°C)</option>
+                    <option value="F">Fahrenheit (°F)</option>
+                </select>
+
+                <button type="submit" class="btn-agro-primary">Guardar cambios</button>
+            </form>
+        </div>
+    </main>
+
+    <nav class="navegacion_inferior d-flex justify-content-between">
+        <a href="../inicio/inicio.html" class="text-center small"><i class="bi bi-house-door d-block"></i>Inicio</a>
+        <a href="../cultivos/cultivos.html" class="text-center small"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
+        <a href="../clima/clima.html" class="text-center small"><i class="bi bi-cloud-sun d-block"></i>Clima</a>
+        <a href="../insumos/insumos.html" class="text-center small"><i class="bi bi-box-seam d-block"></i>Insumos</a>
+        <a href="../perfil/perfil.html" class="text-center small"><i class="bi bi-person-circle d-block"></i>Perfil</a>
+    </nav>
+
+    <script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/comun.js"></script>
+    <script src="../../assets/js/permisos.js"></script>
+    <script src="../../assets/js/inicio/preferencias.js"></script>
+    <script src="../../assets/js/confirmacion.js"></script>
+  <script src="../../assets/js/conexion.js"></script>
+  <script src="../../assets/js/logo.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+/*LOGO DE AGRO VERDE
+  Mismo tamaño en todas las pantallas y siempre en el mismo lugar del encabezado:
+  a la izquierda, justo después de la flecha de volver (logo.js lo pone ahí).*/
+
+.logo-app {
+    width: 44px;
+    height: auto;
+    flex-shrink: 0;
+    display: inline-block;
+}
+
+@media (min-width: 768px) {
+    .logo-app {
+        width: 52px;
+    }
+}
+
+/* "+ Nuevo" de Propiedades en una sola línea */
+.boton-nuevo {
+    white-space: nowrap;
+}
+
+@media (max-width: 400px) {
+    .boton-nuevo {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        font-size: 0.85rem;
+    }
+}
+
+/* Celulares pequeños: flecha + logo + título + botón deben caber en una fila */
+@media (max-width: 400px) {
+    header > div,
+    .app-header__left {
+        min-width: 0;
+    }
+
+    header > div.gap-3,
+    .app-header__left {
+        gap: 8px !important;
+    }
+
+    .titulo-pagina {
+        font-size: 1.15rem !important;
+    }
+
+    .logo-app {
+        width: 38px;
+    }
+}

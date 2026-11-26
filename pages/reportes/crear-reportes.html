@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Reporte - Agro Verde</title>
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/logo.css">
+</head>
+
+<body>
+  <img src="../../assets/img/agro-verde-logo.png" alt="Agro Verde" class="logo-app">
+    <main class="pantalla container-fluid">
+        <header class="app-header">
+            <div class="app-header__left">
+                <a href="reportes.html" class="btn-back" aria-label="Volver"><i class="bi bi-arrow-left"></i></a>
+                <h4 class="m-0 fw-bold">Reportes</h4>
+            </div>
+        </header>
+
+        <form action="reportes.html" id="formReporte" class="mx-auto" style="max-width: 600px;">
+            <input type="hidden" name="mensaje" value="guardado">
+            <label for="nombreReporte" class="agro-label">Nombre del reporte</label>
+            <input type="text" id="nombreReporte" name="nombreReporte" class="agro-input" placeholder="Ej. Informe"
+                required>
+
+            <label for="fechaReporte" class="agro-label">Fecha de reporte</label>
+            <input type="date" id="fechaReporte" name="fechaReporte" class="agro-input" required>
+
+            <label for="notasReporte" class="agro-label">Notas</label>
+            <textarea id="notasReporte" name="notasReporte" rows="4" class="agro-textarea"
+                placeholder="Observaciones adicionales..."></textarea>
+
+            <div class="mt-4">
+                <button type="submit" class="btn-agro-primary">Guardar reporte</button>
+            </div>
+        </form>
+    </main>
+    <script src="../../assets/js/comun.js"></script>
+    <script src="../../assets/js/permisos.js"></script>
+    <script src="../../assets/js/reportes/reportes.js"></script>
+  <script src="../../assets/js/conexion.js"></script>
+  <script src="../../assets/js/logo.js"></script>
+</body>
+
+</html>

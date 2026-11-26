@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear cuenta - Agro Verde</title>
+  <link rel="stylesheet" href="../../assets/css/inicio-sesion/acceso.css">
+</head>
+
+<body>
+  <main class="tarjeta-acceso">
+    <header class="encabezado">
+      <img src="../../assets/img/agro-verde-con-texto.png" alt="Agro Verde">
+      <h1>Crear cuenta</h1>
+      <p>Crea tu cuenta con unos simples pasos</p>
+    </header>
+
+    <form class="formulario_cuenta" action="../inicio/inicio.html">
+      <label class="campo-acceso">Nombre de usuario
+        <input type="text" id="usuario" placeholder="Ej. Ana Ruiz" autocomplete="name" required>
+      </label>
+      <label class="campo-acceso">Correo electrónico
+        <input type="email" id="correo" placeholder="tu@correo.com" autocomplete="email" required>
+      </label>
+      <label class="campo-acceso">Contraseña
+        <input type="password" id="contrasena" placeholder="Mínimo 6 caracteres" autocomplete="new-password" required>
+      </label>
+
+      <button type="submit" class="boton-acceso">Crear cuenta</button>
+    </form>
+
+    <p class="texto-pie">¿Ya tienes cuenta? <a href="iniciar-sesion.html">Inicia sesión</a></p>
+  </main>
+
+  <script src="../../assets/js/comun.js"></script>
+  <script src="../../assets/js/inicio-sesion/crear-cuenta.js"></script>
+  <script src="../../assets/js/conexion.js"></script>
+</body>
+
+</html>

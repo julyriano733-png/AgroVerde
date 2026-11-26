@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insumos - Agro Verde</title>
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/insumos/insumos.css">
+  <link rel="stylesheet" href="../../assets/css/logo.css">
+</head>
+
+<body>
+  <img src="../../assets/img/agro-verde-logo.png" alt="Agro Verde" class="logo-app">
+    <main class="pantalla container-fluid">
+        <!-- Encabezado: en celular el logo va arriba y el buscador abajo,
+             en computador todo queda en una sola fila -->
+        <header class="app-header encabezado-insumos">
+            <a href="../inicio/inicio.html" class="btn-back" aria-label="Volver"><i class="bi bi-arrow-left"></i></a>
+            <h3 class="m-0 fw-bold">Insumos</h3>
+            <input type="search" id="buscador" class="agro-input buscador-insumos" placeholder="Buscar por nombre, categoría o código">
+            <a href="crear-insumo.html" class="btn-agro-sm">+ Nuevo</a>
+        </header>
+
+        <div class="contenido-insumos">
+
+            <!-- Resumen -->
+            <div class="row g-2 mb-3">
+                <div class="col">
+                    <div class="tarjeta-resumen">
+                        <div id="dato1" class="numero numero--verde">42</div>
+                        <span class="texto_gris small">Insumos en stock</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="tarjeta-resumen">
+                        <div id="dato2" class="numero numero--rojo">5</div>
+                        <span class="texto_gris small">Insumos por agotarse</span>
+                    </div>
+                </div>
+            </div>
+
+            <a href="opciones-insumo.html" class="btn-agro-outline mb-3">Opciones Insumos</a>
+
+            <!-- Inventario -->
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 class="fw-bold m-0">Inventario</h5>
+                <a href="consultar-catalogo.html" class="link-editar">Ver catálogo</a>
+            </div>
+            <div class="d-flex gap-2 mb-2 overflow-auto pb-1" id="filtroCategorias"></div>
+            <div id="listaPrincipal" class="lista-insumos d-flex flex-column gap-2 mb-3">
+                <details class="insumo-desplegable item-buscable" open>
+                    <summary>
+                        <div class="d-flex align-items-center gap-3">
+                            <span class="punto-insumo punto-insumo--verde"></span>
+                            <div>
+                                <strong class="d-block">Fertilizante NPK</strong>
+                                <span class="texto_gris small">18 sacos disponibles</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <a href="editar-insumo.html" class="btn-agro-sm">Editar</a>
+                            <i class="bi bi-chevron-down"></i>
+                        </div>
+                    </summary>
+                    <div class="descripcion">
+                        <p class="titulo-seccion mb-1">Descripción</p>
+                        Fertilizante NPK de uso agrícola que aporta nitrógeno, fósforo y potasio, esenciales para el crecimiento, desarrollo y producción de los cultivos. Cantidad disponible: 18 sacos. Recomendado para mejorar la nutrición del suelo y favorecer un desarrollo saludable de las plantas. Presentación: saco. Estado: disponible.
+                    </div>
+                </details>
+                <details class="insumo-desplegable item-buscable">
+                    <summary>
+                        <div class="d-flex align-items-center gap-3">
+                            <span class="punto-insumo punto-insumo--azul"></span>
+                            <div>
+                                <strong class="d-block">Herbicida selectivo</strong>
+                                <span class="texto_gris small">9 litros disponibles</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <a href="editar-insumo.html" class="btn-agro-sm">Editar</a>
+                            <i class="bi bi-chevron-down"></i>
+                        </div>
+                    </summary>
+                    <div class="descripcion">
+                        <p class="titulo-seccion mb-1">Descripción</p>
+                        Herbicida selectivo para el control de malezas sin afectar el cultivo. Presentación: litro. Estado: disponible.
+                    </div>
+                </details>
+                <details class="insumo-desplegable item-buscable">
+                    <summary>
+                        <div class="d-flex align-items-center gap-3">
+                            <span class="punto-insumo punto-insumo--rojo"></span>
+                            <div>
+                                <strong class="d-block">Fungicida orgánico</strong>
+                                <span class="texto-bajo-stock small">3 unidades - bajo stock</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <a href="editar-insumo.html" class="btn-agro-sm">Editar</a>
+                            <i class="bi bi-chevron-down"></i>
+                        </div>
+                    </summary>
+                    <div class="descripcion">
+                        <p class="titulo-seccion mb-1">Descripción</p>
+                        Fungicida orgánico para la prevención de hongos en hojas y tallos. Presentación: unidad. Estado: bajo stock.
+                    </div>
+                </details>
+                <details class="insumo-desplegable item-buscable">
+                    <summary>
+                        <div class="d-flex align-items-center gap-3">
+                            <span class="punto-insumo punto-insumo--verde"></span>
+                            <div>
+                                <strong class="d-block">Semilla de maíz</strong>
+                                <span class="texto_gris small">50 kg disponibles</span>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <a href="editar-insumo.html" class="btn-agro-sm">Editar</a>
+                            <i class="bi bi-chevron-down"></i>
+                        </div>
+                    </summary>
+                    <div class="descripcion">
+                        <p class="titulo-seccion mb-1">Descripción</p>
+                        Semilla de maíz certificada para siembra. Presentación: kilogramo. Estado: disponible.
+                    </div>
+                </details>
+            </div>
+
+            <!-- Acciones -->
+            <div class="acciones-insumos d-flex flex-column gap-2">
+                <a href="uso-insumo.html" class="btn-agro-primary">Usar insumo</a>
+                <a href="inhabilitar-insumo.html" class="btn-agro-danger">Inhabilitar insumo</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Barra de navegación inferior -->
+    <nav class="navegacion_inferior d-flex justify-content-between">
+        <a href="../inicio/inicio.html" class="text-center small"><i class="bi bi-house-door d-block"></i>Inicio</a>
+        <a href="../cultivos/cultivos.html" class="text-center small"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
+        <a href="../clima/clima.html" class="text-center small"><i class="bi bi-cloud-sun d-block"></i>Clima</a>
+        <a href="insumos.html" class="text-center small active"><i class="bi bi-box-seam d-block"></i>Insumos</a>
+        <a href="../perfil/perfil.html" class="text-center small"><i class="bi bi-person-circle d-block"></i>Perfil</a>
+    </nav>
+
+    <script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/comun.js"></script>
+    <script src="../../assets/js/permisos.js"></script>
+    <script src="../../assets/js/insumos/datos-insumos.js"></script>
+    <script src="../../assets/js/insumos/insumos.js"></script>
+    <script src="../../assets/js/confirmacion.js"></script>
+  <script src="../../assets/js/conexion.js"></script>
+  <script src="../../assets/js/logo.js"></script>
+</body>
+
+</html>

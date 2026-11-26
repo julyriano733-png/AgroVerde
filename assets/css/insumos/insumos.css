@@ -1,0 +1,506 @@
+/*ESTILOS ESPECÍFICOS - MÓDULO INSUMOS
+   (Hereda body, .pantalla, .tarjeta, .agro-input y botones de global.css)*/
+
+/* Ancho máximo del contenido */
+.contenido-insumos {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.titulo-seccion {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+/* Tarjetas de resumen (stock, por agotarse...) */
+.tarjeta-resumen {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  padding: 14px;
+  height: 100%;
+}
+
+.tarjeta-resumen .numero {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--green-primary);
+  line-height: 1.1;
+}
+
+.tarjeta-resumen .numero--alerta {
+  color: #eab308;
+}
+
+/* Insumo desplegable (V / ^) */
+.insumo-desplegable {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  padding: 12px 14px;
+}
+
+.insumo-desplegable summary {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.insumo-desplegable summary::-webkit-details-marker {
+  display: none;
+}
+
+.insumo-desplegable summary .bi-chevron-down {
+  color: var(--green-primary);
+  transition: transform 0.2s;
+}
+
+.insumo-desplegable[open] summary .bi-chevron-down {
+  transform: rotate(180deg);
+}
+
+.insumo-desplegable .descripcion {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin: 10px 0 0 0;
+  padding-top: 10px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.link-editar {
+  color: var(--green-primary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link-editar:hover {
+  color: var(--green-primary-hover);
+}
+
+/* Etiqueta de bajo stock */
+.texto-bajo-stock {
+  color: #eab308;
+}
+
+/* El botón secundario (.btn-agro-outline) ahora está en global.css */
+
+/* Selectores tipo pastilla (Entrada / Salida, Ver / Registrar) */
+.pastillas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.pastillas input[type="radio"] {
+  display: none;
+}
+
+.pastillas label,
+.pastillas a {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  text-align: center;
+  text-decoration: none;
+  padding: 9px 10px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pastillas input[type="radio"]:checked + label,
+.pastillas a.activa {
+  background-color: var(--green-primary);
+  border-color: var(--green-primary);
+  color: var(--text-dark);
+}
+
+/* Contador de cantidad ( - 5 sacos + ) */
+.contador {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 6px;
+  margin-bottom: 14px;
+}
+
+.contador button {
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--green-primary);
+  color: var(--text-dark);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.contador span {
+  font-weight: 700;
+}
+
+/* Selección de insumo con radio (Actualizar stock / Inhabilitar) */
+.opcion-insumo input {
+  display: none;
+}
+
+.opcion-insumo label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.opcion-insumo input:checked + label {
+  border-color: var(--green-primary);
+  background-color: rgba(34, 197, 94, 0.12);
+}
+
+.opcion-insumo--peligro input:checked + label {
+  border-color: #ef4444;
+  background-color: rgba(239, 68, 68, 0.12);
+}
+
+/* Tarjeta de total (costos) */
+.tarjeta-total {
+  background-color: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.4);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.tarjeta-total .monto {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--green-primary);
+}
+
+.precio {
+  color: var(--green-primary);
+  font-weight: 700;
+}
+
+/* Gráfica de barras */
+.grafica {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  height: 220px;
+  padding: 16px 10px 0 10px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.grafica .barra-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  width: 18%;
+}
+
+.grafica .barra {
+  width: 100%;
+  background-color: var(--green-primary);
+  border-radius: 8px 8px 0 0;
+}
+
+.grafica .valor {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.grafica-etiquetas {
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  padding-top: 6px;
+}
+
+/* Escáner de código de barras */
+.escaner {
+  border: 2px dashed var(--green-primary);
+  border-radius: 18px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--text-muted);
+  background-color: var(--bg-card);
+}
+
+.escaner i {
+  font-size: 3rem;
+  color: var(--green-primary);
+}
+
+/* Lista de opciones ( > ) */
+.opcion-lista {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.opcion-lista .bi-chevron-right {
+  color: var(--green-primary);
+}
+
+/* Puntos de color de cada insumo */
+.punto-insumo {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background-color: var(--green-primary);
+}
+
+.punto-insumo--azul {
+  background-color: #38bdf8;
+}
+
+.punto-insumo--amarillo {
+  background-color: #eab308;
+}
+
+.punto-insumo--rojo {
+  background-color: #ef4444;
+}
+
+.punto-insumo--gris {
+  background-color: var(--text-muted);
+}
+
+/* Colores de los números de resumen */
+.tarjeta-resumen .numero--verde {
+  color: var(--green-primary);
+}
+
+.tarjeta-resumen .numero--rojo {
+  color: #ef4444;
+}
+
+/* Monto grande (costos) */
+.monto-total {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--green-primary);
+}
+
+/* Selector de siembra con tres opciones */
+.pastillas--tres {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.pastillas--tres label {
+  border-radius: 50px;
+  padding: 8px 6px;
+  font-size: 0.78rem;
+}
+
+/* Opciones con borde verde */
+.tarjeta--borde-verde {
+  border-color: rgba(34, 197, 94, 0.6);
+}
+
+/* Colores de las barras de la gráfica */
+.grafica .barra--azul {
+  background-color: #38bdf8;
+}
+
+.grafica .barra--amarillo {
+  background-color: #eab308;
+}
+
+.grafica .barra--rojo {
+  background-color: #ef4444;
+}
+
+/* Etiquetas en mayúsculas (Registrar proveedor) */
+.formulario-mayusculas .agro-label {
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+/* Títulos largos y botón "+ Nuevo" en una sola línea */
+.app-header h3 {
+  font-size: 1.3rem;
+}
+
+.app-header .btn-agro-sm {
+  white-space: nowrap;
+}
+
+/*RESPONSIVO - TABLETS Y COMPUTADORES*/
+
+/* Pantallas muy pequeñas (menos de 360px) */
+@media (max-width: 359px) {
+  .pastillas--tres label {
+    font-size: 0.7rem;
+    padding: 8px 4px;
+  }
+
+  .tarjeta-resumen .numero {
+    font-size: 1.3rem;
+  }
+
+  .app-header h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Tablets: más espacio para la gráfica y el escáner */
+@media (min-width: 768px) {
+  .grafica {
+    height: 300px;
+  }
+
+  .escaner {
+    height: 260px;
+  }
+
+  /* Botones de acción (Usar / Inhabilitar) lado a lado */
+  .acciones-insumos {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Computadores: el contenido ocupa todo el ancho de la pantalla */
+@media (min-width: 992px) {
+  .contenido-insumos {
+    max-width: 100%;
+  }
+
+  /* Las listas se reparten en columnas que se llenan de arriba hacia abajo,
+     así no quedan huecos cuando un insumo se despliega */
+  .lista-insumos {
+    display: block !important;
+    column-count: 2;
+    column-gap: 12px;
+  }
+
+  .lista-insumos > * {
+    break-inside: avoid;
+    margin-bottom: 8px;
+  }
+
+  .tarjeta,
+  .insumo-desplegable {
+    transition: background-color 0.2s, transform 0.2s;
+  }
+
+  a.tarjeta:hover {
+    transform: translateY(-2px);
+  }
+
+  .grafica {
+    height: 340px;
+  }
+}
+
+/* Pantallas grandes: listas en tres columnas */
+@media (min-width: 1400px) {
+  .lista-insumos {
+    column-count: 3;
+  }
+}
+
+/*ENCABEZADO DE LA PANTALLA PRINCIPAL Y LOGO*/
+
+/* La imagen del logo tiene mucho borde transparente, por eso se agranda */
+.app-logo-mini {
+  width: 72px;
+  height: 60px;
+}
+
+.encabezado-insumos {
+  flex-wrap: wrap;
+}
+
+/* Celular: logo arriba centrado, título y botón, y el buscador abajo */
+.logo-insumos {
+  width: 130px;
+  height: 90px;
+  object-fit: contain;
+  flex-basis: 100%;
+  margin: 0 auto;
+}
+
+.encabezado-insumos h3 {
+  flex: 1;
+}
+
+.buscador-insumos {
+  order: 3;
+  flex-basis: 100%;
+  margin-bottom: 0;
+}
+
+/* Computador: logo, título, buscador y botón en una sola fila */
+@media (min-width: 992px) {
+  .encabezado-insumos {
+    flex-wrap: nowrap;
+    gap: 20px;
+  }
+
+  .logo-insumos {
+    flex-basis: auto;
+    width: 110px;
+    height: 76px;
+    margin: 0;
+  }
+
+  .encabezado-insumos h3 {
+    flex: 0 0 auto;
+    font-size: 1.6rem;
+  }
+
+  .buscador-insumos {
+    order: 0;
+    flex: 1;
+    flex-basis: auto;
+  }
+
+  .app-logo-mini {
+    width: 90px;
+    height: 70px;
+  }
+}
+
+/* Círculo con el ícono del proveedor (Ver proveedor) */
+.avatar-proveedor {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: rgba(56, 189, 248, 0.18);
+  color: #38bdf8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+/* Flecha de volver en la pantalla principal de Insumos */
+.encabezado-insumos .btn-back {
+  flex-shrink: 0;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día de cosecha estimado - Agro Verde</title>
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/cultivos/dia-cosecha.css">
+  <link rel="stylesheet" href="../../assets/css/logo.css">
+</head>
+
+<body>
+  <img src="../../assets/img/agro-verde-logo.png" alt="Agro Verde" class="logo-app">
+
+    <main class="pantalla container-fluid">
+        <div class="mx-auto" style="max-width: 650px;">
+
+            <!-- Encabezado con botón regresar -->
+            <header class="d-flex justify-content-between align-items-center mb-3">
+                <div class="d-flex align-items-center gap-3">
+                    <a href="cultivos.html" class="btn-back" aria-label="Volver">
+                        <i class="bi bi-arrow-left"></i>
+                    </a>
+                    <h4 class="mb-0 fw-bold titulo">Día de cosecha estimado</h4>
+                </div>
+            </header>
+
+            <!-- Tarjeta de cosecha -->
+            <section class="card tarjeta-cosecha mb-4">
+                <h6 class="nombre-lote" id="cosechaNombre">Maíz - Lote 3</h6>
+                <p class="fecha-siembra" id="cosechaSiembra">Sembrado: 12 Ene 2026</p>
+
+                <h2 class="fecha-cosecha" id="cosechaFecha">18 Mayo 2026</h2>
+                <p class="texto-cosecha">Fecha estimada de cosecha</p>
+
+                <div class="progress barra-avance" role="progressbar" aria-label="Avance del cultivo" aria-valuenow="68"
+                    aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar barra-relleno" id="cosechaBarra" style="width: 68%;"></div>
+                </div>
+                <p class="dia-actual mb-0" id="cosechaDia">Día 82 de 120</p>
+            </section>
+
+            <!-- Factores considerados -->
+            <section class="card tarjeta-factores mb-4">
+                <h6 class="factores-titulo">Factores considerados</h6>
+
+                <div class="d-flex align-items-center gap-3 factor">
+                    <span class="punto punto-verde"></span>
+                    <span>Temperatura y humedad promedio</span>
+                </div>
+
+                <div class="d-flex align-items-center gap-3 factor">
+                    <span class="punto punto-azul"></span>
+                    <span>Variedad de semilla sembrada</span>
+                </div>
+
+                <div class="d-flex align-items-center gap-3 factor">
+                    <span class="punto punto-rojo"></span>
+                    <span>Historial climático de la zona</span>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Barra de navegación inferior unificada -->
+    <nav class="navegacion_inferior d-flex justify-content-between">
+        <a href="../inicio/inicio.html" class="text-center small"><i class="bi bi-house-door d-block"></i>Inicio</a>
+        <a href="cultivos.html" class="text-center small active"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
+        <a href="../clima/clima.html" class="text-center small"><i class="bi bi-cloud-sun d-block"></i>Clima</a>
+        <a href="../insumos/insumos.html" class="text-center small"><i class="bi bi-box-seam d-block"></i>Insumos</a>
+        <a href="../perfil/perfil.html" class="text-center small"><i class="bi bi-person-circle d-block"></i>Perfil</a>
+    </nav>
+
+    <script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/comun.js"></script>
+    <script src="../../assets/js/permisos.js"></script>
+    <script src="../../assets/js/cultivos/guia-cultivos.js"></script>
+    <script src="../../assets/js/plagas/datos-plagas.js"></script>
+    <script src="../../assets/js/cultivos/cultivos.js"></script>
+  <script src="../../assets/js/conexion.js"></script>
+  <script src="../../assets/js/logo.js"></script>
+</body>
+
+</html>

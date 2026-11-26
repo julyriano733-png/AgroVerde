@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Cultivo - Agro Verde</title>
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/cultivos/editar-cultivo.css">
+  <link rel="stylesheet" href="../../assets/css/logo.css">
+</head>
+
+<body>
+  <img src="../../assets/img/agro-verde-logo.png" alt="Agro Verde" class="logo-app">
+
+    <main class="pantalla container-fluid">
+        <div class="mx-auto" style="max-width: 650px;">
+
+            <!-- Encabezado -->
+            <header class="d-flex justify-content-between align-items-center mb-3">
+                <div class="d-flex align-items-center gap-3">
+                    <a href="ver-cultivo.html" class="btn-back" aria-label="Volver">
+                        <i class="bi bi-arrow-left"></i>
+                    </a>
+                    <h4 class="mb-0 fw-bold">Editar cultivo</h4>
+                </div>
+            </header>
+
+            <form action="cultivos.html" id="formEditarCultivo">
+                <input type="hidden" name="mensaje" value="guardado">
+                <div class="mb-3">
+                    <label for="editNombreCultivo" class="agro-label">Nombre del cultivo</label>
+                    <input type="text" id="editNombreCultivo" name="nombreCultivo" class="agro-input mb-0" value="Maíz"
+                        required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="editTipoCultivo" class="agro-label">Tipo de cultivo</label>
+                    <select id="editTipoCultivo" name="tipoCultivo" class="agro-select mb-0">
+                        <option value="fruta">Fruta</option>
+                        <option value="verdura">Verdura</option>
+                        <option value="hortaliza">Hortaliza</option>
+                        <option value="cereal">Cereal</option>
+                        <option value="leguminosa">Leguminosa</option>
+                        <option value="tuberculo">Tubérculo</option>
+                        <option value="permanente">Cultivo permanente (café, cacao)</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="editTerrenoLote" class="agro-label">Terreno / Lote</label>
+                    <select id="editTerrenoLote" name="terrenoLote" class="agro-select mb-0">
+                        <option value="" disabled>Seleccionar terreno</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="editUbicacion" class="agro-label">Ubicación</label>
+                    <input type="text" id="editUbicacion" name="ubicacion" class="agro-input mb-0"
+                        value="Finca El Manantial Norte">
+                </div>
+
+                <div class="mb-3">
+                    <label for="editEtapa" class="agro-label">Etapa actual</label>
+                    <select id="editEtapa" name="etapa" class="agro-select mb-0">
+                        <option value="siembra">Siembra</option>
+                        <option value="germinacion">Germinación</option>
+                        <option value="crecimiento">Crecimiento</option>
+                        <option value="floracion" selected>Floración</option>
+                        <option value="fructificacion">Fructificación</option>
+                        <option value="maduracion">Maduración</option>
+                    </select>
+                </div>
+
+                <div class="row g-2 mb-3">
+                    <div class="col-6">
+                        <label for="editFechaSiembra" class="agro-label">Fecha de siembra</label>
+                        <input type="date" id="editFechaSiembra" name="fechaSiembra" class="agro-input mb-0"
+                            value="2026-02-12">
+                    </div>
+                    <div class="col-6">
+                        <label for="editArea" class="agro-label">Área sembrada (ha)</label>
+                        <input type="number" step="0.1" id="editArea" name="area" class="agro-input mb-0" value="2.5">
+                    </div>
+                </div>
+
+                <div class="row g-2 mb-3">
+                    <div class="col-6">
+                        <label for="editFechaCosecha" class="agro-label">Fecha estimada de cosecha</label>
+                        <input type="date" id="editFechaCosecha" name="fechaCosecha" class="agro-input mb-0">
+                    </div>
+                    <div class="col-6">
+                        <label for="editTemporada" class="agro-label">Temporada de siembra</label>
+                        <select id="editTemporada" name="temporada" class="agro-select mb-0">
+                            <option value="lluviosa">Lluviosa</option>
+                            <option value="seca">Seca</option>
+                            <option value="todo">Todo el año</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="editRendimiento" class="agro-label">Rendimiento esperado (ton/ha)</label>
+                    <input type="number" step="0.1" id="editRendimiento" name="rendimiento" class="agro-input mb-0"
+                        value="7.2">
+                </div>
+
+                <div class="mb-3">
+                    <label for="editNotas" class="agro-label">Notas técnicas</label>
+                    <textarea id="editNotas" name="notas" rows="3"
+                        class="agro-textarea mb-0">Cultivo en etapa de floración, sin novedades registradas. Estimación basada en rendimiento histórico del lote.</textarea>
+                </div>
+
+                <hr class="border-secondary my-3">
+
+                <!-- Fuente hídrica -->
+                <label class="agro-label">Tipo de fuente hídrica</label>
+                <div class="radio-pills-group">
+                    <div>
+                        <input type="radio" id="cultivoRio" name="fuenteHidricaCultivo" value="rio" checked>
+                        <label for="cultivoRio" class="w-100">Río</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="cultivoPozo" name="fuenteHidricaCultivo" value="pozo">
+                        <label for="cultivoPozo" class="w-100">Pozo</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="cultivoAcueducto" name="fuenteHidricaCultivo" value="acueducto">
+                        <label for="cultivoAcueducto" class="w-100">Acueducto</label>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="editCaudal" class="agro-label">Caudal estimado (L/min)</label>
+                    <input type="number" id="editCaudal" name="caudal" class="agro-input mb-2" value="120">
+                    <button type="button" class="btn-agro-outline">
+                        <i class="bi bi-droplet me-1"></i> Asociar fuente hídrica
+                    </button>
+                </div>
+
+                <!-- Coordenadas -->
+                <div class="mb-4">
+                    <label class="agro-label">Capturar coordenadas</label>
+                    <div class="row g-2 mb-2">
+                        <div class="col-6">
+                            <input type="text" name="latitud" class="agro-input mb-0" value="4.85921"
+                                aria-label="Latitud">
+                        </div>
+                        <div class="col-6">
+                            <input type="text" name="longitud" class="agro-input mb-0" value="-74.05812"
+                                aria-label="Longitud">
+                        </div>
+                    </div>
+                    <button type="button" class="btn-agro-outline">
+                        <i class="bi bi-geo-alt me-1"></i> Actualizar coordenadas
+                    </button>
+                </div>
+
+                <!-- Acciones -->
+                <div class="d-flex flex-column gap-2 mb-3">
+                    <button type="submit" class="btn-agro-primary">Guardar cambios</button>
+                    <a href="inhabilitar-cultivo.html" class="btn-agro-danger">Inhabilitar cultivo</a>
+                </div>
+            </form>
+
+        </div>
+    </main>
+
+    <!-- Barra de navegación inferior unificada -->
+    <nav class="navegacion_inferior d-flex justify-content-between">
+        <a href="../inicio/inicio.html" class="text-center small"><i class="bi bi-house-door d-block"></i>Inicio</a>
+        <a href="cultivos.html" class="text-center small active"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
+        <a href="../clima/clima.html" class="text-center small"><i class="bi bi-cloud-sun d-block"></i>Clima</a>
+        <a href="../insumos/insumos.html" class="text-center small"><i class="bi bi-box-seam d-block"></i>Insumos</a>
+        <a href="../perfil/perfil.html" class="text-center small"><i class="bi bi-person-circle d-block"></i>Perfil</a>
+    </nav>
+
+    <script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/comun.js"></script>
+    <script src="../../assets/js/permisos.js"></script>
+    <script src="../../assets/js/terreno/terreno.js"></script>
+    <script src="../../assets/js/cultivos/guia-cultivos.js"></script>
+    <script src="../../assets/js/plagas/datos-plagas.js"></script>
+    <script src="../../assets/js/cultivos/cultivos.js"></script>
+  <script src="../../assets/js/conexion.js"></script>
+  <script src="../../assets/js/logo.js"></script>
+</body>
+
+</html>

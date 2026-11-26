@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inhabilitar Cultivo - Agro Verde</title>
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/cultivos/cultivos.css">
+  <link rel="stylesheet" href="../../assets/css/logo.css">
+</head>
+
+<body>
+  <img src="../../assets/img/agro-verde-logo.png" alt="Agro Verde" class="logo-app">
+    <main class="pantalla container-fluid">
+        <header class="app-header">
+            <div class="app-header__left">
+                <a href="cultivos.html" class="btn-back" aria-label="Volver"><i class="bi bi-arrow-left"></i></a>
+                <h4 class="m-0 fw-bold">Eliminar cultivo</h4>
+            </div>
+        </header>
+
+        <div class="mx-auto" style="max-width: 720px;">
+            <input type="search" id="buscadorInhabilitar" class="agro-input mb-3" placeholder="Buscar cultivo o lote">
+
+            <div class="d-flex flex-column gap-2 mb-4" id="listaInhabilitar">
+                <label class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center"
+                    style="cursor: pointer;">
+                    <div class="d-flex align-items-center gap-3">
+                        <input type="checkbox" name="cultivosEliminar" value="1" class="form-check-input m-0">
+                        <div>
+                            <strong class="d-block">Maíz - Lote 1</strong>
+                            <span class="texto_gris small">Etapa: Floración</span>
+                        </div>
+                    </div>
+                    <span class="badge-estado badge-estado--optimo">Óptimo</span>
+                </label>
+
+                <label class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center"
+                    style="cursor: pointer;">
+                    <div class="d-flex align-items-center gap-3">
+                        <input type="checkbox" name="cultivosEliminar" value="2" class="form-check-input m-0">
+                        <div>
+                            <strong class="d-block">Café - Lote 2</strong>
+                            <span class="texto_gris small">Etapa: Maduración</span>
+                        </div>
+                    </div>
+                    <span class="badge-estado badge-estado--revisar">Revisar</span>
+                </label>
+
+                <label class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center"
+                    style="cursor: pointer;">
+                    <div class="d-flex align-items-center gap-3">
+                        <input type="checkbox" name="cultivosEliminar" value="3" class="form-check-input m-0">
+                        <div>
+                            <strong class="d-block">Fríjol - Lote 3</strong>
+                            <span class="texto_gris small">Etapa: Siembra</span>
+                        </div>
+                    </div>
+                    <span class="badge-estado badge-estado--alerta">Alerta plaga</span>
+                </label>
+
+                <label class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center"
+                    style="cursor: pointer;">
+                    <div class="d-flex align-items-center gap-3">
+                        <input type="checkbox" name="cultivosEliminar" value="4" class="form-check-input m-0">
+                        <div>
+                            <strong class="d-block">Tomate - Lote 4</strong>
+                            <span class="texto_gris small">Etapa: Crecimiento</span>
+                        </div>
+                    </div>
+                    <span class="badge-estado badge-estado--optimo">Óptimo</span>
+                </label>
+            </div>
+
+            <a href="cultivos.html?mensaje=inhabilitado" class="btn-agro-danger" id="botonInhabilitar">Inhabilitar cultivo</a>
+        </div>
+    </main>
+
+    <nav class="navegacion_inferior d-flex justify-content-between">
+        <a href="../inicio/inicio.html" class="text-center small"><i class="bi bi-house-door d-block"></i>Inicio</a>
+        <a href="cultivos.html" class="text-center small active"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
+        <a href="../clima/clima.html" class="text-center small"><i class="bi bi-cloud-sun d-block"></i>Clima</a>
+        <a href="../insumos/insumos.html" class="text-center small"><i class="bi bi-box-seam d-block"></i>Insumos</a>
+        <a href="../perfil/perfil.html" class="text-center small"><i class="bi bi-person-circle d-block"></i>Perfil</a>
+    </nav>
+    <script src="../../assets/js/comun.js"></script>
+    <script src="../../assets/js/permisos.js"></script>
+    <script src="../../assets/js/cultivos/guia-cultivos.js"></script>
+    <script src="../../assets/js/plagas/datos-plagas.js"></script>
+    <script src="../../assets/js/cultivos/cultivos.js"></script>
+  <script src="../../assets/js/conexion.js"></script>
+  <script src="../../assets/js/logo.js"></script>
+</body>
+
+</html>

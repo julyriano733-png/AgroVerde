@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modificar plaga - Agro Verde</title>
+
+  <!-- Bootstrap 5 -->
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <!-- Íconos de Bootstrap -->
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <!-- Estilos globales y específicos de Plagas -->
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/plagas/gestion-plagas.css">
+  <link rel="stylesheet" href="../../assets/css/logo.css">
+</head>
+
+<body>
+  <img src="../../assets/img/agro-verde-logo.png" alt="Agro Verde" class="logo-app">
+
+  <!-- Pantalla principal -->
+  <main class="pantalla container-fluid">
+
+    <!-- Encabezado con botón de regreso, título y logo -->
+    <header class="d-flex justify-content-between align-items-center mb-4">
+      <div class="d-flex align-items-center gap-3">
+        <a href="plagas.html"
+          class="boton_atras text-white text-decoration-none d-flex align-items-center justify-content-center"
+          aria-label="Volver">
+          <i class="bi bi-chevron-left fs-5"></i>
+        </a>
+        <h4 class="m-0 text-white fw-bold">Modificar plaga</h4>
+      </div>
+    </header>
+
+    <!-- Formulario y resumen centrados -->
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 col-lg-6">
+        <section class="tarjeta p-4 rounded-4" id="contenido_modificar">
+
+          <!-- Resumen actual de la plaga -->
+          <div class="tarjeta p-3 rounded-4 mb-4" style="background-color: rgba(255, 255, 255, 0.05);">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="fw-bold text-white" id="resumen_ubicacion">Maíz - Lote 1</span>
+              <span class="insignia insignia_revisar" id="resumen_nombre">Gusano</span>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="insignia" id="resumen_estado"></span>
+              <span class="small texto_gris" id="resumen_fecha"></span>
+            </div>
+          </div>
+
+          <form action="plagas.html" method="GET" id="formulario_plaga">
+            <div id="aviso_error" class="alert alert-danger d-none small py-2"></div>
+            <input type="hidden" name="mensaje" value="guardada">
+
+            <!-- Elegir la plaga del catálogo -->
+            <div class="mb-3">
+              <label for="plaga_catalogo" class="form-label text-white small fw-bold">Elegir del catálogo de plagas</label>
+              <select class="form-select caja_busqueda" id="plaga_catalogo"></select>
+              <a href="catalogo-plagas.html" class="small text-success text-decoration-none d-inline-block mt-1"><i class="bi bi-journal-bookmark me-1"></i>Ver el catálogo completo</a>
+            </div>
+
+            <!-- Nombre de la plaga -->
+            <div class="mb-3">
+              <label for="nombre" class="form-label text-white small fw-bold">Nombre de la plaga</label>
+              <input type="text" class="form-control caja_busqueda" id="nombre" name="nombre" value="Gusano" required>
+            </div>
+
+            <!-- Fecha de inicio -->
+            <div class="mb-3">
+              <label for="fecha" class="form-label text-white small fw-bold">Fecha de inicio</label>
+              <input type="date" class="form-control caja_busqueda" id="fecha" name="fecha" value="2026-06-14" required>
+            </div>
+
+            <!-- Ubicación / Cultivo -->
+            <div class="mb-3">
+              <label for="ubicacion" class="form-label text-white small fw-bold">Ubicación / Cultivo</label>
+              <select class="form-select caja_busqueda" id="ubicacion" name="ubicacion" required></select>
+            </div>
+
+            <!-- Nivel de severidad -->
+            <div class="mb-3">
+              <label for="estado" class="form-label text-white small fw-bold">Nivel de severidad</label>
+              <select class="form-select caja_busqueda" id="estado" name="estado" required>
+                <option value="Iniciada">Iniciada</option>
+                <option value="Avanzada">Avanzada</option>
+                <option value="Controlada">Controlada</option>
+              </select>
+            </div>
+
+            <!-- Notas -->
+            <div class="mb-4">
+              <label for="notas" class="form-label text-white small fw-bold">Notas</label>
+              <textarea class="form-control caja_busqueda" id="notas" name="notas" rows="4"
+                placeholder="Observaciones adicionales...">Aplicación de control biológico iniciada en borde norte del lote.</textarea>
+            </div>
+
+            <!-- Botón actualizar -->
+            <button type="submit" class="btn_nuevo w-100 py-2 border-0 text-center">Actualizar Información</button>
+
+          </form>
+
+        </section>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Barra de navegación inferior fija -->
+  <nav class="navegacion_inferior d-flex justify-content-between">
+    <a href="../inicio/inicio.html" class="text-center small"><i class="bi bi-house-door d-block"></i>Inicio</a>
+    <a href="../cultivos/cultivos.html" class="text-center small"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
+    <a href="../clima/clima.html" class="text-center small"><i class="bi bi-cloud-sun d-block"></i>Clima</a>
+    <a href="../insumos/insumos.html" class="text-center small"><i class="bi bi-box-seam d-block"></i>Insumos</a>
+    <a href="../perfil/perfil.html" class="text-center small"><i class="bi bi-person-circle d-block"></i>Perfil</a>
+  </nav>
+
+  <!-- Script de Bootstrap -->
+  <script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  <!-- scripts de plagas (el orden importa: primero los datos) -->
+  <script src="../../assets/js/comun.js"></script>
+  <script src="../../assets/js/permisos.js"></script>
+  <script src="../../assets/js/plagas/datos-plagas.js"></script>
+  <script src="../../assets/js/plagas/modificar-plaga.js"></script>
+  <script src="../../assets/js/conexion.js"></script>
+  <script src="../../assets/js/logo.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario Agrícola - Agro Verde</title>
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <style>
+        .cal-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 8px;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        .cal-day {
+            padding: 8px 0;
+            border-radius: 50%;
+            width: 34px;
+            height: 34px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cal-day--event {
+            background-color: #22c55e;
+            color: #091c12;
+            font-weight: 700;
+        }
+    </style>
+  <link rel="stylesheet" href="../../assets/css/logo.css">
+</head>
+
+<body>
+  <img src="../../assets/img/agro-verde-logo.png" alt="Agro Verde" class="logo-app">
+    <main class="pantalla container-fluid">
+        <header class="app-header">
+            <div class="app-header__left">
+                <a href="clima.html" class="btn-back" aria-label="Volver"><i class="bi bi-arrow-left"></i></a>
+                <h4 class="m-0 fw-bold">Calendario agrícola</h4>
+            </div>
+        </header>
+
+        <div class="row g-3">
+            <!-- Calendario mensual -->
+            <div class="col-12 col-lg-7">
+                <div class="tarjeta p-3 rounded-4">
+                    <p class="texto_gris small mb-3" id="calMes">Agosto 2026</p>
+                    <div class="cal-grid texto_gris small mb-2">
+                        <span>L</span><span>M</span><span>Mi</span><span>J</span><span>V</span><span>S</span><span>D</span>
+                    </div>
+                    <div class="cal-grid" id="calDias">
+                        <span></span><span></span><span></span><span></span><span></span>
+                        <span class="cal-day">1</span><span class="cal-day">2</span>
+                        <span class="cal-day">3</span><span class="cal-day">4</span><span class="cal-day">5</span><span
+                            class="cal-day">6</span><span class="cal-day">7</span><span class="cal-day">8</span><span
+                            class="cal-day">9</span>
+                        <span class="cal-day">10</span><span class="cal-day">11</span><span
+                            class="cal-day">12</span><span class="cal-day">13</span><span class="cal-day">14</span><span
+                            class="cal-day">15</span><span class="cal-day">16</span>
+                        <span class="cal-day">17</span><span class="cal-day">18</span><span
+                            class="cal-day">19</span><span class="cal-day cal-day--event">20</span><span
+                            class="cal-day">21</span><span class="cal-day">22</span><span class="cal-day">23</span>
+                        <span class="cal-day">24</span><span class="cal-day cal-day--event">25</span><span
+                            class="cal-day">26</span><span class="cal-day">27</span><span class="cal-day">28</span><span
+                            class="cal-day">29</span><span class="cal-day">30</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Próximos eventos -->
+            <div class="col-12 col-lg-5">
+                <p class="texto_gris small fw-semibold mb-2">Próximos eventos</p>
+                <div class="d-flex flex-column gap-2" id="listaEventos">
+                    <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center gap-3">
+                            <span class="punto_azul_pequeno"></span>
+                            <strong>Fumigación Lote 2</strong>
+                        </div>
+                        <span class="texto_gris small">20 Ago</span>
+                    </div>
+
+                    <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center gap-3">
+                            <span class="punto_azul_pequeno"></span>
+                            <strong>Cosecha Lote 1</strong>
+                        </div>
+                        <span class="texto_gris small">25 Ago</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <nav class="navegacion_inferior d-flex justify-content-between">
+        <a href="../inicio/inicio.html" class="text-center small"><i class="bi bi-house-door d-block"></i>Inicio</a>
+        <a href="../cultivos/cultivos.html" class="text-center small"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
+        <a href="clima.html" class="text-center small active"><i class="bi bi-cloud-sun d-block"></i>Clima</a>
+        <a href="../insumos/insumos.html" class="text-center small"><i class="bi bi-box-seam d-block"></i>Insumos</a>
+        <a href="../perfil/perfil.html" class="text-center small"><i class="bi bi-person-circle d-block"></i>Perfil</a>
+    </nav>
+    <script src="../../assets/js/comun.js"></script>
+    <script src="../../assets/js/permisos.js"></script>
+    <script src="../../assets/js/clima/clima.js"></script>
+  <script src="../../assets/js/conexion.js"></script>
+  <script src="../../assets/js/logo.js"></script>
+</body>
+
+</html>

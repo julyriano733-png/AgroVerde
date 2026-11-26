@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fase fenológica - Agro Verde</title>
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/cultivos/fase-fenologica.css">
+  <link rel="stylesheet" href="../../assets/css/logo.css">
+</head>
+
+<body>
+  <img src="../../assets/img/agro-verde-logo.png" alt="Agro Verde" class="logo-app">
+
+    <main class="pantalla container-fluid">
+        <div class="mx-auto" style="max-width: 650px;">
+
+            <!-- Parte de arriba -->
+            <header class="d-flex justify-content-between align-items-center mb-3">
+                <div class="d-flex align-items-center gap-3">
+                    <a href="cultivos.html" class="btn-volver" aria-label="Volver">
+                        <i class="bi bi-arrow-left"></i>
+                    </a>
+                    <h4 class="mb-0 fw-bold">Fase fenológica</h4>
+                </div>
+            </header>
+
+            <!-- Desplegable de Cultivo -->
+            <label class="agro-label mb-2">Cultivo</label>
+
+            <details class="mb-4" id="detalleCultivoFase">
+                <summary class="campo" id="cultivoActualFase">Café - Lote 2</summary>
+
+                <div class="lista">
+                    <div class="opcion">Frijol - Lote 3</div>
+                    <div class="opcion">Maíz - Lote 1</div>
+                    <div class="opcion opcion-activa">Café - Lote 2</div>
+                    <div class="opcion">Tomate - Lote 4</div>
+                </div>
+            </details>
+
+            <!-- Recomendaciones -->
+            <p class="small fw-semibold mb-3">Recomendación según la fase fenológica</p>
+
+            <section class="card tarjeta-fase mb-4">
+                <div class="etapa" id="faseEtapa">FLORACIÓN</div>
+
+                <div id="faseConsejos"></div>
+            </section>
+
+            <!-- Próxima etapa -->
+            <h6 class="small fw-bold texto_gris mb-2">PRÓXIMA ETAPA ESTIMADA</h6>
+
+            <div class="proxima d-flex justify-content-between align-items-center">
+                <span class="texto-gris" id="faseSiguiente">Maduración</span>
+                <span class="fw-bold text-success" id="faseDias">en 18 Días</span>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Barra de navegación inferior -->
+    <nav class="navegacion_inferior d-flex justify-content-between">
+        <a href="../inicio/inicio.html" class="text-center small"><i class="bi bi-house-door d-block"></i>Inicio</a>
+        <a href="cultivos.html" class="text-center small active"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
+        <a href="../clima/clima.html" class="text-center small"><i class="bi bi-cloud-sun d-block"></i>Clima</a>
+        <a href="../insumos/insumos.html" class="text-center small"><i class="bi bi-box-seam d-block"></i>Insumos</a>
+        <a href="../perfil/perfil.html" class="text-center small"><i class="bi bi-person-circle d-block"></i>Perfil</a>
+    </nav>
+
+    <script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/comun.js"></script>
+    <script src="../../assets/js/permisos.js"></script>
+    <script src="../../assets/js/cultivos/guia-cultivos.js"></script>
+    <script src="../../assets/js/plagas/datos-plagas.js"></script>
+    <script src="../../assets/js/cultivos/cultivos.js"></script>
+  <script src="../../assets/js/conexion.js"></script>
+  <script src="../../assets/js/logo.js"></script>
+</body>
+
+</html>

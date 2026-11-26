@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de insumos - Agro Verde</title>
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/insumos/insumos.css">
+  <link rel="stylesheet" href="../../assets/css/logo.css">
+</head>
+
+<body>
+  <img src="../../assets/img/agro-verde-logo.png" alt="Agro Verde" class="logo-app">
+    <main class="pantalla container-fluid">
+        <!-- Encabezado -->
+        <header class="app-header">
+            <div class="app-header__left">
+                <a href="insumos.html" class="btn-back" aria-label="Volver"><i class="bi bi-arrow-left"></i></a>
+                <h3 class="m-0 fw-bold">Catálogo de insumos</h3>
+            </div>
+        </header>
+
+        <div class="contenido-insumos">
+            <input type="search" id="buscador" class="agro-input mb-3" placeholder="Buscar por nombre, categoría o código de barras">
+            <!-- Filtro por categoría (lo llena insumos.js) -->
+            <div class="d-flex gap-2 mb-3 overflow-auto pb-1" id="filtroCategorias"></div>
+
+            <div id="listaPrincipal" class="lista-insumos d-flex flex-column gap-2 mb-3">
+                <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center item-buscable">
+                    <div class="d-flex align-items-center gap-3">
+                        <div>
+                        <strong class="d-block">Fertilizante NPK</strong>
+                        <span class="texto_gris small">Fertilizante · Inventario</span>
+                        </div>
+                    </div>
+                    <div class="text-end">
+                        <strong class="d-block">18 sacos</strong>
+                        <span class="precio small">$1.134.000</span>
+                    </div>
+                </div>
+                <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center item-buscable">
+                    <div class="d-flex align-items-center gap-3">
+                        <div>
+                        <strong class="d-block">Herbicida selectivo</strong>
+                        <span class="texto_gris small">Herbicida · Inventario</span>
+                        </div>
+                    </div>
+                    <div class="text-end">
+                        <strong class="d-block">9 L</strong>
+                        <span class="precio small">$405.000</span>
+                    </div>
+                </div>
+                <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center item-buscable">
+                    <div class="d-flex align-items-center gap-3">
+                        <div>
+                        <strong class="d-block">Fungicida orgánico</strong>
+                        <span class="texto-bajo-stock small">Fungicida · Bajo stock</span>
+                        </div>
+                    </div>
+                    <div class="text-end">
+                        <strong class="d-block">3 uds</strong>
+                        <span class="precio small">$105.000</span>
+                    </div>
+                </div>
+                <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center item-buscable">
+                    <div class="d-flex align-items-center gap-3">
+                        <div>
+                        <strong class="d-block">Semilla de maíz</strong>
+                        <span class="texto_gris small">Semilla · Inventario</span>
+                        </div>
+                    </div>
+                    <div class="text-end">
+                        <strong class="d-block">50 kg</strong>
+                        <span class="precio small">$600.000</span>
+                    </div>
+                </div>
+                <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center item-buscable">
+                    <div class="d-flex align-items-center gap-3">
+                        <div>
+                        <strong class="d-block">Herbicida Roundup</strong>
+                        <span class="texto_gris small">Herbicida</span>
+                        </div>
+                    </div>
+                    <div class="text-end">
+                        <strong class="d-block">50 kg</strong>
+                        <span class="precio small">$405.000</span>
+                    </div>
+                </div>
+                <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center item-buscable">
+                    <div class="d-flex align-items-center gap-3">
+                        <div>
+                        <strong class="d-block">Insecticida NPK</strong>
+                        <span class="texto_gris small">Insecticida</span>
+                        </div>
+                    </div>
+                    <div class="text-end">
+                        <strong class="d-block">50 kg</strong>
+                        <span class="precio small">$1.790.900</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Barra de navegación inferior -->
+    <nav class="navegacion_inferior d-flex justify-content-between">
+        <a href="../inicio/inicio.html" class="text-center small"><i class="bi bi-house-door d-block"></i>Inicio</a>
+        <a href="../cultivos/cultivos.html" class="text-center small"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
+        <a href="../clima/clima.html" class="text-center small"><i class="bi bi-cloud-sun d-block"></i>Clima</a>
+        <a href="insumos.html" class="text-center small active"><i class="bi bi-box-seam d-block"></i>Insumos</a>
+        <a href="../perfil/perfil.html" class="text-center small"><i class="bi bi-person-circle d-block"></i>Perfil</a>
+    </nav>
+
+    <script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/comun.js"></script>
+    <script src="../../assets/js/permisos.js"></script>
+    <script src="../../assets/js/insumos/datos-insumos.js"></script>
+    <script src="../../assets/js/insumos/insumos.js"></script>
+    <script src="../../assets/js/confirmacion.js"></script>
+  <script src="../../assets/js/conexion.js"></script>
+  <script src="../../assets/js/logo.js"></script>
+</body>
+
+</html>

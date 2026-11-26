@@ -1,0 +1,117 @@
+/* =========================================
+   ESTILOS ESPECÍFICOS - DÍA DE COSECHA
+   (Hereda body, .pantalla, .btn-back, .app-logo-mini
+    y .navegacion_inferior desde global.css)
+   ========================================= */
+:root {
+    --tarjeta-cosecha: rgba(255, 255, 255, 0.08);
+    --borde-cosecha: rgba(255, 255, 255, 0.12);
+    --verde: #22c55e;
+    --azul: #38bdf8;
+    --rojo: #ef4444;
+    --texto-suave: #9ca3af;
+}
+
+/* Encabezado */
+.titulo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* Tarjeta de cosecha */
+.tarjeta-cosecha {
+    background-color: var(--tarjeta-cosecha);
+    border: 1px solid var(--borde-cosecha);
+    border-radius: 16px;
+    padding: 1.25rem;
+    color: #ffffff;
+}
+
+.nombre-lote {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+
+.fecha-siembra {
+    color: var(--texto-suave);
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.fecha-cosecha {
+    color: var(--verde);
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+}
+
+.texto-cosecha {
+    color: var(--texto-suave);
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+/* Barra de avance */
+.barra-avance {
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.12);
+    border-radius: 50px;
+    margin-bottom: 0.5rem;
+}
+
+.barra-relleno {
+    width: 68%;
+    background-color: var(--verde);
+    border-radius: 50px;
+}
+
+.dia-actual {
+    color: var(--texto-suave);
+    font-size: 0.78rem;
+}
+
+/* Factores considerados */
+.tarjeta-factores {
+    background-color: var(--tarjeta-cosecha);
+    border: 1px solid var(--borde-cosecha);
+    border-radius: 16px;
+    padding: 1.25rem;
+    color: #ffffff;
+}
+
+.factores-titulo {
+    font-size: 0.92rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.factor {
+    color: #e5e7eb;
+    font-size: 0.85rem;
+    margin-bottom: 0.85rem;
+}
+
+.factor:last-child {
+    margin-bottom: 0;
+}
+
+.punto {
+    flex-shrink: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.punto-verde {
+    background-color: var(--verde);
+}
+
+.punto-azul {
+    background-color: var(--azul);
+}
+
+.punto-rojo {
+    background-color: var(--rojo);
+}

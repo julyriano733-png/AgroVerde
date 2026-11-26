@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial Climático - Agro Verde</title>
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/logo.css">
+</head>
+
+<body>
+  <img src="../../assets/img/agro-verde-logo.png" alt="Agro Verde" class="logo-app">
+    <main class="pantalla container-fluid">
+        <header class="app-header">
+            <div class="app-header__left">
+                <a href="clima.html" class="btn-back" aria-label="Volver"><i class="bi bi-arrow-left"></i></a>
+                <h4 class="m-0 fw-bold">Historial climático</h4>
+            </div>
+        </header>
+
+        <!-- Gráficas de tendencia (las dibuja clima.js) -->
+        <div class="d-flex gap-2 mb-3" id="rangoClima">
+            <button type="button" class="chip-activo" data-dias="7">7 días</button>
+            <button type="button" class="chip" data-dias="14">14 días</button>
+            <button type="button" class="chip" data-dias="30">30 días</button>
+        </div>
+        <div class="row g-3 mb-4">
+            <div class="col-12 col-lg-6">
+                <div class="tarjeta p-3 rounded-4">
+                    <p class="small fw-semibold mb-1">Temperatura (°C)</p>
+                    <p class="small texto_gris mb-2"><span style="color: #f97316;">● máxima</span> &nbsp; <span style="color: #38bdf8;">● mínima</span></p>
+                    <div id="graficaTemperatura"></div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="tarjeta p-3 rounded-4">
+                    <p class="small fw-semibold mb-1">Humedad promedio (%)</p>
+                    <p class="small texto_gris mb-2"><span style="color: #22c55e;">● humedad</span></p>
+                    <div id="graficaHumedad"></div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="tarjeta p-3 rounded-4">
+                    <p class="small fw-semibold mb-1">Lluvia (mm por día)</p>
+                    <p class="small texto_gris mb-2" id="resumenLluvia"></p>
+                    <div id="graficaLluvia"></div>
+                </div>
+            </div>
+        </div>
+
+        <p class="texto_gris small fw-semibold mb-2">Día por día</p>
+        <div class="d-flex flex-column gap-2" id="listaHistorialClima">
+            <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-3">
+                    <span class="punto_verde_pequeno"></span>
+                    <div>
+                        <strong class="d-block">15 Ago 2026</strong>
+                        <span class="texto_gris small">Lote 2 - Maíz • Lluvia 12mm</span>
+                    </div>
+                </div>
+                <span class="fw-bold">24°C</span>
+            </div>
+
+            <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-3">
+                    <span class="punto_verde_pequeno"></span>
+                    <div>
+                        <strong class="d-block">14 Ago 2026</strong>
+                        <span class="texto_gris small">Lote 1 - Café • Sin lluvia</span>
+                    </div>
+                </div>
+                <span class="fw-bold">22°C</span>
+            </div>
+
+            <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-3">
+                    <span class="punto_verde_pequeno"></span>
+                    <div>
+                        <strong class="d-block">13 Ago 2026</strong>
+                        <span class="texto_gris small">Lote 3 - Papa • Lluvia 4mm</span>
+                    </div>
+                </div>
+                <span class="fw-bold">19°C</span>
+            </div>
+        </div>
+    </main>
+
+    <nav class="navegacion_inferior d-flex justify-content-between">
+        <a href="../inicio/inicio.html" class="text-center small"><i class="bi bi-house-door d-block"></i>Inicio</a>
+        <a href="../cultivos/cultivos.html" class="text-center small"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
+        <a href="clima.html" class="text-center small active"><i class="bi bi-cloud-sun d-block"></i>Clima</a>
+        <a href="../insumos/insumos.html" class="text-center small"><i class="bi bi-box-seam d-block"></i>Insumos</a>
+        <a href="../perfil/perfil.html" class="text-center small"><i class="bi bi-person-circle d-block"></i>Perfil</a>
+    </nav>
+    <script src="../../assets/js/comun.js"></script>
+    <script src="../../assets/js/permisos.js"></script>
+    <script src="../../assets/js/clima/clima.js"></script>
+  <script src="../../assets/js/conexion.js"></script>
+  <script src="../../assets/js/logo.js"></script>
+</body>
+
+</html>

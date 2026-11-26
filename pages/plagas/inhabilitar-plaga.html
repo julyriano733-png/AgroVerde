@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inhabilitar plaga - Agro Verde</title>
+  
+  <!-- Bootstrap 5 -->
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <!-- Íconos de Bootstrap -->
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <!-- Estilos globales y específicos de Plagas -->
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/plagas/gestion-plagas.css">
+  <link rel="stylesheet" href="../../assets/css/logo.css">
+</head>
+
+<body>
+  <img src="../../assets/img/agro-verde-logo.png" alt="Agro Verde" class="logo-app">
+
+  <!-- Pantalla principal -->
+  <main class="pantalla container-fluid">
+
+    <!-- Encabezado con botón de regreso, título y logo -->
+    <header class="d-flex justify-content-between align-items-center mb-4">
+      <div class="d-flex align-items-center gap-3">
+        <a href="plagas.html" class="boton_atras text-white text-decoration-none d-flex align-items-center justify-content-center" aria-label="Volver">
+          <i class="bi bi-chevron-left fs-5"></i>
+        </a>
+        <h4 class="m-0 text-white fw-bold">Inhabilitar plaga</h4>
+      </div>
+    </header>
+
+    <!-- Buscador y lista centrados -->
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 col-lg-6">
+        
+        <!-- Buscador -->
+        <input type="search" id="buscador" class="form-control caja_busqueda mb-3" placeholder="Buscar plaga o lote" aria-label="Buscar plaga">
+
+        <form action="plagas.html" method="GET" id="formulario_inhabilitar">
+            <div id="aviso_error" class="alert alert-danger d-none small py-2"></div>
+          <input type="hidden" name="mensaje" value="inhabilitada">
+          
+          <!-- Lista de opciones para seleccionar la plaga -->
+          <div class="d-flex flex-column gap-2 mb-4" id="lista_opciones">
+
+            <!-- Opción 1: Cogollero -->
+            <label class="tarjeta p-3 rounded-4 d-flex align-items-center gap-3 cursor-pointer">
+              <input type="radio" class="form-check-input radio_custom m-0" name="plaga" value="cogollero" required>
+              <div class="flex-grow-1">
+                <div class="fw-bold text-white">Cogollero - Lote 1</div>
+                <small class="texto_gris">Etapa: Leve / Controlada</small>
+              </div>
+              <span class="insignia insignia_optimo">Óptimo</span>
+            </label>
+
+            <!-- Opción 2: Broca del café -->
+            <label class="tarjeta p-3 rounded-4 d-flex align-items-center gap-3 cursor-pointer">
+              <input type="radio" class="form-check-input radio_custom m-0" name="plaga" value="broca">
+              <div class="flex-grow-1">
+                <div class="fw-bold text-white">Broca del café - Lote 2</div>
+                <small class="texto_gris">Etapa: Iniciada</small>
+              </div>
+              <span class="insignia insignia_revisar">Revisar</span>
+            </label>
+
+            <!-- Opción 3: Mosca blanca -->
+            <label class="tarjeta p-3 rounded-4 d-flex align-items-center gap-3 cursor-pointer">
+              <input type="radio" class="form-check-input radio_custom m-0" name="plaga" value="mosca-blanca">
+              <div class="flex-grow-1">
+                <div class="fw-bold text-white">Mosca blanca - Lote 3</div>
+                <small class="texto_gris">Etapa: Avanzada</small>
+              </div>
+              <span class="insignia insignia_alerta">Alerta plaga</span>
+            </label>
+
+            <!-- Opción 4: Polilla -->
+            <label class="tarjeta p-3 rounded-4 d-flex align-items-center gap-3 cursor-pointer">
+              <input type="radio" class="form-check-input radio_custom m-0" name="plaga" value="polilla">
+              <div class="flex-grow-1">
+                <div class="fw-bold text-white">Polilla - Lote 4</div>
+                <small class="texto_gris">Etapa: Controlada</small>
+              </div>
+              <span class="insignia insignia_optimo">Óptimo</span>
+            </label>
+
+          </div>
+
+          <!-- Botón rojo para confirmar -->
+          <button type="submit" id="boton_inhabilitar" class="btn_inhabilitar w-100 py-2 text-center">Inhabilitar Plaga</button>
+
+        </form>
+
+      </div>
+    </div>
+
+  </main>
+
+
+  <!-- Ventana para confirmar antes de inhabilitar -->
+  <div class="modal fade" id="modal_confirmar" tabindex="-1" aria-labelledby="titulo_confirmar" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content ventana_notas">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="titulo_confirmar">Inhabilitar plaga</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body" id="texto_confirmar"></div>
+        <div class="modal-footer border-0">
+          <button type="button" class="boton_acceso border-0 py-2 px-3 rounded-4" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" id="boton_confirmar" class="btn_inhabilitar py-2 px-3">Inhabilitar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Barra de navegación inferior fija -->
+  <nav class="navegacion_inferior d-flex justify-content-between">
+    <a href="../inicio/inicio.html" class="text-center small"><i class="bi bi-house-door d-block"></i>Inicio</a>
+    <a href="../cultivos/cultivos.html" class="text-center small"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
+    <a href="../clima/clima.html" class="text-center small"><i class="bi bi-cloud-sun d-block"></i>Clima</a>
+    <a href="../insumos/insumos.html" class="text-center small"><i class="bi bi-box-seam d-block"></i>Insumos</a>
+    <a href="../perfil/perfil.html" class="text-center small"><i class="bi bi-person-circle d-block"></i>Perfil</a>
+  </nav>
+
+  <!-- Script de Bootstrap -->
+  <script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  <!-- scripts de plagas (el orden importa: primero los datos) -->
+  <script src="../../assets/js/comun.js"></script>
+  <script src="../../assets/js/permisos.js"></script>
+  <script src="../../assets/js/plagas/datos-plagas.js"></script>
+  <script src="../../assets/js/plagas/inhabilitar-plaga.js"></script>
+  <script src="../../assets/js/conexion.js"></script>
+  <script src="../../assets/js/logo.js"></script>
+</body>
+</html>

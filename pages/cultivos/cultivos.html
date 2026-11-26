@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cultivos - Agro Verde</title>
+  
+  <!-- Bootstrap 5 -->
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <!-- Iconos de Bootstrap -->
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <!-- Estilos globales y específicos de cultivos -->
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/cultivos/cultivos.css">
+  <link rel="stylesheet" href="../../assets/css/logo.css">
+</head>
+<body>
+  <img src="../../assets/img/agro-verde-logo.png" alt="Agro Verde" class="logo-app">
+
+  <!-- Contenedor principal responsivo -->
+  <main class="pantalla container-fluid">
+
+    <!-- Encabezado con título, logo y botón + Nuevo -->
+    <header class="d-flex justify-content-between align-items-center mb-3">
+      <div class="d-flex align-items-center gap-3">
+        <a href="../inicio/inicio.html" class="btn-back" aria-label="Volver"><i class="bi bi-arrow-left"></i></a>
+        <h4 class="m-0 text-white fw-bold">Cultivos</h4>
+      </div>
+      <a href="crear-cultivo.html" class="btn_nuevo text-decoration-none">
+        + Nuevo
+      </a>
+    </header>
+
+    <!-- Buscador de cultivos o lotes -->
+    <div class="mb-4">
+      <input type="search" id="buscadorCultivos" class="form-control caja_busqueda" placeholder="Buscar cultivo o lote" aria-label="Buscar cultivo o lote">
+    </div>
+
+    <!-- Filtro por temporada -->
+    <div class="d-flex gap-2 mb-4 overflow-auto pb-1" id="filtrosTemporada">
+      <button type="button" class="btn_nuevo border-0 py-1 px-3" data-temporada="todas">Todas</button>
+      <button type="button" class="boton_acceso border-0 py-1 px-3 rounded-4" data-temporada="lluviosa">Lluviosa</button>
+      <button type="button" class="boton_acceso border-0 py-1 px-3 rounded-4" data-temporada="seca">Seca</button>
+      <button type="button" class="boton_acceso border-0 py-1 px-3 rounded-4" data-temporada="todo">Todo el año</button>
+    </div>
+
+    <!-- Lista de cultivos activos -->
+    <div class="row g-3 mb-4" id="listaCultivos">
+      
+      <!-- Tarjeta cultivo maíz -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <a href="ver-cultivo.html" class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center text-decoration-none h-100">
+          <div>
+            <h6 class="m-0 text-white fw-bold">Maíz - Lote 1</h6>
+            <p class="m-0 small texto_gris">Etapa: Floración</p>
+          </div>
+          <span class="insignia insignia_optimo">Óptimo</span>
+        </a>
+      </div>
+
+      <!-- Tarjeta cultivo café -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <a href="ver-cultivo.html" class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center text-decoration-none h-100">
+          <div>
+            <h6 class="m-0 text-white fw-bold">Café - Lote 2</h6>
+            <p class="m-0 small texto_gris">Etapa: Maduración</p>
+          </div>
+          <span class="insignia insignia_revisar">Revisar</span>
+        </a>
+      </div>
+
+      <!-- Tarjeta cultivo fríjol -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <a href="ver-cultivo.html" class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center text-decoration-none h-100">
+          <div>
+            <h6 class="m-0 text-white fw-bold">Fríjol - Lote 3</h6>
+            <p class="m-0 small texto_gris">Etapa: Siembra</p>
+          </div>
+          <span class="insignia insignia_alerta">Alerta plaga</span>
+        </a>
+      </div>
+
+      <!-- Tarjeta cultivo tomate -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <a href="ver-cultivo.html" class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center text-decoration-none h-100">
+          <div>
+            <h6 class="m-0 text-white fw-bold">Tomate - Lote 4</h6>
+            <p class="m-0 small texto_gris">Etapa: Crecimiento</p>
+          </div>
+          <span class="insignia insignia_optimo">Óptimo</span>
+        </a>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Menú flotante desplegable hacia arriba (dropup) -->
+  <div class="contenedor_menu_flotante dropup">
+    <button class="boton_mas_flotante dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Herramientas de cultivos">
+      <i class="bi bi-plus-lg"></i>
+    </button>
+
+    <div class="dropdown-menu panel_monitoreo dropdown-menu-end shadow">
+      <div class="encabezado_panel">
+        <i class="bi bi-bar-chart-fill me-2"></i> Monitoreo y Análisis
+      </div>
+      <div class="cuerpo_panel">
+        <a href="fase-fenologica.html" class="dropdown-item opcion_panel">
+          <i class="bi bi-bell icon"></i> Fase fenológica
+        </a>
+        <a href="dia-cosecha.html" class="dropdown-item opcion_panel">
+          <i class="bi bi-graph-up-arrow icon"></i> Cosecha estimada
+        </a>
+        <a href="inhabilitar-cultivo.html" class="dropdown-item opcion_panel text-danger">
+          <i class="bi bi-trash-fill icon text-danger"></i> Inhabilitar cultivo
+        </a>
+        <a href="../plagas/plagas.html" class="dropdown-item opcion_panel">
+          <i class="bi bi-bug-fill icon"></i> Plagas por cultivo
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Barra de navegación inferior -->
+  <nav class="navegacion_inferior d-flex justify-content-between">
+    <a href="../inicio/inicio.html" class="text-center small"><i class="bi bi-house-door d-block"></i>Inicio</a>
+    <a href="cultivos.html" class="text-center small active"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
+    <a href="../clima/clima.html" class="text-center small"><i class="bi bi-cloud-sun d-block"></i>Clima</a>
+    <a href="../insumos/insumos.html" class="text-center small"><i class="bi bi-box-seam d-block"></i>Insumos</a>
+    <a href="../perfil/perfil.html" class="text-center small"><i class="bi bi-person-circle d-block"></i>Perfil</a>
+  </nav>
+
+  <!-- Script de Bootstrap -->
+  <script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/comun.js"></script>
+    <script src="../../assets/js/permisos.js"></script>
+    <script src="../../assets/js/cultivos/guia-cultivos.js"></script>
+    <script src="../../assets/js/plagas/datos-plagas.js"></script>
+    <script src="../../assets/js/cultivos/cultivos.js"></script>
+    <script src="../../assets/js/confirmacion.js"></script>
+  <script src="../../assets/js/conexion.js"></script>
+  <script src="../../assets/js/logo.js"></script>
+</body>
+</html>

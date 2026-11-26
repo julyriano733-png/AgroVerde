@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de Terrenos - Agro Verde</title>
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/logo.css">
+</head>
+
+<body>
+  <img src="../../assets/img/agro-verde-logo.png" alt="Agro Verde" class="logo-app">
+    <main class="pantalla container-fluid">
+        <header class="app-header">
+            <div class="app-header__left">
+                <a href="terreno.html" class="btn-back" aria-label="Volver"><i class="bi bi-arrow-left"></i></a>
+                <div>
+                    <h4 class="m-0 fw-bold">Historial de terrenos</h4>
+                    <span class="texto_gris small">Cambios y registros por parcela</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="mx-auto d-flex flex-column gap-2" style="max-width: 700px;" id="listaHistorialTerrenos">
+            <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-3">
+                    <span class="punto_verde_pequeno"></span>
+                    <div>
+                        <strong class="d-block small">Lote 2 - Maíz</strong>
+                        <span class="texto_gris" style="font-size: 0.78rem;">Área actualizada: 2.4 ha</span>
+                    </div>
+                </div>
+                <span class="texto_gris small">15 Ago 2026</span>
+            </div>
+
+            <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-3">
+                    <span class="punto_azul_pequeno"></span>
+                    <div>
+                        <strong class="d-block small">Lote 1 - Café</strong>
+                        <span class="texto_gris" style="font-size: 0.78rem;">Fuente de agua asociada</span>
+                    </div>
+                </div>
+                <span class="texto_gris small">03 Ago 2026</span>
+            </div>
+
+            <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-3">
+                    <span class="punto_amarillo_pequeno"></span>
+                    <div>
+                        <strong class="d-block small">Lote 3 - Fríjol</strong>
+                        <span class="texto_gris" style="font-size: 0.78rem;">Tipo de suelo registrado: Franco</span>
+                    </div>
+                </div>
+                <span class="texto_gris small">28 Jul 2026</span>
+            </div>
+
+            <div class="tarjeta p-3 rounded-4 d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-3">
+                    <span class="punto_verde_pequeno"></span>
+                    <div>
+                        <strong class="d-block small">Lote 2 - Maíz</strong>
+                        <span class="texto_gris" style="font-size: 0.78rem;">Parcela creada</span>
+                    </div>
+                </div>
+                <span class="texto_gris small">12 Ene 2026</span>
+            </div>
+        </div>
+    </main>
+
+    <nav class="navegacion_inferior d-flex justify-content-between">
+        <a href="../inicio/inicio.html" class="text-center small"><i class="bi bi-house-door d-block"></i>Inicio</a>
+        <a href="../cultivos/cultivos.html" class="text-center small"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
+        <a href="../clima/clima.html" class="text-center small"><i class="bi bi-cloud-sun d-block"></i>Clima</a>
+        <a href="../insumos/insumos.html" class="text-center small"><i class="bi bi-box-seam d-block"></i>Insumos</a>
+        <a href="../perfil/perfil.html" class="text-center small"><i class="bi bi-person-circle d-block"></i>Perfil</a>
+    </nav>
+    <script src="../../assets/js/comun.js"></script>
+    <script src="../../assets/js/permisos.js"></script>
+    <script src="../../assets/js/terreno/terreno.js"></script>
+    <script src="../../assets/js/confirmacion.js"></script>
+  <script src="../../assets/js/conexion.js"></script>
+  <script src="../../assets/js/logo.js"></script>
+</body>
+
+</html>

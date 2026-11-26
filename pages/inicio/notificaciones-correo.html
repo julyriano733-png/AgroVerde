@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificaciones - Agro Verde</title>
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/inicio/notificaciones-por-correo.css">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../assets/css/logo.css">
+</head>
+
+<body>
+  <img src="../../assets/img/agro-verde-logo.png" alt="Agro Verde" class="logo-app">
+
+    <main class="pantalla-notificaciones">
+        <div class="contenedor-notificaciones">
+
+            <div class="d-flex align-items-center gap-3 mb-3 encabezado-logo">
+                <a href="alertas-configuracion.html" class="text-white fs-4 text-decoration-none" aria-label="Volver"><i class="bi bi-arrow-left"></i></a>
+                <h1 class="titulo-pantalla m-0">Notificaciones</h1>
+            </div>
+
+            <div class="tarjeta-alerta d-flex justify-content-between align-items-center">
+                <div>
+                    <p class="nombre-alerta">Alertas climáticas</p>
+                    <p class="descripcion-alerta">Recibir por correo electrónico</p>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="alertaClima" checked>
+                </div>
+            </div>
+
+            
+            <div class="tarjeta-alerta d-flex justify-content-between align-items-center">
+                <div>
+                    <p class="nombre-alerta">Alertas de stock mínimo</p>
+                    <p class="descripcion-alerta">Recibir por correo electrónico</p>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="alertaStock" checked>
+                </div>
+            </div>
+
+         
+            <div class="tarjeta-alerta d-flex justify-content-between align-items-center">
+                <div>
+                    <p class="nombre-alerta">Reportes semanales</p>
+                    <p class="descripcion-alerta">Resumen los lunes por correo</p>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="reportesSemanales">
+                </div>
+            </div>
+
+           
+            <div class="tarjeta-alerta d-flex justify-content-between align-items-center">
+                <div>
+                    <p class="nombre-alerta">Alerta por correo electrónico</p>
+                    <p class="descripcion-alerta" id="textoCorreo">usuario@agroverde.com</p>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="alertaCorreo" checked>
+                </div>
+            </div>
+
+            
+            <div class="tarjeta-alerta d-flex justify-content-between align-items-center">
+                <div>
+                    <p class="nombre-alerta">Alerta por SMS / teléfono</p>
+                    <p class="descripcion-alerta" id="textoTelefono">+57 300 123 4567</p>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="alertaSms" checked>
+                </div>
+            </div>
+
+          
+            <div class="mb-3 grupo-campo">
+                <label for="correo" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control campo-oscuro" id="correo" value="usuario@agroverde.com">
+            </div>
+
+            <div class="mb-4 grupo-campo">
+                <label for="telefono" class="form-label">Número de teléfono</label>
+                <input type="tel" class="form-control campo-oscuro" id="telefono" value="+57" placeholder="+57 300 123 4567">
+            </div>
+
+            <p id="aviso-error" class="text-danger small d-none" role="alert"></p>
+
+            <button type="button" class="btn boton-guardar w-100">Guardar alertas</button>
+
+        </div>
+    </main>
+
+
+
+    <script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/js/comun.js"></script>
+  <script src="../../assets/js/permisos.js"></script>
+  <script src="../../assets/js/inicio/notificaciones-correo.js"></script>
+  <script src="../../assets/js/confirmacion.js"></script>
+  <script src="../../assets/js/conexion.js"></script>
+  <script src="../../assets/js/logo.js"></script>
+</body>
+
+</html>

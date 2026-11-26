@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inhabilitados - Agro Verde</title>
+
+  <!-- Bootstrap 5 -->
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <!-- Íconos de Bootstrap -->
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <!-- Estilos globales y específicos de Historial -->
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/historial/historial.css">
+  <link rel="stylesheet" href="../../assets/js/historial/inhabilitados.js">
+  <link rel="stylesheet" href="../../assets/css/logo.css">
+</head>
+
+<body>
+  <img src="../../assets/img/agro-verde-logo.png" alt="Agro Verde" class="logo-app">
+
+  <!-- Pantalla principal fluida -->
+  <main class="pantalla container-fluid">
+
+    <!-- Encabezado con botón regresar, título y logo -->
+    <header class="d-flex justify-content-between align-items-center mb-4">
+      <div class="d-flex align-items-center gap-3">
+        <a href="../inicio/inicio.html"
+          class="boton_atras text-white text-decoration-none d-flex align-items-center justify-content-center"
+          aria-label="Volver">
+          <i class="bi bi-chevron-left fs-5"></i>
+        </a>
+        <h4 class="m-0 text-white fw-bold">Inhabilitados</h4>
+      </div>
+    </header>
+
+    <!-- Accesos: historial de acciones e inhabilitados -->
+    <div class="pastillas-historial d-flex gap-2 mb-3">
+      <a href="historial.html" class="boton_acceso text-decoration-none py-2 px-3 rounded-4"><i class="bi bi-clock-history me-1"></i>Acciones</a>
+      <a href="inhabilitados.html" class="btn_nuevo text-decoration-none py-2 px-3"><i class="bi bi-slash-circle me-1"></i>Inhabilitados</a>
+    </div>
+
+    <p class="texto_gris small mb-3">Lo que se inhabilita no se borra: queda aquí, separado por sección, y se puede <strong class="text-white">restaurar</strong>.</p>
+    <input type="search" id="buscarInhabilitado" class="form-control caja_busqueda mb-3" placeholder="Buscar en los inhabilitados">
+
+    <!-- Una sección por módulo (las llena inhabilitados.js) -->
+    <div class="d-flex flex-column gap-3 mb-4" id="seccionesInhabilitados"></div>
+
+  </main>
+
+  <!-- Barra de navegación inferior fija -->
+  <nav class="navegacion_inferior d-flex justify-content-between">
+    <a href="../inicio/inicio.html" class="text-center small"><i class="bi bi-house-door d-block"></i>Inicio</a>
+    <a href="../cultivos/cultivos.html" class="text-center small"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
+    <a href="../clima/clima.html" class="text-center small"><i class="bi bi-cloud-sun d-block"></i>Clima</a>
+    <a href="../insumos/insumos.html" class="text-center small"><i class="bi bi-box-seam d-block"></i>Insumos</a>
+    <a href="../perfil/perfil.html" class="text-center small"><i class="bi bi-person-circle d-block"></i>Perfil</a>
+  </nav>
+
+  <!-- Script de Bootstrap -->
+  <script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/js/comun.js"></script>
+  <script src="../../assets/js/permisos.js"></script>
+  <script src="../../assets/js/historial/inhabilitados.js"></script>
+  <script src="../../assets/js/confirmacion.js"></script>
+  <script src="../../assets/js/conexion.js"></script>
+  <script src="../../assets/js/logo.js"></script>
+</body>
+
+</html>

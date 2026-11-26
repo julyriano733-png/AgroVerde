@@ -1,0 +1,70 @@
+/*ESTILOS ESPECÍFICOS - HISTORIAL*/
+
+/* Botón cuadrado para devolverse */
+.boton_atras {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #1d734e;
+  border-radius: 12px;
+  background-color: transparent;
+  transition: background-color 0.2s ease;
+}
+
+.boton_atras:hover,
+.boton_atras:active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Botón verde para filtro activo */
+.btn_nuevo {
+  background-color: #22c55e;
+  color: #0f2a1d;
+  font-weight: bold;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+/* Botones de filtro inactivos */
+.boton_acceso {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.boton_acceso:hover,
+.boton_acceso:active,
+.boton_acceso:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+/* Contenedor circular de íconos de eventos */
+.icono-evento {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icono-verde {
+  background-color: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+}
+
+.icono-rojo {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+}
+
+.icono-cyan {
+  background-color: rgba(6, 182, 212, 0.15);
+  color: #06b6d4;
+}

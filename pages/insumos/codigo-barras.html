@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escanear código - Agro Verde</title>
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../assets/css/global.css">
+    <link rel="stylesheet" href="../../assets/css/insumos/insumos.css">
+  <link rel="stylesheet" href="../../assets/css/logo.css">
+</head>
+
+<body>
+  <img src="../../assets/img/agro-verde-logo.png" alt="Agro Verde" class="logo-app">
+    <main class="pantalla container-fluid">
+        <!-- Encabezado -->
+        <header class="app-header">
+            <div class="app-header__left">
+                <a href="crear-insumo.html" class="btn-back" aria-label="Volver"><i class="bi bi-arrow-left"></i></a>
+                <h3 class="m-0 fw-bold">Escanear código</h3>
+            </div>
+        </header>
+
+        <div class="contenido-insumos">
+            <div class="escaner mb-3">
+                <i class="bi bi-upc-scan"></i>
+                <span class="small">Apunta la cámara al código de barras</span>
+            </div>
+
+            <form id="formCodigo" action="insumos.html">
+                <label for="codigo" class="agro-label">o ingresa el código manualmente</label>
+                <input type="text" id="codigo" name="codigo" class="agro-input" placeholder="Ej. 7501234567890">
+
+                <div class="tarjeta-total mb-3 d-none" id="tarjetaEncontrado">
+                    <strong class="d-block">Fertilizante NPK</strong>
+                    <span class="texto_gris small d-block">Código: 7501234567890</span>
+                    <span class="precio small">Insumo encontrado - 18 sacos en stock</span>
+                </div>
+
+                <span class="agro-label">Tipo de movimiento</span>
+                <div class="pastillas">
+                    <input type="radio" name="movimiento" id="c-entrada" value="entrada" checked>
+                    <label for="c-entrada">Entrada</label>
+                    <input type="radio" name="movimiento" id="c-salida" value="salida">
+                    <label for="c-salida">Salida</label>
+                </div>
+                <span class="agro-label">Cantidad</span>
+                <div class="contador" data-unidad="sacos">
+                    <button type="button" aria-label="Restar">-</button>
+                    <span>2 sacos</span>
+                    <button type="button" aria-label="Sumar">+</button>
+                    <input type="hidden" name="cantidad" value="2">
+                </div>
+
+                <button type="submit" class="btn-agro-primary">Registrar movimiento</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Barra de navegación inferior -->
+    <nav class="navegacion_inferior d-flex justify-content-between">
+        <a href="../inicio/inicio.html" class="text-center small"><i class="bi bi-house-door d-block"></i>Inicio</a>
+        <a href="../cultivos/cultivos.html" class="text-center small"><i class="bi bi-flower1 d-block"></i>Cultivos</a>
+        <a href="../clima/clima.html" class="text-center small"><i class="bi bi-cloud-sun d-block"></i>Clima</a>
+        <a href="insumos.html" class="text-center small active"><i class="bi bi-box-seam d-block"></i>Insumos</a>
+        <a href="../perfil/perfil.html" class="text-center small"><i class="bi bi-person-circle d-block"></i>Perfil</a>
+    </nav>
+
+    <script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/comun.js"></script>
+    <script src="../../assets/js/permisos.js"></script>
+    <script src="../../assets/js/insumos/datos-insumos.js"></script>
+    <script src="../../assets/js/insumos/insumos.js"></script>
+    <script src="../../assets/js/confirmacion.js"></script>
+  <script src="../../assets/js/conexion.js"></script>
+  <script src="../../assets/js/logo.js"></script>
+</body>
+
+</html>
